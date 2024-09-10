@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID4065",
+  "title": "UNECE_UNTDID4065",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4065Type": {
+          "title": "Contract and carriage condition code",
+          "description": "Code to identify the conditions of contract and\r\ncarriage.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "AVC conditions"
+            },
+            {
+              "const": "2",
+              "title": "Special agreement for parcels transport"
+            },
+            {
+              "const": "3",
+              "title": "Special agreement for full loading transport"
+            },
+            {
+              "const": "4",
+              "title": "Combined transport"
+            },
+            {
+              "const": "5",
+              "title": "FIATA combined transport bill of lading"
+            },
+            {
+              "const": "6",
+              "title": "Freight forwarders national conditions"
+            },
+            {
+              "const": "7",
+              "title": "Normal tariff, parcels transport"
+            },
+            {
+              "const": "8",
+              "title": "Normal tariff, full loading transport"
+            },
+            {
+              "const": "9",
+              "title": "Ordinary"
+            },
+            {
+              "const": "10",
+              "title": "Port to port"
+            },
+            {
+              "const": "11",
+              "title": "CMR carnet"
+            },
+            {
+              "const": "12",
+              "title": "Special tariff, parcels transport"
+            },
+            {
+              "const": "13",
+              "title": "Special tariff, full transport"
+            },
+            {
+              "const": "14",
+              "title": "Through transport"
+            },
+            {
+              "const": "15",
+              "title": "Cancel space allocation"
+            },
+            {
+              "const": "16",
+              "title": "Report sale of space"
+            },
+            {
+              "const": "17",
+              "title": "Alternative space allocation"
+            },
+            {
+              "const": "18",
+              "title": "No alternative space allocation"
+            },
+            {
+              "const": "19",
+              "title": "Allotment sale"
+            },
+            {
+              "const": "20",
+              "title": "Confirmation of space"
+            },
+            {
+              "const": "21",
+              "title": "Unable to confirm"
+            },
+            {
+              "const": "22",
+              "title": "Non-operative flight"
+            },
+            {
+              "const": "23",
+              "title": "Wait list"
+            },
+            {
+              "const": "24",
+              "title": "Prior space allocation request"
+            },
+            {
+              "const": "25",
+              "title": "Holding confirmed space allocation"
+            },
+            {
+              "const": "26",
+              "title": "Holding wait list"
+            },
+            {
+              "const": "27",
+              "title": "Door-to-door"
+            },
+            {
+              "const": "28",
+              "title": "Door-to-pier"
+            },
+            {
+              "const": "29",
+              "title": "Pier-to-door"
+            },
+            {
+              "const": "30",
+              "title": "Pier-to-pier"
+            },
+            {
+              "const": "31",
+              "title": "Space cancellation noted"
+            },
+            {
+              "const": "32",
+              "title": "Mini landbridge service"
+            },
+            {
+              "const": "34",
+              "title": "Speed level - required"
+            },
+            {
+              "const": "35",
+              "title": "Speed level - adopted"
+            },
+            {
+              "const": "36",
+              "title": "Normal tariff, less than full load transport"
+            },
+            {
+              "const": "37",
+              "title": "Re-expedition special tariff"
+            },
+            {
+              "const": "38",
+              "title": "Transport arrangement by the requester"
+            },
+            {
+              "const": "39",
+              "title": "Transport arrangement by the provider"
+            },
+            {
+              "const": "40",
+              "title": "Transport arrangement by the patient"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

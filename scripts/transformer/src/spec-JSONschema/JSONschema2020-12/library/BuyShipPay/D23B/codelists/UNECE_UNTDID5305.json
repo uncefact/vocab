@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID5305",
+  "title": "UNECE_UNTDID5305",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5305Type": {
+          "title": "Duty or tax or fee category code",
+          "description": "Code specifying a duty or tax or fee category.",
+          "oneOf": [
+            {
+              "const": "A",
+              "title": "Mixed tax rate"
+            },
+            {
+              "const": "AA",
+              "title": "Lower rate"
+            },
+            {
+              "const": "AB",
+              "title": "Exempt for resale"
+            },
+            {
+              "const": "AC",
+              "title": "Value Added Tax (VAT) not now due for payment"
+            },
+            {
+              "const": "AD",
+              "title": "Value Added Tax (VAT) due from a previous invoice"
+            },
+            {
+              "const": "AE",
+              "title": "VAT Reverse Charge"
+            },
+            {
+              "const": "B",
+              "title": "Transferred (VAT)"
+            },
+            {
+              "const": "C",
+              "title": "Duty paid by supplier"
+            },
+            {
+              "const": "D",
+              "title": "Value Added Tax (VAT) margin scheme - travel agents"
+            },
+            {
+              "const": "E",
+              "title": "Exempt from tax"
+            },
+            {
+              "const": "F",
+              "title": "Value Added Tax (VAT) margin scheme - second-hand goods"
+            },
+            {
+              "const": "G",
+              "title": "Free export item, tax not charged"
+            },
+            {
+              "const": "H",
+              "title": "Higher rate"
+            },
+            {
+              "const": "I",
+              "title": "Value Added Tax (VAT) margin scheme - works of art Margin scheme — Works of art"
+            },
+            {
+              "const": "J",
+              "title": "Value Added Tax (VAT) margin scheme - collector’s items and antiques"
+            },
+            {
+              "const": "K",
+              "title": "VAT exempt for EEA intra-community supply of goods and services"
+            },
+            {
+              "const": "L",
+              "title": "Canary Islands general indirect tax"
+            },
+            {
+              "const": "M",
+              "title": "Tax for production, services and importation in Ceuta and Melilla"
+            },
+            {
+              "const": "N",
+              "title": "standard rate additional VAT"
+            },
+            {
+              "const": "O",
+              "title": "Services outside scope of tax"
+            },
+            {
+              "const": "S",
+              "title": "Standard rate"
+            },
+            {
+              "const": "Z",
+              "title": "Zero rated goods"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

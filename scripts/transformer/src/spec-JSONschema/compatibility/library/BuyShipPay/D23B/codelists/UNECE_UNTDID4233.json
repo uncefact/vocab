@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/library/BuyShipPay/D23B/UNECE_UNTDID4233",
+  "title": "UNECE_UNTDID4233",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4233Type": {
+          "title": "Marking instructions code",
+          "description": "Code specifying instructions for marking.\r\n\r\nApplicable codes:\r\n* '1' - Do not mark suppliers company name\r\n* '2' - Mark customers company name\r\n* '3' - Mark customers references\r\n* '4' - Mark additionally customers article description\r\n* '5' - Mark exclusively customers article description\r\n* '6' - Mark packages dimensions\r\n* '7' - Mark net weight\r\n* '8' - Mark gross weight\r\n* '9' - Mark tare weight\r\n* '10' - Mark batch number\r\n* '11' - Mark article number customer\r\n* '12' - Mark running number of packages\r\n* '13' - Mark date of production\r\n* '14' - Mark expiry date\r\n* '15' - Mark supplier number\r\n* '16' - Buyer's instructions\r\n* '17' - Seller's instructions\r\n* '18' - Carrier's instructions\r\n* '19' - Legal requirements\r\n* '20' - Industry instructions\r\n* '21' - Line item only\r\n* '22' - Pre-marked by buyer\r\n* '23' - Entire shipment\r\n* '24' - Shipper assigned\r\n* '25' - Shipper assigned roll number\r\n* '26' - Shipper assigned skid number\r\n* '27' - Uniform Code Council (UCC) format\r\n* '28' - Mark free text\r\n* '29' - Mark case number\r\n* '30' - Mark serial shipping container code\r\n* '31' - Marked with ISO 10374 (permanent container tag)\r\n* '32' - Mark date of packaging\r\n* '33' - Mark reference to source entity\r\n* '34' - Marked GS1 Global Individual Asset Identifier\r\n* '35' - Marked with a product serial number\r\n* '36' - Marked with a GS1 Global Identification Number for Consignment (GINC)\r\n* '37' - Marked with a GS1 Global Shipment Identification Number (GSIN)\r\n* '38' - Marked price\r\n* '39' - Marked with Serial Shipping Container Code (SSCC)\r\n* '40' - Marked with first freezing date\r\n* '41' - Marked with batch number\r\n* '42' - Marked with production date\r\n* '43' - Marked with expiry date\r\n* '44' - Marked with best before date\r\n* '45' - Marked with net weight\r\n* '46' - Marked with packaging date\r\n* '47' - Marked with GS1 Global Returnable Asset Identifier (GRAI)\r\n* '48' - Marked with a greeting message\r\n* '49' - Price per unit of measure marked on product\r\n* 'ZZZ' - Mutually defined",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "ZZZ"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

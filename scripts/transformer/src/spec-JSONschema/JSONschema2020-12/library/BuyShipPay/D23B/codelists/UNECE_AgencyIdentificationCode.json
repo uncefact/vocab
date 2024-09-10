@@ -1,0 +1,1659 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_AgencyIdentificationCode",
+  "title": "UNECE_AgencyIdentificationCode",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "AgencyIdentificationCodeType": {
+          "title": "Code list responsible agency code",
+          "description": "Code specifying the agency responsible for a code\r\nlist.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "CCC (Customs Co-operation Council)"
+            },
+            {
+              "const": "2",
+              "title": "CEC (Commission of the European Communities)"
+            },
+            {
+              "const": "3",
+              "title": "IATA (International Air Transport Association)"
+            },
+            {
+              "const": "4",
+              "title": "ICC (International Chamber of Commerce)"
+            },
+            {
+              "const": "5",
+              "title": "ISO (International Organization for Standardization)"
+            },
+            {
+              "const": "6",
+              "title": "UN/ECE (United Nations - Economic Commission for Europe)"
+            },
+            {
+              "const": "7",
+              "title": "CEFIC (Conseil Europeen des Federations de l'Industrie Chimique)"
+            },
+            {
+              "const": "8",
+              "title": "EDIFICE"
+            },
+            {
+              "const": "9",
+              "title": "GS1"
+            },
+            {
+              "const": "10",
+              "title": "ODETTE"
+            },
+            {
+              "const": "11",
+              "title": "Lloyd's register of shipping"
+            },
+            {
+              "const": "12",
+              "title": "UIC (International union of railways)"
+            },
+            {
+              "const": "13",
+              "title": "ICAO (International Civil Aviation Organization)"
+            },
+            {
+              "const": "14",
+              "title": "ICS (International Chamber of Shipping)"
+            },
+            {
+              "const": "15",
+              "title": "RINET (Reinsurance and Insurance Network)"
+            },
+            {
+              "const": "16",
+              "title": "US, D&B (Dun & Bradstreet Corporation)"
+            },
+            {
+              "const": "17",
+              "title": "S.W.I.F.T."
+            },
+            {
+              "const": "18",
+              "title": "Conventions on SAD and transit (EC and EFTA)"
+            },
+            {
+              "const": "19",
+              "title": "FRRC (Federal Reserve Routing Code)"
+            },
+            {
+              "const": "20",
+              "title": "BIC (Bureau International des Containeurs)"
+            },
+            {
+              "const": "21",
+              "title": "Assigned by transport company"
+            },
+            {
+              "const": "22",
+              "title": "US, ISA (Information Systems Agreement)"
+            },
+            {
+              "const": "23",
+              "title": "FR, EDITRANSPORT"
+            },
+            {
+              "const": "24",
+              "title": "AU, ROA (Railways of Australia)"
+            },
+            {
+              "const": "25",
+              "title": "EDITEX (Europe)"
+            },
+            {
+              "const": "26",
+              "title": "NL, Foundation Uniform Transport Code"
+            },
+            {
+              "const": "27",
+              "title": "US, FDA (Food and Drug Administration)"
+            },
+            {
+              "const": "28",
+              "title": "EDITEUR (European book sector electronic data interchange group)"
+            },
+            {
+              "const": "29",
+              "title": "GB, FLEETNET"
+            },
+            {
+              "const": "30",
+              "title": "GB, ABTA (Association of British Travel Agencies)"
+            },
+            {
+              "const": "31",
+              "title": "FI, Finish State Railway"
+            },
+            {
+              "const": "32",
+              "title": "PL, Polish State Railway"
+            },
+            {
+              "const": "33",
+              "title": "BG, Bulgaria State Railway"
+            },
+            {
+              "const": "34",
+              "title": "RO, Rumanian State Railway"
+            },
+            {
+              "const": "35",
+              "title": "CZ, Tchechian State Railway"
+            },
+            {
+              "const": "36",
+              "title": "HU, Hungarian State Railway"
+            },
+            {
+              "const": "37",
+              "title": "GB, British Railways"
+            },
+            {
+              "const": "38",
+              "title": "ES, Spanish National Railway"
+            },
+            {
+              "const": "39",
+              "title": "SE, Swedish State Railway"
+            },
+            {
+              "const": "40",
+              "title": "NO, Norwegian State Railway"
+            },
+            {
+              "const": "41",
+              "title": "DE, German Railway"
+            },
+            {
+              "const": "42",
+              "title": "AT, Austrian Federal Railways"
+            },
+            {
+              "const": "43",
+              "title": "LU, Luxembourg National Railway Company"
+            },
+            {
+              "const": "44",
+              "title": "IT, Italian State Railways"
+            },
+            {
+              "const": "45",
+              "title": "NL, Netherlands Railways"
+            },
+            {
+              "const": "46",
+              "title": "CH, Swiss Federal Railways"
+            },
+            {
+              "const": "47",
+              "title": "DK, Danish State Railways"
+            },
+            {
+              "const": "48",
+              "title": "FR, French National Railway Company"
+            },
+            {
+              "const": "49",
+              "title": "BE, Belgian National Railway Company"
+            },
+            {
+              "const": "50",
+              "title": "PT, Portuguese Railways"
+            },
+            {
+              "const": "51",
+              "title": "SK, Slovakian State Railways"
+            },
+            {
+              "const": "52",
+              "title": "IE, Irish Transport Company"
+            },
+            {
+              "const": "53",
+              "title": "FIATA (International Federation of Freight Forwarders Associations)"
+            },
+            {
+              "const": "54",
+              "title": "IMO (International Maritime Organisation)"
+            },
+            {
+              "const": "55",
+              "title": "US, DOT (United States Department of Transportation)"
+            },
+            {
+              "const": "56",
+              "title": "TW, Trade-van"
+            },
+            {
+              "const": "57",
+              "title": "TW, Chinese Taipei Customs"
+            },
+            {
+              "const": "58",
+              "title": "EUROFER"
+            },
+            {
+              "const": "59",
+              "title": "DE, EDIBAU"
+            },
+            {
+              "const": "60",
+              "title": "Assigned by national trade agency"
+            },
+            {
+              "const": "61",
+              "title": "Association Europeenne des Constructeurs de Materiel Aerospatial (AECMA)"
+            },
+            {
+              "const": "62",
+              "title": "US, DIstilled Spirits Council of the United States (DISCUS)"
+            },
+            {
+              "const": "63",
+              "title": "North Atlantic Treaty Organization (NATO)"
+            },
+            {
+              "const": "64",
+              "title": "FR, CLEEP"
+            },
+            {
+              "const": "65",
+              "title": "GS1 France"
+            },
+            {
+              "const": "66",
+              "title": "MY, Malaysian Customs and Excise"
+            },
+            {
+              "const": "67",
+              "title": "MY, Malaysia Central Bank"
+            },
+            {
+              "const": "68",
+              "title": "GS1 Italy"
+            },
+            {
+              "const": "69",
+              "title": "US, National Alcohol Beverage Control Association (NABCA)"
+            },
+            {
+              "const": "70",
+              "title": "MY, Dagang.Net"
+            },
+            {
+              "const": "71",
+              "title": "US, FCC (Federal Communications Commission)"
+            },
+            {
+              "const": "72",
+              "title": "US, MARAD (Maritime Administration)"
+            },
+            {
+              "const": "73",
+              "title": "US, DSAA (Defense Security Assistance Agency)"
+            },
+            {
+              "const": "74",
+              "title": "US, NRC (Nuclear Regulatory Commission)"
+            },
+            {
+              "const": "75",
+              "title": "US, ODTC (Office of Defense Trade Controls)"
+            },
+            {
+              "const": "76",
+              "title": "US, ATF (Bureau of Alcohol, Tobacco and Firearms)"
+            },
+            {
+              "const": "77",
+              "title": "US, BXA (Bureau of Export Administration)"
+            },
+            {
+              "const": "78",
+              "title": "US, FWS (Fish and Wildlife Service)"
+            },
+            {
+              "const": "79",
+              "title": "US, OFAC (Office of Foreign Assets Control)"
+            },
+            {
+              "const": "80",
+              "title": "BRMA/RAA - LIMNET - RINET Joint Venture"
+            },
+            {
+              "const": "81",
+              "title": "RU, (SFT) Society for Financial Telecommunications"
+            },
+            {
+              "const": "82",
+              "title": "NO, Enhetsregisteret ved Bronnoysundregisterne"
+            },
+            {
+              "const": "83",
+              "title": "US, National Retail Federation"
+            },
+            {
+              "const": "84",
+              "title": "DE, BRD (Gesetzgeber der Bundesrepublik Deutschland)"
+            },
+            {
+              "const": "85",
+              "title": "North America, Telecommunications Industry Forum"
+            },
+            {
+              "const": "86",
+              "title": "Assigned by party originating the message"
+            },
+            {
+              "const": "87",
+              "title": "Assigned by carrier"
+            },
+            {
+              "const": "88",
+              "title": "Assigned by owner of operation"
+            },
+            {
+              "const": "89",
+              "title": "Assigned by distributor"
+            },
+            {
+              "const": "90",
+              "title": "Assigned by manufacturer"
+            },
+            {
+              "const": "91",
+              "title": "Assigned by seller or seller's agent"
+            },
+            {
+              "const": "92",
+              "title": "Assigned by buyer or buyer's agent"
+            },
+            {
+              "const": "93",
+              "title": "AT, Austrian Customs"
+            },
+            {
+              "const": "94",
+              "title": "AT, Austrian PTT"
+            },
+            {
+              "const": "95",
+              "title": "AU, Australian Customs Service"
+            },
+            {
+              "const": "96",
+              "title": "CA, Revenue Canada, Customs and Excise"
+            },
+            {
+              "const": "97",
+              "title": "CH, Administration federale des contributions"
+            },
+            {
+              "const": "98",
+              "title": "CH, Direction generale des douanes"
+            },
+            {
+              "const": "99",
+              "title": "CH, Division des importations et exportations, OFAEE"
+            },
+            {
+              "const": "100",
+              "title": "CH, Entreprise des PTT"
+            },
+            {
+              "const": "101",
+              "title": "CH, Carbura"
+            },
+            {
+              "const": "102",
+              "title": "CH, Centrale suisse pour l'importation du charbon"
+            },
+            {
+              "const": "103",
+              "title": "CH, Office fiduciaire des importateurs de denrees alimentaires"
+            },
+            {
+              "const": "104",
+              "title": "CH, Association suisse code des articles"
+            },
+            {
+              "const": "105",
+              "title": "DK, Ministry of taxation, Central Customs and Tax Administration"
+            },
+            {
+              "const": "106",
+              "title": "FR, Direction generale des douanes et droits indirects"
+            },
+            {
+              "const": "107",
+              "title": "FR, INSEE"
+            },
+            {
+              "const": "108",
+              "title": "FR, Banque de France"
+            },
+            {
+              "const": "109",
+              "title": "GB, H.M. Customs & Excise"
+            },
+            {
+              "const": "110",
+              "title": "IE, Revenue Commissioners, Customs AEP project"
+            },
+            {
+              "const": "111",
+              "title": "US, U.S. Customs Service"
+            },
+            {
+              "const": "112",
+              "title": "US, U.S. Census Bureau"
+            },
+            {
+              "const": "113",
+              "title": "GS1 US"
+            },
+            {
+              "const": "114",
+              "title": "US, ABA (American Bankers Association)"
+            },
+            {
+              "const": "116",
+              "title": "US, ANSI ASC X12"
+            },
+            {
+              "const": "117",
+              "title": "AT, Geldausgabeautomaten-Service Gesellschaft m.b.H."
+            },
+            {
+              "const": "118",
+              "title": "SE, Svenska Bankfoereningen"
+            },
+            {
+              "const": "119",
+              "title": "IT, Associazione Bancaria Italiana"
+            },
+            {
+              "const": "120",
+              "title": "IT, Socieata' Interbancaria per l'Automazione"
+            },
+            {
+              "const": "121",
+              "title": "CH, Telekurs AG"
+            },
+            {
+              "const": "122",
+              "title": "CH, Swiss Securities Clearing Corporation"
+            },
+            {
+              "const": "123",
+              "title": "NO, Norwegian Interbank Research Organization"
+            },
+            {
+              "const": "124",
+              "title": "NO, Norwegian Bankers' Association"
+            },
+            {
+              "const": "125",
+              "title": "FI, The Finnish Bankers' Association"
+            },
+            {
+              "const": "126",
+              "title": "US, NCCMA (Account Analysis Codes)"
+            },
+            {
+              "const": "127",
+              "title": "DE, ARE (AbRechnungs Einheit)"
+            },
+            {
+              "const": "128",
+              "title": "BE, Belgian Bankers' Association"
+            },
+            {
+              "const": "129",
+              "title": "BE, Belgian Ministry of Finance"
+            },
+            {
+              "const": "130",
+              "title": "DK, Danish Bankers Association"
+            },
+            {
+              "const": "131",
+              "title": "DE, German Bankers Association"
+            },
+            {
+              "const": "132",
+              "title": "GB, BACS Limited"
+            },
+            {
+              "const": "133",
+              "title": "GB, Association for Payment Clearing Services"
+            },
+            {
+              "const": "134",
+              "title": "GB, APACS (Association of payment clearing services)"
+            },
+            {
+              "const": "135",
+              "title": "GB, The Clearing House"
+            },
+            {
+              "const": "136",
+              "title": "GS1 UK"
+            },
+            {
+              "const": "137",
+              "title": "AT, Verband oesterreichischer Banken und Bankiers"
+            },
+            {
+              "const": "138",
+              "title": "FR, CFONB (Comite francais d'organ. et de normalisation bancaires)"
+            },
+            {
+              "const": "139",
+              "title": "Universal Postal Union (UPU)"
+            },
+            {
+              "const": "140",
+              "title": "CEC (Commission of the European Communities), DG/XXI-01"
+            },
+            {
+              "const": "141",
+              "title": "CEC (Commission of the European Communities), DG/XXI-B-1"
+            },
+            {
+              "const": "142",
+              "title": "CEC (Commission of the European Communities), DG/XXXIV"
+            },
+            {
+              "const": "143",
+              "title": "NZ, New Zealand Customs"
+            },
+            {
+              "const": "144",
+              "title": "NL, Netherlands Customs"
+            },
+            {
+              "const": "145",
+              "title": "SE, Swedish Customs"
+            },
+            {
+              "const": "146",
+              "title": "DE, German Customs"
+            },
+            {
+              "const": "147",
+              "title": "BE, Belgian Customs"
+            },
+            {
+              "const": "148",
+              "title": "ES, Spanish Customs"
+            },
+            {
+              "const": "149",
+              "title": "IL, Israel Customs"
+            },
+            {
+              "const": "150",
+              "title": "HK, Hong Kong Customs"
+            },
+            {
+              "const": "151",
+              "title": "JP, Japan Customs"
+            },
+            {
+              "const": "152",
+              "title": "SA, Saudi Arabia Customs"
+            },
+            {
+              "const": "153",
+              "title": "IT, Italian Customs"
+            },
+            {
+              "const": "154",
+              "title": "GR, Greek Customs"
+            },
+            {
+              "const": "155",
+              "title": "PT, Portuguese Customs"
+            },
+            {
+              "const": "156",
+              "title": "LU, Luxembourg Customs"
+            },
+            {
+              "const": "157",
+              "title": "NO, Norwegian Customs"
+            },
+            {
+              "const": "158",
+              "title": "FI, Finnish Customs"
+            },
+            {
+              "const": "159",
+              "title": "IS, Iceland Customs"
+            },
+            {
+              "const": "160",
+              "title": "LI, Liechtenstein authority"
+            },
+            {
+              "const": "161",
+              "title": "UNCTAD (United Nations - Conference on Trade And Development)"
+            },
+            {
+              "const": "162",
+              "title": "CEC (Commission of the European Communities), DG/XIII-D-5"
+            },
+            {
+              "const": "163",
+              "title": "US, FMC (Federal Maritime Commission)"
+            },
+            {
+              "const": "164",
+              "title": "US, DEA (Drug Enforcement Agency)"
+            },
+            {
+              "const": "165",
+              "title": "US, DCI (Distribution Codes, INC.)"
+            },
+            {
+              "const": "166",
+              "title": "US, National Motor Freight Classification Association"
+            },
+            {
+              "const": "167",
+              "title": "US, AIAG (Automotive Industry Action Group)"
+            },
+            {
+              "const": "168",
+              "title": "US, FIPS (Federal Information Publishing Standard)"
+            },
+            {
+              "const": "169",
+              "title": "CA, SCC (Standards Council of Canada)"
+            },
+            {
+              "const": "170",
+              "title": "CA, CPA (Canadian Payment Association)"
+            },
+            {
+              "const": "171",
+              "title": "NL, Interpay Girale Services"
+            },
+            {
+              "const": "172",
+              "title": "NL, Interpay Debit Card Services"
+            },
+            {
+              "const": "173",
+              "title": "NO, NORPRO"
+            },
+            {
+              "const": "174",
+              "title": "DE, DIN (Deutsches Institut fuer Normung)"
+            },
+            {
+              "const": "175",
+              "title": "FCI (Factors Chain International)"
+            },
+            {
+              "const": "176",
+              "title": "BR, Banco Central do Brazil"
+            },
+            {
+              "const": "177",
+              "title": "AU, LIFA (Life Insurance Federation of Australia)"
+            },
+            {
+              "const": "178",
+              "title": "AU, SAA (Standards Association of Australia)"
+            },
+            {
+              "const": "179",
+              "title": "US, Air transport association of America"
+            },
+            {
+              "const": "180",
+              "title": "DE, BIA (Berufsgenossenschaftliches Institut fuer Arbeitssicherheit)"
+            },
+            {
+              "const": "181",
+              "title": "Edibuild"
+            },
+            {
+              "const": "182",
+              "title": "US, Standard Carrier Alpha Code (Motor)"
+            },
+            {
+              "const": "183",
+              "title": "US, American Petroleum Institute"
+            },
+            {
+              "const": "184",
+              "title": "AU, ACOS (Australian Chamber of Shipping)"
+            },
+            {
+              "const": "185",
+              "title": "DE, BDI (Bundesverband der Deutschen Industrie e.V.)"
+            },
+            {
+              "const": "186",
+              "title": "US, GSA (General Services Administration)"
+            },
+            {
+              "const": "187",
+              "title": "US, DLMSO (Defense Logistics Management Standards Office)"
+            },
+            {
+              "const": "188",
+              "title": "US, NIST (National Institute of Standards and Technology)"
+            },
+            {
+              "const": "189",
+              "title": "US, DoD (Department of Defense)"
+            },
+            {
+              "const": "190",
+              "title": "US, VA (Department of Veterans Affairs)"
+            },
+            {
+              "const": "191",
+              "title": "IAPSO (United Nations Inter-Agency Procurement Services Office)"
+            },
+            {
+              "const": "192",
+              "title": "Shipper's association"
+            },
+            {
+              "const": "193",
+              "title": "EU, European Telecommunications Informatics Services (ETIS)"
+            },
+            {
+              "const": "194",
+              "title": "AU, AQIS (Australian Quarantine and Inspection Service)"
+            },
+            {
+              "const": "195",
+              "title": "CO, DIAN (Direccion de Impuestos y Aduanas Nacionales)"
+            },
+            {
+              "const": "196",
+              "title": "US, COPAS (Council of Petroleum Accounting Society)"
+            },
+            {
+              "const": "197",
+              "title": "US, DISA (Data Interchange Standards Association)"
+            },
+            {
+              "const": "198",
+              "title": "CO, Superintendencia Bancaria De Colombia"
+            },
+            {
+              "const": "199",
+              "title": "FR, Direction de la Comptabilite Publique"
+            },
+            {
+              "const": "200",
+              "title": "GS1 Netherlands"
+            },
+            {
+              "const": "201",
+              "title": "US, WSSA(Wine and Spirits Shippers Association)"
+            },
+            {
+              "const": "202",
+              "title": "PT, Banco de Portugal"
+            },
+            {
+              "const": "203",
+              "title": "FR, GALIA (Groupement pour l'Amelioration des Liaisons dans l'Industrie Automobile)"
+            },
+            {
+              "const": "204",
+              "title": "DE, VDA (Verband der Automobilindustrie E.V.)"
+            },
+            {
+              "const": "205",
+              "title": "IT, ODETTE Italy"
+            },
+            {
+              "const": "206",
+              "title": "NL, ODETTE Netherlands"
+            },
+            {
+              "const": "207",
+              "title": "ES, ODETTE Spain"
+            },
+            {
+              "const": "208",
+              "title": "SE, ODETTE Sweden"
+            },
+            {
+              "const": "209",
+              "title": "GB, ODETTE United Kingdom"
+            },
+            {
+              "const": "210",
+              "title": "EU, EDI for financial, informational, cost, accounting, auditing and social areas (EDIFICAS) - Europe"
+            },
+            {
+              "const": "211",
+              "title": "FR, EDI for financial, informational, cost, accounting, auditing and social areas (EDIFICAS) - France"
+            },
+            {
+              "const": "212",
+              "title": "DE, Deutsch Telekom AG"
+            },
+            {
+              "const": "213",
+              "title": "JP, NACCS Center (Nippon Automated Cargo And Port Consolidated System, Inc.)"
+            },
+            {
+              "const": "214",
+              "title": "US, AISI (American Iron and Steel Institute)"
+            },
+            {
+              "const": "215",
+              "title": "AU, APCA (Australian Payments Clearing Association)"
+            },
+            {
+              "const": "216",
+              "title": "US, Department of Labor"
+            },
+            {
+              "const": "217",
+              "title": "US, N.A.I.C. (National Association of Insurance Commissioners)"
+            },
+            {
+              "const": "218",
+              "title": "GB, The Association of British Insurers"
+            },
+            {
+              "const": "219",
+              "title": "FR, d'ArvA"
+            },
+            {
+              "const": "220",
+              "title": "FI, Finnish tax board"
+            },
+            {
+              "const": "221",
+              "title": "FR, CNAMTS (Caisse Nationale de l'Assurance Maladie des Travailleurs Salaries)"
+            },
+            {
+              "const": "222",
+              "title": "DK, Danish National Board of Health"
+            },
+            {
+              "const": "223",
+              "title": "DK, Danish Ministry of Home Affairs"
+            },
+            {
+              "const": "224",
+              "title": "US, Aluminum Association"
+            },
+            {
+              "const": "225",
+              "title": "US, CIDX (Chemical Industry Data Exchange)"
+            },
+            {
+              "const": "226",
+              "title": "US, Carbide Manufacturers"
+            },
+            {
+              "const": "227",
+              "title": "US, NWDA (National Wholesale Druggist Association)"
+            },
+            {
+              "const": "228",
+              "title": "US, EIA (Electronic Industry Association)"
+            },
+            {
+              "const": "229",
+              "title": "US, American Paper Institute"
+            },
+            {
+              "const": "230",
+              "title": "US, VICS (Voluntary Inter-Industry Commerce Standards)"
+            },
+            {
+              "const": "231",
+              "title": "Copper and Brass Fabricators Council"
+            },
+            {
+              "const": "232",
+              "title": "GB, Inland Revenue"
+            },
+            {
+              "const": "233",
+              "title": "US, OMB (Office of Management and Budget)"
+            },
+            {
+              "const": "234",
+              "title": "DE, Siemens AG"
+            },
+            {
+              "const": "235",
+              "title": "AU, Tradegate (Electronic Commerce Australia)"
+            },
+            {
+              "const": "236",
+              "title": "US, United States Postal Service (USPS)"
+            },
+            {
+              "const": "237",
+              "title": "US, United States health industry"
+            },
+            {
+              "const": "238",
+              "title": "US, TDCC (Transportation Data Coordinating Committee)"
+            },
+            {
+              "const": "239",
+              "title": "US, HL7 (Health Level 7)"
+            },
+            {
+              "const": "240",
+              "title": "US, CHIPS (Clearing House Interbank Payment Systems)"
+            },
+            {
+              "const": "241",
+              "title": "PT, SIBS (Sociedade Interbancaria de Servicos)"
+            },
+            {
+              "const": "244",
+              "title": "US, Department of Health and Human Services"
+            },
+            {
+              "const": "245",
+              "title": "GS1 Denmark"
+            },
+            {
+              "const": "246",
+              "title": "GS1 Germany"
+            },
+            {
+              "const": "247",
+              "title": "US, HBICC (Health Industry Business Communication Council)"
+            },
+            {
+              "const": "248",
+              "title": "US, ASTM (American Society of Testing and Materials)"
+            },
+            {
+              "const": "249",
+              "title": "IP (Institute of Petroleum)"
+            },
+            {
+              "const": "250",
+              "title": "US, UOP (Universal Oil Products)"
+            },
+            {
+              "const": "251",
+              "title": "AU, HIC (Health Insurance Commission)"
+            },
+            {
+              "const": "252",
+              "title": "AU, AIHW (Australian Institute of Health and Welfare)"
+            },
+            {
+              "const": "253",
+              "title": "AU, NCCH (National Centre for Classification in Health)"
+            },
+            {
+              "const": "254",
+              "title": "AU, DOH (Australian Department of Health)"
+            },
+            {
+              "const": "255",
+              "title": "AU, ADA (Australian Dental Association)"
+            },
+            {
+              "const": "256",
+              "title": "US, AAR (Association of American Railroads)"
+            },
+            {
+              "const": "257",
+              "title": "ECCMA (Electronic Commerce Code Management Association)"
+            },
+            {
+              "const": "258",
+              "title": "JP, Japanese Ministry of Transport"
+            },
+            {
+              "const": "259",
+              "title": "JP, Japanese Maritime Safety Agency"
+            },
+            {
+              "const": "260",
+              "title": "ebIX (European forum for energy Business Information eXchange)"
+            },
+            {
+              "const": "261",
+              "title": "EEG7, European Expert Group 7 (Insurance)"
+            },
+            {
+              "const": "262",
+              "title": "DE, GDV (Gesamtverband der Deutschen Versicherungswirtschaft e.V.)"
+            },
+            {
+              "const": "263",
+              "title": "CA, CSIO (Centre for Study of Insurance Operations)"
+            },
+            {
+              "const": "264",
+              "title": "FR, AGF (Assurances Generales de France)"
+            },
+            {
+              "const": "265",
+              "title": "SE, Central bank"
+            },
+            {
+              "const": "266",
+              "title": "US, DoA (Department of Agriculture)"
+            },
+            {
+              "const": "267",
+              "title": "RU, Central Bank of Russia"
+            },
+            {
+              "const": "268",
+              "title": "FR, DGI (Direction Generale des Impots)"
+            },
+            {
+              "const": "269",
+              "title": "GRE (Reference Group of Experts)"
+            },
+            {
+              "const": "270",
+              "title": "Concord EDI group"
+            },
+            {
+              "const": "271",
+              "title": "InterContainer InterFrigo"
+            },
+            {
+              "const": "272",
+              "title": "Joint Automotive Industry agency"
+            },
+            {
+              "const": "273",
+              "title": "CH, SCC (Swiss Chambers of Commerce)"
+            },
+            {
+              "const": "274",
+              "title": "ITIGG (International Transport Implementation Guidelines Group)"
+            },
+            {
+              "const": "275",
+              "title": "ES, Banco de España"
+            },
+            {
+              "const": "276",
+              "title": "Assigned by Port Community"
+            },
+            {
+              "const": "277",
+              "title": "BIGNet (Business Information Group Network)"
+            },
+            {
+              "const": "278",
+              "title": "Eurogate"
+            },
+            {
+              "const": "279",
+              "title": "NL, Graydon"
+            },
+            {
+              "const": "280",
+              "title": "FR, Euler"
+            },
+            {
+              "const": "281",
+              "title": "GS1 Belgium and Luxembourg"
+            },
+            {
+              "const": "282",
+              "title": "DE, Creditreform International e.V."
+            },
+            {
+              "const": "283",
+              "title": "DE, Hermes Kreditversicherungs AG"
+            },
+            {
+              "const": "284",
+              "title": "TW, Taiwanese Bankers' Association"
+            },
+            {
+              "const": "285",
+              "title": "ES, Asociación Española de Banca"
+            },
+            {
+              "const": "286",
+              "title": "SE, TCO (Tjänstemännes Central Organisation)"
+            },
+            {
+              "const": "287",
+              "title": "DE, FORTRAS (Forschungs- und Entwicklungsgesellschaft für Transportwesen GMBH)"
+            },
+            {
+              "const": "288",
+              "title": "OSJD (Organizacija Sotrudnichestva Zeleznih Dorog)"
+            },
+            {
+              "const": "289",
+              "title": "JP.JIPDEC"
+            },
+            {
+              "const": "290",
+              "title": "JP, JAMA"
+            },
+            {
+              "const": "291",
+              "title": "JP, JAPIA"
+            },
+            {
+              "const": "292",
+              "title": "FI, TIEKE The Information Technology Development Centre of Finland"
+            },
+            {
+              "const": "293",
+              "title": "DE, BDEW (Bundesverband der Energie- und Wasserwirtschaft e.V.)"
+            },
+            {
+              "const": "294",
+              "title": "GS1 Austria"
+            },
+            {
+              "const": "295",
+              "title": "AU, Australian Therapeutic Goods Administration"
+            },
+            {
+              "const": "296",
+              "title": "ITU (International Telecommunication Union)"
+            },
+            {
+              "const": "297",
+              "title": "IT, Ufficio IVA"
+            },
+            {
+              "const": "298",
+              "title": "GS1 Spain"
+            },
+            {
+              "const": "299",
+              "title": "BE, Seagha"
+            },
+            {
+              "const": "300",
+              "title": "SE, Swedish International Freight Association"
+            },
+            {
+              "const": "301",
+              "title": "DE, BauDatenbank GmbH"
+            },
+            {
+              "const": "302",
+              "title": "DE, Bundesverband des Deutschen Textileinzelhandels e.V."
+            },
+            {
+              "const": "303",
+              "title": "GB, Trade Service Information Ltd (TSI)"
+            },
+            {
+              "const": "304",
+              "title": "DE, Bundesverband Deutscher Heimwerker-, Bau- und Gartenfachmaerkte e.V."
+            },
+            {
+              "const": "305",
+              "title": "ETSO (European Transmission System Operator)"
+            },
+            {
+              "const": "306",
+              "title": "SMDG (Ship-planning Message Design Group)"
+            },
+            {
+              "const": "307",
+              "title": "JP, Ministry of Justice"
+            },
+            {
+              "const": "309",
+              "title": "JP, JASTPRO (Japan Association for Simplification of International Trade Procedures)"
+            },
+            {
+              "const": "310",
+              "title": "DE, SAP AG (Systeme, Anwendungen und Produkte)"
+            },
+            {
+              "const": "311",
+              "title": "JP, TDB (Teikoku Databank, Ltd.)"
+            },
+            {
+              "const": "312",
+              "title": "FR, AGRO EDI EUROPE"
+            },
+            {
+              "const": "313",
+              "title": "FR, Groupement National Interprofessionnel des Semences et Plants"
+            },
+            {
+              "const": "314",
+              "title": "OAGi (Open Applications Group, Incorporated)"
+            },
+            {
+              "const": "315",
+              "title": "US, STAR (Standards for Technology in Automotive Retail)"
+            },
+            {
+              "const": "316",
+              "title": "GS1 Finland"
+            },
+            {
+              "const": "317",
+              "title": "GS1 Brazil"
+            },
+            {
+              "const": "318",
+              "title": "IETF (Internet Engineering Task Force)"
+            },
+            {
+              "const": "319",
+              "title": "FR, GTF"
+            },
+            {
+              "const": "320",
+              "title": "DK, Danish National IT and Telcom Agency (ITA)"
+            },
+            {
+              "const": "321",
+              "title": "EASEE-Gas (European Association for the Streamlining of Energy Exchange for gas)"
+            },
+            {
+              "const": "322",
+              "title": "IS, ICEPRO"
+            },
+            {
+              "const": "323",
+              "title": "PROTECT"
+            },
+            {
+              "const": "324",
+              "title": "GS1 Ireland"
+            },
+            {
+              "const": "325",
+              "title": "GS1 Russia"
+            },
+            {
+              "const": "326",
+              "title": "GS1 Poland"
+            },
+            {
+              "const": "327",
+              "title": "GS1 Estonia"
+            },
+            {
+              "const": "328",
+              "title": "Assigned by ultimate recipient of the message"
+            },
+            {
+              "const": "329",
+              "title": "Assigned by loading dock operator"
+            },
+            {
+              "const": "330",
+              "title": "Nordic Ediel Group"
+            },
+            {
+              "const": "331",
+              "title": "US, Agricultural Marketing Service (AMS)"
+            },
+            {
+              "const": "332",
+              "title": "DE, DVGW Service & Consult GmbH"
+            },
+            {
+              "const": "333",
+              "title": "US, Animal and Plant Health Inspection Service (APHIS)"
+            },
+            {
+              "const": "334",
+              "title": "US, Bureau of Labor Statistics (BLS)"
+            },
+            {
+              "const": "335",
+              "title": "US, Bureau of Transportation Statistics (BTS)"
+            },
+            {
+              "const": "336",
+              "title": "US, Customs and Border Protection (CBP)"
+            },
+            {
+              "const": "337",
+              "title": "US, Center for Disease Control (CDC)"
+            },
+            {
+              "const": "338",
+              "title": "US, Consumer Product Safety Commission (CPSC)"
+            },
+            {
+              "const": "339",
+              "title": "US, Directorate of Defense Trade Controls (DDTC)"
+            },
+            {
+              "const": "340",
+              "title": "US, Environmental Protection Agency (EPA)"
+            },
+            {
+              "const": "341",
+              "title": "US, Federal Aviation Administration (FAA)"
+            },
+            {
+              "const": "342",
+              "title": "US, Foreign Agriculture Service (FAS)"
+            },
+            {
+              "const": "343",
+              "title": "US, Federal Motor Carrier Safety Administration (FMCSA)"
+            },
+            {
+              "const": "344",
+              "title": "US, Food Safety Inspection Service (FSIS)"
+            },
+            {
+              "const": "345",
+              "title": "US, Foreign Trade Zones Board (FTZB)"
+            },
+            {
+              "const": "346",
+              "title": "US, The Grain Inspection, Packers and Stockyards Administration (GIPSA)"
+            },
+            {
+              "const": "347",
+              "title": "US, Import Administration (IA)"
+            },
+            {
+              "const": "348",
+              "title": "US, Internal Revenue Service (IRS)"
+            },
+            {
+              "const": "349",
+              "title": "US, International Trade Commission (ITC)"
+            },
+            {
+              "const": "350",
+              "title": "US, National Highway Traffic Safety Administration (NHTSA)"
+            },
+            {
+              "const": "351",
+              "title": "US, National Marine Fisheries Service (NMFS)"
+            },
+            {
+              "const": "352",
+              "title": "US, Office of Fossil Energy (OFE)"
+            },
+            {
+              "const": "353",
+              "title": "US, Office of Foreign Missions (OFM)"
+            },
+            {
+              "const": "354",
+              "title": "US, Bureau of Oceans and International Environmental and Scientific Affairs (OES)"
+            },
+            {
+              "const": "355",
+              "title": "US, Office of Naval Intelligence (ONI)"
+            },
+            {
+              "const": "356",
+              "title": "US, Pipeline and Hazardous Materials Safety Administration (PHMSA)"
+            },
+            {
+              "const": "357",
+              "title": "US, Alcohol and Tobacco Tax and Trade Bureau (TTB)"
+            },
+            {
+              "const": "358",
+              "title": "US, Army Corp of Engineers (USACE)"
+            },
+            {
+              "const": "359",
+              "title": "US, Agency for International Development (USAID)"
+            },
+            {
+              "const": "360",
+              "title": "US, Coast Guard (USCG)"
+            },
+            {
+              "const": "361",
+              "title": "US, Office of the United States Trade Representative (USTR)"
+            },
+            {
+              "const": "362",
+              "title": "International Commission for the Conservation of Atlantic Tunas (ICCAT)"
+            },
+            {
+              "const": "363",
+              "title": "Inter-American Tropical Tuna Commission (IATTC)"
+            },
+            {
+              "const": "364",
+              "title": "Commission for the Conservation of Southern Bluefin Tuna (CCSBT)"
+            },
+            {
+              "const": "365",
+              "title": "Indian Ocean Tuna Commission (IOTC)"
+            },
+            {
+              "const": "366",
+              "title": "International Botanical Congress"
+            },
+            {
+              "const": "367",
+              "title": "International Commission on Zoological Nomenclature"
+            },
+            {
+              "const": "368",
+              "title": "International Society for Horticulture Science"
+            },
+            {
+              "const": "369",
+              "title": "Chemical Abstract Service (CAS)"
+            },
+            {
+              "const": "370",
+              "title": "Social Security Administration (SSA)"
+            },
+            {
+              "const": "371",
+              "title": "INMARSAT"
+            },
+            {
+              "const": "372",
+              "title": "Agent of ship at the intended port of arrival"
+            },
+            {
+              "const": "373",
+              "title": "US Air Force"
+            },
+            {
+              "const": "374",
+              "title": "US, Bureau of Explosives"
+            },
+            {
+              "const": "375",
+              "title": "Basel Convention Secretariat"
+            },
+            {
+              "const": "376",
+              "title": "PANTONE"
+            },
+            {
+              "const": "377",
+              "title": "IS, National Registry of Iceland"
+            },
+            {
+              "const": "378",
+              "title": "IS, Internal Revenue Directorate of Iceland"
+            },
+            {
+              "const": "379",
+              "title": "IANA (Internet Assigned Numbers Authority)"
+            },
+            {
+              "const": "380",
+              "title": "Korea Customs Service"
+            },
+            {
+              "const": "381",
+              "title": "Israel Tax Authority"
+            },
+            {
+              "const": "382",
+              "title": "Israeli Ministry of Interior"
+            },
+            {
+              "const": "383",
+              "title": "FR, LUMD (Logistique Urbaine Mutualisée Durable)"
+            },
+            {
+              "const": "384",
+              "title": "DE, BiPRO (Brancheninitiative Prozessoptimierung)"
+            },
+            {
+              "const": "385",
+              "title": "JO, Jordan Ministry of Agriculture"
+            },
+            {
+              "const": "386",
+              "title": "JO, Jordan Customs"
+            },
+            {
+              "const": "387",
+              "title": "JO, Jordan Food & Drug Administration"
+            },
+            {
+              "const": "388",
+              "title": "JO, Jordan Institution for Standards and Metrology"
+            },
+            {
+              "const": "389",
+              "title": "JO, Jordan Telecommunication Regulatory Commission"
+            },
+            {
+              "const": "390",
+              "title": "JO, Jordan Nuclear Regulatory Commission"
+            },
+            {
+              "const": "391",
+              "title": "JO, Jordan Ministry of Environment"
+            },
+            {
+              "const": "392",
+              "title": "Hazardous waste collector"
+            },
+            {
+              "const": "393",
+              "title": "Hazardous waste generator"
+            },
+            {
+              "const": "394",
+              "title": "Marketing agent"
+            },
+            {
+              "const": "395",
+              "title": "BE, TELEBIB Centre"
+            },
+            {
+              "const": "396",
+              "title": "BE, BNB"
+            },
+            {
+              "const": "397",
+              "title": "BE, FSMA"
+            },
+            {
+              "const": "398",
+              "title": "FR, PHAST"
+            },
+            {
+              "const": "399",
+              "title": "EXIS (Exis Technologies Ltd.)"
+            },
+            {
+              "const": "400",
+              "title": "FAO (Food and Agriculture Organisation)"
+            },
+            {
+              "const": "401",
+              "title": "CH, Spedlogswiss"
+            },
+            {
+              "const": "402",
+              "title": "JP, National Tax Agency"
+            },
+            {
+              "const": "403",
+              "title": "Comite Européen de Normalisation"
+            },
+            {
+              "const": "404",
+              "title": "Assigned by logistics service provider"
+            },
+            {
+              "const": "405",
+              "title": "Assigned by transport ministry"
+            },
+            {
+              "const": "406",
+              "title": "AR, Customs Administration of Argentina"
+            },
+            {
+              "const": "407",
+              "title": "BO, Customs Administration of Bolivia"
+            },
+            {
+              "const": "408",
+              "title": "BR, Customs Administration of Brazil"
+            },
+            {
+              "const": "409",
+              "title": "PY, Customs Administration of Paraguay"
+            },
+            {
+              "const": "410",
+              "title": "UY, Customs Administration of Uruguay"
+            },
+            {
+              "const": "411",
+              "title": "VE, Customs Administration of Venezuela"
+            },
+            {
+              "const": "412",
+              "title": "IN, Customs Administration of India"
+            },
+            {
+              "const": "413",
+              "title": "JP, JEC (UN/CEFACT Japan Committee)"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

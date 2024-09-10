@@ -1,0 +1,6 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Data model: D19B CHACCO Mapping Guide; AAA
+
+ERROR: Empty code list: codelists/IANA_MIMEMediaType.json#/$defs/codeList/MIMEMediaTypeType (Binary Object. Mime. Code)

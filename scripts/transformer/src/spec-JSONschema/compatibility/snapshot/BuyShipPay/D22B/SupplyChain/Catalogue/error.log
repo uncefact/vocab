@@ -1,0 +1,7 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Datenmodell: CIC SCRDM; D22B
+
+ERROR: Empty code list restriction (ignored): file: "UNECE-CrossIndustryCatalogue.json" (Q)DT: "Quantity. Type" cc or sc "Quantity Unit. Code List. Identifier"
+ERROR: Leere Codeliste: UNECE-CrossIndustryCatalogue.json#/$defs/codeList/$defs/MIMEMediaTypeType (Binary Object. Mime. Code)

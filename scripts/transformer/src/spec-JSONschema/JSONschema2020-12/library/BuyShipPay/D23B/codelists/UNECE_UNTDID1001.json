@@ -1,0 +1,3275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID1001",
+  "title": "UNECE_UNTDID1001",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID1001Type": {
+          "title": "Document name code",
+          "description": "Code specifying the document name.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Certificate of analysis"
+            },
+            {
+              "const": "2",
+              "title": "Certificate of conformity"
+            },
+            {
+              "const": "3",
+              "title": "Certificate of quality"
+            },
+            {
+              "const": "4",
+              "title": "Test report"
+            },
+            {
+              "const": "5",
+              "title": "Product performance report"
+            },
+            {
+              "const": "6",
+              "title": "Product specification report"
+            },
+            {
+              "const": "7",
+              "title": "Process data report"
+            },
+            {
+              "const": "8",
+              "title": "First sample test report"
+            },
+            {
+              "const": "9",
+              "title": "Price/sales catalogue"
+            },
+            {
+              "const": "10",
+              "title": "Party information"
+            },
+            {
+              "const": "11",
+              "title": "Federal label approval"
+            },
+            {
+              "const": "12",
+              "title": "Mill certificate"
+            },
+            {
+              "const": "13",
+              "title": "Post receipt"
+            },
+            {
+              "const": "14",
+              "title": "Weight certificate"
+            },
+            {
+              "const": "15",
+              "title": "Weight list"
+            },
+            {
+              "const": "16",
+              "title": "Certificate"
+            },
+            {
+              "const": "17",
+              "title": "Combined certificate of value and origin"
+            },
+            {
+              "const": "18",
+              "title": "Movement certificate A.TR.1"
+            },
+            {
+              "const": "19",
+              "title": "Certificate of quantity"
+            },
+            {
+              "const": "20",
+              "title": "Quality data message"
+            },
+            {
+              "const": "21",
+              "title": "Query"
+            },
+            {
+              "const": "22",
+              "title": "Response to query"
+            },
+            {
+              "const": "23",
+              "title": "Status information"
+            },
+            {
+              "const": "24",
+              "title": "Restow"
+            },
+            {
+              "const": "25",
+              "title": "Container discharge list"
+            },
+            {
+              "const": "26",
+              "title": "Corporate superannuation contributions advice"
+            },
+            {
+              "const": "27",
+              "title": "Industry superannuation contributions advice"
+            },
+            {
+              "const": "28",
+              "title": "Corporate superannuation member maintenance message"
+            },
+            {
+              "const": "29",
+              "title": "Industry superannuation member maintenance message"
+            },
+            {
+              "const": "30",
+              "title": "Life insurance payroll deductions advice"
+            },
+            {
+              "const": "31",
+              "title": "Underbond request"
+            },
+            {
+              "const": "32",
+              "title": "Underbond approval"
+            },
+            {
+              "const": "33",
+              "title": "Certificate of sealing of export meat lockers"
+            },
+            {
+              "const": "34",
+              "title": "Cargo status"
+            },
+            {
+              "const": "35",
+              "title": "Inventory report"
+            },
+            {
+              "const": "36",
+              "title": "Identity card"
+            },
+            {
+              "const": "37",
+              "title": "Response to a trade statistics message"
+            },
+            {
+              "const": "38",
+              "title": "Vaccination certificate"
+            },
+            {
+              "const": "39",
+              "title": "Passport"
+            },
+            {
+              "const": "40",
+              "title": "Driving licence (national)"
+            },
+            {
+              "const": "41",
+              "title": "Driving licence (international)"
+            },
+            {
+              "const": "42",
+              "title": "Free pass"
+            },
+            {
+              "const": "43",
+              "title": "Season ticket"
+            },
+            {
+              "const": "44",
+              "title": "Transport status report"
+            },
+            {
+              "const": "45",
+              "title": "Transport status request"
+            },
+            {
+              "const": "46",
+              "title": "Banking status"
+            },
+            {
+              "const": "47",
+              "title": "Extra-Community trade statistical declaration"
+            },
+            {
+              "const": "48",
+              "title": "Written instructions in conformance with ADR article number 10385"
+            },
+            {
+              "const": "49",
+              "title": "Damage certification"
+            },
+            {
+              "const": "50",
+              "title": "Validated priced tender"
+            },
+            {
+              "const": "51",
+              "title": "Price/sales catalogue response"
+            },
+            {
+              "const": "52",
+              "title": "Price negotiation result"
+            },
+            {
+              "const": "53",
+              "title": "Safety and hazard data sheet"
+            },
+            {
+              "const": "54",
+              "title": "Legal statement of an account"
+            },
+            {
+              "const": "55",
+              "title": "Listing statement of an account"
+            },
+            {
+              "const": "56",
+              "title": "Closing statement of an account"
+            },
+            {
+              "const": "57",
+              "title": "Transport equipment on-hire report"
+            },
+            {
+              "const": "58",
+              "title": "Transport equipment off-hire report"
+            },
+            {
+              "const": "59",
+              "title": "Treatment - nil outturn"
+            },
+            {
+              "const": "60",
+              "title": "Treatment - time-up underbond"
+            },
+            {
+              "const": "61",
+              "title": "Treatment - underbond by sea"
+            },
+            {
+              "const": "62",
+              "title": "Treatment - personal effect"
+            },
+            {
+              "const": "63",
+              "title": "Treatment - timber"
+            },
+            {
+              "const": "64",
+              "title": "Preliminary credit assessment"
+            },
+            {
+              "const": "65",
+              "title": "Credit cover"
+            },
+            {
+              "const": "66",
+              "title": "Current account"
+            },
+            {
+              "const": "67",
+              "title": "Commercial dispute"
+            },
+            {
+              "const": "68",
+              "title": "Chargeback"
+            },
+            {
+              "const": "69",
+              "title": "Reassignment"
+            },
+            {
+              "const": "70",
+              "title": "Collateral account"
+            },
+            {
+              "const": "71",
+              "title": "Request for payment"
+            },
+            {
+              "const": "72",
+              "title": "Unship permit"
+            },
+            {
+              "const": "73",
+              "title": "Statistical definitions"
+            },
+            {
+              "const": "74",
+              "title": "Statistical data"
+            },
+            {
+              "const": "75",
+              "title": "Request for statistical data"
+            },
+            {
+              "const": "76",
+              "title": "Call-off delivery"
+            },
+            {
+              "const": "77",
+              "title": "Consignment status report"
+            },
+            {
+              "const": "78",
+              "title": "Inventory movement advice"
+            },
+            {
+              "const": "79",
+              "title": "Inventory status advice"
+            },
+            {
+              "const": "80",
+              "title": "Debit note related to goods or services"
+            },
+            {
+              "const": "81",
+              "title": "Credit note related to goods or services"
+            },
+            {
+              "const": "82",
+              "title": "Metered services invoice"
+            },
+            {
+              "const": "83",
+              "title": "Credit note related to financial adjustments"
+            },
+            {
+              "const": "84",
+              "title": "Debit note related to financial adjustments"
+            },
+            {
+              "const": "85",
+              "title": "Customs manifest"
+            },
+            {
+              "const": "86",
+              "title": "Vessel unpack report"
+            },
+            {
+              "const": "87",
+              "title": "General cargo summary manifest report"
+            },
+            {
+              "const": "88",
+              "title": "Consignment unpack report"
+            },
+            {
+              "const": "89",
+              "title": "Meat and meat by-products sanitary certificate"
+            },
+            {
+              "const": "90",
+              "title": "Meat food products sanitary certificate"
+            },
+            {
+              "const": "91",
+              "title": "Poultry sanitary certificate"
+            },
+            {
+              "const": "92",
+              "title": "Horsemeat sanitary certificate"
+            },
+            {
+              "const": "93",
+              "title": "Casing sanitary certificate"
+            },
+            {
+              "const": "94",
+              "title": "Pharmaceutical sanitary certificate"
+            },
+            {
+              "const": "95",
+              "title": "Inedible sanitary certificate"
+            },
+            {
+              "const": "96",
+              "title": "Impending arrival"
+            },
+            {
+              "const": "97",
+              "title": "Means of transport advice"
+            },
+            {
+              "const": "98",
+              "title": "Arrival information"
+            },
+            {
+              "const": "99",
+              "title": "Cargo release notification"
+            },
+            {
+              "const": "100",
+              "title": "Excise certificate"
+            },
+            {
+              "const": "101",
+              "title": "Registration document"
+            },
+            {
+              "const": "102",
+              "title": "Tax notification"
+            },
+            {
+              "const": "103",
+              "title": "Transport equipment direct interchange report"
+            },
+            {
+              "const": "104",
+              "title": "Transport equipment impending arrival advice"
+            },
+            {
+              "const": "105",
+              "title": "Purchase order"
+            },
+            {
+              "const": "106",
+              "title": "Transport equipment damage report"
+            },
+            {
+              "const": "107",
+              "title": "Transport equipment maintenance and repair work estimate advice"
+            },
+            {
+              "const": "108",
+              "title": "Transport equipment empty release instruction"
+            },
+            {
+              "const": "109",
+              "title": "Transport movement gate in report"
+            },
+            {
+              "const": "110",
+              "title": "Manufacturing instructions"
+            },
+            {
+              "const": "111",
+              "title": "Transport movement gate out report"
+            },
+            {
+              "const": "112",
+              "title": "Transport equipment unpacking instruction"
+            },
+            {
+              "const": "113",
+              "title": "Transport equipment unpacking report"
+            },
+            {
+              "const": "114",
+              "title": "Transport equipment pick-up availability request"
+            },
+            {
+              "const": "115",
+              "title": "Transport equipment pick-up availability confirmation"
+            },
+            {
+              "const": "116",
+              "title": "Transport equipment pick-up report"
+            },
+            {
+              "const": "117",
+              "title": "Transport equipment shift report"
+            },
+            {
+              "const": "118",
+              "title": "Transport discharge instruction"
+            },
+            {
+              "const": "119",
+              "title": "Transport discharge report"
+            },
+            {
+              "const": "120",
+              "title": "Stores requisition"
+            },
+            {
+              "const": "121",
+              "title": "Transport loading instruction"
+            },
+            {
+              "const": "122",
+              "title": "Transport loading report"
+            },
+            {
+              "const": "123",
+              "title": "Transport equipment maintenance and repair work authorisation"
+            },
+            {
+              "const": "124",
+              "title": "Transport departure report"
+            },
+            {
+              "const": "125",
+              "title": "Transport empty equipment advice"
+            },
+            {
+              "const": "126",
+              "title": "Transport equipment acceptance order"
+            },
+            {
+              "const": "127",
+              "title": "Transport equipment special service instruction"
+            },
+            {
+              "const": "128",
+              "title": "Transport equipment stock report"
+            },
+            {
+              "const": "129",
+              "title": "Transport cargo release order"
+            },
+            {
+              "const": "130",
+              "title": "Invoicing data sheet"
+            },
+            {
+              "const": "131",
+              "title": "Transport equipment packing instruction"
+            },
+            {
+              "const": "132",
+              "title": "Customs clearance notice"
+            },
+            {
+              "const": "133",
+              "title": "Customs documents expiration notice"
+            },
+            {
+              "const": "134",
+              "title": "Transport equipment on-hire request"
+            },
+            {
+              "const": "135",
+              "title": "Transport equipment on-hire order"
+            },
+            {
+              "const": "136",
+              "title": "Transport equipment off-hire request"
+            },
+            {
+              "const": "137",
+              "title": "Transport equipment survey order"
+            },
+            {
+              "const": "138",
+              "title": "Transport equipment survey order response"
+            },
+            {
+              "const": "139",
+              "title": "Transport equipment survey report"
+            },
+            {
+              "const": "140",
+              "title": "Packing instructions"
+            },
+            {
+              "const": "141",
+              "title": "Advising items to be booked to a financial account"
+            },
+            {
+              "const": "142",
+              "title": "Transport equipment maintenance and repair work estimate order"
+            },
+            {
+              "const": "143",
+              "title": "Transport equipment maintenance and repair notice"
+            },
+            {
+              "const": "144",
+              "title": "Empty container disposition order"
+            },
+            {
+              "const": "145",
+              "title": "Cargo vessel discharge order"
+            },
+            {
+              "const": "146",
+              "title": "Cargo vessel loading order"
+            },
+            {
+              "const": "147",
+              "title": "Multidrop order"
+            },
+            {
+              "const": "148",
+              "title": "Bailment contract"
+            },
+            {
+              "const": "149",
+              "title": "Basic agreement"
+            },
+            {
+              "const": "150",
+              "title": "Internal transport order"
+            },
+            {
+              "const": "151",
+              "title": "Grant"
+            },
+            {
+              "const": "152",
+              "title": "Indefinite delivery indefinite quantity contract"
+            },
+            {
+              "const": "153",
+              "title": "Indefinite delivery definite quantity contract"
+            },
+            {
+              "const": "154",
+              "title": "Requirements contract"
+            },
+            {
+              "const": "155",
+              "title": "Task order"
+            },
+            {
+              "const": "156",
+              "title": "Make or buy plan"
+            },
+            {
+              "const": "157",
+              "title": "Subcontractor plan"
+            },
+            {
+              "const": "158",
+              "title": "Cost data summary"
+            },
+            {
+              "const": "159",
+              "title": "Certified cost and price data"
+            },
+            {
+              "const": "160",
+              "title": "Wage determination"
+            },
+            {
+              "const": "161",
+              "title": "Contract Funds Status Report (CFSR)"
+            },
+            {
+              "const": "162",
+              "title": "Certified inspection and test results"
+            },
+            {
+              "const": "163",
+              "title": "Material inspection and receiving report"
+            },
+            {
+              "const": "164",
+              "title": "Purchasing specification"
+            },
+            {
+              "const": "165",
+              "title": "Payment or performance bond"
+            },
+            {
+              "const": "166",
+              "title": "Contract security classification specification"
+            },
+            {
+              "const": "167",
+              "title": "Manufacturing specification"
+            },
+            {
+              "const": "168",
+              "title": "Buy America certificate of compliance"
+            },
+            {
+              "const": "169",
+              "title": "Container off-hire notice"
+            },
+            {
+              "const": "170",
+              "title": "Cargo acceptance order"
+            },
+            {
+              "const": "171",
+              "title": "Pick-up notice"
+            },
+            {
+              "const": "172",
+              "title": "Authorisation to plan and suggest orders"
+            },
+            {
+              "const": "173",
+              "title": "Authorisation to plan and ship orders"
+            },
+            {
+              "const": "174",
+              "title": "Drawing"
+            },
+            {
+              "const": "175",
+              "title": "Cost Performance Report (CPR) format 2"
+            },
+            {
+              "const": "176",
+              "title": "Cost Schedule Status Report (CSSR)"
+            },
+            {
+              "const": "177",
+              "title": "Cost Performance Report (CPR) format 1"
+            },
+            {
+              "const": "178",
+              "title": "Cost Performance Report (CPR) format 3"
+            },
+            {
+              "const": "179",
+              "title": "Cost Performance Report (CPR) format 4"
+            },
+            {
+              "const": "180",
+              "title": "Cost Performance Report (CPR) format 5"
+            },
+            {
+              "const": "181",
+              "title": "Progressive discharge report"
+            },
+            {
+              "const": "182",
+              "title": "Balance confirmation"
+            },
+            {
+              "const": "183",
+              "title": "Container stripping order"
+            },
+            {
+              "const": "184",
+              "title": "Container stuffing order"
+            },
+            {
+              "const": "185",
+              "title": "Conveyance declaration (arrival)"
+            },
+            {
+              "const": "186",
+              "title": "Conveyance declaration (departure)"
+            },
+            {
+              "const": "187",
+              "title": "Conveyance declaration (combined)"
+            },
+            {
+              "const": "188",
+              "title": "Project recovery plan"
+            },
+            {
+              "const": "189",
+              "title": "Project production plan"
+            },
+            {
+              "const": "190",
+              "title": "Statistical and other administrative internal documents"
+            },
+            {
+              "const": "191",
+              "title": "Project master schedule"
+            },
+            {
+              "const": "192",
+              "title": "Priced alternate tender bill of quantity"
+            },
+            {
+              "const": "193",
+              "title": "Estimated priced bill of quantity"
+            },
+            {
+              "const": "194",
+              "title": "Draft bill of quantity"
+            },
+            {
+              "const": "195",
+              "title": "Documentary credit collection instruction"
+            },
+            {
+              "const": "196",
+              "title": "Request for an amendment of a documentary credit"
+            },
+            {
+              "const": "197",
+              "title": "Documentary credit amendment information"
+            },
+            {
+              "const": "198",
+              "title": "Advice of an amendment of a documentary credit"
+            },
+            {
+              "const": "199",
+              "title": "Response to an amendment of a documentary credit"
+            },
+            {
+              "const": "200",
+              "title": "Documentary credit issuance information"
+            },
+            {
+              "const": "201",
+              "title": "Direct payment valuation request"
+            },
+            {
+              "const": "202",
+              "title": "Direct payment valuation"
+            },
+            {
+              "const": "203",
+              "title": "Provisional payment valuation"
+            },
+            {
+              "const": "204",
+              "title": "Payment valuation"
+            },
+            {
+              "const": "205",
+              "title": "Quantity valuation"
+            },
+            {
+              "const": "206",
+              "title": "Quantity valuation request"
+            },
+            {
+              "const": "207",
+              "title": "Contract bill of quantities - BOQ"
+            },
+            {
+              "const": "208",
+              "title": "Unpriced bill of quantity"
+            },
+            {
+              "const": "209",
+              "title": "Priced tender BOQ"
+            },
+            {
+              "const": "210",
+              "title": "Enquiry"
+            },
+            {
+              "const": "211",
+              "title": "Interim application for payment"
+            },
+            {
+              "const": "212",
+              "title": "Agreement to pay"
+            },
+            {
+              "const": "213",
+              "title": "Request for financial cancellation"
+            },
+            {
+              "const": "214",
+              "title": "Pre-authorised direct debit(s)"
+            },
+            {
+              "const": "215",
+              "title": "Letter of intent"
+            },
+            {
+              "const": "216",
+              "title": "Approved unpriced bill of quantity"
+            },
+            {
+              "const": "217",
+              "title": "Payment valuation for unscheduled items"
+            },
+            {
+              "const": "218",
+              "title": "Final payment request based on completion of work"
+            },
+            {
+              "const": "219",
+              "title": "Payment request for completed units"
+            },
+            {
+              "const": "220",
+              "title": "Order"
+            },
+            {
+              "const": "221",
+              "title": "Blanket order"
+            },
+            {
+              "const": "222",
+              "title": "Spot order"
+            },
+            {
+              "const": "223",
+              "title": "Lease order"
+            },
+            {
+              "const": "224",
+              "title": "Rush order"
+            },
+            {
+              "const": "225",
+              "title": "Repair order"
+            },
+            {
+              "const": "226",
+              "title": "Call off order"
+            },
+            {
+              "const": "227",
+              "title": "Consignment order"
+            },
+            {
+              "const": "228",
+              "title": "Sample order"
+            },
+            {
+              "const": "229",
+              "title": "Swap order"
+            },
+            {
+              "const": "230",
+              "title": "Purchase order change request"
+            },
+            {
+              "const": "231",
+              "title": "Purchase order response"
+            },
+            {
+              "const": "232",
+              "title": "Hire order"
+            },
+            {
+              "const": "233",
+              "title": "Spare parts order"
+            },
+            {
+              "const": "234",
+              "title": "Campaign price/sales catalogue"
+            },
+            {
+              "const": "235",
+              "title": "Container list"
+            },
+            {
+              "const": "236",
+              "title": "Delivery forecast"
+            },
+            {
+              "const": "237",
+              "title": "Cross docking services order"
+            },
+            {
+              "const": "238",
+              "title": "Non-pre-authorised direct debit(s)"
+            },
+            {
+              "const": "239",
+              "title": "Rejected direct debit(s)"
+            },
+            {
+              "const": "240",
+              "title": "Delivery instructions"
+            },
+            {
+              "const": "241",
+              "title": "Delivery schedule"
+            },
+            {
+              "const": "242",
+              "title": "Delivery just-in-time"
+            },
+            {
+              "const": "243",
+              "title": "Pre-authorised direct debit request(s)"
+            },
+            {
+              "const": "244",
+              "title": "Non-pre-authorised direct debit request(s)"
+            },
+            {
+              "const": "245",
+              "title": "Delivery release"
+            },
+            {
+              "const": "246",
+              "title": "Settlement of a letter of credit"
+            },
+            {
+              "const": "247",
+              "title": "Bank to bank funds transfer"
+            },
+            {
+              "const": "248",
+              "title": "Customer payment order(s)"
+            },
+            {
+              "const": "249",
+              "title": "Low value payment order(s)"
+            },
+            {
+              "const": "250",
+              "title": "Crew list declaration"
+            },
+            {
+              "const": "251",
+              "title": "Inquiry"
+            },
+            {
+              "const": "252",
+              "title": "Response to previous banking status message"
+            },
+            {
+              "const": "253",
+              "title": "Project master plan"
+            },
+            {
+              "const": "254",
+              "title": "Project plan"
+            },
+            {
+              "const": "255",
+              "title": "Project schedule"
+            },
+            {
+              "const": "256",
+              "title": "Project planning available resources"
+            },
+            {
+              "const": "257",
+              "title": "Project planning calendar"
+            },
+            {
+              "const": "258",
+              "title": "Standing order"
+            },
+            {
+              "const": "259",
+              "title": "Cargo movement event log"
+            },
+            {
+              "const": "260",
+              "title": "Cargo analysis voyage report"
+            },
+            {
+              "const": "261",
+              "title": "Self billed credit note"
+            },
+            {
+              "const": "262",
+              "title": "Consolidated credit note - goods and services"
+            },
+            {
+              "const": "263",
+              "title": "Inventory adjustment status report"
+            },
+            {
+              "const": "264",
+              "title": "Transport equipment movement instruction"
+            },
+            {
+              "const": "265",
+              "title": "Transport equipment movement report"
+            },
+            {
+              "const": "266",
+              "title": "Transport equipment status change report"
+            },
+            {
+              "const": "267",
+              "title": "Fumigation certificate"
+            },
+            {
+              "const": "268",
+              "title": "Wine certificate"
+            },
+            {
+              "const": "269",
+              "title": "Wool health certificate"
+            },
+            {
+              "const": "270",
+              "title": "Delivery note"
+            },
+            {
+              "const": "271",
+              "title": "Packing list"
+            },
+            {
+              "const": "272",
+              "title": "New code request"
+            },
+            {
+              "const": "273",
+              "title": "Code change request"
+            },
+            {
+              "const": "274",
+              "title": "Simple data element request"
+            },
+            {
+              "const": "275",
+              "title": "Simple data element change request"
+            },
+            {
+              "const": "276",
+              "title": "Composite data element request"
+            },
+            {
+              "const": "277",
+              "title": "Composite data element change request"
+            },
+            {
+              "const": "278",
+              "title": "Segment request"
+            },
+            {
+              "const": "279",
+              "title": "Segment change request"
+            },
+            {
+              "const": "280",
+              "title": "New message request"
+            },
+            {
+              "const": "281",
+              "title": "Message in development request"
+            },
+            {
+              "const": "282",
+              "title": "Modification of existing message"
+            },
+            {
+              "const": "283",
+              "title": "Tracking number assignment report"
+            },
+            {
+              "const": "284",
+              "title": "User directory definition"
+            },
+            {
+              "const": "285",
+              "title": "United Nations standard message request"
+            },
+            {
+              "const": "286",
+              "title": "Service directory definition"
+            },
+            {
+              "const": "287",
+              "title": "Status report"
+            },
+            {
+              "const": "288",
+              "title": "Kanban schedule"
+            },
+            {
+              "const": "289",
+              "title": "Product data message"
+            },
+            {
+              "const": "290",
+              "title": "A claim for parts and/or labour charges"
+            },
+            {
+              "const": "291",
+              "title": "Delivery schedule response"
+            },
+            {
+              "const": "292",
+              "title": "Inspection request"
+            },
+            {
+              "const": "293",
+              "title": "Inspection report"
+            },
+            {
+              "const": "294",
+              "title": "Application acknowledgement and error report"
+            },
+            {
+              "const": "295",
+              "title": "Price variation invoice"
+            },
+            {
+              "const": "296",
+              "title": "Credit note for price variation"
+            },
+            {
+              "const": "297",
+              "title": "Instruction to collect"
+            },
+            {
+              "const": "298",
+              "title": "Dangerous goods list"
+            },
+            {
+              "const": "299",
+              "title": "Registration renewal"
+            },
+            {
+              "const": "300",
+              "title": "Registration change"
+            },
+            {
+              "const": "301",
+              "title": "Response to registration"
+            },
+            {
+              "const": "302",
+              "title": "Implementation guideline"
+            },
+            {
+              "const": "303",
+              "title": "Request for transfer"
+            },
+            {
+              "const": "304",
+              "title": "Cost performance report"
+            },
+            {
+              "const": "305",
+              "title": "Application error and acknowledgement"
+            },
+            {
+              "const": "306",
+              "title": "Cash pool financial statement"
+            },
+            {
+              "const": "307",
+              "title": "Sequenced delivery schedule"
+            },
+            {
+              "const": "308",
+              "title": "Delcredere credit note"
+            },
+            {
+              "const": "309",
+              "title": "Healthcare discharge report, final"
+            },
+            {
+              "const": "310",
+              "title": "Offer / quotation"
+            },
+            {
+              "const": "311",
+              "title": "Request for quote"
+            },
+            {
+              "const": "312",
+              "title": "Acknowledgement message"
+            },
+            {
+              "const": "313",
+              "title": "Application error message"
+            },
+            {
+              "const": "314",
+              "title": "Cargo movement voyage summary"
+            },
+            {
+              "const": "315",
+              "title": "Contract"
+            },
+            {
+              "const": "316",
+              "title": "Application for usage of berth or mooring facilities"
+            },
+            {
+              "const": "317",
+              "title": "Application for designation of berthing places"
+            },
+            {
+              "const": "318",
+              "title": "Application for shifting from the designated place in port"
+            },
+            {
+              "const": "319",
+              "title": "Supplementary document for application for cargo operation of dangerous goods"
+            },
+            {
+              "const": "320",
+              "title": "Acknowledgement of order"
+            },
+            {
+              "const": "321",
+              "title": "Supplementary document for application for transport of dangerous goods"
+            },
+            {
+              "const": "322",
+              "title": "Optical Character Reading (OCR) payment"
+            },
+            {
+              "const": "323",
+              "title": "Preliminary sales report"
+            },
+            {
+              "const": "324",
+              "title": "Transport emergency card"
+            },
+            {
+              "const": "325",
+              "title": "Proforma invoice"
+            },
+            {
+              "const": "326",
+              "title": "Partial invoice"
+            },
+            {
+              "const": "327",
+              "title": "Operating instructions"
+            },
+            {
+              "const": "328",
+              "title": "Name/product plate"
+            },
+            {
+              "const": "329",
+              "title": "Co-insurance ceding bordereau"
+            },
+            {
+              "const": "330",
+              "title": "Request for delivery instructions"
+            },
+            {
+              "const": "331",
+              "title": "Commercial invoice which includes a packing list"
+            },
+            {
+              "const": "332",
+              "title": "Trade data"
+            },
+            {
+              "const": "333",
+              "title": "Customs declaration for cargo examination"
+            },
+            {
+              "const": "334",
+              "title": "Customs declaration for cargo examination, alternate"
+            },
+            {
+              "const": "335",
+              "title": "Booking request"
+            },
+            {
+              "const": "336",
+              "title": "Customs crew and conveyance"
+            },
+            {
+              "const": "337",
+              "title": "Customs summary declaration with commercial detail, alternate"
+            },
+            {
+              "const": "338",
+              "title": "Items booked to a financial account report"
+            },
+            {
+              "const": "339",
+              "title": "Report of transactions which need further information from the receiver"
+            },
+            {
+              "const": "340",
+              "title": "Shipping instructions"
+            },
+            {
+              "const": "341",
+              "title": "Shipper's letter of instructions (air)"
+            },
+            {
+              "const": "342",
+              "title": "Report of transactions for information only"
+            },
+            {
+              "const": "343",
+              "title": "Cartage order (local transport)"
+            },
+            {
+              "const": "344",
+              "title": "EDI associated object administration message"
+            },
+            {
+              "const": "345",
+              "title": "Ready for despatch advice"
+            },
+            {
+              "const": "346",
+              "title": "Summary sales report"
+            },
+            {
+              "const": "347",
+              "title": "Order status enquiry"
+            },
+            {
+              "const": "348",
+              "title": "Order status report"
+            },
+            {
+              "const": "349",
+              "title": "Declaration regarding the inward and outward movement of vessel"
+            },
+            {
+              "const": "350",
+              "title": "Despatch order"
+            },
+            {
+              "const": "351",
+              "title": "Despatch advice"
+            },
+            {
+              "const": "352",
+              "title": "Notification of usage of berth or mooring facilities"
+            },
+            {
+              "const": "353",
+              "title": "Application for vessel's entering into port area in night- time"
+            },
+            {
+              "const": "354",
+              "title": "Notification of emergency shifting from the designated place in port"
+            },
+            {
+              "const": "355",
+              "title": "Customs summary declaration without commercial detail, alternate"
+            },
+            {
+              "const": "356",
+              "title": "Performance bond"
+            },
+            {
+              "const": "357",
+              "title": "Payment bond"
+            },
+            {
+              "const": "358",
+              "title": "Healthcare discharge report, preliminary"
+            },
+            {
+              "const": "359",
+              "title": "Request for provision of a health service"
+            },
+            {
+              "const": "360",
+              "title": "Request for price quote"
+            },
+            {
+              "const": "361",
+              "title": "Price quote"
+            },
+            {
+              "const": "362",
+              "title": "Delivery quote"
+            },
+            {
+              "const": "363",
+              "title": "Price and delivery quote"
+            },
+            {
+              "const": "364",
+              "title": "Contract price quote"
+            },
+            {
+              "const": "365",
+              "title": "Contract price and delivery quote"
+            },
+            {
+              "const": "366",
+              "title": "Price quote, specified end-customer"
+            },
+            {
+              "const": "367",
+              "title": "Price and delivery quote, specified end-customer"
+            },
+            {
+              "const": "368",
+              "title": "Price quote, ship and debit"
+            },
+            {
+              "const": "369",
+              "title": "Price and delivery quote, ship and debit"
+            },
+            {
+              "const": "370",
+              "title": "Advice of distribution of documents"
+            },
+            {
+              "const": "371",
+              "title": "Plan for provision of health service"
+            },
+            {
+              "const": "372",
+              "title": "Prescription"
+            },
+            {
+              "const": "373",
+              "title": "Prescription request"
+            },
+            {
+              "const": "374",
+              "title": "Prescription dispensing report"
+            },
+            {
+              "const": "375",
+              "title": "Certificate of shipment"
+            },
+            {
+              "const": "376",
+              "title": "Standing inquiry on product information"
+            },
+            {
+              "const": "377",
+              "title": "Party credit information"
+            },
+            {
+              "const": "378",
+              "title": "Party payment behaviour information"
+            },
+            {
+              "const": "379",
+              "title": "Request for metering point information"
+            },
+            {
+              "const": "380",
+              "title": "Commercial invoice"
+            },
+            {
+              "const": "381",
+              "title": "Credit note"
+            },
+            {
+              "const": "382",
+              "title": "Commission note"
+            },
+            {
+              "const": "383",
+              "title": "Debit note"
+            },
+            {
+              "const": "384",
+              "title": "Corrected invoice"
+            },
+            {
+              "const": "385",
+              "title": "Consolidated invoice"
+            },
+            {
+              "const": "386",
+              "title": "Prepayment invoice"
+            },
+            {
+              "const": "387",
+              "title": "Hire invoice"
+            },
+            {
+              "const": "388",
+              "title": "Tax invoice"
+            },
+            {
+              "const": "389",
+              "title": "Self-billed invoice"
+            },
+            {
+              "const": "390",
+              "title": "Delcredere invoice"
+            },
+            {
+              "const": "391",
+              "title": "Metering point information response"
+            },
+            {
+              "const": "392",
+              "title": "Notification of change of supplier"
+            },
+            {
+              "const": "393",
+              "title": "Factored invoice"
+            },
+            {
+              "const": "394",
+              "title": "Lease invoice"
+            },
+            {
+              "const": "395",
+              "title": "Consignment invoice"
+            },
+            {
+              "const": "396",
+              "title": "Factored credit note"
+            },
+            {
+              "const": "397",
+              "title": "Commercial account summary response"
+            },
+            {
+              "const": "398",
+              "title": "Cross docking despatch advice"
+            },
+            {
+              "const": "399",
+              "title": "Transshipment despatch advice"
+            },
+            {
+              "const": "400",
+              "title": "Exceptional order"
+            },
+            {
+              "const": "401",
+              "title": "Pre-packed cross docking order"
+            },
+            {
+              "const": "402",
+              "title": "Intermediate handling cross docking order"
+            },
+            {
+              "const": "403",
+              "title": "Means of transportation availability information"
+            },
+            {
+              "const": "404",
+              "title": "Means of transportation schedule information"
+            },
+            {
+              "const": "405",
+              "title": "Transport equipment delivery notice"
+            },
+            {
+              "const": "406",
+              "title": "Notification to supplier of contract termination"
+            },
+            {
+              "const": "407",
+              "title": "Notification to supplier of metering point changes"
+            },
+            {
+              "const": "408",
+              "title": "Notification of meter change"
+            },
+            {
+              "const": "409",
+              "title": "Instructions for bank transfer"
+            },
+            {
+              "const": "410",
+              "title": "Notification of metering point identification change"
+            },
+            {
+              "const": "411",
+              "title": "Utilities time series message"
+            },
+            {
+              "const": "412",
+              "title": "Application for banker's draft"
+            },
+            {
+              "const": "413",
+              "title": "Infrastructure condition"
+            },
+            {
+              "const": "414",
+              "title": "Acknowledgement of change of supplier"
+            },
+            {
+              "const": "415",
+              "title": "Data Plot Sheet"
+            },
+            {
+              "const": "416",
+              "title": "Soil analysis"
+            },
+            {
+              "const": "417",
+              "title": "Farmyard manure analysis"
+            },
+            {
+              "const": "418",
+              "title": "WCO Cargo Report Export, Rail or Road"
+            },
+            {
+              "const": "419",
+              "title": "WCO Cargo Report Export, Air or Maritime"
+            },
+            {
+              "const": "420",
+              "title": "Optical Character Reading (OCR) payment credit note"
+            },
+            {
+              "const": "421",
+              "title": "WCO Cargo Report Import, Rail or Road"
+            },
+            {
+              "const": "422",
+              "title": "WCO Cargo Report Import, Air or Maritime"
+            },
+            {
+              "const": "423",
+              "title": "WCO one-step export declaration"
+            },
+            {
+              "const": "424",
+              "title": "WCO first step of two-step export declaration"
+            },
+            {
+              "const": "425",
+              "title": "Collection payment advice"
+            },
+            {
+              "const": "426",
+              "title": "Documentary credit payment advice"
+            },
+            {
+              "const": "427",
+              "title": "Documentary credit acceptance advice"
+            },
+            {
+              "const": "428",
+              "title": "Documentary credit negotiation advice"
+            },
+            {
+              "const": "429",
+              "title": "Application for banker's guarantee"
+            },
+            {
+              "const": "430",
+              "title": "Banker's guarantee"
+            },
+            {
+              "const": "431",
+              "title": "Documentary credit letter of indemnity"
+            },
+            {
+              "const": "432",
+              "title": "Notification to grid operator of contract termination"
+            },
+            {
+              "const": "433",
+              "title": "Notification to grid operator of metering point changes"
+            },
+            {
+              "const": "434",
+              "title": "Notification of balance responsible entity change"
+            },
+            {
+              "const": "435",
+              "title": "Preadvice of a credit"
+            },
+            {
+              "const": "436",
+              "title": "Transport equipment profile report"
+            },
+            {
+              "const": "437",
+              "title": "Request for price and delivery quote, specified end-user"
+            },
+            {
+              "const": "438",
+              "title": "Request for price quote, ship and debit"
+            },
+            {
+              "const": "439",
+              "title": "Request for price and delivery quote, ship and debit"
+            },
+            {
+              "const": "440",
+              "title": "Delivery point list."
+            },
+            {
+              "const": "441",
+              "title": "Transport routing information"
+            },
+            {
+              "const": "442",
+              "title": "Request for delivery quote"
+            },
+            {
+              "const": "443",
+              "title": "Request for price and delivery quote"
+            },
+            {
+              "const": "444",
+              "title": "Request for contract price quote"
+            },
+            {
+              "const": "445",
+              "title": "Request for contract price and delivery quote"
+            },
+            {
+              "const": "446",
+              "title": "Request for price quote, specified end-customer"
+            },
+            {
+              "const": "447",
+              "title": "Collection order"
+            },
+            {
+              "const": "448",
+              "title": "Documents presentation form"
+            },
+            {
+              "const": "449",
+              "title": "Identification match"
+            },
+            {
+              "const": "450",
+              "title": "Payment order"
+            },
+            {
+              "const": "451",
+              "title": "Extended payment order"
+            },
+            {
+              "const": "452",
+              "title": "Multiple payment order"
+            },
+            {
+              "const": "453",
+              "title": "Notice that circumstances prevent payment of delivered goods"
+            },
+            {
+              "const": "454",
+              "title": "Credit advice"
+            },
+            {
+              "const": "455",
+              "title": "Extended credit advice"
+            },
+            {
+              "const": "456",
+              "title": "Debit advice"
+            },
+            {
+              "const": "457",
+              "title": "Reversal of debit"
+            },
+            {
+              "const": "458",
+              "title": "Reversal of credit"
+            },
+            {
+              "const": "459",
+              "title": "Travel ticket"
+            },
+            {
+              "const": "460",
+              "title": "Documentary credit application"
+            },
+            {
+              "const": "461",
+              "title": "Payment card"
+            },
+            {
+              "const": "462",
+              "title": "Ready for transshipment despatch advice"
+            },
+            {
+              "const": "463",
+              "title": "Pre-packed cross docking despatch advice"
+            },
+            {
+              "const": "464",
+              "title": "Intermediate handling cross docking despatch advice"
+            },
+            {
+              "const": "465",
+              "title": "Documentary credit"
+            },
+            {
+              "const": "466",
+              "title": "Documentary credit notification"
+            },
+            {
+              "const": "467",
+              "title": "Documentary credit transfer advice"
+            },
+            {
+              "const": "468",
+              "title": "Documentary credit amendment notification"
+            },
+            {
+              "const": "469",
+              "title": "Documentary credit amendment"
+            },
+            {
+              "const": "470",
+              "title": "Waste disposal report"
+            },
+            {
+              "const": "480",
+              "title": "Invoice out of scope of tax"
+            },
+            {
+              "const": "481",
+              "title": "Remittance advice"
+            },
+            {
+              "const": "482",
+              "title": "Port authority waste disposal report"
+            },
+            {
+              "const": "483",
+              "title": "Visa"
+            },
+            {
+              "const": "484",
+              "title": "Multiple direct debit request"
+            },
+            {
+              "const": "485",
+              "title": "Banker's draft"
+            },
+            {
+              "const": "486",
+              "title": "Multiple direct debit"
+            },
+            {
+              "const": "487",
+              "title": "Certificate of disembarkation permission"
+            },
+            {
+              "const": "488",
+              "title": "Deratting exemption certificate"
+            },
+            {
+              "const": "489",
+              "title": "Reefer connection order"
+            },
+            {
+              "const": "490",
+              "title": "Bill of exchange"
+            },
+            {
+              "const": "491",
+              "title": "Promissory note"
+            },
+            {
+              "const": "493",
+              "title": "Statement of account message"
+            },
+            {
+              "const": "494",
+              "title": "Direct delivery (transport)"
+            },
+            {
+              "const": "495",
+              "title": "WCO second step of two-step export declaration"
+            },
+            {
+              "const": "496",
+              "title": "WCO one-step import declaration"
+            },
+            {
+              "const": "497",
+              "title": "WCO first step of two-step import declaration"
+            },
+            {
+              "const": "498",
+              "title": "WCO second step of two-step import declaration"
+            },
+            {
+              "const": "499",
+              "title": "Previous transport document"
+            },
+            {
+              "const": "500",
+              "title": "Self billed prepayment invoice"
+            },
+            {
+              "const": "501",
+              "title": "Self billed factored invoice"
+            },
+            {
+              "const": "502",
+              "title": "Self billed factored credit note"
+            },
+            {
+              "const": "503",
+              "title": "Prepayment credit note"
+            },
+            {
+              "const": "520",
+              "title": "Insurance certificate"
+            },
+            {
+              "const": "521",
+              "title": "Special requirements permit related to the transport of cargo"
+            },
+            {
+              "const": "522",
+              "title": "Dangerous Goods Notification for Tanker vessel"
+            },
+            {
+              "const": "523",
+              "title": "Dangerous Goods Notification for non-tanker vessel"
+            },
+            {
+              "const": "524",
+              "title": "WCO Conveyance Arrival Report"
+            },
+            {
+              "const": "525",
+              "title": "WCO Conveyance Departure Report"
+            },
+            {
+              "const": "526",
+              "title": "Accounting voucher"
+            },
+            {
+              "const": "527",
+              "title": "Self billed debit note"
+            },
+            {
+              "const": "528",
+              "title": "Military Identification Card"
+            },
+            {
+              "const": "529",
+              "title": "Re-Entry Permit"
+            },
+            {
+              "const": "530",
+              "title": "Insurance policy"
+            },
+            {
+              "const": "531",
+              "title": "Refugee Permit"
+            },
+            {
+              "const": "532",
+              "title": "Forwarder’s credit note"
+            },
+            {
+              "const": "533",
+              "title": "Original accounting voucher"
+            },
+            {
+              "const": "534",
+              "title": "Copy accounting voucher"
+            },
+            {
+              "const": "535",
+              "title": "Pro-forma accounting voucher"
+            },
+            {
+              "const": "536",
+              "title": "International Ship Security Certificate"
+            },
+            {
+              "const": "537",
+              "title": "Interim International Ship Security Certificate"
+            },
+            {
+              "const": "538",
+              "title": "Good Manufacturing Practice (GMP) Certificate"
+            },
+            {
+              "const": "539",
+              "title": "Framework Agreement"
+            },
+            {
+              "const": "550",
+              "title": "Insurance declaration sheet (bordereau)"
+            },
+            {
+              "const": "551",
+              "title": "Transport capacity offer"
+            },
+            {
+              "const": "552",
+              "title": "Ship Security Plan"
+            },
+            {
+              "const": "553",
+              "title": "Forwarder’s invoice discrepancy report"
+            },
+            {
+              "const": "554",
+              "title": "Storage capacity offer"
+            },
+            {
+              "const": "575",
+              "title": "Insurer's invoice"
+            },
+            {
+              "const": "576",
+              "title": "Storage capacity request"
+            },
+            {
+              "const": "577",
+              "title": "Transport capacity request"
+            },
+            {
+              "const": "578",
+              "title": "EU Customs declaration for External Community Transit (T1)"
+            },
+            {
+              "const": "579",
+              "title": "EU Customs declaration for internal Community Transit (T2)"
+            },
+            {
+              "const": "580",
+              "title": "Cover note"
+            },
+            {
+              "const": "581",
+              "title": "EU Customs declaration for non-fiscal area internal Community Transit (T2F)"
+            },
+            {
+              "const": "582",
+              "title": "EU Customs declaration for internal transit to San Marino (T2SM)"
+            },
+            {
+              "const": "583",
+              "title": "EU Customs declaration for mixed consignments (T)"
+            },
+            {
+              "const": "584",
+              "title": "EU Document for establishing the Community status of goods (T2L)"
+            },
+            {
+              "const": "585",
+              "title": "EU Document for establishing the Community status of goods for certain fiscal purposes (T2LF)"
+            },
+            {
+              "const": "586",
+              "title": "Document for establishing the Customs Status of goods for San Marino (T2LSM)"
+            },
+            {
+              "const": "587",
+              "title": "Customs declaration for TIR Carnet goods"
+            },
+            {
+              "const": "588",
+              "title": "Transport Means Security Report"
+            },
+            {
+              "const": "589",
+              "title": "Halal Slaughtering Certificate"
+            },
+            {
+              "const": "610",
+              "title": "Forwarding instructions"
+            },
+            {
+              "const": "621",
+              "title": "Forwarder's advice to import agent"
+            },
+            {
+              "const": "622",
+              "title": "Forwarder's advice to exporter"
+            },
+            {
+              "const": "623",
+              "title": "Forwarder's invoice"
+            },
+            {
+              "const": "624",
+              "title": "Forwarder's certificate of receipt"
+            },
+            {
+              "const": "625",
+              "title": "Heat Treatment Certificate"
+            },
+            {
+              "const": "626",
+              "title": "Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) Certificate"
+            },
+            {
+              "const": "627",
+              "title": "Free Sale Certificate in the Country of Origin"
+            },
+            {
+              "const": "628",
+              "title": "Transit license"
+            },
+            {
+              "const": "629",
+              "title": "Veterinary quarantine certificate"
+            },
+            {
+              "const": "630",
+              "title": "Shipping note"
+            },
+            {
+              "const": "631",
+              "title": "Forwarder's warehouse receipt"
+            },
+            {
+              "const": "632",
+              "title": "Goods receipt"
+            },
+            {
+              "const": "633",
+              "title": "Port charges documents"
+            },
+            {
+              "const": "634",
+              "title": "Certified list of ingredients"
+            },
+            {
+              "const": "635",
+              "title": "Warehouse warrant"
+            },
+            {
+              "const": "636",
+              "title": "Health certificate"
+            },
+            {
+              "const": "637",
+              "title": "Food grade certificate"
+            },
+            {
+              "const": "638",
+              "title": "Certificate of suitability for transport of grains and legumes"
+            },
+            {
+              "const": "639",
+              "title": "Certificate of refrigerated transport equipment inspection"
+            },
+            {
+              "const": "640",
+              "title": "Delivery order"
+            },
+            {
+              "const": "641",
+              "title": "Thermographic reading report"
+            },
+            {
+              "const": "642",
+              "title": "Certificate of food item transport readiness"
+            },
+            {
+              "const": "643",
+              "title": "Food packaging contact certificate"
+            },
+            {
+              "const": "644",
+              "title": "Packaging material composition report"
+            },
+            {
+              "const": "645",
+              "title": "Export price certificate"
+            },
+            {
+              "const": "646",
+              "title": "Public price certificate"
+            },
+            {
+              "const": "647",
+              "title": "Drug shelf life study report"
+            },
+            {
+              "const": "648",
+              "title": "Certificate of compliance with standards of the World Organization for Animal Health (OIE)"
+            },
+            {
+              "const": "649",
+              "title": "Production facility license"
+            },
+            {
+              "const": "650",
+              "title": "Handling order"
+            },
+            {
+              "const": "651",
+              "title": "Manufacturing license"
+            },
+            {
+              "const": "652",
+              "title": "Low risk country formal letter"
+            },
+            {
+              "const": "653",
+              "title": "Previous correspondence"
+            },
+            {
+              "const": "654",
+              "title": "Declaration for radioactive material"
+            },
+            {
+              "const": "655",
+              "title": "Gate pass"
+            },
+            {
+              "const": "656",
+              "title": "Resale information"
+            },
+            {
+              "const": "657",
+              "title": "Phytosanitary Re-export Certificate"
+            },
+            {
+              "const": "658",
+              "title": "Bayplan/stowage plan, full"
+            },
+            {
+              "const": "659",
+              "title": "Bayplan/stowage plan, partial"
+            },
+            {
+              "const": "660",
+              "title": "Production Report"
+            },
+            {
+              "const": "700",
+              "title": "Waybill"
+            },
+            {
+              "const": "701",
+              "title": "Universal (multipurpose) transport document"
+            },
+            {
+              "const": "702",
+              "title": "Goods receipt, carriage"
+            },
+            {
+              "const": "703",
+              "title": "House waybill"
+            },
+            {
+              "const": "704",
+              "title": "Master bill of lading"
+            },
+            {
+              "const": "705",
+              "title": "Bill of lading"
+            },
+            {
+              "const": "706",
+              "title": "Bill of lading original"
+            },
+            {
+              "const": "707",
+              "title": "Bill of lading copy"
+            },
+            {
+              "const": "708",
+              "title": "Empty container bill"
+            },
+            {
+              "const": "709",
+              "title": "Tanker bill of lading"
+            },
+            {
+              "const": "710",
+              "title": "Sea waybill"
+            },
+            {
+              "const": "711",
+              "title": "Inland waterway bill of lading"
+            },
+            {
+              "const": "712",
+              "title": "Non-negotiable maritime transport document (generic)"
+            },
+            {
+              "const": "713",
+              "title": "Mate's receipt"
+            },
+            {
+              "const": "714",
+              "title": "House bill of lading"
+            },
+            {
+              "const": "715",
+              "title": "Letter of indemnity for non-surrender of bill of lading"
+            },
+            {
+              "const": "716",
+              "title": "Forwarder's bill of lading"
+            },
+            {
+              "const": "717",
+              "title": "Residence permit"
+            },
+            {
+              "const": "718",
+              "title": "Seaman’s book"
+            },
+            {
+              "const": "719",
+              "title": "General message"
+            },
+            {
+              "const": "720",
+              "title": "Rail consignment note (generic term)"
+            },
+            {
+              "const": "721",
+              "title": "Product data response"
+            },
+            {
+              "const": "722",
+              "title": "Road list-SMGS"
+            },
+            {
+              "const": "723",
+              "title": "Escort official recognition"
+            },
+            {
+              "const": "724",
+              "title": "Recharging document"
+            },
+            {
+              "const": "725",
+              "title": "Manufacturer raised order"
+            },
+            {
+              "const": "726",
+              "title": "Manufacturer raised consignment order"
+            },
+            {
+              "const": "727",
+              "title": "Price/sales catalogue not containing commercial information"
+            },
+            {
+              "const": "728",
+              "title": "Price/sales catalogue containing commercial information"
+            },
+            {
+              "const": "729",
+              "title": "Returns advice"
+            },
+            {
+              "const": "730",
+              "title": "Road consignment note"
+            },
+            {
+              "const": "731",
+              "title": "Commercial account summary"
+            },
+            {
+              "const": "732",
+              "title": "Announcement for returns"
+            },
+            {
+              "const": "733",
+              "title": "Instruction for returns"
+            },
+            {
+              "const": "734",
+              "title": "Sales forecast report"
+            },
+            {
+              "const": "735",
+              "title": "Sales data report"
+            },
+            {
+              "const": "736",
+              "title": "Standing inquiry on complete product information"
+            },
+            {
+              "const": "737",
+              "title": "Proof of delivery"
+            },
+            {
+              "const": "738",
+              "title": "Cargo/goods handling and movement message"
+            },
+            {
+              "const": "739",
+              "title": "Metered services consumption report supporting an invoice"
+            },
+            {
+              "const": "740",
+              "title": "Air waybill"
+            },
+            {
+              "const": "741",
+              "title": "Master air waybill"
+            },
+            {
+              "const": "742",
+              "title": "Metered services consumption report"
+            },
+            {
+              "const": "743",
+              "title": "Substitute air waybill"
+            },
+            {
+              "const": "744",
+              "title": "Crew's effects declaration"
+            },
+            {
+              "const": "745",
+              "title": "Passenger list"
+            },
+            {
+              "const": "746",
+              "title": "Delivery notice (rail transport)"
+            },
+            {
+              "const": "747",
+              "title": "Payroll deductions advice"
+            },
+            {
+              "const": "748",
+              "title": "Consignment despatch advice"
+            },
+            {
+              "const": "749",
+              "title": "Transport equipment gross mass verification message"
+            },
+            {
+              "const": "750",
+              "title": "Despatch note (post parcels)"
+            },
+            {
+              "const": "751",
+              "title": "Invoice information for accounting purposes"
+            },
+            {
+              "const": "752",
+              "title": "Plant Passport"
+            },
+            {
+              "const": "753",
+              "title": "Certificate of sustainability"
+            },
+            {
+              "const": "754",
+              "title": "Call for tender"
+            },
+            {
+              "const": "755",
+              "title": "Invitation to tender"
+            },
+            {
+              "const": "756",
+              "title": "European Single Procurement Document request"
+            },
+            {
+              "const": "757",
+              "title": "Tendering price/sales catalogue request"
+            },
+            {
+              "const": "758",
+              "title": "Tender"
+            },
+            {
+              "const": "759",
+              "title": "European Single Procurement Document"
+            },
+            {
+              "const": "760",
+              "title": "Multimodal/combined transport document (generic)"
+            },
+            {
+              "const": "761",
+              "title": "Through bill of lading"
+            },
+            {
+              "const": "762",
+              "title": "Tendering price/sales catalogue"
+            },
+            {
+              "const": "763",
+              "title": "Forwarder's certificate of transport"
+            },
+            {
+              "const": "764",
+              "title": "Combined transport document (generic)"
+            },
+            {
+              "const": "765",
+              "title": "Multimodal transport document (generic)"
+            },
+            {
+              "const": "766",
+              "title": "Combined transport bill of lading/multimodal bill of lading"
+            },
+            {
+              "const": "767",
+              "title": "Acknowledgment of receipt"
+            },
+            {
+              "const": "768",
+              "title": "Civil status document"
+            },
+            {
+              "const": "769",
+              "title": "Advice report"
+            },
+            {
+              "const": "770",
+              "title": "Booking confirmation"
+            },
+            {
+              "const": "771",
+              "title": "Binding offer"
+            },
+            {
+              "const": "772",
+              "title": "Binding customer agreement for contract"
+            },
+            {
+              "const": "773",
+              "title": "Coverage confirmation note"
+            },
+            {
+              "const": "774",
+              "title": "General terms and conditions"
+            },
+            {
+              "const": "775",
+              "title": "Calling forward notice"
+            },
+            {
+              "const": "776",
+              "title": "Contract clauses"
+            },
+            {
+              "const": "777",
+              "title": "Specific contract conditions"
+            },
+            {
+              "const": "778",
+              "title": "Group insurance rules"
+            },
+            {
+              "const": "779",
+              "title": "Questionnaire"
+            },
+            {
+              "const": "780",
+              "title": "Freight invoice"
+            },
+            {
+              "const": "781",
+              "title": "Arrival notice (goods)"
+            },
+            {
+              "const": "782",
+              "title": "Notice of circumstances preventing delivery (goods)"
+            },
+            {
+              "const": "783",
+              "title": "Notice of circumstances preventing transport (goods)"
+            },
+            {
+              "const": "784",
+              "title": "Delivery notice (goods)"
+            },
+            {
+              "const": "785",
+              "title": "Cargo manifest"
+            },
+            {
+              "const": "786",
+              "title": "Freight manifest"
+            },
+            {
+              "const": "787",
+              "title": "Bordereau"
+            },
+            {
+              "const": "788",
+              "title": "Container manifest (unit packing list)"
+            },
+            {
+              "const": "789",
+              "title": "Charges note"
+            },
+            {
+              "const": "790",
+              "title": "Advice of collection"
+            },
+            {
+              "const": "791",
+              "title": "Safety of ship certificate"
+            },
+            {
+              "const": "792",
+              "title": "Safety of radio certificate"
+            },
+            {
+              "const": "793",
+              "title": "Safety of equipment certificate"
+            },
+            {
+              "const": "794",
+              "title": "Civil liability for oil certificate"
+            },
+            {
+              "const": "795",
+              "title": "Loadline document"
+            },
+            {
+              "const": "796",
+              "title": "Derat document"
+            },
+            {
+              "const": "797",
+              "title": "Maritime declaration of health"
+            },
+            {
+              "const": "798",
+              "title": "Certificate of registry"
+            },
+            {
+              "const": "799",
+              "title": "Ship's stores declaration"
+            },
+            {
+              "const": "810",
+              "title": "Export licence, application for"
+            },
+            {
+              "const": "811",
+              "title": "Export licence"
+            },
+            {
+              "const": "812",
+              "title": "Exchange control declaration, export"
+            },
+            {
+              "const": "813",
+              "title": "Declaration of final beneficiary"
+            },
+            {
+              "const": "814",
+              "title": "US, FATCA statement"
+            },
+            {
+              "const": "815",
+              "title": "Insured status report"
+            },
+            {
+              "const": "816",
+              "title": "Group pension commitment information"
+            },
+            {
+              "const": "817",
+              "title": "Claim notification"
+            },
+            {
+              "const": "818",
+              "title": "Assessment report"
+            },
+            {
+              "const": "819",
+              "title": "Loss statement"
+            },
+            {
+              "const": "820",
+              "title": "Despatch note model T"
+            },
+            {
+              "const": "821",
+              "title": "Despatch note model T1"
+            },
+            {
+              "const": "822",
+              "title": "Despatch note model T2"
+            },
+            {
+              "const": "823",
+              "title": "Control document T5"
+            },
+            {
+              "const": "824",
+              "title": "Re-sending consignment note"
+            },
+            {
+              "const": "825",
+              "title": "Despatch note model T2L"
+            },
+            {
+              "const": "826",
+              "title": "Guarantee of cost acceptance"
+            },
+            {
+              "const": "827",
+              "title": "Close of claim"
+            },
+            {
+              "const": "828",
+              "title": "Refusal of claim"
+            },
+            {
+              "const": "829",
+              "title": "Valuation report"
+            },
+            {
+              "const": "830",
+              "title": "Goods declaration for exportation"
+            },
+            {
+              "const": "831",
+              "title": "Claim history certificate"
+            },
+            {
+              "const": "832",
+              "title": "Accounting statement"
+            },
+            {
+              "const": "833",
+              "title": "Cargo declaration (departure)"
+            },
+            {
+              "const": "834",
+              "title": "Payment receipt confirmation"
+            },
+            {
+              "const": "835",
+              "title": "Certificate of paid insurance premium"
+            },
+            {
+              "const": "836",
+              "title": "Insured party payment report"
+            },
+            {
+              "const": "837",
+              "title": "Third party payment report"
+            },
+            {
+              "const": "838",
+              "title": "Direct debit authorisation"
+            },
+            {
+              "const": "839",
+              "title": "Physician report"
+            },
+            {
+              "const": "840",
+              "title": "Application for goods control certificate"
+            },
+            {
+              "const": "841",
+              "title": "Goods control certificate"
+            },
+            {
+              "const": "842",
+              "title": "Medical certificate"
+            },
+            {
+              "const": "843",
+              "title": "Witness report"
+            },
+            {
+              "const": "844",
+              "title": "Calculation note"
+            },
+            {
+              "const": "845",
+              "title": "Communication from opposite party"
+            },
+            {
+              "const": "846",
+              "title": "Amicable agreement"
+            },
+            {
+              "const": "847",
+              "title": "Out of court settlement"
+            },
+            {
+              "const": "848",
+              "title": "Legal action"
+            },
+            {
+              "const": "849",
+              "title": "Summons"
+            },
+            {
+              "const": "850",
+              "title": "Application for phytosanitary certificate"
+            },
+            {
+              "const": "851",
+              "title": "Phytosanitary certificate"
+            },
+            {
+              "const": "852",
+              "title": "Sanitary certificate"
+            },
+            {
+              "const": "853",
+              "title": "Veterinary certificate"
+            },
+            {
+              "const": "854",
+              "title": "Court judgment"
+            },
+            {
+              "const": "855",
+              "title": "Application for inspection certificate"
+            },
+            {
+              "const": "856",
+              "title": "Inspection certificate"
+            },
+            {
+              "const": "857",
+              "title": "Vehicle aboard document"
+            },
+            {
+              "const": "858",
+              "title": "Image"
+            },
+            {
+              "const": "859",
+              "title": "Audio"
+            },
+            {
+              "const": "860",
+              "title": "Certificate of origin, application for"
+            },
+            {
+              "const": "861",
+              "title": "Certificate of origin"
+            },
+            {
+              "const": "862",
+              "title": "Declaration of origin"
+            },
+            {
+              "const": "863",
+              "title": "Regional appellation certificate"
+            },
+            {
+              "const": "864",
+              "title": "Preference certificate of origin"
+            },
+            {
+              "const": "865",
+              "title": "Certificate of origin form GSP"
+            },
+            {
+              "const": "866",
+              "title": "Video"
+            },
+            {
+              "const": "867",
+              "title": "Introductory letter"
+            },
+            {
+              "const": "868",
+              "title": "Data protection regulations statement"
+            },
+            {
+              "const": "869",
+              "title": "Exclusive brokerage mandate"
+            },
+            {
+              "const": "870",
+              "title": "Consular invoice"
+            },
+            {
+              "const": "871",
+              "title": "Inquiry mandate"
+            },
+            {
+              "const": "872",
+              "title": "Risk analysis"
+            },
+            {
+              "const": "873",
+              "title": "Transport equipment movement report, partial"
+            },
+            {
+              "const": "874",
+              "title": "Conveyance declaration"
+            },
+            {
+              "const": "875",
+              "title": "Partial construction invoice"
+            },
+            {
+              "const": "876",
+              "title": "Partial final construction invoice"
+            },
+            {
+              "const": "877",
+              "title": "Final construction invoice"
+            },
+            {
+              "const": "878",
+              "title": "AEO Certificate of Security and/or Safety"
+            },
+            {
+              "const": "879",
+              "title": "AEO Certificate of Conformity or Compliance"
+            },
+            {
+              "const": "890",
+              "title": "Dangerous goods declaration"
+            },
+            {
+              "const": "891",
+              "title": "AEO Certificate Full"
+            },
+            {
+              "const": "892",
+              "title": "Purchase Order Financing Request"
+            },
+            {
+              "const": "893",
+              "title": "Purchase Order Financing Request Status"
+            },
+            {
+              "const": "894",
+              "title": "Purchase Order Financing Request Cancellation"
+            },
+            {
+              "const": "895",
+              "title": "Statistical document, export"
+            },
+            {
+              "const": "896",
+              "title": "INTRASTAT declaration"
+            },
+            {
+              "const": "897",
+              "title": "Transit certificate of approval"
+            },
+            {
+              "const": "898",
+              "title": "Pre-packed cross docking consignment order"
+            },
+            {
+              "const": "899",
+              "title": "Traceability event declaration"
+            },
+            {
+              "const": "900",
+              "title": "Sustainability data request"
+            },
+            {
+              "const": "901",
+              "title": "Delivery verification certificate"
+            },
+            {
+              "const": "902",
+              "title": "Sustainability data response"
+            },
+            {
+              "const": "903",
+              "title": "Sustainability Inspection request"
+            },
+            {
+              "const": "904",
+              "title": "Sustainability Inspection response"
+            },
+            {
+              "const": "905",
+              "title": "Transport Means Forecast Information Message"
+            },
+            {
+              "const": "906",
+              "title": "Transport Means Actual Information Message"
+            },
+            {
+              "const": "907",
+              "title": "Arrival Report Message"
+            },
+            {
+              "const": "908",
+              "title": "Tally Message"
+            },
+            {
+              "const": "909",
+              "title": "Goods Loading Message"
+            },
+            {
+              "const": "910",
+              "title": "Import licence, application for"
+            },
+            {
+              "const": "911",
+              "title": "Import licence"
+            },
+            {
+              "const": "912",
+              "title": "Transport Means and Goods Release Message."
+            },
+            {
+              "const": "913",
+              "title": "Customs declaration without commercial detail"
+            },
+            {
+              "const": "914",
+              "title": "Customs declaration with commercial and item detail"
+            },
+            {
+              "const": "915",
+              "title": "Customs declaration without item detail"
+            },
+            {
+              "const": "916",
+              "title": "Related document"
+            },
+            {
+              "const": "917",
+              "title": "Receipt (Customs)"
+            },
+            {
+              "const": "925",
+              "title": "Application for exchange allocation"
+            },
+            {
+              "const": "926",
+              "title": "Foreign exchange permit"
+            },
+            {
+              "const": "927",
+              "title": "Exchange control declaration (import)"
+            },
+            {
+              "const": "929",
+              "title": "Goods declaration for importation"
+            },
+            {
+              "const": "930",
+              "title": "Goods declaration for home use"
+            },
+            {
+              "const": "931",
+              "title": "Customs immediate release declaration"
+            },
+            {
+              "const": "932",
+              "title": "Customs delivery note"
+            },
+            {
+              "const": "933",
+              "title": "Cargo declaration (arrival)"
+            },
+            {
+              "const": "934",
+              "title": "Value declaration"
+            },
+            {
+              "const": "935",
+              "title": "Customs invoice"
+            },
+            {
+              "const": "936",
+              "title": "Customs declaration (post parcels)"
+            },
+            {
+              "const": "937",
+              "title": "Tax declaration (value added tax)"
+            },
+            {
+              "const": "938",
+              "title": "Tax declaration (general)"
+            },
+            {
+              "const": "940",
+              "title": "Tax demand"
+            },
+            {
+              "const": "941",
+              "title": "Embargo permit"
+            },
+            {
+              "const": "950",
+              "title": "Goods declaration for Customs transit"
+            },
+            {
+              "const": "951",
+              "title": "TIF form"
+            },
+            {
+              "const": "952",
+              "title": "TIR carnet"
+            },
+            {
+              "const": "953",
+              "title": "EC carnet"
+            },
+            {
+              "const": "954",
+              "title": "EUR 1 certificate of origin"
+            },
+            {
+              "const": "955",
+              "title": "ATA carnet"
+            },
+            {
+              "const": "960",
+              "title": "Single administrative document"
+            },
+            {
+              "const": "961",
+              "title": "General response (Customs)"
+            },
+            {
+              "const": "962",
+              "title": "Document response (Customs)"
+            },
+            {
+              "const": "963",
+              "title": "Error response (Customs)"
+            },
+            {
+              "const": "964",
+              "title": "Package response (Customs)"
+            },
+            {
+              "const": "965",
+              "title": "Tax calculation/confirmation response (Customs)"
+            },
+            {
+              "const": "966",
+              "title": "Quota prior allocation certificate"
+            },
+            {
+              "const": "970",
+              "title": "Wagon report"
+            },
+            {
+              "const": "971",
+              "title": "Transit Conveyor Document"
+            },
+            {
+              "const": "972",
+              "title": "Rail consignment note forwarder copy"
+            },
+            {
+              "const": "974",
+              "title": "Duty suspended goods"
+            },
+            {
+              "const": "975",
+              "title": "Proof of transit declaration"
+            },
+            {
+              "const": "976",
+              "title": "Container transfer note"
+            },
+            {
+              "const": "977",
+              "title": "NATO transit document"
+            },
+            {
+              "const": "978",
+              "title": "Transfrontier waste shipment authorization"
+            },
+            {
+              "const": "979",
+              "title": "Transfrontier waste shipment movement document"
+            },
+            {
+              "const": "990",
+              "title": "End use authorization"
+            },
+            {
+              "const": "991",
+              "title": "Government contract"
+            },
+            {
+              "const": "995",
+              "title": "Statistical document, import"
+            },
+            {
+              "const": "996",
+              "title": "Application for documentary credit"
+            },
+            {
+              "const": "998",
+              "title": "Previous Customs document/message"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

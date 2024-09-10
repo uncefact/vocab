@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID8335",
+  "title": "UNECE_UNTDID8335",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8335Type": {
+          "title": "Movement type description code",
+          "description": "Code specifying a type of movement.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Breakbulk"
+            },
+            {
+              "const": "2",
+              "title": "LCL/LCL"
+            },
+            {
+              "const": "3",
+              "title": "FCL/FCL"
+            },
+            {
+              "const": "4",
+              "title": "FCL/LCL"
+            },
+            {
+              "const": "5",
+              "title": "LCL/FCL"
+            },
+            {
+              "const": "6",
+              "title": "Consolidation"
+            },
+            {
+              "const": "7",
+              "title": "Parcel post"
+            },
+            {
+              "const": "8",
+              "title": "Expedited truck"
+            },
+            {
+              "const": "9",
+              "title": "Consignor determined means"
+            },
+            {
+              "const": "10",
+              "title": "Private parcel service"
+            },
+            {
+              "const": "11",
+              "title": "House to house"
+            },
+            {
+              "const": "12",
+              "title": "House to terminal"
+            },
+            {
+              "const": "13",
+              "title": "House to pier"
+            },
+            {
+              "const": "14",
+              "title": "Air charter"
+            },
+            {
+              "const": "15",
+              "title": "Air express"
+            },
+            {
+              "const": "16",
+              "title": "Geographic grouped transport"
+            },
+            {
+              "const": "17",
+              "title": "Less than truck load"
+            },
+            {
+              "const": "18",
+              "title": "Pooled piggyback"
+            },
+            {
+              "const": "19",
+              "title": "Consignee transportation provided"
+            },
+            {
+              "const": "20",
+              "title": "Rail"
+            },
+            {
+              "const": "21",
+              "title": "Terminal to house"
+            },
+            {
+              "const": "22",
+              "title": "Terminal to terminal"
+            },
+            {
+              "const": "23",
+              "title": "Terminal to pier"
+            },
+            {
+              "const": "31",
+              "title": "Pier to house"
+            },
+            {
+              "const": "32",
+              "title": "Pier to terminal"
+            },
+            {
+              "const": "33",
+              "title": "Pier to pier"
+            },
+            {
+              "const": "41",
+              "title": "Station to station"
+            },
+            {
+              "const": "42",
+              "title": "House to warehouse"
+            },
+            {
+              "const": "43",
+              "title": "Warehouse to house"
+            },
+            {
+              "const": "44",
+              "title": "Station to house"
+            },
+            {
+              "const": "45",
+              "title": "Geographic grouped transport, multiple origins, multiple destinations"
+            },
+            {
+              "const": "46",
+              "title": "Geographic grouped transport, multiple origins, single destination"
+            },
+            {
+              "const": "47",
+              "title": "Geographic receiving"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

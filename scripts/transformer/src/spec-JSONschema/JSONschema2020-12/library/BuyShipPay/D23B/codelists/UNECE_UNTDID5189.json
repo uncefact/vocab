@@ -1,0 +1,439 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID5189",
+  "title": "UNECE_UNTDID5189",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5189Type": {
+          "title": "Allowance or charge identification code",
+          "description": "Code specifying the identification of an allowance or charge.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Handling commission"
+            },
+            {
+              "const": "2",
+              "title": "Amendment commission"
+            },
+            {
+              "const": "3",
+              "title": "Acceptance commission"
+            },
+            {
+              "const": "4",
+              "title": "Commission for obtaining acceptance"
+            },
+            {
+              "const": "5",
+              "title": "Commission on delivery"
+            },
+            {
+              "const": "6",
+              "title": "Advising commission"
+            },
+            {
+              "const": "7",
+              "title": "Confirmation commission"
+            },
+            {
+              "const": "8",
+              "title": "Deferred payment commission"
+            },
+            {
+              "const": "9",
+              "title": "Commission for taking up documents"
+            },
+            {
+              "const": "10",
+              "title": "Opening commission"
+            },
+            {
+              "const": "11",
+              "title": "Fee for payment under reserve"
+            },
+            {
+              "const": "12",
+              "title": "Discrepancy fee"
+            },
+            {
+              "const": "13",
+              "title": "Domicilation commission"
+            },
+            {
+              "const": "14",
+              "title": "Commission for release of goods"
+            },
+            {
+              "const": "15",
+              "title": "Collection commission"
+            },
+            {
+              "const": "16",
+              "title": "Negotiation commission"
+            },
+            {
+              "const": "17",
+              "title": "Return commission"
+            },
+            {
+              "const": "18",
+              "title": "B/L splitting charges"
+            },
+            {
+              "const": "19",
+              "title": "Trust commission"
+            },
+            {
+              "const": "20",
+              "title": "Transfer commission"
+            },
+            {
+              "const": "21",
+              "title": "Commission for opening irrevocable documentary credits"
+            },
+            {
+              "const": "22",
+              "title": "Pre-advice commission"
+            },
+            {
+              "const": "23",
+              "title": "Supervisory commission"
+            },
+            {
+              "const": "24",
+              "title": "Model charges"
+            },
+            {
+              "const": "25",
+              "title": "Risk commission"
+            },
+            {
+              "const": "26",
+              "title": "Guarantee commission"
+            },
+            {
+              "const": "27",
+              "title": "Reimbursement commission"
+            },
+            {
+              "const": "28",
+              "title": "Stamp duty"
+            },
+            {
+              "const": "29",
+              "title": "Brokerage"
+            },
+            {
+              "const": "30",
+              "title": "Bank charges"
+            },
+            {
+              "const": "31",
+              "title": "Bank charges information"
+            },
+            {
+              "const": "32",
+              "title": "Courier fee"
+            },
+            {
+              "const": "33",
+              "title": "Phone fee"
+            },
+            {
+              "const": "34",
+              "title": "Postage fee"
+            },
+            {
+              "const": "35",
+              "title": "S.W.I.F.T. fee"
+            },
+            {
+              "const": "36",
+              "title": "Telex fee"
+            },
+            {
+              "const": "37",
+              "title": "Penalty for late delivery of documents"
+            },
+            {
+              "const": "38",
+              "title": "Penalty for late delivery of valuation of works"
+            },
+            {
+              "const": "39",
+              "title": "Penalty for execution of works behind schedule"
+            },
+            {
+              "const": "40",
+              "title": "Other penalties"
+            },
+            {
+              "const": "41",
+              "title": "Bonus for works ahead of schedule"
+            },
+            {
+              "const": "42",
+              "title": "Other bonus"
+            },
+            {
+              "const": "44",
+              "title": "Project management cost"
+            },
+            {
+              "const": "45",
+              "title": "Pro rata retention"
+            },
+            {
+              "const": "46",
+              "title": "Contractual retention"
+            },
+            {
+              "const": "47",
+              "title": "Other retentions"
+            },
+            {
+              "const": "48",
+              "title": "Interest on arrears"
+            },
+            {
+              "const": "49",
+              "title": "Interest"
+            },
+            {
+              "const": "50",
+              "title": "Charge per credit cover"
+            },
+            {
+              "const": "51",
+              "title": "Charge per unused credit cover"
+            },
+            {
+              "const": "52",
+              "title": "Minimum commission"
+            },
+            {
+              "const": "53",
+              "title": "Factoring commission"
+            },
+            {
+              "const": "54",
+              "title": "Chamber of commerce charge"
+            },
+            {
+              "const": "55",
+              "title": "Transfer charges"
+            },
+            {
+              "const": "56",
+              "title": "Repatriation charges"
+            },
+            {
+              "const": "57",
+              "title": "Miscellaneous charges"
+            },
+            {
+              "const": "58",
+              "title": "Foreign exchange charges"
+            },
+            {
+              "const": "59",
+              "title": "Agreed debit interest charge"
+            },
+            {
+              "const": "60",
+              "title": "Manufacturer's consumer discount"
+            },
+            {
+              "const": "61",
+              "title": "Fax advice charge"
+            },
+            {
+              "const": "62",
+              "title": "Due to military status"
+            },
+            {
+              "const": "63",
+              "title": "Due to work accident"
+            },
+            {
+              "const": "64",
+              "title": "Special agreement"
+            },
+            {
+              "const": "65",
+              "title": "Production error discount"
+            },
+            {
+              "const": "66",
+              "title": "New outlet discount"
+            },
+            {
+              "const": "67",
+              "title": "Sample discount"
+            },
+            {
+              "const": "68",
+              "title": "End-of-range discount"
+            },
+            {
+              "const": "69",
+              "title": "Charge for a customer specific finish"
+            },
+            {
+              "const": "70",
+              "title": "Incoterm discount"
+            },
+            {
+              "const": "71",
+              "title": "Point of sales threshold allowance"
+            },
+            {
+              "const": "72",
+              "title": "Technical modification costs"
+            },
+            {
+              "const": "73",
+              "title": "Job-order production costs"
+            },
+            {
+              "const": "74",
+              "title": "Off-premises costs"
+            },
+            {
+              "const": "75",
+              "title": "Additional processing costs"
+            },
+            {
+              "const": "76",
+              "title": "Attesting charge"
+            },
+            {
+              "const": "77",
+              "title": "Rush delivery surcharge"
+            },
+            {
+              "const": "78",
+              "title": "Special construction costs"
+            },
+            {
+              "const": "79",
+              "title": "Freight charges"
+            },
+            {
+              "const": "80",
+              "title": "Packing charge"
+            },
+            {
+              "const": "81",
+              "title": "Repair charge"
+            },
+            {
+              "const": "82",
+              "title": "Loading charge"
+            },
+            {
+              "const": "83",
+              "title": "Setup charge"
+            },
+            {
+              "const": "84",
+              "title": "Testing charge"
+            },
+            {
+              "const": "85",
+              "title": "Warehousing charge"
+            },
+            {
+              "const": "86",
+              "title": "Gold surcharge"
+            },
+            {
+              "const": "87",
+              "title": "Copper surcharge"
+            },
+            {
+              "const": "88",
+              "title": "Material surcharge/deduction"
+            },
+            {
+              "const": "89",
+              "title": "Lead surcharge"
+            },
+            {
+              "const": "90",
+              "title": "Price index surcharge"
+            },
+            {
+              "const": "91",
+              "title": "Platinum surcharge"
+            },
+            {
+              "const": "92",
+              "title": "Silver surcharge"
+            },
+            {
+              "const": "93",
+              "title": "Wolfram surcharge"
+            },
+            {
+              "const": "94",
+              "title": "Aluminum surcharge"
+            },
+            {
+              "const": "95",
+              "title": "Discount"
+            },
+            {
+              "const": "96",
+              "title": "Insurance"
+            },
+            {
+              "const": "97",
+              "title": "Minimum order / minimum billing charge"
+            },
+            {
+              "const": "98",
+              "title": "Material surcharge (special materials)"
+            },
+            {
+              "const": "99",
+              "title": "Surcharge"
+            },
+            {
+              "const": "100",
+              "title": "Special rebate"
+            },
+            {
+              "const": "101",
+              "title": "Carbon footprint charge"
+            },
+            {
+              "const": "102",
+              "title": "Fixed long term"
+            },
+            {
+              "const": "103",
+              "title": "Temporary"
+            },
+            {
+              "const": "104",
+              "title": "Standard"
+            },
+            {
+              "const": "105",
+              "title": "Yearly turnover"
+            },
+            {
+              "const": "106",
+              "title": "Withheld taxes and social security contributions"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

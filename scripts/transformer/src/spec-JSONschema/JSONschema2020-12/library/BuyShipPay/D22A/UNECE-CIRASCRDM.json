@@ -1,0 +1,435 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/uncefact/spec-JSONschema/tree/main/JSONschema2020-12/library/BuyShipPay/D22A/CIRASCRDM",
+  "title": "CIRA SCRDM",
+  "description": "Copyright (C) UN/CEFACT (2022). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "type": "object",
+  "properties": {
+    "exchangedDocumentContext": {
+      "title": "BSP Master. Exchanged Document_ Context",
+      "description": "The set of context parameters specified for a use of this master message assembly.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-CIRAContextCCL.json#/$defs/exchangedDocumentContextType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "exchangedDocument": {
+      "title": "BSP Master. Exchanged_ Document",
+      "description": "The header document information for a use of this master message assembly.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-CIRAContextCCL.json#/$defs/exchangedDocumentType",
+          "properties": {
+            "languageId": false,
+            "globalId": false,
+            "revisionId": false,
+            "previousRevisionId": false,
+            "urgencyCode": false,
+            "effectivePeriod": false
+          },
+          "required": [
+            "id",
+            "issueDateTime"
+          ]
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "tradeTransaction": {
+      "title": "BSP Master. Supply Chain_ Trade Transaction",
+      "description": "A supply chain trade transaction specified for a use of this master message assembly.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-CIRAContextCCL.json#/$defs/supplyChainTradeTransactionType",
+            "properties": {
+              "salesAgentAssignedId": false,
+              "information": false,
+              "lineItemQuantity": false,
+              "associatedReferencedDocument": false,
+              "includedTradeLineItem": {
+                "properties": {
+                  "id": false,
+                  "additionalId": false,
+                  "associatedDocumentLineDocument": {
+                    "properties": {
+                      "uuidLineId": false,
+                      "parentLineId": false,
+                      "lineStatusReasonCode": false,
+                      "issueDateTime": false,
+                      "lineStatusReason": false,
+                      "publicationDateTime": false,
+                      "buyerAssignedCategoryCode": false,
+                      "subordinateLineId": false
+                    },
+                    "required": [
+                      "lineId"
+                    ]
+                  },
+                  "specifiedTradeProduct": {
+                    "maxItems": 1,
+                    "properties": {
+                      "id": {
+                        "maxItems": 1
+                      },
+                      "globalId": {
+                        "maxItems": 1
+                      },
+                      "manufacturerAssignedId": {
+                        "maxItems": 1
+                      },
+                      "industryAssignedId": {
+                        "maxItems": 1
+                      },
+                      "modelId": false,
+                      "grossWeightMeasure": {
+                        "maxItems": 1
+                      },
+                      "statusCode": false,
+                      "netVolumeMeasure": false,
+                      "grossVolumeMeasure": false,
+                      "conciseDescription": false,
+                      "additionalDescription": false,
+                      "isOrHasConfigurable": false,
+                      "recyclingTypeCode": false,
+                      "unitTypeCode": false,
+                      "contentUnitQuantity": false,
+                      "commonName": false,
+                      "sizeDescription": false,
+                      "originTradeCountry": {
+                        "maxItems": 1
+                      },
+                      "linearSpatialDimension": {
+                        "maxItems": 1
+                      },
+                      "minimumLinearSpatialDimension": {
+                        "maxItems": 1
+                      },
+                      "maximumLinearSpatialDimension": {
+                        "maxItems": 1
+                      },
+                      "manufacturer": {
+                        "maxItems": 1
+                      },
+                      "finalAssemblyTradeCountry": false,
+                      "msdsReferenceReferencedDocument": {
+                        "maxItems": 1
+                      },
+                      "applicableTradeProductCertification": false
+                    }
+                  },
+                  "substitutedReferencedProduct": {
+                    "properties": {
+                      "name": false
+                    }
+                  },
+                  "referenceReferencedDocument": false,
+                  "specifiedLineTradeAgreement": {
+                    "properties": {
+                      "sellerReference": false,
+                      "buyerOrderReferencedDocument": {
+                        "maxItems": 1
+                      },
+                      "orderPriceProductTradePrice": false
+                    }
+                  },
+                  "specifiedLineTradeDelivery": {
+                    "properties": {
+                      "id": false,
+                      "subordinateId": false,
+                      "specifiedDeliveryAdjustment": {
+                        "maxItems": 1
+                      },
+                      "relatedConsignment": {
+                        "properties": {
+                          "includedConsignmentItem": {
+                            "properties": {
+                              "packageQuantity": false,
+                              "applicableDangerousGoods": {
+                                "properties": {
+                                  "mfagId": false,
+                                  "explosiveCompatibilityGroupCode": false,
+                                  "tunnelRestrictionCode": false,
+                                  "aircraftLimitationInformation": false
+                                }
+                              },
+                              "transportLogisticsPackage": false,
+                              "includedTradeLineItem": false,
+                              "applicableLogisticsServiceCharge": false,
+                              "reportedLogisticsStatus": false
+                            }
+                          }
+                        }
+                      },
+                      "specifiedDeliveryInstructions": false,
+                      "actualDespatchEvent": {
+                        "maxItems": 1
+                      },
+                      "requestedDeliveryEvent": {
+                        "maxItems": 1
+                      }
+                    }
+                  },
+                  "specifiedLineTradeSettlement": {
+                    "maxItems": 1,
+                    "properties": {
+                      "invoiceIssuerReference": false,
+                      "payerReference": false,
+                      "invoiceDateTime": false,
+                      "applicableTradeTax": {
+                        "maxItems": 1,
+                        "properties": {
+                          "lineTotalBasisAmount": false,
+                          "allowanceChargeBasisAmount": false
+                        }
+                      },
+                      "specifiedTradePaymentTerms": {
+                        "properties": {
+                          "billStartDateTime": false
+                        }
+                      },
+                      "specifiedTradeSettlementLineMonetarySummation": {
+                        "properties": {
+                          "lineTotalAmount": {
+                            "maxItems": 1
+                          },
+                          "grandTotalAmount": {
+                            "maxItems": 1
+                          },
+                          "duePayableAmount": false,
+                          "paymentTotalAmount": false,
+                          "netIncludingTaxesLineTotalAmount": false
+                        }
+                      },
+                      "specifiedFinancialAdjustment": false,
+                      "invoiceReferencedDocument": false,
+                      "additionalReferencedDocument": false,
+                      "associatedDocumentLineDocument": false,
+                      "referencedLineTradeTransaction": false
+                    }
+                  },
+                  "invoiceAssociatedReferencedDocument": false
+                },
+                "required": [
+                  "associatedDocumentLineDocument"
+                ]
+              },
+              "specifiedLogisticsPackage": {
+                "properties": {
+                  "includedTradeLineItem": {
+                    "properties": {
+                      "associatedDocumentLineDocument": {
+                        "properties": {
+                          "uuidLineId": false,
+                          "parentLineId": false,
+                          "lineStatusReasonCode": false,
+                          "issueDateTime": false,
+                          "lineStatusReason": false,
+                          "publicationDateTime": false
+                        },
+                        "required": [
+                          "lineId"
+                        ]
+                      },
+                      "specifiedTradeProduct": {
+                        "properties": {
+                          "modelId": false,
+                          "statusCode": false,
+                          "netVolumeMeasure": false,
+                          "grossVolumeMeasure": false,
+                          "conciseDescription": false,
+                          "additionalDescription": false,
+                          "isOrHasConfigurable": false,
+                          "recyclingTypeCode": false,
+                          "unitTypeCode": false,
+                          "contentUnitQuantity": false,
+                          "commonName": false
+                        }
+                      },
+                      "specifiedLineTradeDelivery": {
+                        "properties": {
+                          "relatedConsignment": {
+                            "properties": {
+                              "declaredValueForCarriageAmount": false,
+                              "includedConsignmentItem": {
+                                "properties": {
+                                  "packageQuantity": false,
+                                  "applicableDangerousGoods": {
+                                    "properties": {
+                                      "mfagId": false,
+                                      "explosiveCompatibilityGroupCode": false,
+                                      "tunnelRestrictionCode": false,
+                                      "aircraftLimitationInformation": false
+                                    }
+                                  },
+                                  "transportLogisticsPackage": false,
+                                  "includedTradeLineItem": false,
+                                  "applicableLogisticsServiceCharge": false,
+                                  "reportedLogisticsStatus": false
+                                }
+                              }
+                            }
+                          },
+                          "requestedDespatchEvent": false
+                        }
+                      },
+                      "specifiedLineTradeSettlement": {
+                        "properties": {
+                          "invoiceDateTime": false,
+                          "specifiedTradeSettlementLineMonetarySummation": {
+                            "properties": {
+                              "duePayableAmount": false,
+                              "paymentTotalAmount": false,
+                              "netLineTotalAmount": false,
+                              "netIncludingTaxesLineTotalAmount": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "associatedDocumentLineDocument": false,
+              "includedTradeProductGroup": false,
+              "applicableHeaderTradeAgreement": {
+                "minItems": 1,
+                "maxItems": 1,
+                "properties": {
+                  "sellerReference": false,
+                  "specifiedProcuringProject": {
+                    "properties": {
+                      "worksTypeCode": false,
+                      "subWorksTypeCode": false,
+                      "typeCode": false,
+                      "isOrHasConstraint": false,
+                      "totalBudgetAmount": false,
+                      "netBudgetAmount": false
+                    }
+                  }
+                }
+              },
+              "applicableHeaderTradeDelivery": {
+                "minItems": 1,
+                "maxItems": 1,
+                "properties": {
+                  "includedPackaging": {
+                    "properties": {
+                      "isOrHasReturnable": false,
+                      "totalUnitQuantity": false
+                    }
+                  },
+                  "relatedConsignment": {
+                    "properties": {
+                      "declaredValueForCarriageAmount": false,
+                      "includedConsignmentItem": {
+                        "properties": {
+                          "applicableDangerousGoods": {
+                            "properties": {
+                              "mfagId": false,
+                              "explosiveCompatibilityGroupCode": false,
+                              "tunnelRestrictionCode": false,
+                              "aircraftLimitationInformation": false
+                            }
+                          },
+                          "transportLogisticsPackage": false,
+                          "includedTradeLineItem": false,
+                          "applicableLogisticsServiceCharge": false,
+                          "reportedLogisticsStatus": false
+                        }
+                      }
+                    }
+                  },
+                  "actualDespatchEvent": {
+                    "maxItems": 1
+                  },
+                  "requestedDeliveryEvent": {
+                    "maxItems": 1
+                  }
+                },
+                "required": [
+                  "shipTo",
+                  "shipFrom"
+                ]
+              },
+              "applicableHeaderTradeSettlement": {
+                "properties": {
+                  "paymentReference": false,
+                  "invoiceIssuerReference": false,
+                  "payerReference": false,
+                  "invoiceDateTime": false,
+                  "closingBookDueDateTime": false,
+                  "scheduledPaymentDateTime": false,
+                  "description": false,
+                  "isOrHasDiscount": false,
+                  "totalInvoiceAmount": false,
+                  "totalAdjustmentAmount": false,
+                  "invoicer": false,
+                  "invoicee": false,
+                  "taxApplicableTradeCurrencyExchange": false,
+                  "applicableTradeTax": {
+                    "maxItems": 1,
+                    "properties": {
+                      "lineTotalBasisAmount": false,
+                      "allowanceChargeBasisAmount": false
+                    }
+                  },
+                  "specifiedTradePaymentTerms": {
+                    "maxItems": 1,
+                    "properties": {
+                      "settlementPeriodMeasure": false,
+                      "description": false,
+                      "instructionTypeCode": false,
+                      "billStartDateTime": false
+                    }
+                  },
+                  "specifiedTradeSettlementHeaderMonetarySummation": {
+                    "properties": {
+                      "lineTotalAmount": {
+                        "maxItems": 1
+                      },
+                      "taxTotalAmount": {
+                        "maxItems": 1
+                      },
+                      "grandTotalAmount": {
+                        "maxItems": 1
+                      },
+                      "totalDiscountAmount": false,
+                      "duePayableAmount": false,
+                      "paymentTotalAmount": false,
+                      "totalDiscountBasisAmount": false,
+                      "balanceOutAmount": false,
+                      "adjustedBalanceOutAmount": false,
+                      "applicableHeaderBalanceOut": false
+                    }
+                  },
+                  "specifiedFinancialAdjustment": false,
+                  "invoiceReferencedDocument": false,
+                  "relevant": false
+                }
+              }
+            }
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 1
+    }
+  },
+  "required": [
+    "exchangedDocumentContext",
+    "exchangedDocument"
+  ],
+  "$ref": "UNECE-BasicComponents.json#/$defs/extensibleType",
+  "unevaluatedProperties": false
+}

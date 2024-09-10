@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/PurchaseOrderFinancingRequestStatus",
+  "title": "Purchase Order Financing Request Status",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-PAYMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocument": {
+          "oneOf": [
+            {
+              "$ref": "UNECE-PAYContextCCL.json#/$defs/exchangedDocumentType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "tradeTransaction": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-PAYContextCCL.json#/$defs/supplyChainTradeTransactionType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "issueDateTime": {
+                    "properties": {
+                      "format": false
+                    }
+                  },
+                  "documentURLId": false,
+                  "senderRecipientSequenceId": false,
+                  "associatedReferencedDocument": false,
+                  "applicableHeaderTradeAgreement": {
+                    "items": {
+                      "properties": {
+                        "seller": {
+                          "properties": {
+                            "specifiedTaxRegistration": {
+                              "items": {
+                                "properties": {
+                                  "id": {
+                                    "properties": {
+                                      "schemeId": false
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "specifiedContactPerson": {
+                              "maxItems": 1,
+                              "items": {
+                                "properties": {
+                                  "givenName": false,
+                                  "familyName": false,
+                                  "titleCode": false,
+                                  "role": false,
+                                  "specifiedBirthAddress": {
+                                    "properties": {
+                                      "cityName": {
+                                        "properties": {
+                                          "languageId": false,
+                                          "languageLocaleId": false
+                                        }
+                                      },
+                                      "countryId": {
+                                        "properties": {
+                                          "schemeId": false,
+                                          "schemeAgencyId": false,
+                                          "schemeVersionId": false
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "specifiedTaxRegistration": {
+                                    "maxItems": 1,
+                                    "items": {
+                                      "properties": {
+                                        "id": {
+                                          "properties": {
+                                            "schemeId": false
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "specifiedProprietaryIdentity": {
+                              "items": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false,
+                                        "schemeName": false,
+                                        "schemeAgencyId": false,
+                                        "schemeAgencyName": false,
+                                        "schemeVersionId": false,
+                                        "schemeDataUri": false,
+                                        "schemeUri": false
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "ownedCreditorFinancialAccount": {
+                              "properties": {
+                                "currencyCode": {
+                                  "properties": {
+                                    "listAgencyName": false,
+                                    "listVersionId": false,
+                                    "name": false,
+                                    "listName": false,
+                                    "languageId": false,
+                                    "listUri": false,
+                                    "listSchemeUri": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "buyer": false
+                      },
+                      "required": [
+                        "seller"
+                      ]
+                    }
+                  },
+                  "applicableHeaderTradeSettlement": {
+                    "properties": {
+                      "requestedFinancingAmount": false,
+                      "requestedFinancingRatePercent": false,
+                      "debitNoteAmount": false,
+                      "creditNoteAmount": false,
+                      "specifiedTradeSettlementPaymentMeans": false,
+                      "specifiedTradeSettlementHeaderMonetarySummation": {
+                        "properties": {
+                          "taxBasisTotalAmount": false,
+                          "taxTotalAmount": false,
+                          "grandTotalSpecifiedFinancialAdjustment": false
+                        }
+                      },
+                      "specifiedPaymentInstalmentPlan": {
+                        "properties": {
+                          "specifiedInstalmentPayment": {
+                            "items": {
+                              "properties": {
+                                "dueDateTime": false,
+                                "specifiedFinancingRequestResultDocument": {
+                                  "required": [
+                                    "specifiedFinancingStatus"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "specifiedFinancingRequestResultDocument"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "associatedFinancingRequestResultDocument": {
+                    "required": [
+                      "specifiedFinancingStatus"
+                    ]
+                  }
+                },
+                "required": [
+                  "typeCode",
+                  "applicableHeaderTradeSettlement",
+                  "associatedFinancingRequestResultDocument"
+                ]
+              }
+            }
+          ]
+        },
+        "financingRequestDocument": {
+          "allOf": [
+            {
+              "oneOf": [
+                {
+                  "$ref": "UNECE-PAYContextCCL.json#/$defs/financingRequestDocumentType"
+                },
+                {
+                  "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                }
+              ]
+            },
+            {
+              "properties": {
+                "groupId": {
+                  "properties": {
+                    "schemeId": false,
+                    "schemeName": false,
+                    "schemeAgencyId": false,
+                    "schemeAgencyName": false,
+                    "schemeVersionId": false,
+                    "schemeDataUri": false,
+                    "schemeUri": false
+                  }
+                },
+                "groupedTransactionQuantity": false,
+                "groupedTransactionTotalAmount": false,
+                "creationDateTime": {
+                  "properties": {
+                    "format": false
+                  }
+                },
+                "authorization": false,
+                "cancellationReason": false,
+                "currencyCode": false,
+                "agreementInformation": false,
+                "firstAgentSpecifiedCreditorFinancialInstitution": {
+                  "properties": {
+                    "specifiedProprietaryIdentity": {
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "items": {
+                              "properties": {
+                                "schemeId": false,
+                                "schemeName": false,
+                                "schemeAgencyId": false,
+                                "schemeAgencyName": false,
+                                "schemeVersionId": false,
+                                "schemeDataUri": false,
+                                "schemeUri": false
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "specifiedRequestingParty": {
+                  "required": [
+                    "name"
+                  ]
+                },
+                "contractualDocumentClause": false,
+                "additionalInformationIncludedNote": false
+              },
+              "required": [
+                "specifiedValidationStatus"
+              ]
+            }
+          ]
+        },
+        "financingSummaryDocument": {
+          "allOf": [
+            {
+              "$ref": "UNECE-PAYContextCCL.json#/$defs/financingSummaryDocumentType"
+            },
+            {
+              "required": [
+                "financedTransactionQuantity"
+              ]
+            }
+          ]
+        },
+        "experienceProgramAction": false
+      }
+    }
+  ]
+}

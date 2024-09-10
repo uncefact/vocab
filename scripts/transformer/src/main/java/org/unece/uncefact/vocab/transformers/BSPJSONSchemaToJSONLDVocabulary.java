@@ -164,6 +164,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                     }
                     entity.setObjectClassTerm(cleanUp(objectClassTerm));
                     entity.setContext(jsonObject.getString("uncefact:cefactBusinessProcess"));
+                    entity.setSchemaName(key);
                     vocabulary.put(entity.getName(), entity);
 
                 }
@@ -203,7 +204,13 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                         } else {
                             propertyEntity.setTDED("");
                         }
-                        String ref = propertyJsonObject.getString("$ref");
+                        String ref = null;
+                        if (propertyJsonObject.containsKey("$ref")) {
+                            ref = propertyJsonObject.getString("$ref");
+                        } else  if (propertyJsonObject.getJsonObject("items").containsKey("$ref")){
+                            ref = propertyJsonObject.getJsonObject("items").getString("$ref");
+                        }
+                        
                         refTypes.add(ref);
                         if (rangeObjectTypeMap.containsKey(ref)) {
                             propertyEntity.setRangeIncludes(rangeObjectTypeMap.get(ref));
@@ -222,11 +229,6 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                                 downgradeCount +=1;
                             }
                         }
-
-                        if (propertyEntity.getId().equalsIgnoreCase("UN01012488")){
-                            System.out.println();
-                        }
-
 
                         if (ref.startsWith("UNECE-BasicComponents.json#/$defs/udt/$defs")) {
                             if (udtMap.isEmpty()) {
@@ -327,6 +329,20 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                         }
                     }
                     propertyEntity.setContext(propertyJsonObject.getString("uncefact:cefactBusinessProcess"));
+
+                    String ref = null;
+                        if (propertyJsonObject.containsKey("$ref")) {
+                            ref = propertyJsonObject.getString("$ref");
+                        } else  if (propertyJsonObject.containsKey("items")) {
+                            if (propertyJsonObject.getJsonObject("items").containsKey("$ref")){
+                                ref = propertyJsonObject.getJsonObject("items").getString("$ref");
+                            }else  if (propertyJsonObject.getJsonObject("items").containsKey("oneOf")){
+                                if (propertyJsonObject.getJsonObject("items").getJsonArray("oneOf").getJsonObject(0).containsKey("$ref")){
+                                    ref = propertyJsonObject.getJsonObject("items").getJsonArray("oneOf").getJsonObject(0).getString("$ref");
+                                    System.err.println("ref - " + ref);
+                            }
+                        }
+                    }
 
                     vocabulary.put(propertyEntity.getName(), propertyEntity);
                 /*
@@ -455,7 +471,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                 }
                 entities.add(entity);
                 classesMap.put(key, entities);
-            }
+            }   
         }
 
         for (String key : classesMap.keySet()) {
@@ -807,6 +823,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                 }
                 JsonObjectBuilder unitCodeCodeProperty = Json.createObjectBuilder();
                 unitCodeCodeProperty.add(ID, StringUtils.join(UNECE_NS, ":", codeId));
+                unitCodeCodeProperty.add(TYPE, RDF_PROPERTY);
                 unitCodeCodeProperty.add(RDFS_LABEL, codeId);
                 unitCodeCodeProperty.add(RDFS_COMMENT, "An amount currency code.");
                 unitCodeCodeProperty.add(SCHEMA_RANGE_INCLUDES, Json.createObjectBuilder(Map.of(
@@ -994,6 +1011,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                         properties.containsKey("languageId") ||
                         properties.containsKey("format")*/){
                     String udtTitle = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, StringUtils.substringAfterLast(key, "/"));
+
                     rangeObjectTypeMap.put(key,
                             StringUtils.join(UNECE_NS, ":", udtTitle));
                     description = description!=null?description:"Missing description";
@@ -1068,12 +1086,35 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                             ));
                     if (properties.get("unitCode")!= null){
                         unitCodeTypes.add(qdtTitle);
-                        String ref = properties.getJsonObject("unitCode").getString("$ref");
-                        String refPath = StringUtils.substringBefore(ref, ".json#/");
-                        String jsonPath = StringUtils.substringAfter(ref, ".json#/");
+                        if (properties.getJsonObject("unitCode").containsKey("$ref")) {
+                            
+                            String ref = properties.getJsonObject("unitCode").getString("$ref");
+                            String refPath = StringUtils.substringBefore(ref, ".json#/");
+                            String jsonPath = StringUtils.substringAfter(ref, ".json#/");
 
-                        readCodelistToJSONLD(refPath, jsonPath, null,
+                            readCodelistToJSONLD(refPath, jsonPath, null,
                                 description, qdtTitle.replace("MeasureType", "MeasureCode"));
+                        } else {
+                            JsonObject unitCode = properties.getJsonObject("unitCode");
+                            JsonArray allOfArray = null;
+                            String ref = null;
+                            if (unitCode.containsKey("allOf")) {
+                                Iterator<JsonValue> iterator = unitCode.getJsonArray("allOf").iterator();
+                                while (iterator.hasNext()) {
+                                    JsonObject allOffObject = iterator.next().asJsonObject();
+                                    if (allOffObject.containsKey("$ref")) {
+                                        ref = allOffObject.getString("$ref");
+                                    } else if (allOffObject.containsKey("enum")) {
+                                        allOfArray = allOffObject.getJsonArray("enum");
+                                    }
+                                }
+                            }
+                            String refPath = StringUtils.substringBefore(ref, ".json#/");
+                            String jsonPath = StringUtils.substringAfter(ref, ".json#/");
+                            readCodelistToJSONLD(refPath, jsonPath, allOfArray,
+                                description, qdtTitle.replace("MeasureType", "MeasureCode"));
+                        }
+                        
                     } else if (properties.get("currencyId")!=null){
                         amountTypes.add(qdtTitle);
                         String ref = properties.getJsonObject("currencyId").getString("$ref");

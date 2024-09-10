@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID1225",
+  "title": "UNECE_UNTDID1225",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID1225Type": {
+          "title": "Message function code",
+          "description": "Code indicating the function of the message.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Cancellation"
+            },
+            {
+              "const": "2",
+              "title": "Addition"
+            },
+            {
+              "const": "3",
+              "title": "Deletion"
+            },
+            {
+              "const": "4",
+              "title": "Change"
+            },
+            {
+              "const": "5",
+              "title": "Replace"
+            },
+            {
+              "const": "6",
+              "title": "Confirmation"
+            },
+            {
+              "const": "7",
+              "title": "Duplicate"
+            },
+            {
+              "const": "8",
+              "title": "Status"
+            },
+            {
+              "const": "9",
+              "title": "Original"
+            },
+            {
+              "const": "10",
+              "title": "Not found"
+            },
+            {
+              "const": "11",
+              "title": "Response"
+            },
+            {
+              "const": "12",
+              "title": "Not processed"
+            },
+            {
+              "const": "13",
+              "title": "Request"
+            },
+            {
+              "const": "14",
+              "title": "Advance notification"
+            },
+            {
+              "const": "15",
+              "title": "Reminder"
+            },
+            {
+              "const": "16",
+              "title": "Proposal"
+            },
+            {
+              "const": "17",
+              "title": "Cancel, to be reissued"
+            },
+            {
+              "const": "18",
+              "title": "Reissue"
+            },
+            {
+              "const": "19",
+              "title": "Seller initiated change"
+            },
+            {
+              "const": "20",
+              "title": "Replace heading section only"
+            },
+            {
+              "const": "21",
+              "title": "Replace item detail and summary only"
+            },
+            {
+              "const": "22",
+              "title": "Final transmission"
+            },
+            {
+              "const": "23",
+              "title": "Transaction on hold"
+            },
+            {
+              "const": "24",
+              "title": "Delivery instruction"
+            },
+            {
+              "const": "25",
+              "title": "Forecast"
+            },
+            {
+              "const": "26",
+              "title": "Delivery instruction and forecast"
+            },
+            {
+              "const": "27",
+              "title": "Not accepted"
+            },
+            {
+              "const": "28",
+              "title": "Accepted, with amendment in heading section"
+            },
+            {
+              "const": "29",
+              "title": "Accepted without amendment"
+            },
+            {
+              "const": "30",
+              "title": "Accepted, with amendment in detail section"
+            },
+            {
+              "const": "31",
+              "title": "Copy"
+            },
+            {
+              "const": "32",
+              "title": "Approval"
+            },
+            {
+              "const": "33",
+              "title": "Change in heading section"
+            },
+            {
+              "const": "34",
+              "title": "Accepted with amendment"
+            },
+            {
+              "const": "35",
+              "title": "Retransmission"
+            },
+            {
+              "const": "36",
+              "title": "Change in detail section"
+            },
+            {
+              "const": "37",
+              "title": "Reversal of a debit"
+            },
+            {
+              "const": "38",
+              "title": "Reversal of a credit"
+            },
+            {
+              "const": "39",
+              "title": "Reversal for cancellation"
+            },
+            {
+              "const": "40",
+              "title": "Request for deletion"
+            },
+            {
+              "const": "41",
+              "title": "Finishing/closing order"
+            },
+            {
+              "const": "42",
+              "title": "Confirmation via specific means"
+            },
+            {
+              "const": "43",
+              "title": "Additional transmission"
+            },
+            {
+              "const": "44",
+              "title": "Accepted without reserves"
+            },
+            {
+              "const": "45",
+              "title": "Accepted with reserves"
+            },
+            {
+              "const": "46",
+              "title": "Provisional"
+            },
+            {
+              "const": "47",
+              "title": "Definitive"
+            },
+            {
+              "const": "48",
+              "title": "Accepted, contents rejected"
+            },
+            {
+              "const": "49",
+              "title": "Settled dispute"
+            },
+            {
+              "const": "50",
+              "title": "Withdraw"
+            },
+            {
+              "const": "51",
+              "title": "Authorisation"
+            },
+            {
+              "const": "52",
+              "title": "Proposed amendment"
+            },
+            {
+              "const": "53",
+              "title": "Test"
+            },
+            {
+              "const": "54",
+              "title": "Extract"
+            },
+            {
+              "const": "55",
+              "title": "Notification only"
+            },
+            {
+              "const": "56",
+              "title": "Advice of ledger booked items"
+            },
+            {
+              "const": "57",
+              "title": "Advice of items pending to be booked in the ledger"
+            },
+            {
+              "const": "58",
+              "title": "Pre-advice of items requiring further information"
+            },
+            {
+              "const": "59",
+              "title": "Pre-adviced items"
+            },
+            {
+              "const": "60",
+              "title": "No action since last message"
+            },
+            {
+              "const": "61",
+              "title": "Complete schedule"
+            },
+            {
+              "const": "62",
+              "title": "Update schedule"
+            },
+            {
+              "const": "63",
+              "title": "Not accepted, provisional"
+            },
+            {
+              "const": "64",
+              "title": "Verification"
+            },
+            {
+              "const": "65",
+              "title": "Unsettled dispute"
+            },
+            {
+              "const": "66",
+              "title": "Discharge of operation guarantee"
+            },
+            {
+              "const": "67",
+              "title": "Termination of operation guarantee"
+            },
+            {
+              "const": "68",
+              "title": "Start of operation guarantee"
+            },
+            {
+              "const": "69",
+              "title": "New declaration data"
+            },
+            {
+              "const": "70",
+              "title": "Amended declaration data"
+            },
+            {
+              "const": "71",
+              "title": "Refusal to start operation guarantee"
+            },
+            {
+              "const": "72",
+              "title": "Seals information (Start)"
+            },
+            {
+              "const": "73",
+              "title": "Seals information (Terminate)"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

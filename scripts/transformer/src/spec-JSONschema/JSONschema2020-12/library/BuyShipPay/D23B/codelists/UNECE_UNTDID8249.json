@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID8249",
+  "title": "UNECE_UNTDID8249",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8249Type": {
+          "title": "Equipment status code",
+          "description": "Code specifying the status of equipment.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Continental"
+            },
+            {
+              "const": "2",
+              "title": "Export"
+            },
+            {
+              "const": "3",
+              "title": "Import"
+            },
+            {
+              "const": "4",
+              "title": "Remain on board"
+            },
+            {
+              "const": "5",
+              "title": "Shifter"
+            },
+            {
+              "const": "6",
+              "title": "Transhipment"
+            },
+            {
+              "const": "7",
+              "title": "Shortlanded"
+            },
+            {
+              "const": "8",
+              "title": "Overlanded"
+            },
+            {
+              "const": "9",
+              "title": "Domestic"
+            },
+            {
+              "const": "10",
+              "title": "Positioning"
+            },
+            {
+              "const": "11",
+              "title": "Delivery"
+            },
+            {
+              "const": "12",
+              "title": "Redelivery"
+            },
+            {
+              "const": "13",
+              "title": "Repair"
+            },
+            {
+              "const": "14",
+              "title": "Reloader"
+            },
+            {
+              "const": "15",
+              "title": "Returned"
+            },
+            {
+              "const": "16",
+              "title": "Dropped off"
+            },
+            {
+              "const": "17",
+              "title": "Cross terminal transshipment"
+            },
+            {
+              "const": "18",
+              "title": "Booking confirmed"
+            },
+            {
+              "const": "19",
+              "title": "Inspected at terminal gate"
+            },
+            {
+              "const": "20",
+              "title": "Arrived at offloading location"
+            },
+            {
+              "const": "21",
+              "title": "Departed from loading location."
+            },
+            {
+              "const": "22",
+              "title": "Loaded"
+            },
+            {
+              "const": "23",
+              "title": "Unloaded"
+            },
+            {
+              "const": "24",
+              "title": "Intra-terminal movement"
+            },
+            {
+              "const": "25",
+              "title": "Stuffing ordered"
+            },
+            {
+              "const": "26",
+              "title": "Stripping ordered"
+            },
+            {
+              "const": "27",
+              "title": "Stuffing confirmed"
+            },
+            {
+              "const": "28",
+              "title": "Stripping confirmed"
+            },
+            {
+              "const": "29",
+              "title": "Sent for heavy repair"
+            },
+            {
+              "const": "30",
+              "title": "Replaced"
+            },
+            {
+              "const": "31",
+              "title": "Empty"
+            },
+            {
+              "const": "32",
+              "title": "Full"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

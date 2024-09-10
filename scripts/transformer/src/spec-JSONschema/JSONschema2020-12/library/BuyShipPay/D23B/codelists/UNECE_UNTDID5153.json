@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID5153",
+  "title": "UNECE_UNTDID5153",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5153Type": {
+          "title": "Duty or tax or fee type name code",
+          "description": "Code specifying a type of duty, tax or fee.",
+          "oneOf": [
+            {
+              "const": "AAA",
+              "title": "Petroleum tax"
+            },
+            {
+              "const": "AAB",
+              "title": "Provisional countervailing duty cash"
+            },
+            {
+              "const": "AAC",
+              "title": "Provisional countervailing duty bond"
+            },
+            {
+              "const": "AAD",
+              "title": "Tobacco tax"
+            },
+            {
+              "const": "AAE",
+              "title": "Energy fee"
+            },
+            {
+              "const": "AAF",
+              "title": "Coffee tax"
+            },
+            {
+              "const": "AAG",
+              "title": "Harmonised sales tax, Canadian"
+            },
+            {
+              "const": "AAH",
+              "title": "Quebec sales tax"
+            },
+            {
+              "const": "AAI",
+              "title": "Canadian provincial sales tax"
+            },
+            {
+              "const": "AAJ",
+              "title": "Tax on replacement part"
+            },
+            {
+              "const": "AAK",
+              "title": "Mineral oil tax"
+            },
+            {
+              "const": "AAL",
+              "title": "Special tax"
+            },
+            {
+              "const": "AAM",
+              "title": "Insurance tax"
+            },
+            {
+              "const": "AAO",
+              "title": "Provincial Cannabis Tax"
+            },
+            {
+              "const": "AAP",
+              "title": "Outstanding duty interest"
+            },
+            {
+              "const": "ADD",
+              "title": "Anti-dumping duty"
+            },
+            {
+              "const": "BOL",
+              "title": "Stamp duty (Imposta di Bollo)"
+            },
+            {
+              "const": "CAP",
+              "title": "Agricultural levy"
+            },
+            {
+              "const": "CAR",
+              "title": "Car tax"
+            },
+            {
+              "const": "COC",
+              "title": "Paper consortium tax (Italy)"
+            },
+            {
+              "const": "CST",
+              "title": "Commodity specific tax"
+            },
+            {
+              "const": "CUD",
+              "title": "Customs duty"
+            },
+            {
+              "const": "CVD",
+              "title": "Countervailing duty"
+            },
+            {
+              "const": "ENV",
+              "title": "Environmental tax"
+            },
+            {
+              "const": "EXC",
+              "title": "Excise duty"
+            },
+            {
+              "const": "EXP",
+              "title": "Agricultural export rebate"
+            },
+            {
+              "const": "FET",
+              "title": "Federal excise tax"
+            },
+            {
+              "const": "FRE",
+              "title": "Free"
+            },
+            {
+              "const": "GCN",
+              "title": "General construction tax"
+            },
+            {
+              "const": "GST",
+              "title": "Goods and services tax"
+            },
+            {
+              "const": "ILL",
+              "title": "Illuminants tax"
+            },
+            {
+              "const": "IMP",
+              "title": "Import tax"
+            },
+            {
+              "const": "IND",
+              "title": "Individual tax"
+            },
+            {
+              "const": "LAC",
+              "title": "Business license fee"
+            },
+            {
+              "const": "LCN",
+              "title": "Local construction tax"
+            },
+            {
+              "const": "LDP",
+              "title": "Light dues payable"
+            },
+            {
+              "const": "LOC",
+              "title": "Local sales tax"
+            },
+            {
+              "const": "LST",
+              "title": "Lust tax"
+            },
+            {
+              "const": "MCA",
+              "title": "Monetary compensatory amount"
+            },
+            {
+              "const": "MCD",
+              "title": "Miscellaneous cash deposit"
+            },
+            {
+              "const": "OTH",
+              "title": "Other taxes"
+            },
+            {
+              "const": "PDB",
+              "title": "Provisional duty bond"
+            },
+            {
+              "const": "PDC",
+              "title": "Provisional duty cash"
+            },
+            {
+              "const": "PRF",
+              "title": "Preference duty"
+            },
+            {
+              "const": "SCN",
+              "title": "Special construction tax"
+            },
+            {
+              "const": "SSS",
+              "title": "Shifted social securities"
+            },
+            {
+              "const": "STT",
+              "title": "State/provincial sales tax"
+            },
+            {
+              "const": "SUP",
+              "title": "Suspended duty"
+            },
+            {
+              "const": "SUR",
+              "title": "Surtax"
+            },
+            {
+              "const": "SWT",
+              "title": "Shifted wage tax"
+            },
+            {
+              "const": "TAC",
+              "title": "Alcohol mark tax"
+            },
+            {
+              "const": "TOT",
+              "title": "Total"
+            },
+            {
+              "const": "TOX",
+              "title": "Turnover tax"
+            },
+            {
+              "const": "TTA",
+              "title": "Tonnage taxes"
+            },
+            {
+              "const": "VAD",
+              "title": "Valuation deposit"
+            },
+            {
+              "const": "VAT",
+              "title": "Value added tax"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

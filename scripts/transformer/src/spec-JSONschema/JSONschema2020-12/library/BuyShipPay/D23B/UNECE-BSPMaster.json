@@ -1,0 +1,345 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/BSPMaster",
+  "title": "BSP Master",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "type": "object",
+  "properties": {
+    "exchangedDocumentContext": {
+      "title": "BSP Master. Exchanged Document_ Context",
+      "description": "The set of context parameters specified for a use of this master message assembly.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/exchangedDocumentContextType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "exchangedDocument": {
+      "title": "BSP Master. Exchanged_ Document",
+      "description": "The header document information for a use of this master message assembly.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/exchangedDocumentType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "exchangedDeclaration": {
+      "title": "BSP Master. Exchanged_ Declaration. Exchanged_ Declaration",
+      "description": "A collection of data that is exchanged related to a regulatory declaration for a use of this master message.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/exchangedDeclarationType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "specifiedLogisticsTransportMovement": {
+      "title": "BSP Master. Specified. Logistics_ Transport Movement",
+      "description": "The logistics transport movement specified for a use of this master message assembly.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/logisticsTransportMovementType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "specifiedConsignment": {
+      "title": "BSP Master. Specified. Supply Chain_ Consignment",
+      "description": "A supply chain consignment specified for a use of this master message assembly.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/consignmentType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "specifiedLogisticsTransportEquipment": {
+      "title": "BSP Master. Specified. Logistics_ Transport Equipment",
+      "description": "A piece of logistics transport equipment specified for a use of this master message assembly.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/logisticsTransportEquipmentType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "specifiedService": {
+      "title": "BSP Master. Specified. Transport_ Service",
+      "description": "A transport service specified for a use of this master message assembly.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/serviceType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "tradeSettlementPayment": {
+      "title": "BSP Master. Trade Settlement_ Payment",
+      "description": "A trade settlement payment for a use of this master message assembly.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/tradeSettlementPaymentType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "tradeTransaction": {
+      "title": "BSP Master. Supply Chain_ Trade Transaction",
+      "description": "A supply chain trade transaction specified for a use of this master message assembly.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/supplyChainTradeTransactionType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "tradeProduct": {
+      "title": "BSP Master. Trade_ Product. Trade_ Product",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/tradeProductType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "productBatch": {
+      "title": "BSP Master. Product_ Batch. Product_ Batch",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/productBatchType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "animalBatch": {
+      "title": "BSP Master. Animal_ Batch. Animal_ Batch",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/animalBatchType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "referencedLocation": {
+      "title": "BSP Master. Referenced_ Location. Referenced_ Location",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/referencedLocationType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "productionProcess": {
+      "title": "BSP Master. Production_ Process. Production_ Process",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/productionProcessType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "productionFacility": {
+      "title": "BSP Master. Production_ Facility. Production_ Facility",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/productionFacilityType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "headerTradeDelivery": {
+      "title": "BSP Master. Header_ Trade Delivery. Header_ Trade Delivery",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/headerTradeDeliveryType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "lineTradeDelivery": {
+      "title": "BSP Master. Line_ Trade Delivery. Line_ Trade Delivery",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/lineTradeDeliveryType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "valuationBreakdownStatement": {
+      "title": "BSP Master. Valuation_ Breakdown Statement",
+      "description": "A detailed statement of work, prices, and dimensions for a use of this mastermessage assembly.",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/valuationBreakdownStatementType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "financingRequestDocument": {
+      "title": "BSP Master. Financing Request_ Document",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/financingRequestDocumentType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "financingSummaryDocument": {
+      "title": "BSP Master. Financing Summary_ Document",
+      "$ref": "UNECE-BSPContextCCL.json#/$defs/financingSummaryDocumentType"
+    },
+    "acknowledgementDocument": {
+      "title": "BSP Master. Acknowledgement_ Document",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/acknowledgementDocumentType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "ttExchangedDocument": {
+      "title": "BSP Master. TT Exchanged_ Document. TT Exchanged_ Document",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/ttExchangedDocumentType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    },
+    "ttObjectEvent": {
+      "title": "BSP Master. TT Object_ Event. TT Object_ Event",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/ttObjectEventType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "ttTransformationEvent": {
+      "title": "BSP Master. TT Transformation_ Event. TT Transformation_ Event",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/ttTransformationEventType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "ttAggregationEvent": {
+      "title": "BSP Master. TT Aggregation_ Event. TT Aggregation_ Event",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/ttAggregationEventType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "ttTransactionEvent": {
+      "title": "BSP Master. TT Transaction_ Event. TT Transaction_ Event",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "UNECE-BSPContextCCL.json#/$defs/ttTransactionEventType"
+          },
+          {
+            "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+          }
+        ]
+      }
+    },
+    "experienceProgramAction": {
+      "title": "BSP Master. Experience Program_ Action",
+      "$ref": "UNECE-BSPContextCCL.json#/$defs/experienceProgramActionType"
+    },
+    "electronicNegotiationExchange": {
+      "title": "BSP Master. Electronic_ Negotiation Exchange",
+      "oneOf": [
+        {
+          "$ref": "UNECE-BSPContextCCL.json#/$defs/electronicNegotiationExchangeType"
+        },
+        {
+          "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+        }
+      ]
+    }
+  },
+  "$ref": "UNECE-BasicComponents.json#/$defs/extensibleType",
+  "unevaluatedProperties": false
+}

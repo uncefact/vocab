@@ -1,0 +1,6 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Datenmodell: TL Product Transparency Message; D22B
+
+ERROR: Leere Codeliste: UNECE-TLProductTransparency.json#/$defs/codeList/$defs/MIMEMediaTypeType (Binary Object. Mime. Code)

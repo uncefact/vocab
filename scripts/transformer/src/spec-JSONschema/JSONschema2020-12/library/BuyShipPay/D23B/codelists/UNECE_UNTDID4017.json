@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID4017",
+  "title": "UNECE_UNTDID4017",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4017Type": {
+          "title": "Delivery plan commitment level code",
+          "description": "Code specifying the level of commitment to a delivery\r\nplan.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Firm"
+            },
+            {
+              "const": "2",
+              "title": "Commitment for manufacturing and material"
+            },
+            {
+              "const": "3",
+              "title": "Commitment for material"
+            },
+            {
+              "const": "4",
+              "title": "Planning/forecast"
+            },
+            {
+              "const": "5",
+              "title": "Short delivered on previous delivery"
+            },
+            {
+              "const": "6",
+              "title": "Capacity available"
+            },
+            {
+              "const": "7",
+              "title": "Promotion"
+            },
+            {
+              "const": "8",
+              "title": "Special demand"
+            },
+            {
+              "const": "9",
+              "title": "User defined"
+            },
+            {
+              "const": "10",
+              "title": "Immediate"
+            },
+            {
+              "const": "11",
+              "title": "Pilot/Pre-volume"
+            },
+            {
+              "const": "12",
+              "title": "Planning"
+            },
+            {
+              "const": "13",
+              "title": "Potential order increase"
+            },
+            {
+              "const": "14",
+              "title": "Average plant usage"
+            },
+            {
+              "const": "15",
+              "title": "First time reported firm"
+            },
+            {
+              "const": "16",
+              "title": "Maximum"
+            },
+            {
+              "const": "17",
+              "title": "Tooling capacity"
+            },
+            {
+              "const": "18",
+              "title": "Normal tooling capacity"
+            },
+            {
+              "const": "19",
+              "title": "Prototype"
+            },
+            {
+              "const": "20",
+              "title": "Strike protection"
+            },
+            {
+              "const": "21",
+              "title": "Required tooling capacity"
+            },
+            {
+              "const": "22",
+              "title": "Deliver to schedule"
+            },
+            {
+              "const": "23",
+              "title": "Await manual pull"
+            },
+            {
+              "const": "24",
+              "title": "Reference to commercial agreement between partners"
+            },
+            {
+              "const": "26",
+              "title": "Proposed"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

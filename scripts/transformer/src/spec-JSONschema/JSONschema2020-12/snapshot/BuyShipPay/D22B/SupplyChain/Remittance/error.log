@@ -1,0 +1,6 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Datenmodell: CIR SCRDM; D22B
+
+ERROR: Leere Codeliste: UNECE-CrossIndustryRemittanceAdvice.json#/$defs/codeList/$defs/MIMEMediaTypeType (Binary Object. Mime. Code)

@@ -1,0 +1,435 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID3139",
+  "title": "UNECE_UNTDID3139",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID3139Type": {
+          "title": "Contact function code",
+          "description": "Code specifying the function of a contact (e.g.\r\ndepartment or person).",
+          "oneOf": [
+            {
+              "const": "AA",
+              "title": "Insurance contact"
+            },
+            {
+              "const": "AB",
+              "title": "Workshop contact"
+            },
+            {
+              "const": "AC",
+              "title": "Accepting contact"
+            },
+            {
+              "const": "AD",
+              "title": "Accounting contact"
+            },
+            {
+              "const": "AE",
+              "title": "Contract contact"
+            },
+            {
+              "const": "AF",
+              "title": "Land registry contact"
+            },
+            {
+              "const": "AG",
+              "title": "Agent"
+            },
+            {
+              "const": "AH",
+              "title": "Coordination contact"
+            },
+            {
+              "const": "AI",
+              "title": "Project management contact"
+            },
+            {
+              "const": "AJ",
+              "title": "Investment contact"
+            },
+            {
+              "const": "AK",
+              "title": "Works management contact"
+            },
+            {
+              "const": "AL",
+              "title": "Personnel contact"
+            },
+            {
+              "const": "AM",
+              "title": "Claims contact"
+            },
+            {
+              "const": "AN",
+              "title": "Laboratory contact"
+            },
+            {
+              "const": "AO",
+              "title": "Plant/equipment contact"
+            },
+            {
+              "const": "AP",
+              "title": "Accounts payable contact"
+            },
+            {
+              "const": "AQ",
+              "title": "Quantity surveyor contact"
+            },
+            {
+              "const": "AR",
+              "title": "Accounts receivable contact"
+            },
+            {
+              "const": "AS",
+              "title": "Public relations contact"
+            },
+            {
+              "const": "AT",
+              "title": "Technical contact"
+            },
+            {
+              "const": "AU",
+              "title": "City works authority contact"
+            },
+            {
+              "const": "AV",
+              "title": "Maintenance contact"
+            },
+            {
+              "const": "AW",
+              "title": "Town planning contact"
+            },
+            {
+              "const": "AX",
+              "title": "Traffic authority contact"
+            },
+            {
+              "const": "AY",
+              "title": "Electricity supply contact"
+            },
+            {
+              "const": "AZ",
+              "title": "Gas supply contact"
+            },
+            {
+              "const": "BA",
+              "title": "Water supply contact"
+            },
+            {
+              "const": "BB",
+              "title": "Telecommunications network contact"
+            },
+            {
+              "const": "BC",
+              "title": "Banking contact"
+            },
+            {
+              "const": "BD",
+              "title": "New developments contact"
+            },
+            {
+              "const": "BE",
+              "title": "Transport infrastructure authority"
+            },
+            {
+              "const": "BF",
+              "title": "Service contact"
+            },
+            {
+              "const": "BG",
+              "title": "Auditing contact"
+            },
+            {
+              "const": "BH",
+              "title": "Legal auditing contact"
+            },
+            {
+              "const": "BI",
+              "title": "Software house contact"
+            },
+            {
+              "const": "BJ",
+              "title": "Department or person responsible for processing purchase order"
+            },
+            {
+              "const": "BK",
+              "title": "Electronic data interchange coordinator"
+            },
+            {
+              "const": "BL",
+              "title": "Waiver contact"
+            },
+            {
+              "const": "BM",
+              "title": "Automated clearing house (ACH) contact"
+            },
+            {
+              "const": "BN",
+              "title": "Certification contact"
+            },
+            {
+              "const": "BO",
+              "title": "After business hours contact"
+            },
+            {
+              "const": "BP",
+              "title": "Company Security Officer’s 24-hour contact"
+            },
+            {
+              "const": "BQ",
+              "title": "Agent of ship at the intended port of arrival"
+            },
+            {
+              "const": "BR",
+              "title": "Cook"
+            },
+            {
+              "const": "BS",
+              "title": "Customer contact"
+            },
+            {
+              "const": "BT",
+              "title": "Meter access contact"
+            },
+            {
+              "const": "BU",
+              "title": "Ultimate consignee"
+            },
+            {
+              "const": "CA",
+              "title": "Carrier"
+            },
+            {
+              "const": "CB",
+              "title": "Changed by"
+            },
+            {
+              "const": "CC",
+              "title": "Responsible person for information production"
+            },
+            {
+              "const": "CD",
+              "title": "Responsible person for information dissemination"
+            },
+            {
+              "const": "CE",
+              "title": "Head of unit for computer data processing"
+            },
+            {
+              "const": "CF",
+              "title": "Head of unit for information production"
+            },
+            {
+              "const": "CG",
+              "title": "Head of unit for information dissemination"
+            },
+            {
+              "const": "CN",
+              "title": "Consignee"
+            },
+            {
+              "const": "CO",
+              "title": "Consignor"
+            },
+            {
+              "const": "CP",
+              "title": "Responsible person for computer data processing"
+            },
+            {
+              "const": "CR",
+              "title": "Customer relations"
+            },
+            {
+              "const": "CW",
+              "title": "Confirmed with"
+            },
+            {
+              "const": "DE",
+              "title": "Department/employee to execute export procedures"
+            },
+            {
+              "const": "DI",
+              "title": "Department/employee to execute import procedures"
+            },
+            {
+              "const": "DL",
+              "title": "Delivery contact"
+            },
+            {
+              "const": "EB",
+              "title": "Entered by"
+            },
+            {
+              "const": "EC",
+              "title": "Education coordinator"
+            },
+            {
+              "const": "ED",
+              "title": "Engineering contact"
+            },
+            {
+              "const": "EX",
+              "title": "Expeditor"
+            },
+            {
+              "const": "GR",
+              "title": "Goods receiving contact"
+            },
+            {
+              "const": "HE",
+              "title": "Emergency dangerous goods contact"
+            },
+            {
+              "const": "HG",
+              "title": "Dangerous goods contact"
+            },
+            {
+              "const": "HM",
+              "title": "Hazardous material contact"
+            },
+            {
+              "const": "IC",
+              "title": "Information contact"
+            },
+            {
+              "const": "IN",
+              "title": "Insurer contact"
+            },
+            {
+              "const": "LB",
+              "title": "Place of delivery contact"
+            },
+            {
+              "const": "LO",
+              "title": "Place of collection contact"
+            },
+            {
+              "const": "MC",
+              "title": "Material control contact"
+            },
+            {
+              "const": "MD",
+              "title": "Material disposition contact"
+            },
+            {
+              "const": "MH",
+              "title": "Material handling contact"
+            },
+            {
+              "const": "MR",
+              "title": "Message recipient contact"
+            },
+            {
+              "const": "MS",
+              "title": "Message sender contact"
+            },
+            {
+              "const": "NT",
+              "title": "Notification contact"
+            },
+            {
+              "const": "OC",
+              "title": "Order contact"
+            },
+            {
+              "const": "PA",
+              "title": "Prototype coordinator"
+            },
+            {
+              "const": "PD",
+              "title": "Purchasing contact"
+            },
+            {
+              "const": "PE",
+              "title": "Payee contact"
+            },
+            {
+              "const": "PM",
+              "title": "Product management contact"
+            },
+            {
+              "const": "PP",
+              "title": "Prescribing physician"
+            },
+            {
+              "const": "QA",
+              "title": "Quality assurance contact"
+            },
+            {
+              "const": "QC",
+              "title": "Quality coordinator contact"
+            },
+            {
+              "const": "RD",
+              "title": "Receiving dock contact"
+            },
+            {
+              "const": "RP",
+              "title": "Authorized responsible person"
+            },
+            {
+              "const": "SA",
+              "title": "Sales administration"
+            },
+            {
+              "const": "SC",
+              "title": "Schedule contact"
+            },
+            {
+              "const": "SD",
+              "title": "Shipping contact"
+            },
+            {
+              "const": "SR",
+              "title": "Sales representative or department"
+            },
+            {
+              "const": "SU",
+              "title": "Supplier contact"
+            },
+            {
+              "const": "TA",
+              "title": "Traffic administrator"
+            },
+            {
+              "const": "TD",
+              "title": "Test contact"
+            },
+            {
+              "const": "TI",
+              "title": "Technical documentation recipient"
+            },
+            {
+              "const": "TR",
+              "title": "Transport contact"
+            },
+            {
+              "const": "WH",
+              "title": "Warehouse"
+            },
+            {
+              "const": "WI",
+              "title": "Alternate contact"
+            },
+            {
+              "const": "WJ",
+              "title": "Office Manager"
+            },
+            {
+              "const": "WK",
+              "title": "Chartered accountant contact"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

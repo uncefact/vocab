@@ -1,0 +1,6 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Datenmodell: BSP SPS Certificate; D22A
+
+ERROR: Leere Codeliste: UNECE-SPSCertificate.json#/$defs/codeList/$defs/MIMEMediaTypeType (Binary Object. Mime. Code)

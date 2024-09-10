@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/AirWaybill",
+  "title": "Air Waybill",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-COVID-19AirCargoFoundation.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocument": {
+          "allOf": [
+            {
+              "oneOf": [
+                {
+                  "$ref": "UNECE-MMTITIGGP_RContextCCL.json#/$defs/exchangedDocumentType"
+                },
+                {
+                  "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                }
+              ]
+            },
+            {
+              "properties": {
+                "typeCode": {
+                  "properties": {
+                    "content": {
+                      "enum": [
+                        "740",
+                        "741"
+                      ]
+                    }
+                  }
+                },
+                "includedNote": false,
+                "firstSignatoryDocumentAuthentication": {
+                  "properties": {
+                    "issueLogisticsLocation": false
+                  }
+                },
+                "thirdSignatoryDocumentAuthentication": false,
+                "fourthSignatoryDocumentAuthentication": false,
+                "recipient": false
+              }
+            }
+          ]
+        },
+        "specifiedConsignment": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-MMTITIGGP_RContextCCL.json#/$defs/consignmentType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "consignorAssignedId": false,
+                  "transportEquipmentQuantity": false,
+                  "includedConsignmentItem": {
+                    "items": {
+                      "properties": {
+                        "applicableDangerousGoods": {
+                          "items": {
+                            "properties": {
+                              "regulationCode": false,
+                              "packagingDangerLevelCode": false,
+                              "packingInstructionTypeCode": false,
+                              "grossWeight": false,
+                              "hazardTypeCode": false,
+                              "hazardClassificationId": false,
+                              "additionalHazardClassificationId": false,
+                              "grossVolume": false,
+                              "netWeight": false,
+                              "properShippingName": false,
+                              "explosiveCompatibilityGroupCode": false,
+                              "reportableQuantity": false,
+                              "tunnelRestrictionCode": false,
+                              "specialProvisionId": false,
+                              "authorizationInformation": false,
+                              "allPackedInOneInformation": false,
+                              "qValueNumeric": false,
+                              "overpackInformation": false,
+                              "aircraftLimitationInformation": false,
+                              "shipperDeclarationInformation": false,
+                              "isOrHasRadioactive": false,
+                              "emergencyTradeContact": false,
+                              "radioactiveMaterial": false,
+                              "specifiedLogisticsPackage": {
+                                "items": {
+                                  "properties": {
+                                    "grossWeight": false,
+                                    "grossVolume": false,
+                                    "levelCode": false,
+                                    "typeCode": false,
+                                    "type": false,
+                                    "sequenceNumeric": false,
+                                    "seriesStartId": false,
+                                    "seriesEndId": false,
+                                    "physicalLogisticsShippingMarks": false,
+                                    "linearSpatialDimension": false,
+                                    "usedPackaging": false,
+                                    "statedCondition": false
+                                  }
+                                }
+                              },
+                              "statedCondition": false
+                            }
+                          }
+                        },
+                        "specifiedLogisticsRiskAnalysisResult": {
+                          "items": {
+                            "properties": {
+                              "description": false,
+                              "levelCode": false,
+                              "screeningMethodCode": false,
+                              "securityExemptionCode": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "mainCarriageLogisticsTransportMovement": {
+                    "items": {
+                      "properties": {
+                        "usedLogisticsTransportMeans": false,
+                        "callEvent": false
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "consignor",
+                  "consignee",
+                  "carrier"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

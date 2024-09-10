@@ -1,0 +1,1305 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/SmartConatinersIOTDeviceNotification",
+  "title": "Smart Conatiners IOT Device Notification",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-MMTMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocumentContext": false,
+        "exchangedDocument": {
+          "allOf": [
+            {
+              "oneOf": [
+                {
+                  "$ref": "UNECE-MMTContextCCLContainer.json#/$defs/exchangedDocumentType"
+                },
+                {
+                  "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                }
+              ]
+            },
+            {
+              "properties": {
+                "attachmentBinaryObject": false,
+                "itemId": false,
+                "disposition": false,
+                "pageId": false,
+                "totalPageQuantity": false,
+                "headerInformation": false,
+                "summaryInformation": false,
+                "suffixId": false,
+                "responseDocumentTypeCode": false,
+                "additionalId": false,
+                "firstVersionIssueDateTime": false,
+                "subtypeCode": false,
+                "amendmentPurpose": false,
+                "owner": false,
+                "sender": false,
+                "recipient": {
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "items": {
+                          "properties": {
+                            "schemeId": false
+                          }
+                        }
+                      },
+                      "dodaacId": false,
+                      "cageId": false,
+                      "ricId": false,
+                      "businessTypeCode": false,
+                      "definedTradeContact": false,
+                      "faxUniversalCommunication": false,
+                      "emailURIUniversalCommunication": false,
+                      "requestedNotificationReferencedDocument": false,
+                      "issuedNotificationReferencedDocument": false,
+                      "logoReferencedDocument": false,
+                      "attentionOfAssociated": false,
+                      "claimedPersonalLanguageProficiency": false,
+                      "confirmedDocumentAuthentication": false
+                    }
+                  }
+                },
+                "platformProvider": false
+              }
+            }
+          ]
+        },
+        "exchangedDeclaration": false,
+        "specifiedLogisticsTransportMovement": false,
+        "specifiedConsignment": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-MMTContextCCLContainer.json#/$defs/consignmentType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "consignorAssignedId": false,
+                  "availabilityDueDateTime": false,
+                  "includedTareGrossWeight": false,
+                  "totalTareWeight": false,
+                  "globalId": false,
+                  "contractId": false,
+                  "shippedOnboardDateTime": false,
+                  "contractTermsInformation": false,
+                  "serviceChargeCurrencyCode": false,
+                  "serviceTariffCurrencyCode": false,
+                  "consignor": {
+                    "properties": {
+                      "dodaacId": false,
+                      "cageId": false,
+                      "ricId": false,
+                      "businessTypeCode": false,
+                      "definedTradeContact": false,
+                      "faxUniversalCommunication": false,
+                      "emailURIUniversalCommunication": false,
+                      "requestedNotificationReferencedDocument": false,
+                      "issuedNotificationReferencedDocument": false,
+                      "logoReferencedDocument": false,
+                      "attentionOfAssociated": false,
+                      "claimedPersonalLanguageProficiency": false,
+                      "confirmedDocumentAuthentication": false
+                    }
+                  },
+                  "consignee": {
+                    "properties": {
+                      "dodaacId": false,
+                      "cageId": false,
+                      "ricId": false,
+                      "businessTypeCode": false,
+                      "definedTradeContact": false,
+                      "faxUniversalCommunication": false,
+                      "emailURIUniversalCommunication": false,
+                      "requestedNotificationReferencedDocument": false,
+                      "issuedNotificationReferencedDocument": false,
+                      "logoReferencedDocument": false,
+                      "attentionOfAssociated": false,
+                      "claimedPersonalLanguageProficiency": false,
+                      "confirmedDocumentAuthentication": false
+                    }
+                  },
+                  "carrier": {
+                    "properties": {
+                      "dodaacId": false,
+                      "cageId": false,
+                      "ricId": false,
+                      "businessTypeCode": false,
+                      "definedTradeContact": {
+                        "items": {
+                          "properties": {
+                            "personName": false,
+                            "telephoneUniversalCommunication": false,
+                            "uriUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false,
+                            "ediUniversalCommunication": false,
+                            "postalTradeAddress": false
+                          }
+                        }
+                      },
+                      "faxUniversalCommunication": false,
+                      "emailURIUniversalCommunication": false,
+                      "requestedNotificationReferencedDocument": false,
+                      "issuedNotificationReferencedDocument": false,
+                      "logoReferencedDocument": false,
+                      "attentionOfAssociated": false,
+                      "claimedPersonalLanguageProficiency": false,
+                      "confirmedDocumentAuthentication": false
+                    }
+                  },
+                  "freightForwarder": {
+                    "properties": {
+                      "dodaacId": false,
+                      "cageId": false,
+                      "ricId": false,
+                      "businessTypeCode": false,
+                      "definedTradeContact": false,
+                      "faxUniversalCommunication": false,
+                      "emailURIUniversalCommunication": false,
+                      "requestedNotificationReferencedDocument": false,
+                      "issuedNotificationReferencedDocument": false,
+                      "logoReferencedDocument": false,
+                      "attentionOfAssociated": false,
+                      "claimedPersonalLanguageProficiency": false,
+                      "confirmedDocumentAuthentication": false
+                    }
+                  },
+                  "notified": {
+                    "items": {
+                      "properties": {
+                        "dodaacId": false,
+                        "cageId": false,
+                        "ricId": false,
+                        "businessTypeCode": false,
+                        "definedTradeContact": false,
+                        "faxUniversalCommunication": false,
+                        "emailURIUniversalCommunication": false,
+                        "requestedNotificationReferencedDocument": false,
+                        "issuedNotificationReferencedDocument": false,
+                        "logoReferencedDocument": false,
+                        "attentionOfAssociated": false,
+                        "claimedPersonalLanguageProficiency": false,
+                        "confirmedDocumentAuthentication": false
+                      }
+                    }
+                  },
+                  "carrierAcceptanceLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "utcOffsetNumeric": false,
+                      "countryId": false,
+                      "isOrHasHealthAffectedArea": false,
+                      "physicalGeographicalCoordinate": false,
+                      "subordinateLocation": false,
+                      "specifiedInspectionEvent": false,
+                      "facilityReferencedLocation": false
+                    }
+                  },
+                  "consigneeReceiptLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "utcOffsetNumeric": false,
+                      "countryId": false,
+                      "isOrHasHealthAffectedArea": false,
+                      "physicalGeographicalCoordinate": false,
+                      "subordinateLocation": false,
+                      "specifiedInspectionEvent": false,
+                      "facilityReferencedLocation": false
+                    }
+                  },
+                  "loadingBaseportLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "utcOffsetNumeric": false,
+                      "countryId": false,
+                      "isOrHasHealthAffectedArea": false,
+                      "physicalGeographicalCoordinate": false,
+                      "subordinateLocation": false,
+                      "specifiedInspectionEvent": false,
+                      "facilityReferencedLocation": false
+                    }
+                  },
+                  "unloadingBaseportLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "utcOffsetNumeric": false,
+                      "countryId": false,
+                      "isOrHasHealthAffectedArea": false,
+                      "physicalGeographicalCoordinate": false,
+                      "subordinateLocation": false,
+                      "specifiedInspectionEvent": false,
+                      "facilityReferencedLocation": false
+                    }
+                  },
+                  "transportContractReferencedDocument": {
+                    "properties": {
+                      "lineStatusCode": false,
+                      "creationDateTime": false,
+                      "itemId": false,
+                      "revision": false,
+                      "originalRequiredQuantity": false,
+                      "copyRequiredQuantity": false,
+                      "originalIssuedQuantity": false,
+                      "copyIssuedQuantity": false,
+                      "purposeCode": false,
+                      "amendmentPurposeCode": false,
+                      "revisionDateTime": false,
+                      "lineItemQuantity": false,
+                      "channelCode": false,
+                      "lineCountNumeric": false,
+                      "isOrHasControlRequirement": false,
+                      "reportCountNumeric": false,
+                      "versionId": false,
+                      "issuerSpecifiedDocumentHandlingInstructions": false,
+                      "validityPeriod": false
+                    }
+                  },
+                  "handlingInstructions": false,
+                  "transportEvent": false,
+                  "includedConsignmentItem": false,
+                  "includedReferencedConsignment": false,
+                  "utilizedLogisticsTransportEquipment": false,
+                  "mainCarriageLogisticsTransportMovement": false,
+                  "preCarriageLogisticsTransportMovement": false,
+                  "onCarriageLogisticsTransportMovement": false,
+                  "originTradeCountry": false,
+                  "specifiedTradeDeliveryTerms": false,
+                  "transportService": false,
+                  "reportedLogisticsStatus": false,
+                  "transportLogisticsPackage": false,
+                  "transportServicesBuyer": false,
+                  "classificationReferencedDocument": false,
+                  "specifiedLogisticsStatus": false,
+                  "warehouseOperator": false,
+                  "warehouseKeeper": false,
+                  "warehouseDepositor": false,
+                  "onwardRoutingLogisticsLocation": false,
+                  "originalDespatchLogisticsLocation": false,
+                  "statementNote": false
+                }
+              }
+            }
+          ]
+        },
+        "specifiedLogisticsTransportEquipment": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-MMTContextCCLContainer.json#/$defs/logisticsTransportEquipmentType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "id": false,
+                  "characteristicCode": {
+                    "properties": {
+                      "listId": false,
+                      "listAgencyName": false,
+                      "listVersionId": false,
+                      "name": false,
+                      "listName": false,
+                      "languageId": false,
+                      "listUri": false,
+                      "listSchemeUri": false
+                    }
+                  },
+                  "consigneeAssignedConsignmentId": false,
+                  "stowagePositionId": false,
+                  "axleQuantity": false,
+                  "cargoResidueStatusCode": false,
+                  "verifiedGrossWeight": false,
+                  "grossGoodsWeight": false,
+                  "netGoodsWeight": false,
+                  "grossGoodsVolume": false,
+                  "netGoodsVolume": false,
+                  "goodsItemUnitQuantity": false,
+                  "reportableQuantity": false,
+                  "loadedDangerousGoods": false,
+                  "linearSpatialDimension": false,
+                  "positioningEvent": false,
+                  "pickUpEvent": false,
+                  "operating": false,
+                  "invoicee": false,
+                  "preCarriageLogisticsTransportMovement": false,
+                  "mainCarriageLogisticsTransportMovement": false,
+                  "onCarriageLogisticsTransportMovement": false,
+                  "reportedLogisticsStatus": false,
+                  "transportService": false,
+                  "reportingIOTDeviceCommunicationPairing": {
+                    "items": {
+                      "properties": {
+                        "matchingCommunicationEvent": {
+                          "items": {
+                            "properties": {
+                              "operationalResponsible": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "occurrenceLogisticsLocation": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "reportingIOTDeviceEvent": {
+                    "items": {
+                      "properties": {
+                        "id": false,
+                        "estimatedOccurrenceDateTime": false,
+                        "scheduledOccurrenceDateTime": false,
+                        "requestedOccurrenceDateTime": false,
+                        "isOrHasMaritimeAnchorage": false,
+                        "pilotBoardingPlace": false,
+                        "anchorageDescription": false,
+                        "isOrHasAnchorageExpected": false,
+                        "occurrenceLogisticsLocation": {
+                          "properties": {
+                            "utcOffsetNumeric": false,
+                            "countryId": false,
+                            "isOrHasHealthAffectedArea": false,
+                            "subordinateLocation": {
+                              "items": {
+                                "properties": {
+                                  "subordinateLocation": {
+                                    "properties": {
+                                      "id": false,
+                                      "name": false,
+                                      "typeCode": false
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "reportingMonitoringIOTDevice": {
+                          "items": {
+                            "properties": {
+                              "modelId": false,
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "owner": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "operator": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "provider": false,
+                              "interfaceOEMEquipment": {
+                                "items": {
+                                  "properties": {
+                                    "manufacturer": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "dodaacId": false,
+                                        "cageId": false,
+                                        "ricId": false,
+                                        "businessTypeCode": false,
+                                        "definedTradeContact": false,
+                                        "faxUniversalCommunication": false,
+                                        "emailURIUniversalCommunication": false,
+                                        "requestedNotificationReferencedDocument": false,
+                                        "issuedNotificationReferencedDocument": false,
+                                        "logoReferencedDocument": false,
+                                        "attentionOfAssociated": false,
+                                        "claimedPersonalLanguageProficiency": false,
+                                        "confirmedDocumentAuthentication": false
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "reportingSensorCommunicationPairing": {
+                                "items": {
+                                  "properties": {
+                                    "matchingCommunicationEvent": {
+                                      "items": {
+                                        "properties": {
+                                          "operationalResponsible": {
+                                            "properties": {
+                                              "id": {
+                                                "items": {
+                                                  "properties": {
+                                                    "schemeId": false
+                                                  }
+                                                }
+                                              },
+                                              "dodaacId": false,
+                                              "cageId": false,
+                                              "ricId": false,
+                                              "businessTypeCode": false,
+                                              "definedTradeContact": false,
+                                              "faxUniversalCommunication": false,
+                                              "emailURIUniversalCommunication": false,
+                                              "requestedNotificationReferencedDocument": false,
+                                              "issuedNotificationReferencedDocument": false,
+                                              "logoReferencedDocument": false,
+                                              "attentionOfAssociated": false,
+                                              "claimedPersonalLanguageProficiency": false,
+                                              "confirmedDocumentAuthentication": false
+                                            }
+                                          },
+                                          "occurrenceLogisticsLocation": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "relatedCommunicationEvent": {
+                                "items": {
+                                  "properties": {
+                                    "unitQuantity": false,
+                                    "value": false,
+                                    "operationalResponsible": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "dodaacId": false,
+                                        "cageId": false,
+                                        "ricId": false,
+                                        "businessTypeCode": false,
+                                        "definedTradeContact": false,
+                                        "faxUniversalCommunication": false,
+                                        "emailURIUniversalCommunication": false,
+                                        "requestedNotificationReferencedDocument": false,
+                                        "issuedNotificationReferencedDocument": false,
+                                        "logoReferencedDocument": false,
+                                        "attentionOfAssociated": false,
+                                        "claimedPersonalLanguageProficiency": false,
+                                        "confirmedDocumentAuthentication": false
+                                      }
+                                    },
+                                    "occurrenceLogisticsLocation": false
+                                  }
+                                }
+                              },
+                              "reportedEvent": false,
+                              "embeddedMonitoringSensor": {
+                                "items": {
+                                  "properties": {
+                                    "owner": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "dodaacId": false,
+                                        "cageId": false,
+                                        "ricId": false,
+                                        "businessTypeCode": false,
+                                        "definedTradeContact": false,
+                                        "faxUniversalCommunication": false,
+                                        "emailURIUniversalCommunication": false,
+                                        "requestedNotificationReferencedDocument": false,
+                                        "issuedNotificationReferencedDocument": false,
+                                        "logoReferencedDocument": false,
+                                        "attentionOfAssociated": false,
+                                        "claimedPersonalLanguageProficiency": false,
+                                        "confirmedDocumentAuthentication": false
+                                      }
+                                    },
+                                    "manufacturer": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "dodaacId": false,
+                                        "cageId": false,
+                                        "ricId": false,
+                                        "businessTypeCode": false,
+                                        "faxUniversalCommunication": false,
+                                        "emailURIUniversalCommunication": false,
+                                        "requestedNotificationReferencedDocument": false,
+                                        "issuedNotificationReferencedDocument": false,
+                                        "logoReferencedDocument": false,
+                                        "attentionOfAssociated": false,
+                                        "claimedPersonalLanguageProficiency": false,
+                                        "confirmedDocumentAuthentication": false
+                                      }
+                                    },
+                                    "definedControlSettingParameter": {
+                                      "items": {
+                                        "properties": {
+                                          "requestedRange": {
+                                            "items": {
+                                              "properties": {
+                                                "valueCode": false,
+                                                "value": false,
+                                                "valueBaseSystemCode": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "definedOperationalParameter": false,
+                                    "precisionCalibratedMeasurement": false,
+                                    "actualReportedCalibratedMeasurement": false,
+                                    "scheduledReportedCalibratedMeasurement": false
+                                  }
+                                }
+                              },
+                              "remoteMonitoringSensor": {
+                                "items": {
+                                  "properties": {
+                                    "owner": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "dodaacId": false,
+                                        "cageId": false,
+                                        "ricId": false,
+                                        "businessTypeCode": false,
+                                        "definedTradeContact": false,
+                                        "faxUniversalCommunication": false,
+                                        "emailURIUniversalCommunication": false,
+                                        "requestedNotificationReferencedDocument": false,
+                                        "issuedNotificationReferencedDocument": false,
+                                        "logoReferencedDocument": false,
+                                        "attentionOfAssociated": false,
+                                        "claimedPersonalLanguageProficiency": false,
+                                        "confirmedDocumentAuthentication": false
+                                      }
+                                    },
+                                    "manufacturer": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "dodaacId": false,
+                                        "cageId": false,
+                                        "ricId": false,
+                                        "businessTypeCode": false,
+                                        "faxUniversalCommunication": false,
+                                        "emailURIUniversalCommunication": false,
+                                        "requestedNotificationReferencedDocument": false,
+                                        "issuedNotificationReferencedDocument": false,
+                                        "logoReferencedDocument": false,
+                                        "attentionOfAssociated": false,
+                                        "claimedPersonalLanguageProficiency": false,
+                                        "confirmedDocumentAuthentication": false
+                                      }
+                                    },
+                                    "definedControlSettingParameter": {
+                                      "items": {
+                                        "properties": {
+                                          "requestedRange": {
+                                            "items": {
+                                              "properties": {
+                                                "valueCode": false,
+                                                "value": false,
+                                                "valueBaseSystemCode": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "definedOperationalParameter": {
+                                      "items": {
+                                        "properties": {
+                                          "definedRange": {
+                                            "items": {
+                                              "properties": {
+                                                "valueCode": false,
+                                                "value": false,
+                                                "valueBaseSystemCode": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "precisionCalibratedMeasurement": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "typeCode": false
+                                        }
+                                      }
+                                    },
+                                    "actualReportedCalibratedMeasurement": {
+                                      "items": {
+                                        "properties": {
+                                          "typeCode": false
+                                        }
+                                      }
+                                    },
+                                    "scheduledReportedCalibratedMeasurement": {
+                                      "items": {
+                                        "properties": {
+                                          "typeCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "actualOccurrencePeriod": false,
+                        "preTranshipmentTransportEquipmentApplicableNote": false,
+                        "transportInformationApplicableNote": false
+                      }
+                    }
+                  },
+                  "relatedCommunicationEvent": {
+                    "items": {
+                      "properties": {
+                        "operationalResponsible": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "dodaacId": false,
+                            "cageId": false,
+                            "ricId": false,
+                            "businessTypeCode": false,
+                            "definedTradeContact": false,
+                            "faxUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false,
+                            "requestedNotificationReferencedDocument": false,
+                            "issuedNotificationReferencedDocument": false,
+                            "logoReferencedDocument": false,
+                            "attentionOfAssociated": false,
+                            "claimedPersonalLanguageProficiency": false,
+                            "confirmedDocumentAuthentication": false
+                          }
+                        },
+                        "occurrenceLogisticsLocation": false
+                      }
+                    }
+                  },
+                  "scheduledRoute": {
+                    "items": {
+                      "properties": {
+                        "itineraryStopEvent": {
+                          "items": {
+                            "properties": {
+                              "estimatedOccurrenceDateTime": false,
+                              "actualOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "receivedDateTime": false,
+                              "isOrHasMaritimeAnchorage": false,
+                              "pilotBoardingPlace": false,
+                              "anchorageDescription": false,
+                              "isOrHasAnchorageExpected": false,
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "utcOffsetNumeric": false,
+                                  "countryId": false,
+                                  "isOrHasHealthAffectedArea": false,
+                                  "physicalGeographicalCoordinate": false,
+                                  "subordinateLocation": {
+                                    "items": {
+                                      "properties": {
+                                        "id": false,
+                                        "name": false,
+                                        "typeCode": false,
+                                        "subordinateLocation": false
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "reportingMonitoringIOTDevice": false,
+                              "actualOccurrencePeriod": false,
+                              "preTranshipmentTransportEquipmentApplicableNote": false,
+                              "transportInformationApplicableNote": false
+                            }
+                          }
+                        },
+                        "specifiedLogisticsTransportMovement": false,
+                        "scheduledPeriod": false
+                      }
+                    }
+                  },
+                  "requestedRoute": {
+                    "items": {
+                      "properties": {
+                        "itineraryStopEvent": {
+                          "items": {
+                            "properties": {
+                              "estimatedOccurrenceDateTime": false,
+                              "actualOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "receivedDateTime": false,
+                              "isOrHasMaritimeAnchorage": false,
+                              "pilotBoardingPlace": false,
+                              "anchorageDescription": false,
+                              "isOrHasAnchorageExpected": false,
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "utcOffsetNumeric": false,
+                                  "countryId": false,
+                                  "isOrHasHealthAffectedArea": false,
+                                  "physicalGeographicalCoordinate": {
+                                    "properties": {
+                                      "latitude": false,
+                                      "longitude": false,
+                                      "timeZoneDateTime": false,
+                                      "timeZoneCode": false,
+                                      "timeZone": false,
+                                      "acquisitionDateTime": false,
+                                      "alternativeSourceSystemId": false
+                                    }
+                                  },
+                                  "subordinateLocation": false
+                                }
+                              },
+                              "reportingMonitoringIOTDevice": false,
+                              "actualOccurrencePeriod": false,
+                              "preTranshipmentTransportEquipmentApplicableNote": false,
+                              "transportInformationApplicableNote": false
+                            }
+                          }
+                        },
+                        "specifiedLogisticsTransportMovement": false,
+                        "scheduledPeriod": false
+                      }
+                    }
+                  },
+                  "actualRoute": false,
+                  "attachedMonitoringIOTDevice": {
+                    "items": {
+                      "properties": {
+                        "attachedAssetId": false,
+                        "modelId": false,
+                        "manufacturer": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "dodaacId": false,
+                            "cageId": false,
+                            "ricId": false,
+                            "businessTypeCode": false,
+                            "definedTradeContact": false,
+                            "faxUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false,
+                            "requestedNotificationReferencedDocument": false,
+                            "issuedNotificationReferencedDocument": false,
+                            "logoReferencedDocument": false,
+                            "attentionOfAssociated": false,
+                            "claimedPersonalLanguageProficiency": false,
+                            "confirmedDocumentAuthentication": false
+                          }
+                        },
+                        "owner": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "dodaacId": false,
+                            "cageId": false,
+                            "ricId": false,
+                            "businessTypeCode": false,
+                            "definedTradeContact": false,
+                            "faxUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false,
+                            "requestedNotificationReferencedDocument": false,
+                            "issuedNotificationReferencedDocument": false,
+                            "logoReferencedDocument": false,
+                            "attentionOfAssociated": false,
+                            "claimedPersonalLanguageProficiency": false,
+                            "confirmedDocumentAuthentication": false
+                          }
+                        },
+                        "operator": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "dodaacId": false,
+                            "cageId": false,
+                            "ricId": false,
+                            "businessTypeCode": false,
+                            "definedTradeContact": false,
+                            "faxUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false,
+                            "requestedNotificationReferencedDocument": false,
+                            "issuedNotificationReferencedDocument": false,
+                            "logoReferencedDocument": false,
+                            "attentionOfAssociated": false,
+                            "claimedPersonalLanguageProficiency": false,
+                            "confirmedDocumentAuthentication": false
+                          }
+                        },
+                        "provider": false,
+                        "interfaceOEMEquipment": {
+                          "items": {
+                            "properties": {
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "reportingSensorCommunicationPairing": {
+                          "items": {
+                            "properties": {
+                              "matchingCommunicationEvent": {
+                                "items": {
+                                  "properties": {
+                                    "operationalResponsible": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "dodaacId": false,
+                                        "cageId": false,
+                                        "ricId": false,
+                                        "businessTypeCode": false,
+                                        "definedTradeContact": false,
+                                        "faxUniversalCommunication": false,
+                                        "emailURIUniversalCommunication": false,
+                                        "requestedNotificationReferencedDocument": false,
+                                        "issuedNotificationReferencedDocument": false,
+                                        "logoReferencedDocument": false,
+                                        "attentionOfAssociated": false,
+                                        "claimedPersonalLanguageProficiency": false,
+                                        "confirmedDocumentAuthentication": false
+                                      }
+                                    },
+                                    "occurrenceLogisticsLocation": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "relatedCommunicationEvent": {
+                          "items": {
+                            "properties": {
+                              "operationalResponsible": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "occurrenceLogisticsLocation": false
+                            }
+                          }
+                        },
+                        "reportedEvent": false,
+                        "embeddedMonitoringSensor": {
+                          "items": {
+                            "properties": {
+                              "owner": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "definedControlSettingParameter": {
+                                "items": {
+                                  "properties": {
+                                    "requestedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "definedOperationalParameter": {
+                                "items": {
+                                  "properties": {
+                                    "definedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "precisionCalibratedMeasurement": {
+                                "items": {
+                                  "properties": {
+                                    "typeCode": false
+                                  }
+                                }
+                              },
+                              "actualReportedCalibratedMeasurement": {
+                                "items": {
+                                  "properties": {
+                                    "typeCode": false
+                                  }
+                                }
+                              },
+                              "scheduledReportedCalibratedMeasurement": {
+                                "items": {
+                                  "properties": {
+                                    "typeCode": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "remoteMonitoringSensor": {
+                          "items": {
+                            "properties": {
+                              "owner": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "definedTradeContact": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "dodaacId": false,
+                                  "cageId": false,
+                                  "ricId": false,
+                                  "businessTypeCode": false,
+                                  "faxUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false,
+                                  "requestedNotificationReferencedDocument": false,
+                                  "issuedNotificationReferencedDocument": false,
+                                  "logoReferencedDocument": false,
+                                  "attentionOfAssociated": false,
+                                  "claimedPersonalLanguageProficiency": false,
+                                  "confirmedDocumentAuthentication": false
+                                }
+                              },
+                              "definedControlSettingParameter": {
+                                "items": {
+                                  "properties": {
+                                    "requestedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "definedOperationalParameter": {
+                                "items": {
+                                  "properties": {
+                                    "definedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "precisionCalibratedMeasurement": {
+                                "items": {
+                                  "properties": {
+                                    "typeCode": false
+                                  }
+                                }
+                              },
+                              "actualReportedCalibratedMeasurement": {
+                                "items": {
+                                  "properties": {
+                                    "typeCode": false
+                                  }
+                                }
+                              },
+                              "scheduledReportedCalibratedMeasurement": {
+                                "items": {
+                                  "properties": {
+                                    "typeCode": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "manufacturer": false,
+                  "owner": false,
+                  "deconsolidationEvent": false,
+                  "registrationTradeCountry": false
+                }
+              }
+            }
+          ]
+        },
+        "specifiedService": false,
+        "acknowledgementDocument": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID6313",
+  "title": "UNECE_UNTDID6313",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID6313Type": {
+          "title": "Measured attribute code",
+          "description": "Code specifying the attribute measured.",
+          "oneOf": [
+            {
+              "const": "A",
+              "title": "Consolidated weight"
+            },
+            {
+              "const": "AAA",
+              "title": "Net weight"
+            },
+            {
+              "const": "AAB",
+              "title": "Goods item gross weight"
+            },
+            {
+              "const": "AAC",
+              "title": "Total net weight"
+            },
+            {
+              "const": "AAD",
+              "title": "Consignment gross weight"
+            },
+            {
+              "const": "AAF",
+              "title": "Net net weight"
+            },
+            {
+              "const": "AAG",
+              "title": "Stern thrust"
+            },
+            {
+              "const": "AAH",
+              "title": "Bow thrust"
+            },
+            {
+              "const": "AAI",
+              "title": "Hydrate content of an alcoholic product at bottling"
+            },
+            {
+              "const": "AAJ",
+              "title": "Number of units per pallet"
+            },
+            {
+              "const": "AAK",
+              "title": "Fat content"
+            },
+            {
+              "const": "AAM",
+              "title": "Transport means gross weight"
+            },
+            {
+              "const": "AAN",
+              "title": "Net tonnage of the vessel"
+            },
+            {
+              "const": "AAO",
+              "title": "Humidity"
+            },
+            {
+              "const": "AAP",
+              "title": "Voltage"
+            },
+            {
+              "const": "AAQ",
+              "title": "Power consumption"
+            },
+            {
+              "const": "AAR",
+              "title": "Heat dissipation"
+            },
+            {
+              "const": "AAS",
+              "title": "Air flow"
+            },
+            {
+              "const": "AAT",
+              "title": "Shock impact"
+            },
+            {
+              "const": "AAU",
+              "title": "Operative temperature"
+            },
+            {
+              "const": "AAV",
+              "title": "Non operative temperature"
+            },
+            {
+              "const": "AAW",
+              "title": "Gross volume"
+            },
+            {
+              "const": "AAX",
+              "title": "Net volume"
+            },
+            {
+              "const": "AAY",
+              "title": "Water content"
+            },
+            {
+              "const": "AAZ",
+              "title": "Tensile stress"
+            },
+            {
+              "const": "ABA",
+              "title": "Fibrosity"
+            },
+            {
+              "const": "ABB",
+              "title": "Gauge length"
+            },
+            {
+              "const": "ABC",
+              "title": "Radius"
+            },
+            {
+              "const": "ABD",
+              "title": "Straightness"
+            },
+            {
+              "const": "ABE",
+              "title": "Strain"
+            },
+            {
+              "const": "ABF",
+              "title": "Item width when unrolled"
+            },
+            {
+              "const": "ABG",
+              "title": "Item length when unrolled"
+            },
+            {
+              "const": "ABH",
+              "title": "Item area when unrolled"
+            },
+            {
+              "const": "ABI",
+              "title": "Original wort"
+            },
+            {
+              "const": "ABJ",
+              "title": "Volume"
+            },
+            {
+              "const": "ABK",
+              "title": "Angle"
+            },
+            {
+              "const": "ABL",
+              "title": "Peg hole horizontal distance from package leftmost edge"
+            },
+            {
+              "const": "ABM",
+              "title": "Peg hole vertical distance from package top"
+            },
+            {
+              "const": "ABN",
+              "title": "Number of layers per pallet"
+            },
+            {
+              "const": "ABO",
+              "title": "Product strengh, chemical"
+            },
+            {
+              "const": "ABP",
+              "title": "Product strength basis, chemical"
+            },
+            {
+              "const": "ABS",
+              "title": "Item weight"
+            },
+            {
+              "const": "ABT",
+              "title": "Payload weight, maximum"
+            },
+            {
+              "const": "ABX",
+              "title": "Weight of conveyance"
+            },
+            {
+              "const": "ABY",
+              "title": "Conveyance summer dead weight"
+            },
+            {
+              "const": "ABZ",
+              "title": "Containerized cargo on vessel's weight"
+            },
+            {
+              "const": "ACA",
+              "title": "Non-containerized cargo on vessel's weight"
+            },
+            {
+              "const": "ACE",
+              "title": "Ascertained weight"
+            },
+            {
+              "const": "ACG",
+              "title": "Chargeable weight"
+            },
+            {
+              "const": "ACN",
+              "title": "Estimated gross weight"
+            },
+            {
+              "const": "ACP",
+              "title": "Estimated volume"
+            },
+            {
+              "const": "ACS",
+              "title": "Vessel overall length"
+            },
+            {
+              "const": "ACV",
+              "title": "Loading meters"
+            },
+            {
+              "const": "ACW",
+              "title": "Number of axles"
+            },
+            {
+              "const": "ACX",
+              "title": "Payload"
+            },
+            {
+              "const": "ADR",
+              "title": "Start position in the length"
+            },
+            {
+              "const": "ADS",
+              "title": "End position in the length"
+            },
+            {
+              "const": "ADT",
+              "title": "Start position in the width"
+            },
+            {
+              "const": "ADU",
+              "title": "End position in the width"
+            },
+            {
+              "const": "ADV",
+              "title": "Start position in the thickness"
+            },
+            {
+              "const": "ADW",
+              "title": "End position in the thickness"
+            },
+            {
+              "const": "ADX",
+              "title": "Transport container actual filling weight"
+            },
+            {
+              "const": "ADY",
+              "title": "Transport container maximum capacity"
+            },
+            {
+              "const": "ADZ",
+              "title": "Declared net weight"
+            },
+            {
+              "const": "AEA",
+              "title": "Loading height"
+            },
+            {
+              "const": "AEB",
+              "title": "Stacking height"
+            },
+            {
+              "const": "AEC",
+              "title": "Calculated weight"
+            },
+            {
+              "const": "AED",
+              "title": "Ferrite"
+            },
+            {
+              "const": "AEE",
+              "title": "Impurity"
+            },
+            {
+              "const": "AEF",
+              "title": "Grain size"
+            },
+            {
+              "const": "AEG",
+              "title": "Lanthanides"
+            },
+            {
+              "const": "AEH",
+              "title": "Elasticity"
+            },
+            {
+              "const": "AEI",
+              "title": "Drained weight"
+            },
+            {
+              "const": "AEJ",
+              "title": "Gallium"
+            },
+            {
+              "const": "AEK",
+              "title": "Strontium"
+            },
+            {
+              "const": "AEL",
+              "title": "Area"
+            },
+            {
+              "const": "AEM",
+              "title": "Equipment storage limitation"
+            },
+            {
+              "const": "AEN",
+              "title": "Radioactive index of transport"
+            },
+            {
+              "const": "AEO",
+              "title": "Radioactivity"
+            },
+            {
+              "const": "AEP",
+              "title": "Average gross weight"
+            },
+            {
+              "const": "AEQ",
+              "title": "Forward draft"
+            },
+            {
+              "const": "AER",
+              "title": "After draft"
+            },
+            {
+              "const": "AES",
+              "title": "Acidity"
+            },
+            {
+              "const": "AET",
+              "title": "Transport equipment gross weight"
+            },
+            {
+              "const": "AEU",
+              "title": "Total transport equipment gross weight"
+            },
+            {
+              "const": "AEV",
+              "title": "Acidity of juice"
+            },
+            {
+              "const": "AEW",
+              "title": "Penetrometry"
+            },
+            {
+              "const": "AEX",
+              "title": "Durofel"
+            },
+            {
+              "const": "AEY",
+              "title": "Juice weight per 100 grams"
+            },
+            {
+              "const": "AEZ",
+              "title": "Fruit skin colour"
+            },
+            {
+              "const": "AF",
+              "title": "Angle of bend"
+            },
+            {
+              "const": "AFA",
+              "title": "Fixed incremental measurement"
+            },
+            {
+              "const": "AFB",
+              "title": "Durofel D10"
+            },
+            {
+              "const": "AFC",
+              "title": "Durofel D25"
+            },
+            {
+              "const": "AFD",
+              "title": "Durofel D50"
+            },
+            {
+              "const": "AFE",
+              "title": "Maximum stacking weight"
+            },
+            {
+              "const": "AFF",
+              "title": "Gross measure cube"
+            },
+            {
+              "const": "AFG",
+              "title": "Percentage fat content in dry matter"
+            },
+            {
+              "const": "AFH",
+              "title": "Saccharometric content"
+            },
+            {
+              "const": "AFI",
+              "title": "Hydrate content of an alcoholic product after bottling"
+            },
+            {
+              "const": "AFJ",
+              "title": "Anhydrous content"
+            },
+            {
+              "const": "AFK",
+              "title": "Certified weight"
+            },
+            {
+              "const": "AFL",
+              "title": "Freeboard"
+            },
+            {
+              "const": "AFM",
+              "title": "Maximum vessel draught"
+            },
+            {
+              "const": "AFN",
+              "title": "Net explosive weight"
+            },
+            {
+              "const": "AFO",
+              "title": "Radioactive criticality safety index"
+            },
+            {
+              "const": "AFP",
+              "title": "Waste currently on board"
+            },
+            {
+              "const": "AFQ",
+              "title": "Waste to be delivered at waste reception facility"
+            },
+            {
+              "const": "AFR",
+              "title": "Waste to be generated until next port of call, estimated"
+            },
+            {
+              "const": "AFS",
+              "title": "Waste remaining on board at departure"
+            },
+            {
+              "const": "AFT",
+              "title": "Colour depth"
+            },
+            {
+              "const": "AFU",
+              "title": "Colour depth, maximum"
+            },
+            {
+              "const": "AFV",
+              "title": "Image resolution"
+            },
+            {
+              "const": "AFW",
+              "title": "Device resolution, maximum"
+            },
+            {
+              "const": "AFX",
+              "title": "Acoustic absorption coefficient"
+            },
+            {
+              "const": "B",
+              "title": "Billed weight"
+            },
+            {
+              "const": "BL",
+              "title": "Breaking load"
+            },
+            {
+              "const": "BMY",
+              "title": "Platinum"
+            },
+            {
+              "const": "BMZ",
+              "title": "Silver"
+            },
+            {
+              "const": "BNA",
+              "title": "List"
+            },
+            {
+              "const": "BNB",
+              "title": "Trim"
+            },
+            {
+              "const": "BNC",
+              "title": "Free water"
+            },
+            {
+              "const": "BND",
+              "title": "Bands"
+            },
+            {
+              "const": "BNE",
+              "title": "API (American Petroleum Institute) gravity"
+            },
+            {
+              "const": "BNF",
+              "title": "Petroleum gross observed volume"
+            },
+            {
+              "const": "BNG",
+              "title": "Petroleum gross standard volume"
+            },
+            {
+              "const": "BNH",
+              "title": "Volume variance"
+            },
+            {
+              "const": "BNI",
+              "title": "Petroleum net standard volume"
+            },
+            {
+              "const": "BNJ",
+              "title": "Material on-board quantity, after discharge"
+            },
+            {
+              "const": "BNK",
+              "title": "Petroleum total calculated volume"
+            },
+            {
+              "const": "BNL",
+              "title": "Petroleum total observed volume"
+            },
+            {
+              "const": "BNM",
+              "title": "Innage gauge distance"
+            },
+            {
+              "const": "BNN",
+              "title": "Petroleum net standard weight"
+            },
+            {
+              "const": "BNO",
+              "title": "Sediment and water in petroleum"
+            },
+            {
+              "const": "BNP",
+              "title": "Observed reference height, tank"
+            },
+            {
+              "const": "BNQ",
+              "title": "Reference height, tank"
+            },
+            {
+              "const": "BNR",
+              "title": "Ullage gauge distance"
+            },
+            {
+              "const": "BNS",
+              "title": "Trim correction"
+            },
+            {
+              "const": "BNT",
+              "title": "Bow to bridge distance"
+            },
+            {
+              "const": "BNU",
+              "title": "Peg hole number"
+            },
+            {
+              "const": "BNV",
+              "title": "Number of inner packs"
+            },
+            {
+              "const": "BNW",
+              "title": "Number of next level trade items within inner pack"
+            },
+            {
+              "const": "BNX",
+              "title": "Number of trade items per pallet layer"
+            },
+            {
+              "const": "BNY",
+              "title": "Packed items layer height"
+            },
+            {
+              "const": "BNZ",
+              "title": "Packing material weight, skin tight covering"
+            },
+            {
+              "const": "BR",
+              "title": "Brightness"
+            },
+            {
+              "const": "BRA",
+              "title": "Brakes"
+            },
+            {
+              "const": "BRB",
+              "title": "Components labelled for recycling percentage"
+            },
+            {
+              "const": "BRC",
+              "title": "Renewable plastic components percentage, by net weight"
+            },
+            {
+              "const": "BRD",
+              "title": "Clamp pressure, required"
+            },
+            {
+              "const": "BRE",
+              "title": "Break"
+            },
+            {
+              "const": "BRF",
+              "title": "Ascertained volume"
+            },
+            {
+              "const": "BRG",
+              "title": "Unit weight"
+            },
+            {
+              "const": "BRH",
+              "title": "Total volume"
+            },
+            {
+              "const": "BRI",
+              "title": "Unit volume"
+            },
+            {
+              "const": "BRJ",
+              "title": "Vertical center of gravity"
+            },
+            {
+              "const": "BRK",
+              "title": "Maximum allowable transport stacking weight"
+            },
+            {
+              "const": "BRL",
+              "title": "Carbon Dioxide"
+            },
+            {
+              "const": "BRM",
+              "title": "Number of base units per pallet"
+            },
+            {
+              "const": "BRN",
+              "title": "Colony forming unit"
+            },
+            {
+              "const": "BRO",
+              "title": "Diluted liquid volume"
+            },
+            {
+              "const": "BRP",
+              "title": "Energy efficiency"
+            },
+            {
+              "const": "BRQ",
+              "title": "Number of layers"
+            },
+            {
+              "const": "BRR",
+              "title": "Maximum demand"
+            },
+            {
+              "const": "BRS",
+              "title": "Number of pallet places"
+            },
+            {
+              "const": "BRT",
+              "title": "Package net measurement, cubed"
+            },
+            {
+              "const": "BRU",
+              "title": "Power factor"
+            },
+            {
+              "const": "BRV",
+              "title": "Stacking factor excluding bottom item"
+            },
+            {
+              "const": "BS",
+              "title": "Breaking strength"
+            },
+            {
+              "const": "BSW",
+              "title": "Breaking strength wet"
+            },
+            {
+              "const": "BSX",
+              "title": "Step size"
+            },
+            {
+              "const": "BSY",
+              "title": "Number of units per package"
+            },
+            {
+              "const": "BSZ",
+              "title": "Number of units per layer"
+            },
+            {
+              "const": "BTA",
+              "title": "Weight per running metre"
+            },
+            {
+              "const": "BTB",
+              "title": "Weight per square metre"
+            },
+            {
+              "const": "BTC",
+              "title": "Acidity of meat"
+            },
+            {
+              "const": "BTD",
+              "title": "Slaughtering weight"
+            },
+            {
+              "const": "BTE",
+              "title": "Stacking factor including bottom item"
+            },
+            {
+              "const": "BTF",
+              "title": "Number of units in the width of a layer"
+            },
+            {
+              "const": "BTG",
+              "title": "Number of units in the depth of a layer"
+            },
+            {
+              "const": "BTH",
+              "title": "Nestable percentage"
+            },
+            {
+              "const": "BTI",
+              "title": "Gross weight including carrier's equipment"
+            },
+            {
+              "const": "BTJ",
+              "title": "Sugar content"
+            },
+            {
+              "const": "BTK",
+              "title": "Self-accelerating polymerization temperature (SAPT)"
+            },
+            {
+              "const": "BTL",
+              "title": "Self-accelerating decomposition temperature (SADT)"
+            },
+            {
+              "const": "BTM",
+              "title": "Control temperature"
+            },
+            {
+              "const": "BW",
+              "title": "Basis weight"
+            },
+            {
+              "const": "CHN",
+              "title": "Change"
+            },
+            {
+              "const": "CHO",
+              "title": "Emergency temperature"
+            },
+            {
+              "const": "CM",
+              "title": "Colour"
+            },
+            {
+              "const": "CT",
+              "title": "Contents of package"
+            },
+            {
+              "const": "CV",
+              "title": "Commercial weight"
+            },
+            {
+              "const": "CZ",
+              "title": "Core length"
+            },
+            {
+              "const": "D",
+              "title": "Destination weight agreement"
+            },
+            {
+              "const": "DI",
+              "title": "Diameter"
+            },
+            {
+              "const": "DL",
+              "title": "Delta value L"
+            },
+            {
+              "const": "DN",
+              "title": "Density"
+            },
+            {
+              "const": "DP",
+              "title": "Depth"
+            },
+            {
+              "const": "DR",
+              "title": "Denier"
+            },
+            {
+              "const": "DS",
+              "title": "Distance between points"
+            },
+            {
+              "const": "DW",
+              "title": "Width, boxcar door"
+            },
+            {
+              "const": "E",
+              "title": "Estimated new weight"
+            },
+            {
+              "const": "EA",
+              "title": "Elongation"
+            },
+            {
+              "const": "F",
+              "title": "Deficit weight"
+            },
+            {
+              "const": "FI",
+              "title": "Filament count"
+            },
+            {
+              "const": "FL",
+              "title": "Longitudinal flatness"
+            },
+            {
+              "const": "FN",
+              "title": "Flatness"
+            },
+            {
+              "const": "FV",
+              "title": "Transverse flatness"
+            },
+            {
+              "const": "GG",
+              "title": "Gauge"
+            },
+            {
+              "const": "GW",
+              "title": "Gross weight, maximum"
+            },
+            {
+              "const": "HF",
+              "title": "Hardness"
+            },
+            {
+              "const": "HM",
+              "title": "Height, maximum"
+            },
+            {
+              "const": "HT",
+              "title": "Height dimension"
+            },
+            {
+              "const": "IB",
+              "title": "Impact energy"
+            },
+            {
+              "const": "ID",
+              "title": "Inside diameter"
+            },
+            {
+              "const": "L",
+              "title": "Legal weight"
+            },
+            {
+              "const": "LM",
+              "title": "Length, maximum"
+            },
+            {
+              "const": "LN",
+              "title": "Length"
+            },
+            {
+              "const": "LND",
+              "title": "Lost end"
+            },
+            {
+              "const": "M",
+              "title": "Minimum weight"
+            },
+            {
+              "const": "MO",
+              "title": "Moisture"
+            },
+            {
+              "const": "MW",
+              "title": "Maximum weight"
+            },
+            {
+              "const": "N",
+              "title": "Actual net weight"
+            },
+            {
+              "const": "OD",
+              "title": "Outside diameter"
+            },
+            {
+              "const": "PRS",
+              "title": "Pre stretch"
+            },
+            {
+              "const": "PTN",
+              "title": "Per tonne"
+            },
+            {
+              "const": "RA",
+              "title": "Relative humidity"
+            },
+            {
+              "const": "RF",
+              "title": "Resistivity"
+            },
+            {
+              "const": "RJ",
+              "title": "Rockwell C"
+            },
+            {
+              "const": "RMW",
+              "title": "Ream weight"
+            },
+            {
+              "const": "RP",
+              "title": "Reduction of area"
+            },
+            {
+              "const": "RUN",
+              "title": "Run (process)"
+            },
+            {
+              "const": "RY",
+              "title": "Ratio"
+            },
+            {
+              "const": "SQ",
+              "title": "Shipped quantity"
+            },
+            {
+              "const": "T",
+              "title": "Tare weight"
+            },
+            {
+              "const": "TC",
+              "title": "Temperature"
+            },
+            {
+              "const": "TH",
+              "title": "Thickness"
+            },
+            {
+              "const": "TN",
+              "title": "Time period"
+            },
+            {
+              "const": "TT",
+              "title": "Time"
+            },
+            {
+              "const": "VGM",
+              "title": "Transport equipment verified gross mass (weight)"
+            },
+            {
+              "const": "VH",
+              "title": "Height, van door"
+            },
+            {
+              "const": "VW",
+              "title": "Width, van door"
+            },
+            {
+              "const": "WA",
+              "title": "Weight per unit of area"
+            },
+            {
+              "const": "WD",
+              "title": "Width dimension"
+            },
+            {
+              "const": "WM",
+              "title": "Width, maximum"
+            },
+            {
+              "const": "WU",
+              "title": "Weight per unit of length"
+            },
+            {
+              "const": "XH",
+              "title": "Side height, flat bed with removable sides"
+            },
+            {
+              "const": "XQ",
+              "title": "Squareness"
+            },
+            {
+              "const": "XZ",
+              "title": "Spool size"
+            },
+            {
+              "const": "YS",
+              "title": "Yield stress"
+            },
+            {
+              "const": "ZAL",
+              "title": "Aluminium"
+            },
+            {
+              "const": "ZAS",
+              "title": "Arsenic"
+            },
+            {
+              "const": "ZB",
+              "title": "Boron"
+            },
+            {
+              "const": "ZBI",
+              "title": "Bismuth"
+            },
+            {
+              "const": "ZC",
+              "title": "Carbon"
+            },
+            {
+              "const": "ZCA",
+              "title": "Calcium"
+            },
+            {
+              "const": "ZCB",
+              "title": "Columbium"
+            },
+            {
+              "const": "ZCE",
+              "title": "Cerium"
+            },
+            {
+              "const": "ZCL",
+              "title": "Chlorine"
+            },
+            {
+              "const": "ZCO",
+              "title": "Cobalt"
+            },
+            {
+              "const": "ZCR",
+              "title": "Chromium"
+            },
+            {
+              "const": "ZCU",
+              "title": "Copper"
+            },
+            {
+              "const": "ZFE",
+              "title": "Iron"
+            },
+            {
+              "const": "ZFS",
+              "title": "Iron plus silicon"
+            },
+            {
+              "const": "ZGE",
+              "title": "Germanium"
+            },
+            {
+              "const": "ZH",
+              "title": "Hydrogen"
+            },
+            {
+              "const": "ZK",
+              "title": "Potassium"
+            },
+            {
+              "const": "ZMG",
+              "title": "Magnesium"
+            },
+            {
+              "const": "ZMN",
+              "title": "Manganese"
+            },
+            {
+              "const": "ZMO",
+              "title": "Molybdenum"
+            },
+            {
+              "const": "ZN",
+              "title": "Nitrogen"
+            },
+            {
+              "const": "ZNA",
+              "title": "Sodium"
+            },
+            {
+              "const": "ZNB",
+              "title": "Niobium"
+            },
+            {
+              "const": "ZNI",
+              "title": "Nickel"
+            },
+            {
+              "const": "ZO",
+              "title": "Oxygen"
+            },
+            {
+              "const": "ZP",
+              "title": "Phosphorus"
+            },
+            {
+              "const": "ZPB",
+              "title": "Lead"
+            },
+            {
+              "const": "ZS",
+              "title": "Sulphur"
+            },
+            {
+              "const": "ZSB",
+              "title": "Antimony"
+            },
+            {
+              "const": "ZSE",
+              "title": "Selenium"
+            },
+            {
+              "const": "ZSI",
+              "title": "Silicon"
+            },
+            {
+              "const": "ZSL",
+              "title": "Silicium oxyd"
+            },
+            {
+              "const": "ZSN",
+              "title": "Tin"
+            },
+            {
+              "const": "ZTA",
+              "title": "Tantalium"
+            },
+            {
+              "const": "ZTE",
+              "title": "Tellurium"
+            },
+            {
+              "const": "ZTI",
+              "title": "Titanium"
+            },
+            {
+              "const": "ZV",
+              "title": "Vanadium"
+            },
+            {
+              "const": "ZW",
+              "title": "Tungsten"
+            },
+            {
+              "const": "ZWA",
+              "title": "Waste content"
+            },
+            {
+              "const": "ZZN",
+              "title": "Zinc"
+            },
+            {
+              "const": "ZZR",
+              "title": "Zirconium"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

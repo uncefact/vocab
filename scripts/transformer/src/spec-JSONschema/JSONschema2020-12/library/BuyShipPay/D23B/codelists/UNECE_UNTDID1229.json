@@ -1,0 +1,495 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID1229",
+  "title": "UNECE_UNTDID1229",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID1229Type": {
+          "title": "Action code",
+          "description": "Code specifying the action to be taken or already\r\ntaken.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Added"
+            },
+            {
+              "const": "2",
+              "title": "Deleted"
+            },
+            {
+              "const": "3",
+              "title": "Changed"
+            },
+            {
+              "const": "4",
+              "title": "No action"
+            },
+            {
+              "const": "5",
+              "title": "Accepted without amendment"
+            },
+            {
+              "const": "6",
+              "title": "Accepted with amendment"
+            },
+            {
+              "const": "7",
+              "title": "Not accepted"
+            },
+            {
+              "const": "8",
+              "title": "Schedule only"
+            },
+            {
+              "const": "9",
+              "title": "Amendments"
+            },
+            {
+              "const": "10",
+              "title": "Not found"
+            },
+            {
+              "const": "11",
+              "title": "Not amended"
+            },
+            {
+              "const": "12",
+              "title": "Line item numbers changed"
+            },
+            {
+              "const": "13",
+              "title": "Buyer has deducted amount"
+            },
+            {
+              "const": "14",
+              "title": "Buyer claims against invoice"
+            },
+            {
+              "const": "15",
+              "title": "Charge back by seller"
+            },
+            {
+              "const": "16",
+              "title": "Seller will issue credit note"
+            },
+            {
+              "const": "17",
+              "title": "Terms changed for new terms"
+            },
+            {
+              "const": "18",
+              "title": "Abide outcome of negotiations"
+            },
+            {
+              "const": "19",
+              "title": "Seller rejects dispute"
+            },
+            {
+              "const": "20",
+              "title": "Settlement"
+            },
+            {
+              "const": "21",
+              "title": "No delivery"
+            },
+            {
+              "const": "22",
+              "title": "Call-off delivery"
+            },
+            {
+              "const": "23",
+              "title": "Proposed amendment"
+            },
+            {
+              "const": "24",
+              "title": "Accepted with amendment, no confirmation required"
+            },
+            {
+              "const": "25",
+              "title": "Equipment provisionally repaired"
+            },
+            {
+              "const": "26",
+              "title": "Included"
+            },
+            {
+              "const": "27",
+              "title": "Upon receipt and verification of documents we shall cover you when due as per your instructions"
+            },
+            {
+              "const": "28",
+              "title": "Upon receipt and verification of documents we shall authorize you to debit our account with you when due"
+            },
+            {
+              "const": "29",
+              "title": "On receipt of your authenticated advice we shall cover you when due as per your instructions"
+            },
+            {
+              "const": "30",
+              "title": "On receipt of your authenticated advice we shall authorize you to debit our account with you when due"
+            },
+            {
+              "const": "31",
+              "title": "On receipt of your authenticated advice we shall credit your account with us when due"
+            },
+            {
+              "const": "32",
+              "title": "Credit advice requested for direct debit"
+            },
+            {
+              "const": "33",
+              "title": "Credit advice and acknowledgement for direct debit"
+            },
+            {
+              "const": "34",
+              "title": "Inquiry"
+            },
+            {
+              "const": "35",
+              "title": "Checked"
+            },
+            {
+              "const": "36",
+              "title": "Not checked"
+            },
+            {
+              "const": "37",
+              "title": "Cancelled"
+            },
+            {
+              "const": "38",
+              "title": "Replaced"
+            },
+            {
+              "const": "39",
+              "title": "New"
+            },
+            {
+              "const": "40",
+              "title": "Agreed"
+            },
+            {
+              "const": "41",
+              "title": "Proposed"
+            },
+            {
+              "const": "42",
+              "title": "Already delivered"
+            },
+            {
+              "const": "43",
+              "title": "Additional subordinate structures will follow"
+            },
+            {
+              "const": "44",
+              "title": "Additional subordinate structures will not follow"
+            },
+            {
+              "const": "45",
+              "title": "Result opposed"
+            },
+            {
+              "const": "46",
+              "title": "Auction held"
+            },
+            {
+              "const": "47",
+              "title": "Legal action pursued"
+            },
+            {
+              "const": "48",
+              "title": "Meeting held"
+            },
+            {
+              "const": "49",
+              "title": "Result set aside"
+            },
+            {
+              "const": "50",
+              "title": "Result disputed"
+            },
+            {
+              "const": "51",
+              "title": "Countersued"
+            },
+            {
+              "const": "52",
+              "title": "Pending"
+            },
+            {
+              "const": "53",
+              "title": "Court action dismissed"
+            },
+            {
+              "const": "54",
+              "title": "Referred item, accepted"
+            },
+            {
+              "const": "55",
+              "title": "Referred item, rejected"
+            },
+            {
+              "const": "56",
+              "title": "Debit advice statement line"
+            },
+            {
+              "const": "57",
+              "title": "Credit advice statement line"
+            },
+            {
+              "const": "58",
+              "title": "Grouped credit advices"
+            },
+            {
+              "const": "59",
+              "title": "Grouped debit advices"
+            },
+            {
+              "const": "60",
+              "title": "Registered"
+            },
+            {
+              "const": "61",
+              "title": "Payment denied"
+            },
+            {
+              "const": "62",
+              "title": "Approved as amended"
+            },
+            {
+              "const": "63",
+              "title": "Approved as submitted"
+            },
+            {
+              "const": "64",
+              "title": "Cancelled, no activity"
+            },
+            {
+              "const": "65",
+              "title": "Under investigation"
+            },
+            {
+              "const": "66",
+              "title": "Initial claim received"
+            },
+            {
+              "const": "67",
+              "title": "Not in process"
+            },
+            {
+              "const": "68",
+              "title": "Rejected, duplicate"
+            },
+            {
+              "const": "69",
+              "title": "Rejected, resubmit with corrections"
+            },
+            {
+              "const": "70",
+              "title": "Pending, incomplete"
+            },
+            {
+              "const": "71",
+              "title": "Under field office investigation"
+            },
+            {
+              "const": "72",
+              "title": "Pending, awaiting additional material"
+            },
+            {
+              "const": "73",
+              "title": "Pending, awaiting review"
+            },
+            {
+              "const": "74",
+              "title": "Reopened"
+            },
+            {
+              "const": "75",
+              "title": "Processed by primary, forwarded to additional payer(s)"
+            },
+            {
+              "const": "76",
+              "title": "Processed by secondary, forwarded to additional payer(s)"
+            },
+            {
+              "const": "77",
+              "title": "Processed by tertiary, forwarded to additional payer(s)"
+            },
+            {
+              "const": "78",
+              "title": "Previous payment decision reversed"
+            },
+            {
+              "const": "79",
+              "title": "Not our claim, forwarded to another payer(s)"
+            },
+            {
+              "const": "80",
+              "title": "Transferred to correct insurance carrier"
+            },
+            {
+              "const": "81",
+              "title": "Not paid, predetermination pricing only"
+            },
+            {
+              "const": "82",
+              "title": "Documentation claim"
+            },
+            {
+              "const": "83",
+              "title": "Reviewed"
+            },
+            {
+              "const": "84",
+              "title": "Repriced"
+            },
+            {
+              "const": "85",
+              "title": "Audited"
+            },
+            {
+              "const": "86",
+              "title": "Conditionally paid"
+            },
+            {
+              "const": "87",
+              "title": "On appeal"
+            },
+            {
+              "const": "88",
+              "title": "Closed"
+            },
+            {
+              "const": "89",
+              "title": "Reaudited"
+            },
+            {
+              "const": "90",
+              "title": "Reissued"
+            },
+            {
+              "const": "91",
+              "title": "Closed after reopening"
+            },
+            {
+              "const": "92",
+              "title": "Redetermined"
+            },
+            {
+              "const": "93",
+              "title": "Processed as primary"
+            },
+            {
+              "const": "94",
+              "title": "Processed as secondary"
+            },
+            {
+              "const": "95",
+              "title": "Processed as tertiary"
+            },
+            {
+              "const": "96",
+              "title": "Correction of error"
+            },
+            {
+              "const": "97",
+              "title": "Single credit item of a group"
+            },
+            {
+              "const": "98",
+              "title": "Single debit item of a group"
+            },
+            {
+              "const": "99",
+              "title": "Interim response"
+            },
+            {
+              "const": "100",
+              "title": "Final response"
+            },
+            {
+              "const": "101",
+              "title": "Debit advice requested"
+            },
+            {
+              "const": "102",
+              "title": "Transaction not impacted"
+            },
+            {
+              "const": "103",
+              "title": "Patient to be notified"
+            },
+            {
+              "const": "104",
+              "title": "Healthcare provider to be notified"
+            },
+            {
+              "const": "105",
+              "title": "Usual general practitioner to be notified"
+            },
+            {
+              "const": "106",
+              "title": "Advice without details"
+            },
+            {
+              "const": "107",
+              "title": "Advice with details"
+            },
+            {
+              "const": "108",
+              "title": "Amendment requested"
+            },
+            {
+              "const": "109",
+              "title": "For information"
+            },
+            {
+              "const": "110",
+              "title": "Withdraw"
+            },
+            {
+              "const": "111",
+              "title": "Delivery date change"
+            },
+            {
+              "const": "112",
+              "title": "Quantity change"
+            },
+            {
+              "const": "113",
+              "title": "Resale and claim"
+            },
+            {
+              "const": "114",
+              "title": "Resale"
+            },
+            {
+              "const": "115",
+              "title": "Prior addition"
+            },
+            {
+              "const": "116",
+              "title": "Expired"
+            },
+            {
+              "const": "117",
+              "title": "Hold"
+            },
+            {
+              "const": "118",
+              "title": "Open"
+            },
+            {
+              "const": "119",
+              "title": "Observe"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

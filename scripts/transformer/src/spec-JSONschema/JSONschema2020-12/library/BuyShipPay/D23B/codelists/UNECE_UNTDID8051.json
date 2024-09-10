@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID8051",
+  "title": "UNECE_UNTDID8051",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8051Type": {
+          "title": "Transport stage code qualifier",
+          "description": "Code qualifying a specific stage of transport.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Inland transport"
+            },
+            {
+              "const": "2",
+              "title": "At the statistical territory limit"
+            },
+            {
+              "const": "3",
+              "title": "At arrival"
+            },
+            {
+              "const": "4",
+              "title": "Means of transport at transit"
+            },
+            {
+              "const": "5",
+              "title": "Means of transport crossing the regulatory border"
+            },
+            {
+              "const": "6",
+              "title": "Means of transport at first port of arrival into regulatory territory"
+            },
+            {
+              "const": "10",
+              "title": "Pre-carriage transport"
+            },
+            {
+              "const": "11",
+              "title": "At border"
+            },
+            {
+              "const": "12",
+              "title": "At departure"
+            },
+            {
+              "const": "13",
+              "title": "At destination"
+            },
+            {
+              "const": "15",
+              "title": "Main carriage - fourth carrier"
+            },
+            {
+              "const": "16",
+              "title": "Main carriage - fifth carrier"
+            },
+            {
+              "const": "17",
+              "title": "Main carriage - sixth carrier"
+            },
+            {
+              "const": "18",
+              "title": "Main carriage - seventh carrier"
+            },
+            {
+              "const": "19",
+              "title": "Main carriage - eighth carrier"
+            },
+            {
+              "const": "20",
+              "title": "Main-carriage transport"
+            },
+            {
+              "const": "21",
+              "title": "Main carriage - first carrier"
+            },
+            {
+              "const": "22",
+              "title": "Main carriage - second carrier"
+            },
+            {
+              "const": "23",
+              "title": "Main carriage - third carrier"
+            },
+            {
+              "const": "24",
+              "title": "Inland waterway transport"
+            },
+            {
+              "const": "25",
+              "title": "Delivery carrier all transport"
+            },
+            {
+              "const": "26",
+              "title": "Second pre-carriage transport"
+            },
+            {
+              "const": "27",
+              "title": "Pre-acceptance transport"
+            },
+            {
+              "const": "28",
+              "title": "Second on-carriage transport"
+            },
+            {
+              "const": "29",
+              "title": "Main carriage - ninth carrier"
+            },
+            {
+              "const": "30",
+              "title": "On-carriage transport"
+            },
+            {
+              "const": "31",
+              "title": "Main carriage - tenth carrier"
+            },
+            {
+              "const": "32",
+              "title": "Main carriage - eleventh carrier"
+            },
+            {
+              "const": "33",
+              "title": "Main carriage - twelfth carrier"
+            },
+            {
+              "const": "34",
+              "title": "Overflight"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID8155",
+  "title": "UNECE_UNTDID8155",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8155Type": {
+          "title": "Equipment size and type description code",
+          "description": "Code specifying the size and type of equipment.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Dime coated tank"
+            },
+            {
+              "const": "2",
+              "title": "Epoxy coated tank"
+            },
+            {
+              "const": "6",
+              "title": "Pressurized tank"
+            },
+            {
+              "const": "7",
+              "title": "Refrigerated tank"
+            },
+            {
+              "const": "9",
+              "title": "Stainless steel tank"
+            },
+            {
+              "const": "10",
+              "title": "Nonworking reefer container 40 ft"
+            },
+            {
+              "const": "12",
+              "title": "Europallet"
+            },
+            {
+              "const": "13",
+              "title": "Scandinavian pallet"
+            },
+            {
+              "const": "14",
+              "title": "Trailer"
+            },
+            {
+              "const": "15",
+              "title": "Nonworking reefer container 20 ft"
+            },
+            {
+              "const": "16",
+              "title": "Exchangeable pallet"
+            },
+            {
+              "const": "17",
+              "title": "Semi-trailer"
+            },
+            {
+              "const": "18",
+              "title": "Tank container 20 feet"
+            },
+            {
+              "const": "19",
+              "title": "Tank container 30 feet"
+            },
+            {
+              "const": "20",
+              "title": "Tank container 40 feet"
+            },
+            {
+              "const": "21",
+              "title": "Container IC 20 feet"
+            },
+            {
+              "const": "22",
+              "title": "Container IC 30 feet"
+            },
+            {
+              "const": "23",
+              "title": "Container IC 40 feet"
+            },
+            {
+              "const": "24",
+              "title": "Refrigerated tank 20 feet"
+            },
+            {
+              "const": "25",
+              "title": "Refrigerated tank 30 feet"
+            },
+            {
+              "const": "26",
+              "title": "Refrigerated tank 40 feet"
+            },
+            {
+              "const": "27",
+              "title": "Tank container IC 20 feet"
+            },
+            {
+              "const": "28",
+              "title": "Tank container IC 30 feet"
+            },
+            {
+              "const": "29",
+              "title": "Tank container IC 40 feet"
+            },
+            {
+              "const": "30",
+              "title": "Refrigerated tank IC 20 feet"
+            },
+            {
+              "const": "31",
+              "title": "Temperature controlled container 30 ft."
+            },
+            {
+              "const": "32",
+              "title": "Refrigerated tank IC 40 feet"
+            },
+            {
+              "const": "33",
+              "title": "Movable case: L < 6,15m"
+            },
+            {
+              "const": "34",
+              "title": "Movable case: 6,15m < L < 7,82m"
+            },
+            {
+              "const": "35",
+              "title": "Movable case: 7,82m < L < 9,15m"
+            },
+            {
+              "const": "36",
+              "title": "Movable case: 9,15m < L < 10,90m"
+            },
+            {
+              "const": "37",
+              "title": "Movable case: 10,90m < L < 13,75m"
+            },
+            {
+              "const": "38",
+              "title": "Totebin"
+            },
+            {
+              "const": "39",
+              "title": "Temperature controlled container 20 ft"
+            },
+            {
+              "const": "40",
+              "title": "Temperature controlled container 40 ft"
+            },
+            {
+              "const": "41",
+              "title": "Non working refrigerated (reefer) container 30ft."
+            },
+            {
+              "const": "42",
+              "title": "Dual trailers"
+            },
+            {
+              "const": "43",
+              "title": "20 ft IL container (open top)"
+            },
+            {
+              "const": "44",
+              "title": "20 ft IL container (closed top)"
+            },
+            {
+              "const": "45",
+              "title": "40 ft IL container (closed top)"
+            },
+            {
+              "const": "46",
+              "title": "Synthetic pallet ISO 1"
+            },
+            {
+              "const": "47",
+              "title": "Synthetic pallet ISO 2"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/subset/BuyShipPay/D23B/UNECE_UNTDID8051",
+  "title": "UNECE_UNTDID8051",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8051Type": {
+          "title": "Transport stage code qualifier",
+          "description": "Code qualifying a specific stage of transport.\r\n\r\nApplicable codes:\r\n* '1' - Inland transport\r\n* '2' - At the statistical territory limit\r\n* '3' - At arrival\r\n* '4' - Means of transport at transit\r\n* '5' - Means of transport crossing the regulatory border\r\n* '6' - Means of transport at first port of arrival into regulatory territory\r\n* '10' - Pre-carriage transport\r\n* '11' - At border\r\n* '12' - At departure\r\n* '13' - At destination\r\n* '15' - Main carriage - fourth carrier\r\n* '16' - Main carriage - fifth carrier\r\n* '17' - Main carriage - sixth carrier\r\n* '18' - Main carriage - seventh carrier\r\n* '19' - Main carriage - eighth carrier\r\n* '20' - Main-carriage transport\r\n* '21' - Main carriage - first carrier\r\n* '22' - Main carriage - second carrier\r\n* '23' - Main carriage - third carrier\r\n* '24' - Inland waterway transport\r\n* '25' - Delivery carrier all transport\r\n* '26' - Second pre-carriage transport\r\n* '27' - Pre-acceptance transport\r\n* '28' - Second on-carriage transport\r\n* '29' - Main carriage - ninth carrier\r\n* '30' - On-carriage transport\r\n* '31' - Main carriage - tenth carrier\r\n* '32' - Main carriage - eleventh carrier\r\n* '33' - Main carriage - twelfth carrier\r\n* '34' - Overflight",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "10",
+            "11",
+            "12",
+            "13",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

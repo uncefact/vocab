@@ -1,0 +1,411 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID8053",
+  "title": "UNECE_UNTDID8053",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8053Type": {
+          "title": "Equipment type code qualifier",
+          "description": "Code qualifying a type of equipment.",
+          "oneOf": [
+            {
+              "const": "AA",
+              "title": "Ground equipment"
+            },
+            {
+              "const": "AB",
+              "title": "Chain"
+            },
+            {
+              "const": "AD",
+              "title": "Temperature recorder"
+            },
+            {
+              "const": "AE",
+              "title": "Body trailer"
+            },
+            {
+              "const": "AG",
+              "title": "Slipsheet"
+            },
+            {
+              "const": "AH",
+              "title": "No special equipment needed"
+            },
+            {
+              "const": "AI",
+              "title": "Vessel hold"
+            },
+            {
+              "const": "AJ",
+              "title": "Flat rack"
+            },
+            {
+              "const": "AK",
+              "title": "Aircraft"
+            },
+            {
+              "const": "AL",
+              "title": "Medical device"
+            },
+            {
+              "const": "AM",
+              "title": "Refrigerated container"
+            },
+            {
+              "const": "AN",
+              "title": "Synthetic pallet 80*120cm"
+            },
+            {
+              "const": "AO",
+              "title": "Synthetic pallet 100*120cm"
+            },
+            {
+              "const": "AP",
+              "title": "Clothing hanger rack"
+            },
+            {
+              "const": "AQ",
+              "title": "Road/rail trailer"
+            },
+            {
+              "const": "AT",
+              "title": "Overhang wagon"
+            },
+            {
+              "const": "BB",
+              "title": "Un-containerized cargo (breakbulk)"
+            },
+            {
+              "const": "BL",
+              "title": "Blocks"
+            },
+            {
+              "const": "BPN",
+              "title": "Box pallet non-exchangeable"
+            },
+            {
+              "const": "BPO",
+              "title": "Truck being transported"
+            },
+            {
+              "const": "BPP",
+              "title": "Truck and trailer combination being transported"
+            },
+            {
+              "const": "BPQ",
+              "title": "Tractor and trailer being transported"
+            },
+            {
+              "const": "BPR",
+              "title": "Postal bag"
+            },
+            {
+              "const": "BPS",
+              "title": "Letter Tray"
+            },
+            {
+              "const": "BPT",
+              "title": "Roller Cage"
+            },
+            {
+              "const": "BPU",
+              "title": "Flats Tray"
+            },
+            {
+              "const": "BPV",
+              "title": "Out of bag parcel"
+            },
+            {
+              "const": "BPW",
+              "title": "Wheeled Platform"
+            },
+            {
+              "const": "BPX",
+              "title": "Container non-compliant with the Customs Convention on Containers"
+            },
+            {
+              "const": "BPY",
+              "title": "Box pallet EUR Y non exchangeable"
+            },
+            {
+              "const": "BPZ",
+              "title": "Roll Pallet 1"
+            },
+            {
+              "const": "BR",
+              "title": "Barge"
+            },
+            {
+              "const": "BX",
+              "title": "Boxcar"
+            },
+            {
+              "const": "CH",
+              "title": "Chassis"
+            },
+            {
+              "const": "CN",
+              "title": "Container"
+            },
+            {
+              "const": "DPA",
+              "title": "Deadlight (panel)"
+            },
+            {
+              "const": "DPB",
+              "title": "Roll Pallet 2"
+            },
+            {
+              "const": "DPC",
+              "title": "Container gantry crane"
+            },
+            {
+              "const": "DPD",
+              "title": "Mobile crane"
+            },
+            {
+              "const": "DPE",
+              "title": "Floating crane"
+            },
+            {
+              "const": "DPF",
+              "title": "Ship's equipment crane"
+            },
+            {
+              "const": "DPG",
+              "title": "Conveyor belt"
+            },
+            {
+              "const": "DPH",
+              "title": "Forklift"
+            },
+            {
+              "const": "DPI",
+              "title": "Stacking equipment"
+            },
+            {
+              "const": "DPJ",
+              "title": "Taillift"
+            },
+            {
+              "const": "DPK",
+              "title": "Pallet ISO 0 - 1/2 EURO Pallet"
+            },
+            {
+              "const": "DPL",
+              "title": "On-board equipment"
+            },
+            {
+              "const": "DPM",
+              "title": "Pallet ISO 1 - 1/1 EURO Pallet (GS1 Temporary Code)"
+            },
+            {
+              "const": "DPN",
+              "title": "Pallet ISO 2"
+            },
+            {
+              "const": "DPO",
+              "title": "1/4 EURO Pallet"
+            },
+            {
+              "const": "EFP",
+              "title": "Exchangeable EUR flat pallet"
+            },
+            {
+              "const": "EFQ",
+              "title": "1/8 EURO Pallet"
+            },
+            {
+              "const": "EFR",
+              "title": "Wholesaler pallet"
+            },
+            {
+              "const": "EFS",
+              "title": "Pallet 80 X 100 cm"
+            },
+            {
+              "const": "EFT",
+              "title": "Pallet 60 X 100 cm"
+            },
+            {
+              "const": "EFU",
+              "title": "Oneway pallet"
+            },
+            {
+              "const": "EFV",
+              "title": "Returnable pallet"
+            },
+            {
+              "const": "EFW",
+              "title": "Bottlecrate"
+            },
+            {
+              "const": "EFX",
+              "title": "Bottle, non-protected, cylindrical"
+            },
+            {
+              "const": "EFY",
+              "title": "Box"
+            },
+            {
+              "const": "EFZ",
+              "title": "CHEP Eurobox"
+            },
+            {
+              "const": "EGA",
+              "title": "Case"
+            },
+            {
+              "const": "EGB",
+              "title": "Display package"
+            },
+            {
+              "const": "EGC",
+              "title": "Isothermic case"
+            },
+            {
+              "const": "EGD",
+              "title": "Pallet modular collars 80*100"
+            },
+            {
+              "const": "EGE",
+              "title": "Pallet modular collars 80*120"
+            },
+            {
+              "const": "EGF",
+              "title": "Tray"
+            },
+            {
+              "const": "EGG",
+              "title": "Roll cage"
+            },
+            {
+              "const": "EGH",
+              "title": "Trolley"
+            },
+            {
+              "const": "EGI",
+              "title": "Landside power generator"
+            },
+            {
+              "const": "EYP",
+              "title": "Exchangeable EUR Y box pallet"
+            },
+            {
+              "const": "FPN",
+              "title": "Flat pallet EUR non exchangeable"
+            },
+            {
+              "const": "FPR",
+              "title": "Flat pallet (railway property) non-exchangeable"
+            },
+            {
+              "const": "IL",
+              "title": "Lidded stackable rigid tray (CEN TS 14482:2002)"
+            },
+            {
+              "const": "LAR",
+              "title": "Lashing rope"
+            },
+            {
+              "const": "LU",
+              "title": "Load/unload device on equipment"
+            },
+            {
+              "const": "MPA",
+              "title": "Movable panel"
+            },
+            {
+              "const": "PA",
+              "title": "Pallet"
+            },
+            {
+              "const": "PBP",
+              "title": "Identified private box pallet"
+            },
+            {
+              "const": "PFP",
+              "title": "Identified private flat pallet"
+            },
+            {
+              "const": "PL",
+              "title": "Platform"
+            },
+            {
+              "const": "PPA",
+              "title": "Protecting panel"
+            },
+            {
+              "const": "PST",
+              "title": "Portable stove"
+            },
+            {
+              "const": "RF",
+              "title": "Flat car"
+            },
+            {
+              "const": "RG",
+              "title": "Reefer generator"
+            },
+            {
+              "const": "RGF",
+              "title": "Ground facility"
+            },
+            {
+              "const": "RO",
+              "title": "Rope"
+            },
+            {
+              "const": "RR",
+              "title": "Rail car"
+            },
+            {
+              "const": "SM",
+              "title": "Semi-trailer"
+            },
+            {
+              "const": "SPP",
+              "title": "Identified special pallet"
+            },
+            {
+              "const": "STR",
+              "title": "Strap"
+            },
+            {
+              "const": "SW",
+              "title": "Swap body"
+            },
+            {
+              "const": "TE",
+              "title": "Trailer"
+            },
+            {
+              "const": "TN",
+              "title": "Tank"
+            },
+            {
+              "const": "TP",
+              "title": "Tarpaulin"
+            },
+            {
+              "const": "TS",
+              "title": "Tackles"
+            },
+            {
+              "const": "TSU",
+              "title": "Tarpaulin support"
+            },
+            {
+              "const": "UL",
+              "title": "ULD (Unit load device)"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

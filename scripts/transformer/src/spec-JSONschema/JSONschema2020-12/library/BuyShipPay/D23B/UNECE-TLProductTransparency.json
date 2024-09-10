@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/TLProductTransparency",
+  "title": "TL Product Transparency",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-TLMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocumentContext": {
+          "oneOf": [
+            {
+              "$ref": "UNECE-TLPTContextCCL.json#/$defs/exchangedDocumentContextType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "exchangedDocument": {
+          "oneOf": [
+            {
+              "$ref": "UNECE-TLPTContextCCL.json#/$defs/exchangedDocumentType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "exchangedDeclaration": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/exchangedDeclarationType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "specifiedLogisticsTransportMovement": false,
+        "specifiedConsignment": false,
+        "specifiedService": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/serviceType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "tradeSettlementPayment": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/tradeSettlementPaymentType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "tradeTransaction": false,
+        "tradeProduct": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-TLPTContextCCL.json#/$defs/tradeProductType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "applicableTradeProductCertification": {
+                    "items": {
+                      "properties": {
+                        "specifiedSustainabilityAssertion": {
+                          "items": {
+                            "properties": {
+                              "applicableReferencedStandard": false
+                            }
+                          }
+                        },
+                        "relatedReferencedLocation": {
+                          "items": {
+                            "properties": {
+                              "specifiedProductionFacility": {
+                                "items": {
+                                  "properties": {
+                                    "physicalReferencedLocation": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "applicableSustainabilityCharacteristic": {
+                    "items": {
+                      "properties": {
+                        "applicableInspectionResult": false
+                      }
+                    }
+                  },
+                  "applicableSustainabilityInspection": {
+                    "items": {
+                      "properties": {
+                        "applicableSustainabilityCharacteristic": {
+                          "items": {
+                            "properties": {
+                              "valueMeasure": false,
+                              "measurementMethodCode": false,
+                              "valueText": false,
+                              "valueCode": false,
+                              "valueDateTime": false,
+                              "isOrHasValue": false,
+                              "valueNumeric": false,
+                              "valueAmount": false,
+                              "subordinateCategoryCode": false,
+                              "valueBinaryFile": false,
+                              "applicableInspectionResult": {
+                                "items": {
+                                  "properties": {
+                                    "laboratorySampleObservationResult": {
+                                      "items": {
+                                        "properties": {
+                                          "applicableMethod": {
+                                            "items": {
+                                              "properties": {
+                                                "applicableParameter": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "relatedTradeTransaction": {
+                    "items": {
+                      "properties": {
+                        "associatedReferencedDocument": false
+                      }
+                    }
+                  },
+                  "applicableAssessment": {
+                    "items": {
+                      "properties": {
+                        "applicableSustainabilityCharacteristic": {
+                          "items": {
+                            "properties": {
+                              "applicableInspectionResult": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "productBatch": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/productBatchType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "animalBatch": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/animalBatchType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "referencedLocation": {
+          "oneOf": [
+            {
+              "$ref": "UNECE-TLPTContextCCL.json#/$defs/referencedLocationType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "headerTradeDelivery": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/headerTradeDeliveryType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "lineTradeDelivery": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/lineTradeDeliveryType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "valuationBreakdownStatement": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/valuationBreakdownStatementType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "financingRequestDocument": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/financingRequestDocumentType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "financingSummaryDocument": {
+          "$ref": "#/$defs/financingSummaryDocumentType"
+        },
+        "acknowledgementDocument": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/acknowledgementDocumentType"
+              },
+              {
+                "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+              }
+            ]
+          }
+        },
+        "ttExchangedDocument": false,
+        "ttObjectEvent": false,
+        "ttTransformationEvent": false,
+        "ttAggregationEvent": false,
+        "ttTransactionEvent": false,
+        "electronicNegotiationExchange": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/electronicNegotiationExchangeType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID9415",
+  "title": "UNECE_UNTDID9415",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID9415Type": {
+          "title": "Government agency identification code",
+          "description": "Code identifying a government agency.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Agriculture"
+            },
+            {
+              "const": "2",
+              "title": "Ammunition"
+            },
+            {
+              "const": "3",
+              "title": "Commerce"
+            },
+            {
+              "const": "4",
+              "title": "Coastguard"
+            },
+            {
+              "const": "5",
+              "title": "Customs"
+            },
+            {
+              "const": "6",
+              "title": "Food and drug"
+            },
+            {
+              "const": "7",
+              "title": "Health certificate"
+            },
+            {
+              "const": "8",
+              "title": "Harbour police"
+            },
+            {
+              "const": "9",
+              "title": "Immigration"
+            },
+            {
+              "const": "10",
+              "title": "Live animals"
+            },
+            {
+              "const": "11",
+              "title": "Port authority"
+            },
+            {
+              "const": "12",
+              "title": "Public health"
+            },
+            {
+              "const": "13",
+              "title": "Transportation"
+            },
+            {
+              "const": "14",
+              "title": "Port state control"
+            },
+            {
+              "const": "15",
+              "title": "Fisheries"
+            },
+            {
+              "const": "16",
+              "title": "Mineral resources"
+            },
+            {
+              "const": "17",
+              "title": "Environment"
+            },
+            {
+              "const": "18",
+              "title": "Nuclear safety"
+            },
+            {
+              "const": "19",
+              "title": "Natural Resources"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

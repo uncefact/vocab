@@ -1,0 +1,659 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID7187",
+  "title": "UNECE_UNTDID7187",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID7187Type": {
+          "title": "Process type description code",
+          "description": "Code specifying a type of process.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Wood preparation"
+            },
+            {
+              "const": "2",
+              "title": "Causticizing"
+            },
+            {
+              "const": "3",
+              "title": "Digesting"
+            },
+            {
+              "const": "4",
+              "title": "Brownstock washing"
+            },
+            {
+              "const": "5",
+              "title": "Bleaching"
+            },
+            {
+              "const": "6",
+              "title": "Pulp drying"
+            },
+            {
+              "const": "7",
+              "title": "Freezing"
+            },
+            {
+              "const": "8",
+              "title": "Processing of structured information"
+            },
+            {
+              "const": "9",
+              "title": "Processing of identical information in structured and unstructured form"
+            },
+            {
+              "const": "10",
+              "title": "Processing of different information in structured and unstructured form"
+            },
+            {
+              "const": "11",
+              "title": "Processing of unstructured information"
+            },
+            {
+              "const": "12",
+              "title": "Slaughter"
+            },
+            {
+              "const": "13",
+              "title": "Packing"
+            },
+            {
+              "const": "14",
+              "title": "Heat sterilisation"
+            },
+            {
+              "const": "15",
+              "title": "Chemical sterilisation"
+            },
+            {
+              "const": "16",
+              "title": "Fumigation"
+            },
+            {
+              "const": "17",
+              "title": "Irradiation"
+            },
+            {
+              "const": "18",
+              "title": "Fueling"
+            },
+            {
+              "const": "19",
+              "title": "Acceptance of business conditions"
+            },
+            {
+              "const": "20",
+              "title": "Pathology service"
+            },
+            {
+              "const": "21",
+              "title": "Radiology service"
+            },
+            {
+              "const": "22",
+              "title": "Contribution payment"
+            },
+            {
+              "const": "23",
+              "title": "Clinical donation"
+            },
+            {
+              "const": "24",
+              "title": "Medical general practice"
+            },
+            {
+              "const": "25",
+              "title": "Specialist medical service"
+            },
+            {
+              "const": "26",
+              "title": "Dispensing of medicine"
+            },
+            {
+              "const": "27",
+              "title": "Planning"
+            },
+            {
+              "const": "28",
+              "title": "Trading"
+            },
+            {
+              "const": "29",
+              "title": "Operating"
+            },
+            {
+              "const": "30",
+              "title": "Metering"
+            },
+            {
+              "const": "31",
+              "title": "Settlement"
+            },
+            {
+              "const": "32",
+              "title": "Chilling"
+            },
+            {
+              "const": "33",
+              "title": "Collecting"
+            },
+            {
+              "const": "34",
+              "title": "Cutting"
+            },
+            {
+              "const": "35",
+              "title": "Harvesting"
+            },
+            {
+              "const": "36",
+              "title": "Inspecting"
+            },
+            {
+              "const": "37",
+              "title": "Manufacturing"
+            },
+            {
+              "const": "38",
+              "title": "Preserving"
+            },
+            {
+              "const": "39",
+              "title": "Processing"
+            },
+            {
+              "const": "40",
+              "title": "Producing"
+            },
+            {
+              "const": "41",
+              "title": "Rendering (agriculture)"
+            },
+            {
+              "const": "42",
+              "title": "Sampling"
+            },
+            {
+              "const": "43",
+              "title": "Storing"
+            },
+            {
+              "const": "44",
+              "title": "Transferring"
+            },
+            {
+              "const": "45",
+              "title": "Treating"
+            },
+            {
+              "const": "46",
+              "title": "Grinding"
+            },
+            {
+              "const": "47",
+              "title": "Addition of secondary inhibitors"
+            },
+            {
+              "const": "48",
+              "title": "Metals recovery"
+            },
+            {
+              "const": "49",
+              "title": "Solvents recovery"
+            },
+            {
+              "const": "50",
+              "title": "Recovery for reuse"
+            },
+            {
+              "const": "51",
+              "title": "Incineration"
+            },
+            {
+              "const": "52",
+              "title": "On-site fuel recovery"
+            },
+            {
+              "const": "53",
+              "title": "Fuel blending"
+            },
+            {
+              "const": "54",
+              "title": "Chemical reduction"
+            },
+            {
+              "const": "55",
+              "title": "Cyanide destruction"
+            },
+            {
+              "const": "56",
+              "title": "Chemical oxidation"
+            },
+            {
+              "const": "57",
+              "title": "Wet air oxidation"
+            },
+            {
+              "const": "58",
+              "title": "Chemical precipitation"
+            },
+            {
+              "const": "59",
+              "title": "Biological treatment"
+            },
+            {
+              "const": "60",
+              "title": "Adsorption"
+            },
+            {
+              "const": "61",
+              "title": "Air or steam stripping"
+            },
+            {
+              "const": "62",
+              "title": "Dewatering"
+            },
+            {
+              "const": "63",
+              "title": "Absorption"
+            },
+            {
+              "const": "64",
+              "title": "Stabilization"
+            },
+            {
+              "const": "65",
+              "title": "Macro-encapsulation"
+            },
+            {
+              "const": "66",
+              "title": "Neutralization"
+            },
+            {
+              "const": "67",
+              "title": "Evaporation"
+            },
+            {
+              "const": "68",
+              "title": "Phase separation"
+            },
+            {
+              "const": "69",
+              "title": "Unspecified treatment"
+            },
+            {
+              "const": "70",
+              "title": "Landfill or surface impoundment disposal"
+            },
+            {
+              "const": "71",
+              "title": "Deep well or underground injection"
+            },
+            {
+              "const": "72",
+              "title": "Discharge to sewer"
+            },
+            {
+              "const": "73",
+              "title": "Collection and storage, temporary"
+            },
+            {
+              "const": "74",
+              "title": "Cold treatment"
+            },
+            {
+              "const": "75",
+              "title": "Hot air treatment"
+            },
+            {
+              "const": "76",
+              "title": "Hot water treatment"
+            },
+            {
+              "const": "77",
+              "title": "Methyl bromide treatment"
+            },
+            {
+              "const": "78",
+              "title": "Phosphine treatment"
+            },
+            {
+              "const": "79",
+              "title": "Depulping"
+            },
+            {
+              "const": "80",
+              "title": "Manual removal"
+            },
+            {
+              "const": "81",
+              "title": "Sulfuryl fluoride fumigation"
+            },
+            {
+              "const": "82",
+              "title": "Steam treatment"
+            },
+            {
+              "const": "83",
+              "title": "Vapor heat"
+            },
+            {
+              "const": "84",
+              "title": "Assembling"
+            },
+            {
+              "const": "85",
+              "title": "Boiling"
+            },
+            {
+              "const": "86",
+              "title": "Canning"
+            },
+            {
+              "const": "87",
+              "title": "Chipping"
+            },
+            {
+              "const": "88",
+              "title": "Cleaning"
+            },
+            {
+              "const": "89",
+              "title": "Coating"
+            },
+            {
+              "const": "90",
+              "title": "Dehydration"
+            },
+            {
+              "const": "91",
+              "title": "Devitalization"
+            },
+            {
+              "const": "92",
+              "title": "Disinfection"
+            },
+            {
+              "const": "93",
+              "title": "Drying"
+            },
+            {
+              "const": "94",
+              "title": "Dyeing"
+            },
+            {
+              "const": "95",
+              "title": "Heat treatment"
+            },
+            {
+              "const": "96",
+              "title": "Husking"
+            },
+            {
+              "const": "97",
+              "title": "Liquification"
+            },
+            {
+              "const": "98",
+              "title": "Shelling"
+            },
+            {
+              "const": "99",
+              "title": "Washing"
+            },
+            {
+              "const": "100",
+              "title": "Land treatment or application"
+            },
+            {
+              "const": "101",
+              "title": "Pasteurization"
+            },
+            {
+              "const": "102",
+              "title": "Biological recycling"
+            },
+            {
+              "const": "103",
+              "title": "Biological refining"
+            },
+            {
+              "const": "104",
+              "title": "Blending"
+            },
+            {
+              "const": "105",
+              "title": "Breeding"
+            },
+            {
+              "const": "106",
+              "title": "Chemical recycling"
+            },
+            {
+              "const": "107",
+              "title": "Combing"
+            },
+            {
+              "const": "108",
+              "title": "Agricultural cultivation"
+            },
+            {
+              "const": "109",
+              "title": "Designing"
+            },
+            {
+              "const": "110",
+              "title": "Disposing"
+            },
+            {
+              "const": "111",
+              "title": "Extrusion"
+            },
+            {
+              "const": "112",
+              "title": "Fatliquoring"
+            },
+            {
+              "const": "113",
+              "title": "Product finishing"
+            },
+            {
+              "const": "114",
+              "title": "Ginning"
+            },
+            {
+              "const": "115",
+              "title": "Grading"
+            },
+            {
+              "const": "116",
+              "title": "Hatching"
+            },
+            {
+              "const": "117",
+              "title": "Marketing"
+            },
+            {
+              "const": "118",
+              "title": "Mechanical recycling"
+            },
+            {
+              "const": "119",
+              "title": "Polymerisation"
+            },
+            {
+              "const": "120",
+              "title": "Pre-treatment"
+            },
+            {
+              "const": "121",
+              "title": "Printing"
+            },
+            {
+              "const": "122",
+              "title": "Pulp dissolving"
+            },
+            {
+              "const": "123",
+              "title": "Quality checking"
+            },
+            {
+              "const": "124",
+              "title": "Recycling"
+            },
+            {
+              "const": "125",
+              "title": "Refining"
+            },
+            {
+              "const": "126",
+              "title": "Retailing"
+            },
+            {
+              "const": "127",
+              "title": "Retanning"
+            },
+            {
+              "const": "128",
+              "title": "Retting"
+            },
+            {
+              "const": "129",
+              "title": "Returns management"
+            },
+            {
+              "const": "130",
+              "title": "Setting out leather"
+            },
+            {
+              "const": "131",
+              "title": "Shaving hides"
+            },
+            {
+              "const": "132",
+              "title": "Shearing"
+            },
+            {
+              "const": "133",
+              "title": "Silk reeling"
+            },
+            {
+              "const": "134",
+              "title": "Softening"
+            },
+            {
+              "const": "135",
+              "title": "Sorting"
+            },
+            {
+              "const": "136",
+              "title": "Spinning"
+            },
+            {
+              "const": "137",
+              "title": "Splitting"
+            },
+            {
+              "const": "138",
+              "title": "Tanning"
+            },
+            {
+              "const": "139",
+              "title": "Thermo mechanical recycling"
+            },
+            {
+              "const": "140",
+              "title": "Warehousing"
+            },
+            {
+              "const": "141",
+              "title": "Weaving"
+            },
+            {
+              "const": "142",
+              "title": "Knitting"
+            },
+            {
+              "const": "143",
+              "title": "Farming"
+            },
+            {
+              "const": "144",
+              "title": "Despatching"
+            },
+            {
+              "const": "145",
+              "title": "Hide and Skin preservation"
+            },
+            {
+              "const": "146",
+              "title": "Sammying"
+            },
+            {
+              "const": "147",
+              "title": "Conditioning (leather)"
+            },
+            {
+              "const": "148",
+              "title": "Branding"
+            },
+            {
+              "const": "149",
+              "title": "Down processing"
+            },
+            {
+              "const": "150",
+              "title": "Concentrating"
+            },
+            {
+              "const": "151",
+              "title": "Carding"
+            },
+            {
+              "const": "152",
+              "title": "Embroidering"
+            },
+            {
+              "const": "153",
+              "title": "Embellishing"
+            },
+            {
+              "const": "154",
+              "title": "Molding"
+            },
+            {
+              "const": "155",
+              "title": "Non-woven manufacturing"
+            },
+            {
+              "const": "156",
+              "title": "Preparing"
+            },
+            {
+              "const": "157",
+              "title": "Scouring"
+            },
+            {
+              "const": "158",
+              "title": "Ennobling"
+            },
+            {
+              "const": "159",
+              "title": "Twisting"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Datenmodell: eCMR MMT; D22B
+
+ERROR: Incomplete code list properties: QDT: "Cancellation_ Document Status_ Code. Type"
+ERROR: Empty code list restriction (ignored): file: "UNECE-BasicComponents.json" (Q)DT: "Quantity. Type" cc or sc "Quantity Unit. Code List. Identifier"
+INFO: BBIE Trade_ Payment Terms. Due Date. Date Time ausgelassen wegen FLag.Type=DEP und FLag.AppliedCCL=D14A
+ERROR: Leere Codeliste: codelists/IANA_MIMEMediaType.json#/$defs/codeList/$defs/MIMEMediaTypeType (Binary Object. Mime. Code)
+ERROR: Leere Codeliste: codelists/ISO_CashAccountType.json#/$defs/codeList/$defs/CashAccountTypeType (Cash Account Type_ Code. Content)
+ERROR: Leere Codeliste: codelists/ISO_FinancingStatus.json#/$defs/codeList/$defs/FinancingStatusType (Financing Status_ Code. Content)
+ERROR: Leere Codeliste: codelists/ISO_FinancingStatusReason.json#/$defs/codeList/$defs/FinancingStatusReasonType (Financing Status Reason_ Code. Content)
+ERROR: Leere Codeliste: codelists/ISO_NamePrefixCode.json#/$defs/codeList/$defs/NamePrefixCodeType (Title_ Code. Content)

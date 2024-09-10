@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID1373",
+  "title": "UNECE_UNTDID1373",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID1373Type": {
+          "title": "Document status code",
+          "description": "Code specifying the status of a document.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Accepted"
+            },
+            {
+              "const": "2",
+              "title": "Accompanying goods"
+            },
+            {
+              "const": "3",
+              "title": "Conditionally accepted"
+            },
+            {
+              "const": "4",
+              "title": "To arrive by separate EDI message"
+            },
+            {
+              "const": "5",
+              "title": "Information only"
+            },
+            {
+              "const": "6",
+              "title": "To arrive by manual means"
+            },
+            {
+              "const": "7",
+              "title": "To be raised and sent"
+            },
+            {
+              "const": "8",
+              "title": "Rejected"
+            },
+            {
+              "const": "9",
+              "title": "To be printed"
+            },
+            {
+              "const": "10",
+              "title": "Document currently valid"
+            },
+            {
+              "const": "11",
+              "title": "Document not available"
+            },
+            {
+              "const": "12",
+              "title": "Document exhausted by declaration and attached"
+            },
+            {
+              "const": "13",
+              "title": "Document not exhausted by declaration and attached"
+            },
+            {
+              "const": "14",
+              "title": "Document exhausted by declaration and previously lodged"
+            },
+            {
+              "const": "15",
+              "title": "Document not exhausted by declaration and previously lodged"
+            },
+            {
+              "const": "16",
+              "title": "Document not attached"
+            },
+            {
+              "const": "17",
+              "title": "Document with the goods"
+            },
+            {
+              "const": "18",
+              "title": "Document attached, to be returned after endorsement"
+            },
+            {
+              "const": "19",
+              "title": "Document applied for"
+            },
+            {
+              "const": "20",
+              "title": "Received for shipment"
+            },
+            {
+              "const": "21",
+              "title": "Shipped on board"
+            },
+            {
+              "const": "22",
+              "title": "Status 0"
+            },
+            {
+              "const": "23",
+              "title": "Status 1"
+            },
+            {
+              "const": "24",
+              "title": "Status 2"
+            },
+            {
+              "const": "25",
+              "title": "Message under development"
+            },
+            {
+              "const": "26",
+              "title": "Document not freighted"
+            },
+            {
+              "const": "27",
+              "title": "Document freighted"
+            },
+            {
+              "const": "28",
+              "title": "Archived"
+            },
+            {
+              "const": "29",
+              "title": "Provisional"
+            },
+            {
+              "const": "30",
+              "title": "Documents enclosed in the first transmission"
+            },
+            {
+              "const": "31",
+              "title": "Documents enclosed in the second transmission"
+            },
+            {
+              "const": "32",
+              "title": "Document not required, waiver issued"
+            },
+            {
+              "const": "33",
+              "title": "Already on file with receiver of this message"
+            },
+            {
+              "const": "34",
+              "title": "Retained by sender of this message, or by sender's agent or representative"
+            },
+            {
+              "const": "35",
+              "title": "Document incomplete"
+            },
+            {
+              "const": "36",
+              "title": "Document previously submitted"
+            },
+            {
+              "const": "37",
+              "title": "Document complete"
+            },
+            {
+              "const": "38",
+              "title": "Final"
+            },
+            {
+              "const": "39",
+              "title": "On hold"
+            },
+            {
+              "const": "40",
+              "title": "Validity suspended"
+            },
+            {
+              "const": "41",
+              "title": "Validity revoked"
+            },
+            {
+              "const": "42",
+              "title": "In error"
+            },
+            {
+              "const": "43",
+              "title": "Received"
+            },
+            {
+              "const": "44",
+              "title": "Accepted with warnings"
+            },
+            {
+              "const": "45",
+              "title": "In process"
+            },
+            {
+              "const": "46",
+              "title": "Under query"
+            },
+            {
+              "const": "47",
+              "title": "Paid"
+            },
+            {
+              "const": "48",
+              "title": "Acknowledged"
+            },
+            {
+              "const": "49",
+              "title": "Conditionally accepted"
+            },
+            {
+              "const": "50",
+              "title": "Rejected, no further processing"
+            },
+            {
+              "const": "51",
+              "title": "To arrive by electronic means"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

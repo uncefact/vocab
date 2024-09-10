@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID7273",
+  "title": "UNECE_UNTDID7273",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID7273Type": {
+          "title": "Service requirement code",
+          "description": "Code specifying a service requirement.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Carrier loads"
+            },
+            {
+              "const": "2",
+              "title": "Full loads"
+            },
+            {
+              "const": "3",
+              "title": "Less than full loads"
+            },
+            {
+              "const": "4",
+              "title": "Shipper loads"
+            },
+            {
+              "const": "5",
+              "title": "To be delivered"
+            },
+            {
+              "const": "6",
+              "title": "To be kept"
+            },
+            {
+              "const": "7",
+              "title": "Transhipment allowed"
+            },
+            {
+              "const": "8",
+              "title": "Transhipment not allowed"
+            },
+            {
+              "const": "9",
+              "title": "Partial shipment allowed"
+            },
+            {
+              "const": "10",
+              "title": "Partial shipment not allowed"
+            },
+            {
+              "const": "11",
+              "title": "Partial shipment and/or drawing allowed"
+            },
+            {
+              "const": "12",
+              "title": "Partial shipment and/or drawing not allowed"
+            },
+            {
+              "const": "13",
+              "title": "Carrier unloads"
+            },
+            {
+              "const": "14",
+              "title": "Shipper unloads"
+            },
+            {
+              "const": "15",
+              "title": "Consignee unloads"
+            },
+            {
+              "const": "16",
+              "title": "Consignee loads"
+            },
+            {
+              "const": "17",
+              "title": "Exclusive usage of equipment"
+            },
+            {
+              "const": "18",
+              "title": "Non exclusive usage of equipment"
+            },
+            {
+              "const": "19",
+              "title": "Direct delivery"
+            },
+            {
+              "const": "20",
+              "title": "Direct pick-up"
+            },
+            {
+              "const": "21",
+              "title": "Request for delivery advice services"
+            },
+            {
+              "const": "22",
+              "title": "Do not arrange customs clearance"
+            },
+            {
+              "const": "23",
+              "title": "Arrange customs clearance"
+            },
+            {
+              "const": "24",
+              "title": "Check container condition"
+            },
+            {
+              "const": "25",
+              "title": "Damaged containers allowed"
+            },
+            {
+              "const": "26",
+              "title": "Dirty containers allowed"
+            },
+            {
+              "const": "27",
+              "title": "Fork lift holes not required"
+            },
+            {
+              "const": "28",
+              "title": "Fork lift holes required"
+            },
+            {
+              "const": "29",
+              "title": "Insure goods during transport"
+            },
+            {
+              "const": "30",
+              "title": "Arrange main-carriage"
+            },
+            {
+              "const": "31",
+              "title": "Arrange on-carriage"
+            },
+            {
+              "const": "32",
+              "title": "Arrange pre-carriage"
+            },
+            {
+              "const": "33",
+              "title": "Report container safety convention information"
+            },
+            {
+              "const": "34",
+              "title": "Check seals"
+            },
+            {
+              "const": "35",
+              "title": "Container must be clean"
+            },
+            {
+              "const": "36",
+              "title": "Request for proof of delivery"
+            },
+            {
+              "const": "37",
+              "title": "Request for Customs procedure"
+            },
+            {
+              "const": "38",
+              "title": "Request for administration services"
+            },
+            {
+              "const": "39",
+              "title": "Transport insulated under Intercontainer INTERFRIGO conditions"
+            },
+            {
+              "const": "40",
+              "title": "Transport mechanically refrigerated under Intercontainer INTERFRIGO conditions"
+            },
+            {
+              "const": "41",
+              "title": "Cool or freeze service, not under Intercontainer INTERFRIGO conditions"
+            },
+            {
+              "const": "42",
+              "title": "Transhipment overseas"
+            },
+            {
+              "const": "43",
+              "title": "Station delivery"
+            },
+            {
+              "const": "44",
+              "title": "Non station delivery"
+            },
+            {
+              "const": "45",
+              "title": "Cleaning or disinfecting"
+            },
+            {
+              "const": "46",
+              "title": "Close ventilation valve"
+            },
+            {
+              "const": "47",
+              "title": "Consignment held for pick-up"
+            },
+            {
+              "const": "48",
+              "title": "Refrigeration unit check"
+            },
+            {
+              "const": "49",
+              "title": "Customs clearance at arrival country by carrier"
+            },
+            {
+              "const": "50",
+              "title": "Customs clearance at departure country by carrier"
+            },
+            {
+              "const": "51",
+              "title": "Heating for live animals"
+            },
+            {
+              "const": "52",
+              "title": "Goods humidification"
+            },
+            {
+              "const": "53",
+              "title": "Ensure load is secure"
+            },
+            {
+              "const": "54",
+              "title": "Open ventilation valve"
+            },
+            {
+              "const": "55",
+              "title": "Phytosanitary control"
+            },
+            {
+              "const": "56",
+              "title": "Tare check by carrier"
+            },
+            {
+              "const": "57",
+              "title": "Temperature check"
+            },
+            {
+              "const": "58",
+              "title": "Weighing of goods"
+            },
+            {
+              "const": "59",
+              "title": "Escort"
+            },
+            {
+              "const": "60",
+              "title": "No escort"
+            },
+            {
+              "const": "61",
+              "title": "Request for berthing services"
+            },
+            {
+              "const": "62",
+              "title": "Request for planned berth consideration"
+            },
+            {
+              "const": "63",
+              "title": "Request for inbound passing services through port area"
+            },
+            {
+              "const": "64",
+              "title": "Request for outbound passing services through port area"
+            },
+            {
+              "const": "65",
+              "title": "Neutral delivery"
+            },
+            {
+              "const": "66",
+              "title": "Early delivery"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

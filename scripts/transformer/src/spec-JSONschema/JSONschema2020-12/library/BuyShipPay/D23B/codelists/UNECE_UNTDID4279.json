@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID4279",
+  "title": "UNECE_UNTDID4279",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4279Type": {
+          "title": "Payment terms type code qualifier",
+          "description": "Code qualifying the type of payment terms.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Basic"
+            },
+            {
+              "const": "2",
+              "title": "End of month"
+            },
+            {
+              "const": "3",
+              "title": "Fixed date"
+            },
+            {
+              "const": "4",
+              "title": "Deferred"
+            },
+            {
+              "const": "5",
+              "title": "Discount not applicable"
+            },
+            {
+              "const": "6",
+              "title": "Mixed"
+            },
+            {
+              "const": "7",
+              "title": "Extended"
+            },
+            {
+              "const": "8",
+              "title": "Basic discount offered"
+            },
+            {
+              "const": "9",
+              "title": "Proximo"
+            },
+            {
+              "const": "10",
+              "title": "Instant"
+            },
+            {
+              "const": "11",
+              "title": "Elective"
+            },
+            {
+              "const": "12",
+              "title": "10 days after end of month"
+            },
+            {
+              "const": "13",
+              "title": "Seller to advise buyer"
+            },
+            {
+              "const": "14",
+              "title": "Paid against statement"
+            },
+            {
+              "const": "15",
+              "title": "No charge"
+            },
+            {
+              "const": "16",
+              "title": "Not yet defined"
+            },
+            {
+              "const": "17",
+              "title": "Ultimo"
+            },
+            {
+              "const": "18",
+              "title": "Previously agreed upon"
+            },
+            {
+              "const": "19",
+              "title": "United States funds"
+            },
+            {
+              "const": "20",
+              "title": "Penalty terms"
+            },
+            {
+              "const": "21",
+              "title": "Payment by instalment"
+            },
+            {
+              "const": "22",
+              "title": "Discount"
+            },
+            {
+              "const": "23",
+              "title": "Available by sight payment"
+            },
+            {
+              "const": "24",
+              "title": "Available by deferred payment"
+            },
+            {
+              "const": "25",
+              "title": "Available by acceptance"
+            },
+            {
+              "const": "26",
+              "title": "Available by negotiation with any bank"
+            },
+            {
+              "const": "27",
+              "title": "Available by negotiation with any bank in ..."
+            },
+            {
+              "const": "28",
+              "title": "Available by negotiation by named bank"
+            },
+            {
+              "const": "29",
+              "title": "Available by negotiation"
+            },
+            {
+              "const": "30",
+              "title": "Adjustment payment"
+            },
+            {
+              "const": "31",
+              "title": "Late payment"
+            },
+            {
+              "const": "32",
+              "title": "Advanced payment"
+            },
+            {
+              "const": "33",
+              "title": "Payment by instalments according to progress (as agreed)"
+            },
+            {
+              "const": "34",
+              "title": "Payment by instalments according to progress (to be agreed)"
+            },
+            {
+              "const": "35",
+              "title": "Nonstandard"
+            },
+            {
+              "const": "36",
+              "title": "Tenor payment terms"
+            },
+            {
+              "const": "37",
+              "title": "Complete payment"
+            },
+            {
+              "const": "38",
+              "title": "Payment terms defined in consolidated invoice"
+            },
+            {
+              "const": "39",
+              "title": "Payment upon completion"
+            },
+            {
+              "const": "40",
+              "title": "Partial advance"
+            },
+            {
+              "const": "41",
+              "title": "Consignment"
+            },
+            {
+              "const": "42",
+              "title": "Inter-company account"
+            },
+            {
+              "const": "43",
+              "title": "Sell by note"
+            },
+            {
+              "const": "44",
+              "title": "Supplier floor plan"
+            },
+            {
+              "const": "45",
+              "title": "Contract basis"
+            },
+            {
+              "const": "46",
+              "title": "Credit controlled"
+            },
+            {
+              "const": "47",
+              "title": "Dating given"
+            },
+            {
+              "const": "48",
+              "title": "Trade acceptance"
+            },
+            {
+              "const": "49",
+              "title": "Cost plus"
+            },
+            {
+              "const": "50",
+              "title": "Letter of credit"
+            },
+            {
+              "const": "51",
+              "title": "Lease agreement"
+            },
+            {
+              "const": "52",
+              "title": "Cash On Delivery (COD)"
+            },
+            {
+              "const": "53",
+              "title": "Cash by state law"
+            },
+            {
+              "const": "54",
+              "title": "Bank transfer"
+            },
+            {
+              "const": "55",
+              "title": "Cash on arrival"
+            },
+            {
+              "const": "56",
+              "title": "Cash"
+            },
+            {
+              "const": "57",
+              "title": "Cash discount terms apply"
+            },
+            {
+              "const": "58",
+              "title": "Cash with order"
+            },
+            {
+              "const": "59",
+              "title": "Cash per vendor request"
+            },
+            {
+              "const": "60",
+              "title": "Irrevocable letter of credit"
+            },
+            {
+              "const": "61",
+              "title": "Documents against acceptance"
+            },
+            {
+              "const": "62",
+              "title": "Charge card"
+            },
+            {
+              "const": "63",
+              "title": "Documents against payment"
+            },
+            {
+              "const": "64",
+              "title": "Usance bill"
+            },
+            {
+              "const": "65",
+              "title": "Letter of credit at sight"
+            },
+            {
+              "const": "66",
+              "title": "Secured account"
+            },
+            {
+              "const": "67",
+              "title": "Basic commission terms"
+            },
+            {
+              "const": "68",
+              "title": "Deposit required"
+            },
+            {
+              "const": "69",
+              "title": "Discount with prompt pay"
+            },
+            {
+              "const": "70",
+              "title": "Discount with advance payment"
+            },
+            {
+              "const": "71",
+              "title": "Certified cheque"
+            },
+            {
+              "const": "72",
+              "title": "Cash against documents"
+            },
+            {
+              "const": "73",
+              "title": "Bill of exchange"
+            },
+            {
+              "const": "74",
+              "title": "Progressive discount"
+            },
+            {
+              "const": "75",
+              "title": "Lump sum"
+            },
+            {
+              "const": "76",
+              "title": "Fixed fee"
+            },
+            {
+              "const": "77",
+              "title": "Promissory note"
+            },
+            {
+              "const": "78",
+              "title": "Factoring"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

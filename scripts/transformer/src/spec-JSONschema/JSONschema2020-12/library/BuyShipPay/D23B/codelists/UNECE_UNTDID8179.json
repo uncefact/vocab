@@ -1,0 +1,1135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID8179",
+  "title": "UNECE_UNTDID8179",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8179Type": {
+          "title": "Transport means description code",
+          "description": "Code specifying the means of transport.\r\n\r\nCode list responsible agency:\r\nUNECE\r\n\r\nCode list responsible agency name:\r\nUnited Nations Economic Commission for Europe\r\n\r\nCode list responsible agency code:\r\n6\r\n\r\nCode list:\r\nRec 28\r\n\r\nCode list name:\r\nCodes for Types of Means of Transport\r\n\r\nCode list version:\r\n2014\r\n\r\nCode list issue date:\r\nCL 2018-07",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Box tricycle"
+            },
+            {
+              "const": "31",
+              "title": "Truck"
+            },
+            {
+              "const": "32",
+              "title": "Truck, tanker"
+            },
+            {
+              "const": "33",
+              "title": "Tractor"
+            },
+            {
+              "const": "34",
+              "title": "Van"
+            },
+            {
+              "const": "35",
+              "title": "Tiptanker"
+            },
+            {
+              "const": "36",
+              "title": "Truck, dry bulk"
+            },
+            {
+              "const": "37",
+              "title": "Truck, container"
+            },
+            {
+              "const": "38",
+              "title": "Carrier, car"
+            },
+            {
+              "const": "39",
+              "title": "Truck, reefer"
+            },
+            {
+              "const": "60",
+              "title": "Multimodal, type unknown"
+            },
+            {
+              "const": "70",
+              "title": "Fixed transport installation, type unknown"
+            },
+            {
+              "const": "71",
+              "title": "Pipeline"
+            },
+            {
+              "const": "72",
+              "title": "Powerline"
+            },
+            {
+              "const": "80",
+              "title": "Vessel, type unknown"
+            },
+            {
+              "const": "81",
+              "title": "Motor freighter"
+            },
+            {
+              "const": "85",
+              "title": "Motor freighter, tug"
+            },
+            {
+              "const": "86",
+              "title": "Motor tanker, tug"
+            },
+            {
+              "const": "87",
+              "title": "Motor freighter with one or more ships alongside"
+            },
+            {
+              "const": "88",
+              "title": "Motor freighter with tanker"
+            },
+            {
+              "const": "89",
+              "title": "Motor freighter pushing one or more freighters"
+            },
+            {
+              "const": "150",
+              "title": "General cargo vessel"
+            },
+            {
+              "const": "151",
+              "title": "Unit carrier"
+            },
+            {
+              "const": "152",
+              "title": "Bulk carrier"
+            },
+            {
+              "const": "153",
+              "title": "Tanker"
+            },
+            {
+              "const": "154",
+              "title": "Liquefied gas tanker"
+            },
+            {
+              "const": "155",
+              "title": "Other special tanker"
+            },
+            {
+              "const": "157",
+              "title": "Cargo and passenger vessel"
+            },
+            {
+              "const": "159",
+              "title": "Passenger ship"
+            },
+            {
+              "const": "160",
+              "title": "Assistance vessel"
+            },
+            {
+              "const": "170",
+              "title": "Other sea-going vessel"
+            },
+            {
+              "const": "172",
+              "title": "Work ship"
+            },
+            {
+              "const": "173",
+              "title": "Push boat"
+            },
+            {
+              "const": "174",
+              "title": "Dredger"
+            },
+            {
+              "const": "175",
+              "title": "Fishing boat"
+            },
+            {
+              "const": "176",
+              "title": "Research and education ship"
+            },
+            {
+              "const": "177",
+              "title": "Navy vessel"
+            },
+            {
+              "const": "178",
+              "title": "Structure, floating"
+            },
+            {
+              "const": "180",
+              "title": "Pleasure boat"
+            },
+            {
+              "const": "181",
+              "title": "Speedboat"
+            },
+            {
+              "const": "182",
+              "title": "Sailing boat with auxiliary motor"
+            },
+            {
+              "const": "183",
+              "title": "Sailing yacht"
+            },
+            {
+              "const": "184",
+              "title": "Boat for sport fishing"
+            },
+            {
+              "const": "185",
+              "title": "Craft, pleasure, longer than 20 metres"
+            },
+            {
+              "const": "186",
+              "title": "Craft, pleasure, smaller than 20 metres"
+            },
+            {
+              "const": "187",
+              "title": "Craft, other, extra definitions and specifications"
+            },
+            {
+              "const": "189",
+              "title": "Craft, other, recreational"
+            },
+            {
+              "const": "190",
+              "title": "Fast ship"
+            },
+            {
+              "const": "191",
+              "title": "Hydrofoil"
+            },
+            {
+              "const": "192",
+              "title": "Catamaran, fast"
+            },
+            {
+              "const": "210",
+              "title": "Train, railroad"
+            },
+            {
+              "const": "220",
+              "title": "Train, passenger"
+            },
+            {
+              "const": "230",
+              "title": "Train, freight"
+            },
+            {
+              "const": "310",
+              "title": "Truck, mail"
+            },
+            {
+              "const": "311",
+              "title": "Truck dump"
+            },
+            {
+              "const": "312",
+              "title": "Truck, forklift"
+            },
+            {
+              "const": "313",
+              "title": "Loader, shovel"
+            },
+            {
+              "const": "314",
+              "title": "Truck, platform, fixed"
+            },
+            {
+              "const": "315",
+              "title": "Carrier, straddle"
+            },
+            {
+              "const": "320",
+              "title": "Crane, mobile"
+            },
+            {
+              "const": "330",
+              "title": "Bus"
+            },
+            {
+              "const": "341",
+              "title": "Van, delivery"
+            },
+            {
+              "const": "342",
+              "title": "Van, light"
+            },
+            {
+              "const": "343",
+              "title": "Van, furniture"
+            },
+            {
+              "const": "360",
+              "title": "Tractor, industrial"
+            },
+            {
+              "const": "362",
+              "title": "Truck, freezer with isothermic trailer"
+            },
+            {
+              "const": "363",
+              "title": "Truck, isothermic with isothermic trailer"
+            },
+            {
+              "const": "364",
+              "title": "Truck, refrigerated with isothermic trailer"
+            },
+            {
+              "const": "365",
+              "title": "Truck, freezer with refrigerated trailer"
+            },
+            {
+              "const": "366",
+              "title": "Truck, isothermic with refrigerated trailer"
+            },
+            {
+              "const": "367",
+              "title": "Truck, opening floor, with extendable trailer"
+            },
+            {
+              "const": "368",
+              "title": "Truck, rigid, with tank and tank trailer"
+            },
+            {
+              "const": "369",
+              "title": "Truck, bulk with tank trailer"
+            },
+            {
+              "const": "370",
+              "title": "Truck, rigid with tank and bulk trailer"
+            },
+            {
+              "const": "371",
+              "title": "Truck, bulk with bulk trailer"
+            },
+            {
+              "const": "372",
+              "title": "Truck, tautliner with extendable trailer"
+            },
+            {
+              "const": "373",
+              "title": "Truck, tautliner with removable roof and extendable trailer"
+            },
+            {
+              "const": "374",
+              "title": "Truck, bulk truck with extendable trailer"
+            },
+            {
+              "const": "375",
+              "title": "Truck, refrigerated with freezer trailer"
+            },
+            {
+              "const": "376",
+              "title": "Truck, isothermic with freezer trailer"
+            },
+            {
+              "const": "377",
+              "title": "Truck, furniture with trailer"
+            },
+            {
+              "const": "378",
+              "title": "Truck, tautliner with furniture trailer"
+            },
+            {
+              "const": "379",
+              "title": "Truck, tautliner, removable roof with furniture trailer"
+            },
+            {
+              "const": "380",
+              "title": "Truck, tip-up with gondola trailer"
+            },
+            {
+              "const": "381",
+              "title": "Truck, tautliner with gondola trailer"
+            },
+            {
+              "const": "382",
+              "title": "Truck, tautliner, with removable roof and gondola trailer"
+            },
+            {
+              "const": "383",
+              "title": "Truck, opening-floor with gondola trailer"
+            },
+            {
+              "const": "384",
+              "title": "Truck, bulk with gondola trailer"
+            },
+            {
+              "const": "385",
+              "title": "Truck, tip-up with extendable gondola trailer"
+            },
+            {
+              "const": "386",
+              "title": "Truck, tautliner with extendable gondola trailer"
+            },
+            {
+              "const": "387",
+              "title": "Truck, tautliner, removable roof with extendable gondola trailer"
+            },
+            {
+              "const": "388",
+              "title": "Truck, opening floor with extendable gondola trailer"
+            },
+            {
+              "const": "389",
+              "title": "Truck, bulk with extendable gondola trailer"
+            },
+            {
+              "const": "390",
+              "title": "Truck, tip-up truck with opening-floor trailer"
+            },
+            {
+              "const": "391",
+              "title": "Truck, tautliner with opening-floor trailer"
+            },
+            {
+              "const": "392",
+              "title": "Truck, tautliner, removable roof, with opening-floor trailer"
+            },
+            {
+              "const": "393",
+              "title": "Truck, opening-floor with opening-floor trailer"
+            },
+            {
+              "const": "394",
+              "title": "Truck, bulk truck with opening-floor trailer"
+            },
+            {
+              "const": "395",
+              "title": "Truck, with trailer"
+            },
+            {
+              "const": "396",
+              "title": "Truck, tilt, with tilt trailer"
+            },
+            {
+              "const": "397",
+              "title": "Truck, refrigerated, with refrigerated trailer"
+            },
+            {
+              "const": "398",
+              "title": "Truck, freezer with freezer trailer"
+            },
+            {
+              "const": "399",
+              "title": "Truck, removal with removal trailer"
+            },
+            {
+              "const": "802",
+              "title": "Motor tanker"
+            },
+            {
+              "const": "803",
+              "title": "Container vessel"
+            },
+            {
+              "const": "804",
+              "title": "Gas tanker"
+            },
+            {
+              "const": "810",
+              "title": "Motor freighter pushing at least one tank-ship"
+            },
+            {
+              "const": "811",
+              "title": "Tug, freighter"
+            },
+            {
+              "const": "812",
+              "title": "Tug, tanker"
+            },
+            {
+              "const": "813",
+              "title": "Tug, freighter, coupled"
+            },
+            {
+              "const": "814",
+              "title": "Tug, freighter/tanker, coupled"
+            },
+            {
+              "const": "815",
+              "title": "Freight barge"
+            },
+            {
+              "const": "816",
+              "title": "Tank barge"
+            },
+            {
+              "const": "817",
+              "title": "Freight barge with containers"
+            },
+            {
+              "const": "818",
+              "title": "Tank barge, gas"
+            },
+            {
+              "const": "821",
+              "title": "Pushtow, one cargo barge"
+            },
+            {
+              "const": "822",
+              "title": "Pushtow, two cargo barges"
+            },
+            {
+              "const": "823",
+              "title": "Pushtow, three cargo barges"
+            },
+            {
+              "const": "824",
+              "title": "Pushtow, four cargo barges"
+            },
+            {
+              "const": "825",
+              "title": "Pushtow, five cargo barges"
+            },
+            {
+              "const": "826",
+              "title": "Pushtow, six cargo barges"
+            },
+            {
+              "const": "827",
+              "title": "Pushtow, seven cargo barges"
+            },
+            {
+              "const": "828",
+              "title": "Pushtow, eight cargo barges"
+            },
+            {
+              "const": "829",
+              "title": "Pushtow, nine cargo barges"
+            },
+            {
+              "const": "831",
+              "title": "Pushtow, one gas/tank barge"
+            },
+            {
+              "const": "832",
+              "title": "Pushtow, two barges at least one tanker or gas barge"
+            },
+            {
+              "const": "833",
+              "title": "Pushtow, three barges at least one tanker or gas barge"
+            },
+            {
+              "const": "834",
+              "title": "Pushtow, four barges at least one tanker or gas barge"
+            },
+            {
+              "const": "835",
+              "title": "Pushtow, five barges at least one tanker or gas barge"
+            },
+            {
+              "const": "836",
+              "title": "Pushtow, six barges at least one tanker or gas barge"
+            },
+            {
+              "const": "837",
+              "title": "Pushtow, seven barges at least one tanker or gas barge"
+            },
+            {
+              "const": "838",
+              "title": "Pushtow, eight barges at least one tanker or gas barge"
+            },
+            {
+              "const": "839",
+              "title": "Pushtow, nine or more barges at least one tanker or gas barge"
+            },
+            {
+              "const": "840",
+              "title": "Tug, single"
+            },
+            {
+              "const": "841",
+              "title": "Tug, one or more tows"
+            },
+            {
+              "const": "842",
+              "title": "Tug, assisting a vessel or linked combination"
+            },
+            {
+              "const": "843",
+              "title": "Pushboat, single"
+            },
+            {
+              "const": "844",
+              "title": "Passenger ship, ferry, red cross ship, cruise ship"
+            },
+            {
+              "const": "845",
+              "title": "Service vessel"
+            },
+            {
+              "const": "846",
+              "title": "Vessel, work maintenance craft, floating derrick, cable-ship, buoy-ship, dredge"
+            },
+            {
+              "const": "847",
+              "title": "Object, towed, not otherwise specified"
+            },
+            {
+              "const": "848",
+              "title": "Fishing boat"
+            },
+            {
+              "const": "849",
+              "title": "Bunkership"
+            },
+            {
+              "const": "850",
+              "title": "Barge, tanker, chemical"
+            },
+            {
+              "const": "851",
+              "title": "Object, not otherwise specified"
+            },
+            {
+              "const": "1501",
+              "title": "Grain vessel"
+            },
+            {
+              "const": "1502",
+              "title": "Timber/log carrier"
+            },
+            {
+              "const": "1503",
+              "title": "Wood chips vessel"
+            },
+            {
+              "const": "1504",
+              "title": "Steel products vessel"
+            },
+            {
+              "const": "1505",
+              "title": "Carrier, general cargo/container"
+            },
+            {
+              "const": "1506",
+              "title": "Temperature controlled cargo vessels"
+            },
+            {
+              "const": "1511",
+              "title": "Full container ship/cellular vessel"
+            },
+            {
+              "const": "1512",
+              "title": "RoRo vessel"
+            },
+            {
+              "const": "1513",
+              "title": "Car carrier"
+            },
+            {
+              "const": "1514",
+              "title": "Livestock carrier"
+            },
+            {
+              "const": "1515",
+              "title": "Barge carrier - Lash ship"
+            },
+            {
+              "const": "1516",
+              "title": "Chemical carrier"
+            },
+            {
+              "const": "1517",
+              "title": "Irradiated fuel carrier"
+            },
+            {
+              "const": "1518",
+              "title": "Heavy cargo vessel"
+            },
+            {
+              "const": "1519",
+              "title": "RoRo/Container vessel"
+            },
+            {
+              "const": "1521",
+              "title": "Dry bulk carrier"
+            },
+            {
+              "const": "1522",
+              "title": "Ore carrier"
+            },
+            {
+              "const": "1523",
+              "title": "Cement carrier"
+            },
+            {
+              "const": "1524",
+              "title": "Gravel carrier"
+            },
+            {
+              "const": "1525",
+              "title": "Coal carrier"
+            },
+            {
+              "const": "1531",
+              "title": "Crude oil tanker"
+            },
+            {
+              "const": "1532",
+              "title": "Chemical tanker, coaster"
+            },
+            {
+              "const": "1533",
+              "title": "Chemical tanker, deep sea"
+            },
+            {
+              "const": "1534",
+              "title": "Oil and other derivatives tanker"
+            },
+            {
+              "const": "1541",
+              "title": "LPG tanker"
+            },
+            {
+              "const": "1542",
+              "title": "LNG tanker"
+            },
+            {
+              "const": "1543",
+              "title": "LNG/LPG tanker"
+            },
+            {
+              "const": "1551",
+              "title": "Asphalt/bitumen tanker"
+            },
+            {
+              "const": "1552",
+              "title": "Molasses tanker"
+            },
+            {
+              "const": "1553",
+              "title": "Vegetable oil tanker"
+            },
+            {
+              "const": "1591",
+              "title": "Cruise ship"
+            },
+            {
+              "const": "1592",
+              "title": "Ferry"
+            },
+            {
+              "const": "1593",
+              "title": "Other passenger ship"
+            },
+            {
+              "const": "1594",
+              "title": "Passenger ship, sailing"
+            },
+            {
+              "const": "1601",
+              "title": "Tug, without tow"
+            },
+            {
+              "const": "1602",
+              "title": "Tug, with tow"
+            },
+            {
+              "const": "1603",
+              "title": "Salvage vessel"
+            },
+            {
+              "const": "1604",
+              "title": "Rescue vessel"
+            },
+            {
+              "const": "1605",
+              "title": "Oil combat vessel"
+            },
+            {
+              "const": "1606",
+              "title": "Oil rig"
+            },
+            {
+              "const": "1607",
+              "title": "Hospital vessel"
+            },
+            {
+              "const": "1711",
+              "title": "Pilot boat"
+            },
+            {
+              "const": "1712",
+              "title": "Patrol/measure ship"
+            },
+            {
+              "const": "1721",
+              "title": "Supply vessel"
+            },
+            {
+              "const": "1723",
+              "title": "Offshore support vessel"
+            },
+            {
+              "const": "1724",
+              "title": "Pontoon"
+            },
+            {
+              "const": "1725",
+              "title": "Stone dumping vessel"
+            },
+            {
+              "const": "1726",
+              "title": "Cable layer"
+            },
+            {
+              "const": "1727",
+              "title": "Buoyage vessel"
+            },
+            {
+              "const": "1728",
+              "title": "Icebreaker"
+            },
+            {
+              "const": "1729",
+              "title": "Pipelaying vessel"
+            },
+            {
+              "const": "1751",
+              "title": "Trawler"
+            },
+            {
+              "const": "1752",
+              "title": "Cutter"
+            },
+            {
+              "const": "1753",
+              "title": "Factory ship"
+            },
+            {
+              "const": "1761",
+              "title": "Fishery research vessel"
+            },
+            {
+              "const": "1762",
+              "title": "Climate registration vessel"
+            },
+            {
+              "const": "1763",
+              "title": "Ship for environmental measurement"
+            },
+            {
+              "const": "1764",
+              "title": "Scientific vessel"
+            },
+            {
+              "const": "1765",
+              "title": "Sailing school ship"
+            },
+            {
+              "const": "1766",
+              "title": "Training vessel"
+            },
+            {
+              "const": "1781",
+              "title": "Crane, floating"
+            },
+            {
+              "const": "1782",
+              "title": "Dock, floating"
+            },
+            {
+              "const": "2201",
+              "title": "Train, super express"
+            },
+            {
+              "const": "2202",
+              "title": "Train, sleeper"
+            },
+            {
+              "const": "2203",
+              "title": "Train, passenger, hired group"
+            },
+            {
+              "const": "2301",
+              "title": "Blocktrain"
+            },
+            {
+              "const": "2302",
+              "title": "Train, container"
+            },
+            {
+              "const": "2303",
+              "title": "Train, with one wagon"
+            },
+            {
+              "const": "2304",
+              "title": "Train, with more than one and less than 20 wagons"
+            },
+            {
+              "const": "2305",
+              "title": "Train, with more than 20 wagons"
+            },
+            {
+              "const": "3100",
+              "title": "Truck, tautliner with removal trailer"
+            },
+            {
+              "const": "3101",
+              "title": "Truck, tautliner with removable roof and removal trailer"
+            },
+            {
+              "const": "3102",
+              "title": "Car, with caravan"
+            },
+            {
+              "const": "3103",
+              "title": "Truck, tautliner, 25 tonne"
+            },
+            {
+              "const": "3104",
+              "title": "Truck, tautliner, 25 tonne with removable roof"
+            },
+            {
+              "const": "3105",
+              "title": "Lorry, articulated, flat bed, 25 tonne"
+            },
+            {
+              "const": "3106",
+              "title": "Lorry, articulated, flat bed, 24 tonne, with 10 metre crane"
+            },
+            {
+              "const": "3107",
+              "title": "Lorry, articulated, flat bed, 24 tonne, with 15 metre crane"
+            },
+            {
+              "const": "3108",
+              "title": "Lorry, articulated, flat bed, 24 tonne, with 18 metre crane"
+            },
+            {
+              "const": "3109",
+              "title": "Lorry, articulated, flat bed, 10 tonne"
+            },
+            {
+              "const": "3110",
+              "title": "Truck, tautliner, 25 tonne, with 90 cubic metre trailer"
+            },
+            {
+              "const": "3111",
+              "title": "Truck, tautliner, 25 tonne, with 120 cubic metre trailer"
+            },
+            {
+              "const": "3112",
+              "title": "Lorry, flat with trailer and 10 metre crane"
+            },
+            {
+              "const": "3113",
+              "title": "Lorry, articulated with tank"
+            },
+            {
+              "const": "3114",
+              "title": "Lorry, flat, 15 tonne"
+            },
+            {
+              "const": "3115",
+              "title": "Lorry, flat, 15 tonne with crane"
+            },
+            {
+              "const": "3116",
+              "title": "Truck, isothermic"
+            },
+            {
+              "const": "3117",
+              "title": "Truck, refrigerated"
+            },
+            {
+              "const": "3118",
+              "title": "Van, freezer"
+            },
+            {
+              "const": "3119",
+              "title": "Van, isothermic"
+            },
+            {
+              "const": "3120",
+              "title": "Van, refrigerated"
+            },
+            {
+              "const": "3121",
+              "title": "Truck, bulk"
+            },
+            {
+              "const": "3122",
+              "title": "Truck, tip-up"
+            },
+            {
+              "const": "3123",
+              "title": "Truck, articulated, tip-up"
+            },
+            {
+              "const": "3124",
+              "title": "Truck, rigid, with tank"
+            },
+            {
+              "const": "3125",
+              "title": "Truck, tautliner"
+            },
+            {
+              "const": "3126",
+              "title": "Truck, tautliner, with removable roof"
+            },
+            {
+              "const": "3127",
+              "title": "Truck, with opening floor"
+            },
+            {
+              "const": "3128",
+              "title": "Truck, freezer"
+            },
+            {
+              "const": "3129",
+              "title": "Truck, with crane for moving goods, without trailer"
+            },
+            {
+              "const": "3130",
+              "title": "Truck, with crane for moving goods, with trailer"
+            },
+            {
+              "const": "3131",
+              "title": "Truck, with crane for lifting goods, without trailer"
+            },
+            {
+              "const": "3132",
+              "title": "Truck, with crane for lifting goods, with trailer"
+            },
+            {
+              "const": "3133",
+              "title": "Taxi cab"
+            },
+            {
+              "const": "3134",
+              "title": "Truck, furniture"
+            },
+            {
+              "const": "3135",
+              "title": "Truck, hydrant"
+            },
+            {
+              "const": "3136",
+              "title": "Car"
+            },
+            {
+              "const": "3137",
+              "title": "Truck, with tail-lift"
+            },
+            {
+              "const": "3138",
+              "title": "Armoured vehicle"
+            },
+            {
+              "const": "3201",
+              "title": "Car, elevator"
+            },
+            {
+              "const": "3301",
+              "title": "Bus, with trailer"
+            },
+            {
+              "const": "3302",
+              "title": "Bus, highway"
+            },
+            {
+              "const": "3303",
+              "title": "Bus, sightseeing"
+            },
+            {
+              "const": "3304",
+              "title": "Bus, airport/city"
+            },
+            {
+              "const": "4000",
+              "title": "Aircraft, type unknown"
+            },
+            {
+              "const": "5000",
+              "title": "Mail, type unknown"
+            },
+            {
+              "const": "8021",
+              "title": "Motor tanker, liquid cargo, type N"
+            },
+            {
+              "const": "8022",
+              "title": "Motor tanker, liquid cargo, type C"
+            },
+            {
+              "const": "8023",
+              "title": "Motor tanker, dry cargo"
+            },
+            {
+              "const": "8161",
+              "title": "Tank barge, liquid cargo, type N"
+            },
+            {
+              "const": "8162",
+              "title": "Tank barge, liquid cargo, type C"
+            },
+            {
+              "const": "8163",
+              "title": "Tank barge, dry cargo"
+            },
+            {
+              "const": "8441",
+              "title": "Ferry"
+            },
+            {
+              "const": "8442",
+              "title": "Red cross ship"
+            },
+            {
+              "const": "8443",
+              "title": "Cruise ship"
+            },
+            {
+              "const": "8444",
+              "title": "Passenger ship without accommodation"
+            },
+            {
+              "const": "8445",
+              "title": "Day-trip high speed vessel"
+            },
+            {
+              "const": "8446",
+              "title": "Day-trip hydrofoil vessel"
+            },
+            {
+              "const": "8447",
+              "title": "Sailing cruise ship"
+            },
+            {
+              "const": "8448",
+              "title": "Sailing passenger ship without accommodation"
+            },
+            {
+              "const": "8451",
+              "title": "Service vessel"
+            },
+            {
+              "const": "8452",
+              "title": "Police patrol vessel"
+            },
+            {
+              "const": "8453",
+              "title": "Port service vessel"
+            },
+            {
+              "const": "8454",
+              "title": "Navigation surveillance vessel"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

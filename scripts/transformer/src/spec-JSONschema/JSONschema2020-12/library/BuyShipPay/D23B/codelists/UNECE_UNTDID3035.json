@@ -1,0 +1,2519 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID3035",
+  "title": "UNECE_UNTDID3035",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID3035Type": {
+          "title": "Party function code qualifier",
+          "description": "Code giving specific meaning to a party.",
+          "oneOf": [
+            {
+              "const": "AA",
+              "title": "Party to be billed (AAR Accounting rule 11)"
+            },
+            {
+              "const": "AB",
+              "title": "Buyer's agent/representative"
+            },
+            {
+              "const": "AE",
+              "title": "Declarant's agent/representative"
+            },
+            {
+              "const": "AF",
+              "title": "Transit principal"
+            },
+            {
+              "const": "AG",
+              "title": "Agent"
+            },
+            {
+              "const": "AH",
+              "title": "Transit principal's agent/representative"
+            },
+            {
+              "const": "AI",
+              "title": "Successful job applicant"
+            },
+            {
+              "const": "AJ",
+              "title": "Party issuing mutually agreed codes"
+            },
+            {
+              "const": "AK",
+              "title": "Acknowledgement recipient"
+            },
+            {
+              "const": "AL",
+              "title": "Principal responsible party"
+            },
+            {
+              "const": "AM",
+              "title": "Authorized official"
+            },
+            {
+              "const": "AN",
+              "title": "Approved importer"
+            },
+            {
+              "const": "AO",
+              "title": "Account of"
+            },
+            {
+              "const": "AP",
+              "title": "Accepting party"
+            },
+            {
+              "const": "AQ",
+              "title": "Approved consignor"
+            },
+            {
+              "const": "AR",
+              "title": "Authorized exporter"
+            },
+            {
+              "const": "AS",
+              "title": "Account servicing financial institution"
+            },
+            {
+              "const": "AT",
+              "title": "Authorized importer"
+            },
+            {
+              "const": "AU",
+              "title": "Authorized trader (transit)"
+            },
+            {
+              "const": "AV",
+              "title": "Authorizing official"
+            },
+            {
+              "const": "AW",
+              "title": "Applicant's bank"
+            },
+            {
+              "const": "AX",
+              "title": "Authenticating party"
+            },
+            {
+              "const": "AY",
+              "title": "Animal being investigated"
+            },
+            {
+              "const": "AZ",
+              "title": "Issuing bank"
+            },
+            {
+              "const": "B1",
+              "title": "Contact bank 1"
+            },
+            {
+              "const": "B2",
+              "title": "Contact bank 2"
+            },
+            {
+              "const": "BA",
+              "title": "Booking agent"
+            },
+            {
+              "const": "BB",
+              "title": "Buyer bank identification"
+            },
+            {
+              "const": "BC",
+              "title": "Negotiating bank"
+            },
+            {
+              "const": "BD",
+              "title": "Documentary credit reimbursing bank"
+            },
+            {
+              "const": "BE",
+              "title": "Beneficiary"
+            },
+            {
+              "const": "BF",
+              "title": "Beneficiary's bank"
+            },
+            {
+              "const": "BG",
+              "title": "Employer"
+            },
+            {
+              "const": "BH",
+              "title": "Previous employer"
+            },
+            {
+              "const": "BI",
+              "title": "Buyer's financial institution"
+            },
+            {
+              "const": "BJ",
+              "title": "Release to party"
+            },
+            {
+              "const": "BK",
+              "title": "Financial institution"
+            },
+            {
+              "const": "BL",
+              "title": "Bill of lading recipient"
+            },
+            {
+              "const": "BM",
+              "title": "Insured"
+            },
+            {
+              "const": "BN",
+              "title": "Insurance beneficiary"
+            },
+            {
+              "const": "BO",
+              "title": "Broker or sales office"
+            },
+            {
+              "const": "BP",
+              "title": "Building site purchaser"
+            },
+            {
+              "const": "BQ",
+              "title": "Cheque drawn bank"
+            },
+            {
+              "const": "BS",
+              "title": "Bill and ship to"
+            },
+            {
+              "const": "BT",
+              "title": "Party to be billed for other than freight (bill to)"
+            },
+            {
+              "const": "BU",
+              "title": "Service bureau"
+            },
+            {
+              "const": "BV",
+              "title": "Member"
+            },
+            {
+              "const": "BW",
+              "title": "Borrower"
+            },
+            {
+              "const": "BX",
+              "title": "Building site engineer"
+            },
+            {
+              "const": "BY",
+              "title": "Buyer"
+            },
+            {
+              "const": "BZ",
+              "title": "Building site forwarder"
+            },
+            {
+              "const": "C1",
+              "title": "In care of party no. 1"
+            },
+            {
+              "const": "C2",
+              "title": "In care of party no. 2"
+            },
+            {
+              "const": "CA",
+              "title": "Carrier"
+            },
+            {
+              "const": "CB",
+              "title": "Customs broker"
+            },
+            {
+              "const": "CC",
+              "title": "Claimant"
+            },
+            {
+              "const": "CD",
+              "title": "Agent's bank"
+            },
+            {
+              "const": "CE",
+              "title": "Ceding company"
+            },
+            {
+              "const": "CF",
+              "title": "Container operator/lessee"
+            },
+            {
+              "const": "CG",
+              "title": "Carrier's agent"
+            },
+            {
+              "const": "CH",
+              "title": "Connecting carrier"
+            },
+            {
+              "const": "CI",
+              "title": "Commission processor"
+            },
+            {
+              "const": "CJ",
+              "title": "Previous member"
+            },
+            {
+              "const": "CK",
+              "title": "Empty equipment despatch party"
+            },
+            {
+              "const": "CL",
+              "title": "Container location party"
+            },
+            {
+              "const": "CM",
+              "title": "Customs"
+            },
+            {
+              "const": "CN",
+              "title": "Consignee"
+            },
+            {
+              "const": "CNX",
+              "title": "Cash pool top account servicing financial institution"
+            },
+            {
+              "const": "CNY",
+              "title": "Cash pool level account servicing financial institution"
+            },
+            {
+              "const": "CNZ",
+              "title": "Cash pool sub-account servicing financial institution"
+            },
+            {
+              "const": "CO",
+              "title": "Corporate office"
+            },
+            {
+              "const": "COA",
+              "title": "Entity in which a financial interest is held"
+            },
+            {
+              "const": "COB",
+              "title": "Intermediate level parent company"
+            },
+            {
+              "const": "COC",
+              "title": "Transshipment party"
+            },
+            {
+              "const": "COD",
+              "title": "Quotation requesting party"
+            },
+            {
+              "const": "COE",
+              "title": "Party maintaining the codes used in the message"
+            },
+            {
+              "const": "COF",
+              "title": "Party maintaining the identifiers used in the message"
+            },
+            {
+              "const": "COG",
+              "title": "Dispatcher"
+            },
+            {
+              "const": "COH",
+              "title": "Submitter of sample"
+            },
+            {
+              "const": "COI",
+              "title": "Institutional provider"
+            },
+            {
+              "const": "COJ",
+              "title": "Primary health care provider"
+            },
+            {
+              "const": "COK",
+              "title": "Assistant surgeon"
+            },
+            {
+              "const": "COL",
+              "title": "Admitting health care provider"
+            },
+            {
+              "const": "COM",
+              "title": "Referring health care provider"
+            },
+            {
+              "const": "CON",
+              "title": "Supervising health care provider"
+            },
+            {
+              "const": "COO",
+              "title": "Party providing financing"
+            },
+            {
+              "const": "COP",
+              "title": "Convoying party"
+            },
+            {
+              "const": "COQ",
+              "title": "Nominated bank"
+            },
+            {
+              "const": "COR",
+              "title": "Family member"
+            },
+            {
+              "const": "COS",
+              "title": "Co-participant"
+            },
+            {
+              "const": "COT",
+              "title": "Involved party"
+            },
+            {
+              "const": "COU",
+              "title": "Assigner"
+            },
+            {
+              "const": "COV",
+              "title": "Registered principal"
+            },
+            {
+              "const": "COW",
+              "title": "Freight payer on behalf of the consignor"
+            },
+            {
+              "const": "COX",
+              "title": "Freight payer on behalf of the consignee"
+            },
+            {
+              "const": "COY",
+              "title": "Party responsible for disinfection"
+            },
+            {
+              "const": "COZ",
+              "title": "Party responsible for refueling"
+            },
+            {
+              "const": "CP",
+              "title": "Party to receive certificate of compliance"
+            },
+            {
+              "const": "CPA",
+              "title": "Advising bank"
+            },
+            {
+              "const": "CPB",
+              "title": "Reimbursing bank"
+            },
+            {
+              "const": "CPC",
+              "title": "Advise through bank"
+            },
+            {
+              "const": "CPD",
+              "title": "Charges payer at destination"
+            },
+            {
+              "const": "CPE",
+              "title": "Transport means master name"
+            },
+            {
+              "const": "CPF",
+              "title": "Means of transport charterer"
+            },
+            {
+              "const": "CPG",
+              "title": "Excise party"
+            },
+            {
+              "const": "CPH",
+              "title": "Copy report to"
+            },
+            {
+              "const": "CPI",
+              "title": "Related healthcare party"
+            },
+            {
+              "const": "CPJ",
+              "title": "Clinical information provider"
+            },
+            {
+              "const": "CPK",
+              "title": "Service requester"
+            },
+            {
+              "const": "CPL",
+              "title": "Patient admitted by"
+            },
+            {
+              "const": "CPM",
+              "title": "Patient discharged to"
+            },
+            {
+              "const": "CPN",
+              "title": "Patient hosted by"
+            },
+            {
+              "const": "CPO",
+              "title": "Prescriber's contact person"
+            },
+            {
+              "const": "CQ",
+              "title": "Cheque order"
+            },
+            {
+              "const": "CR",
+              "title": "Empty equipment return party"
+            },
+            {
+              "const": "CS",
+              "title": "Consolidator"
+            },
+            {
+              "const": "CT",
+              "title": "Consignee to be specified"
+            },
+            {
+              "const": "CU",
+              "title": "Container return company"
+            },
+            {
+              "const": "CV",
+              "title": "Consignee of vessel"
+            },
+            {
+              "const": "CW",
+              "title": "Equipment owner"
+            },
+            {
+              "const": "CX",
+              "title": "Consignee's agent"
+            },
+            {
+              "const": "CY",
+              "title": "Commissionable agent"
+            },
+            {
+              "const": "CZ",
+              "title": "Consignor"
+            },
+            {
+              "const": "DA",
+              "title": "Available with bank (documentary credits)"
+            },
+            {
+              "const": "DB",
+              "title": "Distributor branch"
+            },
+            {
+              "const": "DC",
+              "title": "Deconsolidator"
+            },
+            {
+              "const": "DCP",
+              "title": "Despatch charge payer"
+            },
+            {
+              "const": "DCQ",
+              "title": "Prescription database owner"
+            },
+            {
+              "const": "DCR",
+              "title": "Original prescriber"
+            },
+            {
+              "const": "DCS",
+              "title": "Temporary employee"
+            },
+            {
+              "const": "DCT",
+              "title": "Designer"
+            },
+            {
+              "const": "DCU",
+              "title": "Quotation delivered to"
+            },
+            {
+              "const": "DCV",
+              "title": "Developer"
+            },
+            {
+              "const": "DCW",
+              "title": "Test execution party"
+            },
+            {
+              "const": "DCX",
+              "title": "Party to receive refund"
+            },
+            {
+              "const": "DCY",
+              "title": "Authorised issuer of prescription"
+            },
+            {
+              "const": "DCZ",
+              "title": "Authorised dispenser of medicine"
+            },
+            {
+              "const": "DD",
+              "title": "Documentary credit account party's bank"
+            },
+            {
+              "const": "DDA",
+              "title": "Report responsible party"
+            },
+            {
+              "const": "DDB",
+              "title": "Initial sender"
+            },
+            {
+              "const": "DDC",
+              "title": "The party authorising the original prescription"
+            },
+            {
+              "const": "DDD",
+              "title": "Applicant"
+            },
+            {
+              "const": "DDE",
+              "title": "Meter reader"
+            },
+            {
+              "const": "DDF",
+              "title": "Primary electronic business contact"
+            },
+            {
+              "const": "DDG",
+              "title": "Alternate electronic business contact"
+            },
+            {
+              "const": "DDH",
+              "title": "Primary government business contact"
+            },
+            {
+              "const": "DDI",
+              "title": "Alternate government business contact"
+            },
+            {
+              "const": "DDJ",
+              "title": "Past performance contact"
+            },
+            {
+              "const": "DDK",
+              "title": "Balance responsible party"
+            },
+            {
+              "const": "DDL",
+              "title": "Group of passengers"
+            },
+            {
+              "const": "DDM",
+              "title": "Grid operator"
+            },
+            {
+              "const": "DDN",
+              "title": "First financial institution in the transaction chain"
+            },
+            {
+              "const": "DDO",
+              "title": "Location manager"
+            },
+            {
+              "const": "DDP",
+              "title": "Group leader"
+            },
+            {
+              "const": "DDQ",
+              "title": "Energy Supplier"
+            },
+            {
+              "const": "DDR",
+              "title": "Consignor's freight forwarder"
+            },
+            {
+              "const": "DDS",
+              "title": "Consignee's freight forwarder"
+            },
+            {
+              "const": "DDT",
+              "title": "In transit crew member"
+            },
+            {
+              "const": "DDU",
+              "title": "In transit passenger"
+            },
+            {
+              "const": "DDV",
+              "title": "Energy consumption imbalance responsible party"
+            },
+            {
+              "const": "DDW",
+              "title": "Energy production imbalance responsible party"
+            },
+            {
+              "const": "DDX",
+              "title": "Imbalance settlement responsible party"
+            },
+            {
+              "const": "DDY",
+              "title": "Transmission capacity allocator"
+            },
+            {
+              "const": "DDZ",
+              "title": "Metering point administrator"
+            },
+            {
+              "const": "DE",
+              "title": "Depositor"
+            },
+            {
+              "const": "DEA",
+              "title": "Metered data aggregator"
+            },
+            {
+              "const": "DEB",
+              "title": "Meter operator"
+            },
+            {
+              "const": "DEC",
+              "title": "Party connected to grid"
+            },
+            {
+              "const": "DED",
+              "title": "Profile maintenance party"
+            },
+            {
+              "const": "DEE",
+              "title": "Stowaway"
+            },
+            {
+              "const": "DEF",
+              "title": "Meat cutter"
+            },
+            {
+              "const": "DEG",
+              "title": "Consortium Carrier (maritime)"
+            },
+            {
+              "const": "DEH",
+              "title": "Non-vessel operating carrier"
+            },
+            {
+              "const": "DEI",
+              "title": "Means of transport operator"
+            },
+            {
+              "const": "DEJ",
+              "title": "Stuffing address"
+            },
+            {
+              "const": "DEK",
+              "title": "Mooring service provider"
+            },
+            {
+              "const": "DEL",
+              "title": "Pilotage service provider"
+            },
+            {
+              "const": "DEM",
+              "title": "Berth towage service provider"
+            },
+            {
+              "const": "DEN",
+              "title": "Agent/representative, direct representation"
+            },
+            {
+              "const": "DEO",
+              "title": "Agent/representative, indirect representation"
+            },
+            {
+              "const": "DEP",
+              "title": "Stevedore"
+            },
+            {
+              "const": "DEQ",
+              "title": "Shipper"
+            },
+            {
+              "const": "DER",
+              "title": "Source data pool"
+            },
+            {
+              "const": "DES",
+              "title": "Brand owner"
+            },
+            {
+              "const": "DET",
+              "title": "Cockpit crew"
+            },
+            {
+              "const": "DEU",
+              "title": "Cabin crew"
+            },
+            {
+              "const": "DEV",
+              "title": "Airline operations management, not in cockpit"
+            },
+            {
+              "const": "DEW",
+              "title": "Cargo non-cockpit crew and/or non-crew personnel"
+            },
+            {
+              "const": "DEX",
+              "title": "Pilots seated outside cockpit"
+            },
+            {
+              "const": "DEY",
+              "title": "Commercial verifier"
+            },
+            {
+              "const": "DEZ",
+              "title": "Authorized issuer"
+            },
+            {
+              "const": "DF",
+              "title": "Documentary credit applicant"
+            },
+            {
+              "const": "DFA",
+              "title": "Bank for deposit of duties/taxes/fees"
+            },
+            {
+              "const": "DFB",
+              "title": "Company security officer (IMO Circular MSC 1130)"
+            },
+            {
+              "const": "DFC",
+              "title": "Distiller"
+            },
+            {
+              "const": "DFD",
+              "title": "Drayman/lighterman"
+            },
+            {
+              "const": "DFE",
+              "title": "Exhibitor"
+            },
+            {
+              "const": "DFF",
+              "title": "Feedlot"
+            },
+            {
+              "const": "DFG",
+              "title": "Government official"
+            },
+            {
+              "const": "DFH",
+              "title": "Government service requestor"
+            },
+            {
+              "const": "DFI",
+              "title": "Crop grower"
+            },
+            {
+              "const": "DFJ",
+              "title": "ISPS Responsible Party"
+            },
+            {
+              "const": "DFK",
+              "title": "LPCO authorized party"
+            },
+            {
+              "const": "DFL",
+              "title": "Operator of property, registered"
+            },
+            {
+              "const": "DFM",
+              "title": "Organic growth certifier, accredited"
+            },
+            {
+              "const": "DFN",
+              "title": "Party holding Certificate of Financial Responsibility"
+            },
+            {
+              "const": "DFO",
+              "title": "Port facility security officer"
+            },
+            {
+              "const": "DFP",
+              "title": "Vehicle owner"
+            },
+            {
+              "const": "DFQ",
+              "title": "Security certificate issuer, recognized"
+            },
+            {
+              "const": "DFR",
+              "title": "Ship Security Officer"
+            },
+            {
+              "const": "DFS",
+              "title": "Certificate issuer, veterinary"
+            },
+            {
+              "const": "DFT",
+              "title": "Assembler"
+            },
+            {
+              "const": "DFU",
+              "title": "Competitor"
+            },
+            {
+              "const": "DFV",
+              "title": "Right holder"
+            },
+            {
+              "const": "DFW",
+              "title": "Authorised Economic Operator (AEO)"
+            },
+            {
+              "const": "DFX",
+              "title": "Manufacturer of equipment"
+            },
+            {
+              "const": "DFY",
+              "title": "Crew other ship"
+            },
+            {
+              "const": "DFZ",
+              "title": "Article information responsible party"
+            },
+            {
+              "const": "DG",
+              "title": "Documentary credit beneficiary"
+            },
+            {
+              "const": "DGA",
+              "title": "Price information responsible party"
+            },
+            {
+              "const": "DGB",
+              "title": "Invoice processing party"
+            },
+            {
+              "const": "DGC",
+              "title": "Logistic service provider"
+            },
+            {
+              "const": "DGD",
+              "title": "Fattener"
+            },
+            {
+              "const": "DGE",
+              "title": "Breeder"
+            },
+            {
+              "const": "DGF",
+              "title": "Calorific Value Responsible"
+            },
+            {
+              "const": "DGG",
+              "title": "Balancing Service Provider"
+            },
+            {
+              "const": "DGH",
+              "title": "Consent Administrator"
+            },
+            {
+              "const": "DGI",
+              "title": "Energy Service Company (ESCO)"
+            },
+            {
+              "const": "DGJ",
+              "title": "Resource Aggregator"
+            },
+            {
+              "const": "DGK",
+              "title": "Resource Provider"
+            },
+            {
+              "const": "DGL",
+              "title": "Metered Data Administrator"
+            },
+            {
+              "const": "DGM",
+              "title": "Consumer"
+            },
+            {
+              "const": "DGN",
+              "title": "Farmer"
+            },
+            {
+              "const": "DGO",
+              "title": "Recycler"
+            },
+            {
+              "const": "DGP",
+              "title": "Retailer"
+            },
+            {
+              "const": "DGQ",
+              "title": "Second Party"
+            },
+            {
+              "const": "DGR",
+              "title": "Waste Disposal Provider"
+            },
+            {
+              "const": "DGS",
+              "title": "Tanner"
+            },
+            {
+              "const": "DGT",
+              "title": "Service Provider"
+            },
+            {
+              "const": "DGU",
+              "title": "Ginner"
+            },
+            {
+              "const": "DGV",
+              "title": "Spinner"
+            },
+            {
+              "const": "DGW",
+              "title": "Weaver"
+            },
+            {
+              "const": "DH",
+              "title": "Documentary credit account party"
+            },
+            {
+              "const": "DI",
+              "title": "Documentary credit second beneficiary"
+            },
+            {
+              "const": "DJ",
+              "title": "Party according to documentary credit transaction"
+            },
+            {
+              "const": "DK",
+              "title": "Documentary credit beneficiary's bank"
+            },
+            {
+              "const": "DL",
+              "title": "Factor"
+            },
+            {
+              "const": "DM",
+              "title": "Party to whom documents are to be presented"
+            },
+            {
+              "const": "DN",
+              "title": "Owner of operation"
+            },
+            {
+              "const": "DO",
+              "title": "Document recipient"
+            },
+            {
+              "const": "DP",
+              "title": "Delivery party"
+            },
+            {
+              "const": "DQ",
+              "title": "Owner's agent"
+            },
+            {
+              "const": "DR",
+              "title": "Driver"
+            },
+            {
+              "const": "DS",
+              "title": "Distributor"
+            },
+            {
+              "const": "DT",
+              "title": "Declarant"
+            },
+            {
+              "const": "DU",
+              "title": "Owner's representative"
+            },
+            {
+              "const": "DV",
+              "title": "Project management office"
+            },
+            {
+              "const": "DW",
+              "title": "Drawee"
+            },
+            {
+              "const": "DX",
+              "title": "Engineer (construction)"
+            },
+            {
+              "const": "DY",
+              "title": "Engineer, resident (construction)"
+            },
+            {
+              "const": "DZ",
+              "title": "Architect"
+            },
+            {
+              "const": "EA",
+              "title": "Architect-designer"
+            },
+            {
+              "const": "EB",
+              "title": "Building inspectorate"
+            },
+            {
+              "const": "EC",
+              "title": "Exchanger"
+            },
+            {
+              "const": "ED",
+              "title": "Engineer, consultant"
+            },
+            {
+              "const": "EE",
+              "title": "Location of goods for customs examination before clearance"
+            },
+            {
+              "const": "EF",
+              "title": "Project coordination office"
+            },
+            {
+              "const": "EG",
+              "title": "Surveyor, topographical"
+            },
+            {
+              "const": "EH",
+              "title": "Engineer, measurement"
+            },
+            {
+              "const": "EI",
+              "title": "Controller, quality"
+            },
+            {
+              "const": "EJ",
+              "title": "Surveyor, quantity"
+            },
+            {
+              "const": "EK",
+              "title": "Surveyor (professional), quantity"
+            },
+            {
+              "const": "EL",
+              "title": "Project"
+            },
+            {
+              "const": "EM",
+              "title": "Party to receive electronic memo of invoice"
+            },
+            {
+              "const": "EN",
+              "title": "Tenderer"
+            },
+            {
+              "const": "EO",
+              "title": "Owner of equipment"
+            },
+            {
+              "const": "EP",
+              "title": "Equipment drop-off party"
+            },
+            {
+              "const": "EQ",
+              "title": "Empty container responsible party"
+            },
+            {
+              "const": "ER",
+              "title": "Empty container return agent"
+            },
+            {
+              "const": "ES",
+              "title": "Contractor, lead"
+            },
+            {
+              "const": "ET",
+              "title": "Co-contractor"
+            },
+            {
+              "const": "EU",
+              "title": "Contractor, general"
+            },
+            {
+              "const": "EV",
+              "title": "Subcontractor"
+            },
+            {
+              "const": "EW",
+              "title": "Subcontractor with direct payment"
+            },
+            {
+              "const": "EX",
+              "title": "Exporter"
+            },
+            {
+              "const": "EY",
+              "title": "Subcontractor, nominated"
+            },
+            {
+              "const": "EZ",
+              "title": "Operator, essential services"
+            },
+            {
+              "const": "FA",
+              "title": "Operator, communication channel"
+            },
+            {
+              "const": "FB",
+              "title": "Nominated freight company"
+            },
+            {
+              "const": "FC",
+              "title": "Contractor, main"
+            },
+            {
+              "const": "FD",
+              "title": "Buyer's parent company"
+            },
+            {
+              "const": "FE",
+              "title": "Credit rating agency"
+            },
+            {
+              "const": "FF",
+              "title": "Factor, correspondent"
+            },
+            {
+              "const": "FG",
+              "title": "Buyer as officially registered"
+            },
+            {
+              "const": "FH",
+              "title": "Seller as officially registered"
+            },
+            {
+              "const": "FI",
+              "title": "Copy message to"
+            },
+            {
+              "const": "FJ",
+              "title": "Trade Union"
+            },
+            {
+              "const": "FK",
+              "title": "Previous Trade Union"
+            },
+            {
+              "const": "FL",
+              "title": "Passenger"
+            },
+            {
+              "const": "FM",
+              "title": "Crew member"
+            },
+            {
+              "const": "FN",
+              "title": "Tariff issuer"
+            },
+            {
+              "const": "FO",
+              "title": "Party performing inspection"
+            },
+            {
+              "const": "FP",
+              "title": "Freight/charges payer"
+            },
+            {
+              "const": "FQ",
+              "title": "Container survey agent"
+            },
+            {
+              "const": "FR",
+              "title": "Message from"
+            },
+            {
+              "const": "FS",
+              "title": "Party authorized to make definite a contract action"
+            },
+            {
+              "const": "FT",
+              "title": "Financial settlement party"
+            },
+            {
+              "const": "FU",
+              "title": "Hazardous material office"
+            },
+            {
+              "const": "FV",
+              "title": "Party providing government furnished property"
+            },
+            {
+              "const": "FW",
+              "title": "Freight forwarder"
+            },
+            {
+              "const": "FX",
+              "title": "Current receiver"
+            },
+            {
+              "const": "FY",
+              "title": "Current sender"
+            },
+            {
+              "const": "FZ",
+              "title": "Grouping centre"
+            },
+            {
+              "const": "GA",
+              "title": "Road carrier"
+            },
+            {
+              "const": "GB",
+              "title": "Chamber of commerce"
+            },
+            {
+              "const": "GC",
+              "title": "Goods custodian"
+            },
+            {
+              "const": "GD",
+              "title": "Producer"
+            },
+            {
+              "const": "GE",
+              "title": "Registration tribunal"
+            },
+            {
+              "const": "GF",
+              "title": "Slot charter party"
+            },
+            {
+              "const": "GH",
+              "title": "Applicant for job"
+            },
+            {
+              "const": "GI",
+              "title": "Spouse"
+            },
+            {
+              "const": "GJ",
+              "title": "Mother"
+            },
+            {
+              "const": "GK",
+              "title": "Father"
+            },
+            {
+              "const": "GL",
+              "title": "Socially insured person"
+            },
+            {
+              "const": "GM",
+              "title": "Inventory controller"
+            },
+            {
+              "const": "GN",
+              "title": "Processor"
+            },
+            {
+              "const": "GO",
+              "title": "Goods owner"
+            },
+            {
+              "const": "GP",
+              "title": "Packer"
+            },
+            {
+              "const": "GQ",
+              "title": "Slaughterer"
+            },
+            {
+              "const": "GR",
+              "title": "Goods releasing party"
+            },
+            {
+              "const": "GS",
+              "title": "Consignor's representative"
+            },
+            {
+              "const": "GT",
+              "title": "Rail carrier"
+            },
+            {
+              "const": "GU",
+              "title": "Originator of article number"
+            },
+            {
+              "const": "GV",
+              "title": "Procurement responsibility for order"
+            },
+            {
+              "const": "GW",
+              "title": "Party fulfilling all operations"
+            },
+            {
+              "const": "GX",
+              "title": "Central catalogue party"
+            },
+            {
+              "const": "GY",
+              "title": "Inventory reporting party"
+            },
+            {
+              "const": "GZ",
+              "title": "Substitute supplier"
+            },
+            {
+              "const": "HA",
+              "title": "Party which delivers consignments to the terminal"
+            },
+            {
+              "const": "HB",
+              "title": "Party which picks up consignments from the terminal"
+            },
+            {
+              "const": "HC",
+              "title": "Transit freight forwarder"
+            },
+            {
+              "const": "HD",
+              "title": "Inspection and acceptance party"
+            },
+            {
+              "const": "HE",
+              "title": "Transportation office"
+            },
+            {
+              "const": "HF",
+              "title": "Contract administration office"
+            },
+            {
+              "const": "HG",
+              "title": "Investigator"
+            },
+            {
+              "const": "HH",
+              "title": "Audit office"
+            },
+            {
+              "const": "HI",
+              "title": "Requestor"
+            },
+            {
+              "const": "HJ",
+              "title": "Foreign disclosure information office"
+            },
+            {
+              "const": "HK",
+              "title": "Mark-for party"
+            },
+            {
+              "const": "HL",
+              "title": "Party to receive reports"
+            },
+            {
+              "const": "HM",
+              "title": "Alternative manufacturer"
+            },
+            {
+              "const": "HN",
+              "title": "Service performer"
+            },
+            {
+              "const": "HO",
+              "title": "Shipper's association"
+            },
+            {
+              "const": "HP",
+              "title": "Final message recipient"
+            },
+            {
+              "const": "HQ",
+              "title": "Account owner"
+            },
+            {
+              "const": "HR",
+              "title": "Shipping line service"
+            },
+            {
+              "const": "HS",
+              "title": "Creditor"
+            },
+            {
+              "const": "HT",
+              "title": "Clearing house"
+            },
+            {
+              "const": "HU",
+              "title": "Ordering bank"
+            },
+            {
+              "const": "HV",
+              "title": "Receiver of funds"
+            },
+            {
+              "const": "HW",
+              "title": "Sender of funds"
+            },
+            {
+              "const": "HX",
+              "title": "Debtor"
+            },
+            {
+              "const": "HY",
+              "title": "Presenting bank"
+            },
+            {
+              "const": "HZ",
+              "title": "Work team"
+            },
+            {
+              "const": "I1",
+              "title": "Intermediary bank 1"
+            },
+            {
+              "const": "I2",
+              "title": "Intermediary bank 2"
+            },
+            {
+              "const": "IB",
+              "title": "Intermediary/broker"
+            },
+            {
+              "const": "IC",
+              "title": "Intermediate consignee"
+            },
+            {
+              "const": "ID",
+              "title": "Replacing manufacturer"
+            },
+            {
+              "const": "IE",
+              "title": "Non-resident third party company with whom financial account is held"
+            },
+            {
+              "const": "IF",
+              "title": "Non-resident group company with whom financial account is held"
+            },
+            {
+              "const": "IG",
+              "title": "Non-resident beneficiary"
+            },
+            {
+              "const": "IH",
+              "title": "Resident beneficiary"
+            },
+            {
+              "const": "II",
+              "title": "Invoice issuer"
+            },
+            {
+              "const": "IJ",
+              "title": "Non-resident instructing party"
+            },
+            {
+              "const": "IL",
+              "title": "Resident instructing party"
+            },
+            {
+              "const": "IM",
+              "title": "Importer"
+            },
+            {
+              "const": "IN",
+              "title": "Insurer"
+            },
+            {
+              "const": "IO",
+              "title": "Insurance company"
+            },
+            {
+              "const": "IP",
+              "title": "Insurance claim adjuster"
+            },
+            {
+              "const": "IQ",
+              "title": "Domestic financial institution"
+            },
+            {
+              "const": "IR",
+              "title": "Non-domestic financial institution"
+            },
+            {
+              "const": "IS",
+              "title": "Party to receive certified inspection report"
+            },
+            {
+              "const": "IT",
+              "title": "Installation on site"
+            },
+            {
+              "const": "IU",
+              "title": "Non-resident debtor"
+            },
+            {
+              "const": "IV",
+              "title": "Invoicee"
+            },
+            {
+              "const": "IW",
+              "title": "Non-resident creditor"
+            },
+            {
+              "const": "IX",
+              "title": "Supplier work team"
+            },
+            {
+              "const": "IY",
+              "title": "Tenant manager"
+            },
+            {
+              "const": "IZ",
+              "title": "Party mandated to liquidate an enterprise"
+            },
+            {
+              "const": "JA",
+              "title": "Certified accountant"
+            },
+            {
+              "const": "JB",
+              "title": "Goods collection party"
+            },
+            {
+              "const": "JC",
+              "title": "Party at final place of positioning"
+            },
+            {
+              "const": "JD",
+              "title": "Customs office of clearance"
+            },
+            {
+              "const": "JE",
+              "title": "Party from whom customs documents are to be picked up"
+            },
+            {
+              "const": "JF",
+              "title": "Party from whom non-customs documents are to be picked up"
+            },
+            {
+              "const": "JG",
+              "title": "Party to receive customs documents"
+            },
+            {
+              "const": "JH",
+              "title": "Party to receive non-customs documents"
+            },
+            {
+              "const": "LA",
+              "title": "Party designated to provide living animal care"
+            },
+            {
+              "const": "LB",
+              "title": "Co-producer"
+            },
+            {
+              "const": "LC",
+              "title": "Party declaring the Value Added Tax (VAT)"
+            },
+            {
+              "const": "LD",
+              "title": "Party recovering the Value Added Tax (VAT)"
+            },
+            {
+              "const": "LE",
+              "title": "Person on claim"
+            },
+            {
+              "const": "LF",
+              "title": "Buyer's corporate office"
+            },
+            {
+              "const": "LG",
+              "title": "Supplier's corporate office"
+            },
+            {
+              "const": "LH",
+              "title": "Liquidator"
+            },
+            {
+              "const": "LI",
+              "title": "Account coordinator"
+            },
+            {
+              "const": "LJ",
+              "title": "Inspection leader"
+            },
+            {
+              "const": "LK",
+              "title": "Patient"
+            },
+            {
+              "const": "LL",
+              "title": "Patient companion"
+            },
+            {
+              "const": "LM",
+              "title": "Medical treatment executant"
+            },
+            {
+              "const": "LN",
+              "title": "Lender"
+            },
+            {
+              "const": "LO",
+              "title": "Medical treatment prescriber"
+            },
+            {
+              "const": "LP",
+              "title": "Loading party"
+            },
+            {
+              "const": "LQ",
+              "title": "Debt payment authorisation party"
+            },
+            {
+              "const": "LR",
+              "title": "Administration centre"
+            },
+            {
+              "const": "LS",
+              "title": "Product services and repairs centre"
+            },
+            {
+              "const": "LT",
+              "title": "Secretariat"
+            },
+            {
+              "const": "LU",
+              "title": "Entry point technical assessment group"
+            },
+            {
+              "const": "LV",
+              "title": "Party assigning a status"
+            },
+            {
+              "const": "MA",
+              "title": "Party for whom item is ultimately intended"
+            },
+            {
+              "const": "MAD",
+              "title": "Meter administrator"
+            },
+            {
+              "const": "MDR",
+              "title": "Metered data responsible"
+            },
+            {
+              "const": "MF",
+              "title": "Manufacturer of goods"
+            },
+            {
+              "const": "MG",
+              "title": "Party designated to execute re-icing"
+            },
+            {
+              "const": "MI",
+              "title": "Planning schedule/material release issuer"
+            },
+            {
+              "const": "MOP",
+              "title": "Market operator"
+            },
+            {
+              "const": "MP",
+              "title": "Manufacturing unit"
+            },
+            {
+              "const": "MR",
+              "title": "Message recipient"
+            },
+            {
+              "const": "MS",
+              "title": "Document/message issuer/sender"
+            },
+            {
+              "const": "MT",
+              "title": "Party designated to execute sanitary procedures"
+            },
+            {
+              "const": "N2",
+              "title": "Notify party no. 2"
+            },
+            {
+              "const": "NI",
+              "title": "Notify party"
+            },
+            {
+              "const": "OA",
+              "title": "Break bulk berth operator"
+            },
+            {
+              "const": "OB",
+              "title": "Ordered by"
+            },
+            {
+              "const": "OC",
+              "title": "Party data responsible party"
+            },
+            {
+              "const": "OD",
+              "title": "Equipment repair party"
+            },
+            {
+              "const": "OE",
+              "title": "Owner of property"
+            },
+            {
+              "const": "OF",
+              "title": "On behalf of"
+            },
+            {
+              "const": "OG",
+              "title": "Owner or lessor's surveyor"
+            },
+            {
+              "const": "OH",
+              "title": "Lessee's surveyor"
+            },
+            {
+              "const": "OI",
+              "title": "Outside inspection agency"
+            },
+            {
+              "const": "OJ",
+              "title": "Third party"
+            },
+            {
+              "const": "OK",
+              "title": "Receiver's sub-entity"
+            },
+            {
+              "const": "OL",
+              "title": "Case of need party"
+            },
+            {
+              "const": "OM",
+              "title": "Collecting bank"
+            },
+            {
+              "const": "ON",
+              "title": "Remitting bank"
+            },
+            {
+              "const": "OO",
+              "title": "Order of the shipper party"
+            },
+            {
+              "const": "OP",
+              "title": "Operator of property or equipment"
+            },
+            {
+              "const": "OQ",
+              "title": "Collection principal"
+            },
+            {
+              "const": "OR",
+              "title": "Ordered bank"
+            },
+            {
+              "const": "OS",
+              "title": "Original shipper"
+            },
+            {
+              "const": "OT",
+              "title": "Outside test agency"
+            },
+            {
+              "const": "OU",
+              "title": "Account owner's servicing bank on the sending side"
+            },
+            {
+              "const": "OV",
+              "title": "Transport means owner"
+            },
+            {
+              "const": "OW",
+              "title": "Account owner's servicing bank on the receiving side"
+            },
+            {
+              "const": "OX",
+              "title": "Sender's correspondent bank"
+            },
+            {
+              "const": "OY",
+              "title": "Ordering customer"
+            },
+            {
+              "const": "OZ",
+              "title": "Receiver's correspondent bank"
+            },
+            {
+              "const": "P1",
+              "title": "Contact party 1"
+            },
+            {
+              "const": "P2",
+              "title": "Contact party 2"
+            },
+            {
+              "const": "P3",
+              "title": "Contact party 3"
+            },
+            {
+              "const": "P4",
+              "title": "Contact party 4"
+            },
+            {
+              "const": "PA",
+              "title": "Party to receive inspection report"
+            },
+            {
+              "const": "PAD",
+              "title": "Party Administrator"
+            },
+            {
+              "const": "PB",
+              "title": "Paying financial institution"
+            },
+            {
+              "const": "PC",
+              "title": "Actual purchaser's customer"
+            },
+            {
+              "const": "PD",
+              "title": "Purchaser's department buyer"
+            },
+            {
+              "const": "PE",
+              "title": "Payee"
+            },
+            {
+              "const": "PF",
+              "title": "Party to receive freight bill"
+            },
+            {
+              "const": "PG",
+              "title": "Prime contractor"
+            },
+            {
+              "const": "PH",
+              "title": "Payer's financial institution"
+            },
+            {
+              "const": "PI",
+              "title": "Payee's company name/ID"
+            },
+            {
+              "const": "PJ",
+              "title": "Party to receive correspondence"
+            },
+            {
+              "const": "PK",
+              "title": "Contact party"
+            },
+            {
+              "const": "PM",
+              "title": "Party to receive paper memo of invoice"
+            },
+            {
+              "const": "PN",
+              "title": "Party to receive shipping notice"
+            },
+            {
+              "const": "PO",
+              "title": "Ordering party"
+            },
+            {
+              "const": "POA",
+              "title": "Port Authority"
+            },
+            {
+              "const": "PP",
+              "title": "Platform provider party"
+            },
+            {
+              "const": "PQ",
+              "title": "Certifying party"
+            },
+            {
+              "const": "PR",
+              "title": "Payer"
+            },
+            {
+              "const": "PS",
+              "title": "Payer's company name/ID (Check, Draft or Wire)"
+            },
+            {
+              "const": "PT",
+              "title": "Party to receive test report"
+            },
+            {
+              "const": "PW",
+              "title": "Despatch party"
+            },
+            {
+              "const": "PX",
+              "title": "Party to receive all documents"
+            },
+            {
+              "const": "PY",
+              "title": "Checking party"
+            },
+            {
+              "const": "PZ",
+              "title": "Party to print some document"
+            },
+            {
+              "const": "RA",
+              "title": "Central bank or regulatory authority"
+            },
+            {
+              "const": "RB",
+              "title": "Receiving financial institution"
+            },
+            {
+              "const": "RCA",
+              "title": "Reconciliation accountable"
+            },
+            {
+              "const": "RCR",
+              "title": "Reconciliation responsible"
+            },
+            {
+              "const": "RE",
+              "title": "Party to receive commercial invoice remittance"
+            },
+            {
+              "const": "RF",
+              "title": "Received from"
+            },
+            {
+              "const": "RH",
+              "title": "Seller's financial institution"
+            },
+            {
+              "const": "RI",
+              "title": "Reinsurance intermediary/broker"
+            },
+            {
+              "const": "RL",
+              "title": "Reporting carrier (Customs)"
+            },
+            {
+              "const": "RM",
+              "title": "Reporting carrier's nominated agent/representative (Customs)"
+            },
+            {
+              "const": "RP",
+              "title": "Routing party"
+            },
+            {
+              "const": "RS",
+              "title": "Party to receive statement of account"
+            },
+            {
+              "const": "RV",
+              "title": "Receiver of cheque"
+            },
+            {
+              "const": "RW",
+              "title": "Issuer of waybill"
+            },
+            {
+              "const": "SB",
+              "title": "Sales responsibility"
+            },
+            {
+              "const": "SE",
+              "title": "Seller"
+            },
+            {
+              "const": "SF",
+              "title": "Ship from"
+            },
+            {
+              "const": "SG",
+              "title": "Store group"
+            },
+            {
+              "const": "SI",
+              "title": "Shipping schedule issuer"
+            },
+            {
+              "const": "SN",
+              "title": "Store keeper"
+            },
+            {
+              "const": "SO",
+              "title": "Sold to if different than bill to"
+            },
+            {
+              "const": "SPC",
+              "title": "SOLAS verified gross mass responsible party"
+            },
+            {
+              "const": "SR",
+              "title": "Seller agent"
+            },
+            {
+              "const": "SS",
+              "title": "Social securities collector's office"
+            },
+            {
+              "const": "ST",
+              "title": "Ship to"
+            },
+            {
+              "const": "SU",
+              "title": "Supplier"
+            },
+            {
+              "const": "SX",
+              "title": "Surety for additions"
+            },
+            {
+              "const": "SY",
+              "title": "Surety"
+            },
+            {
+              "const": "SZ",
+              "title": "Surety for antidumping/countervailing duty"
+            },
+            {
+              "const": "TA",
+              "title": "Legal receiver"
+            },
+            {
+              "const": "TB",
+              "title": "Submitter"
+            },
+            {
+              "const": "TC",
+              "title": "Tax collector's office"
+            },
+            {
+              "const": "TCP",
+              "title": "Transit charge payer"
+            },
+            {
+              "const": "TCR",
+              "title": "Transport capacity responsible party"
+            },
+            {
+              "const": "TD",
+              "title": "Party to receive technical documentation"
+            },
+            {
+              "const": "TE",
+              "title": "Bankruptcy referee"
+            },
+            {
+              "const": "TF",
+              "title": "Source of information"
+            },
+            {
+              "const": "TG",
+              "title": "Judge"
+            },
+            {
+              "const": "TH",
+              "title": "Attorney"
+            },
+            {
+              "const": "TI",
+              "title": "Law firm"
+            },
+            {
+              "const": "TJ",
+              "title": "Trustee"
+            },
+            {
+              "const": "TK",
+              "title": "Signatory"
+            },
+            {
+              "const": "TL",
+              "title": "Occupant"
+            },
+            {
+              "const": "TM",
+              "title": "Co-occupant"
+            },
+            {
+              "const": "TN",
+              "title": "Subject of inquiry"
+            },
+            {
+              "const": "TO",
+              "title": "Lessor"
+            },
+            {
+              "const": "TP",
+              "title": "Owner of residence"
+            },
+            {
+              "const": "TQ",
+              "title": "Founder"
+            },
+            {
+              "const": "TR",
+              "title": "Terminal operator"
+            },
+            {
+              "const": "TS",
+              "title": "Party to receive certified test results"
+            },
+            {
+              "const": "TT",
+              "title": "Transfer to"
+            },
+            {
+              "const": "TU",
+              "title": "President"
+            },
+            {
+              "const": "TV",
+              "title": "Chairperson"
+            },
+            {
+              "const": "TW",
+              "title": "Legal title holder"
+            },
+            {
+              "const": "TX",
+              "title": "Shareholder"
+            },
+            {
+              "const": "TY",
+              "title": "Provider"
+            },
+            {
+              "const": "TZ",
+              "title": "Military branch"
+            },
+            {
+              "const": "UA",
+              "title": "Educational institution"
+            },
+            {
+              "const": "UB",
+              "title": "Assignor"
+            },
+            {
+              "const": "UC",
+              "title": "Ultimate consignee"
+            },
+            {
+              "const": "UD",
+              "title": "Ultimate customer"
+            },
+            {
+              "const": "UE",
+              "title": "Advisor"
+            },
+            {
+              "const": "UF",
+              "title": "Co-defendant"
+            },
+            {
+              "const": "UG",
+              "title": "Merged company with retained identity"
+            },
+            {
+              "const": "UH",
+              "title": "Party represented"
+            },
+            {
+              "const": "UHP",
+              "title": "Unexpected handling party"
+            },
+            {
+              "const": "UI",
+              "title": "Assignee"
+            },
+            {
+              "const": "UJ",
+              "title": "Key person"
+            },
+            {
+              "const": "UK",
+              "title": "Author"
+            },
+            {
+              "const": "UL",
+              "title": "Ultimate parent company"
+            },
+            {
+              "const": "UM",
+              "title": "Party not to be confused with"
+            },
+            {
+              "const": "UN",
+              "title": "Accountant"
+            },
+            {
+              "const": "UO",
+              "title": "Plaintiff"
+            },
+            {
+              "const": "UP",
+              "title": "Unloading party"
+            },
+            {
+              "const": "UQ",
+              "title": "Parent company"
+            },
+            {
+              "const": "UR",
+              "title": "Affiliated company"
+            },
+            {
+              "const": "US",
+              "title": "Bailiff"
+            },
+            {
+              "const": "UT",
+              "title": "Merged company"
+            },
+            {
+              "const": "UU",
+              "title": "Defendant"
+            },
+            {
+              "const": "UV",
+              "title": "Petitioning creditor"
+            },
+            {
+              "const": "UW",
+              "title": "Guarantee agency"
+            },
+            {
+              "const": "UX",
+              "title": "Organization group"
+            },
+            {
+              "const": "UY",
+              "title": "Subsidiary"
+            },
+            {
+              "const": "UZ",
+              "title": "Industry association"
+            },
+            {
+              "const": "VA",
+              "title": "Joint owner"
+            },
+            {
+              "const": "VB",
+              "title": "Joint venture"
+            },
+            {
+              "const": "VC",
+              "title": "Filing office"
+            },
+            {
+              "const": "VE",
+              "title": "Court"
+            },
+            {
+              "const": "VF",
+              "title": "Liability holder"
+            },
+            {
+              "const": "VG",
+              "title": "Local government sponsor"
+            },
+            {
+              "const": "VH",
+              "title": "Mortgage company"
+            },
+            {
+              "const": "VI",
+              "title": "Notary public"
+            },
+            {
+              "const": "VJ",
+              "title": "Officer"
+            },
+            {
+              "const": "VK",
+              "title": "Publisher"
+            },
+            {
+              "const": "VL",
+              "title": "Party manufactured for"
+            },
+            {
+              "const": "VM",
+              "title": "Previous owner"
+            },
+            {
+              "const": "VN",
+              "title": "Vendor"
+            },
+            {
+              "const": "VO",
+              "title": "Purchased company"
+            },
+            {
+              "const": "VP",
+              "title": "Receiver manager"
+            },
+            {
+              "const": "VQ",
+              "title": "Responsible government agency"
+            },
+            {
+              "const": "VR",
+              "title": "Sole proprietor"
+            },
+            {
+              "const": "VS",
+              "title": "Auctioneer"
+            },
+            {
+              "const": "VT",
+              "title": "Branch"
+            },
+            {
+              "const": "VU",
+              "title": "Business"
+            },
+            {
+              "const": "VV",
+              "title": "Ultimate same country parent company"
+            },
+            {
+              "const": "VW",
+              "title": "Responsible party"
+            },
+            {
+              "const": "VX",
+              "title": "Secured party"
+            },
+            {
+              "const": "VY",
+              "title": "Other related party"
+            },
+            {
+              "const": "VZ",
+              "title": "Co-debtor"
+            },
+            {
+              "const": "WA",
+              "title": "Company which holds financial interest"
+            },
+            {
+              "const": "WB",
+              "title": "Rating organization"
+            },
+            {
+              "const": "WC",
+              "title": "Information reference agency"
+            },
+            {
+              "const": "WD",
+              "title": "Warehouse depositor"
+            },
+            {
+              "const": "WE",
+              "title": "Compilation agency"
+            },
+            {
+              "const": "WF",
+              "title": "Information maintenance agency"
+            },
+            {
+              "const": "WG",
+              "title": "Information dissemination agency"
+            },
+            {
+              "const": "WH",
+              "title": "Warehouse keeper"
+            },
+            {
+              "const": "WI",
+              "title": "Inspection address"
+            },
+            {
+              "const": "WJ",
+              "title": "Refusal party"
+            },
+            {
+              "const": "WK",
+              "title": "Value added network provider"
+            },
+            {
+              "const": "WL",
+              "title": "Agency"
+            },
+            {
+              "const": "WM",
+              "title": "Works manager"
+            },
+            {
+              "const": "WN",
+              "title": "Party to receive order to supply"
+            },
+            {
+              "const": "WO",
+              "title": "Party to receive invitation to offer"
+            },
+            {
+              "const": "WP",
+              "title": "Sub-entity"
+            },
+            {
+              "const": "WPA",
+              "title": "Weighting party"
+            },
+            {
+              "const": "WQ",
+              "title": "Doing business as"
+            },
+            {
+              "const": "WR",
+              "title": "Party submitting quote"
+            },
+            {
+              "const": "WS",
+              "title": "Wholesaler"
+            },
+            {
+              "const": "WT",
+              "title": "Affiliated party"
+            },
+            {
+              "const": "WU",
+              "title": "Previous name"
+            },
+            {
+              "const": "WV",
+              "title": "Party performing task"
+            },
+            {
+              "const": "WW",
+              "title": "Registering party"
+            },
+            {
+              "const": "WX",
+              "title": "Inland clearance depot operator"
+            },
+            {
+              "const": "WY",
+              "title": "Destination terminal operator"
+            },
+            {
+              "const": "WZ",
+              "title": "Departure terminal operator"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

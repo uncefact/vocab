@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/subset/BuyShipPay/D22B/UNECE_UNTDID3155",
+  "title": "UNECE_UNTDID3155",
+  "description": "Copyright (C) UN/CEFACT (2023). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID3155Type": {
+          "title": "Communication means type code",
+          "description": "Code specifying the type of communication address.\r\n\r\nApplicable codes:\r\n* 'AA' - Circuit switching\r\n* 'AB' - SITA\r\n* 'AC' - ARINC\r\n* 'AD' - AT&T mailbox\r\n* 'AE' - Peripheral device\r\n* 'AF' - U.S. Defense Switched Network\r\n* 'AG' - U.S. federal telecommunications system\r\n* 'AH' - World Wide Web\r\n* 'AI' - International calling country code\r\n* 'AJ' - Alternate telephone\r\n* 'AK' - Videotex number\r\n* 'AL' - Cellular phone\r\n* 'AM' - International telephone direct line\r\n* 'AN' - O.F.T.P. (ODETTE File Transfer Protocol)\r\n* 'AO' - Uniform Resource Location (URL)\r\n* 'AP' - Very High Frequency (VHF) radio telephone\r\n* 'AQ' - X.400 address for mail text\r\n* 'AR' - AS1 address\r\n* 'AS' - AS2 address\r\n* 'AT' - AS3 address\r\n* 'AU' - File Transfer Protocol\r\n* 'AV' - Inmarsat call number\r\n* 'AW' - Radio communication call sign\r\n* 'CA' - Cable address\r\n* 'EI' - EDI transmission\r\n* 'EM' - Electronic mail\r\n* 'EX' - Extension\r\n* 'FT' - File transfer access method\r\n* 'FX' - Telefax\r\n* 'GM' - GEIS (General Electric Information Service) mailbox\r\n* 'IE' - IBM information exchange\r\n* 'IM' - Internal mail\r\n* 'MA' - Mail\r\n* 'PB' - Postbox number\r\n* 'PS' - Packet switching\r\n* 'SW' - S.W.I.F.T.\r\n* 'TE' - Telephone\r\n* 'TG' - Telegraph\r\n* 'TL' - Telex\r\n* 'TM' - Telemail\r\n* 'TT' - Teletext\r\n* 'TX' - TWX\r\n* 'XF' - X.400 address\r\n* 'XG' - Pager\r\n* 'XH' - International telephone switchboard\r\n* 'XI' - National telephone direct line\r\n* 'XJ' - National telephone switchboard",
+          "enum": [
+            "AA",
+            "AB",
+            "AC",
+            "AD",
+            "AE",
+            "AF",
+            "AG",
+            "AH",
+            "AI",
+            "AJ",
+            "AK",
+            "AL",
+            "AM",
+            "AN",
+            "AO",
+            "AP",
+            "AQ",
+            "AR",
+            "AS",
+            "AT",
+            "AU",
+            "AV",
+            "AW",
+            "CA",
+            "EI",
+            "EM",
+            "EX",
+            "FT",
+            "FX",
+            "GM",
+            "IE",
+            "IM",
+            "MA",
+            "PB",
+            "PS",
+            "SW",
+            "TE",
+            "TG",
+            "TL",
+            "TM",
+            "TT",
+            "TX",
+            "XF",
+            "XG",
+            "XH",
+            "XI",
+            "XJ"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

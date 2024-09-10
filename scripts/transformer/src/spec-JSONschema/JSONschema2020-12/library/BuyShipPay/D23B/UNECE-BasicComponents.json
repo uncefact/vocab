@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/BasicComponents",
+  "title": "BasicComponents",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "pdt": {
+      "$defs": {
+        "binaryType": {
+          "title": "Binary",
+          "description": "",
+          "type": "string",
+          "contentEncoding": "base64"
+        },
+        "booleanType": {
+          "title": "Boolean",
+          "description": "",
+          "type": "boolean"
+        },
+        "decimalType": {
+          "title": "Decimal",
+          "description": "",
+          "type": "string",
+          "pattern": "^([+-]?(0?|[1-9][0-9]*)(\\.?\\d+))$"
+        },
+        "integerType": {
+          "title": "Integer",
+          "description": "",
+          "type": "integer"
+        },
+        "stringType": {
+          "title": "String",
+          "description": "",
+          "type": "string"
+        }
+      }
+    },
+    "udt": {
+      "$defs": {
+        "amountType": {
+          "title": "Amount. Type",
+          "description": "A number of monetary units specified in a currency where the unit of the currency is explicit or implied.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/decimalType"
+            },
+            "currencyId": {
+              "$ref": "codelists/ISO_ISO3AlphaCurrencyCode.json#/$defs/codeList/$defs/ISO3AlphaCurrencyCodeType"
+            },
+            "currencyCodeListVersionId": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "binaryObjectType": {
+          "title": "Binary Object. Type",
+          "description": "A set of finite-length sequences of binary octets.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/binaryType"
+            },
+            "format": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "mimeCode": {
+              "$ref": "codelists/IANA_MIMEMediaType.json#/$defs/codeList/$defs/MIMEMediaTypeType"
+            },
+            "encodingCode": {
+              "$ref": "codelists/UNECE_CharacterSetEncodingCode.json#/$defs/codeList/$defs/CharacterSetEncodingCodeType"
+            },
+            "characterSetCode": {
+              "$ref": "codelists/IANA_CharacterSetCode.json#/$defs/codeList/$defs/CharacterSetCodeType"
+            },
+            "uri": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "filename": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "codeType": {
+          "title": "Code. Type",
+          "description": "A character string (letters, figures or symbols) that for brevity and/or language independence may be used to represent or replace a definitive value or text of an Attribute together with relevant supplementary information.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "listId": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "listAgencyId": {
+              "$ref": "codelists/UNECE_AgencyIdentificationCode.json#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+            },
+            "listAgencyName": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "listVersionId": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "name": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "listName": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "languageId": {
+              "$ref": "codelists/ISO_ISOAlpha2LanguageCode.json#/$defs/codeList/$defs/ISOAlpha2LanguageCodeType"
+            },
+            "listUri": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "listSchemeUri": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "dateTimeType": {
+          "title": "Date Time. Type",
+          "description": "A particular point in the progression of time together with the relevant supplementary information.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateType": {
+          "title": "Date. Type",
+          "description": "A particular point in the progression of time together with the relevant supplementary information.",
+          "$ref": "#/$defs/udt/$defs/dateTimeType"
+        },
+        "graphicType": {
+          "title": "Graphic. Type",
+          "description": "A set of finite-length sequences of binary octets.",
+          "$ref": "#/$defs/udt/$defs/binaryObjectType"
+        },
+        "idType": {
+          "title": "Identifier. Type",
+          "description": "A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "schemeId": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "schemeName": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "schemeAgencyId": {
+              "$ref": "codelists/UNECE_AgencyIdentificationCode.json#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+            },
+            "schemeAgencyName": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "schemeVersionId": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "schemeDataUri": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "schemeUri": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "indicatorType": {
+          "title": "Indicator. Type",
+          "description": "A list of two mutually exclusive Boolean values that express the only possible states of a Property.",
+          "type": "boolean"
+        },
+        "measureType": {
+          "title": "Measure. Type",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/decimalType"
+            },
+            "unitCode": {
+              "$ref": "codelists/UNECE_MeasurementUnitCommonCode.json#/$defs/codeList/$defs/MeasurementUnitCommonCodeType"
+            },
+            "unitCodeListVersionId": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "nameType": {
+          "title": "Name. Type",
+          "$ref": "#/$defs/udt/$defs/textType"
+        },
+        "numericType": {
+          "title": "Numeric. Type",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/decimalType"
+            },
+            "format": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "percentType": {
+          "title": "Percent. Type",
+          "$ref": "#/$defs/udt/$defs/numericType"
+        },
+        "pictureType": {
+          "title": "Picture. Type",
+          "$ref": "#/$defs/udt/$defs/binaryObjectType"
+        },
+        "quantityType": {
+          "title": "Quantity. Type",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/decimalType"
+            },
+            "unitCode": {
+              "$ref": "codelists/UNECE_MeasurementUnitCommonCode.json#/$defs/codeList/$defs/MeasurementUnitCommonCodeType"
+            },
+            "unitCodeListId": {
+              "$ref": "codelists/UNECE_MeasurementUnitCommonCode.json#/$defs/codeList/$defs/MeasurementUnitCommonCodeType"
+            },
+            "unitCodeListAgencyId": {
+              "$ref": "codelists/UNECE_AgencyIdentificationCode.json#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+            },
+            "unitCodeListAgencyName": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "rateType": {
+          "title": "Rate. Type",
+          "$ref": "#/$defs/udt/$defs/numericType"
+        },
+        "soundType": {
+          "title": "Sound. Type",
+          "$ref": "#/$defs/udt/$defs/binaryObjectType"
+        },
+        "textType": {
+          "title": "Text. Type",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "languageId": {
+              "$ref": "codelists/ISO_ISOAlpha2LanguageCode.json#/$defs/codeList/$defs/ISOAlpha2LanguageCodeType"
+            },
+            "languageLocaleId": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "timeType": {
+          "title": "Time. Type",
+          "$ref": "#/$defs/udt/$defs/dateTimeType"
+        },
+        "valueType": {
+          "title": "Value. Type",
+          "$ref": "#/$defs/udt/$defs/numericType"
+        },
+        "videoType": {
+          "title": "Video. Type",
+          "$ref": "#/$defs/udt/$defs/binaryObjectType"
+        }
+      }
+    },
+    "extensibleType": {
+      "patternProperties": {
+        "^x-": true
+      }
+    },
+    "resourceType": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

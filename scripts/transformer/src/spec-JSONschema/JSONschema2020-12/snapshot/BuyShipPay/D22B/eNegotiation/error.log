@@ -1,0 +1,6 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Datenmodell: Negotiation Exchange Message; D22B
+
+ERROR: Empty code list restriction (ignored): file: "UNECE-eNegotiationExchange.json" (Q)DT: "Quantity. Type" cc or sc "Quantity Unit. Code List. Identifier"

@@ -1,0 +1,379 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/PreferentialCoO",
+  "title": "Preferential CoO",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-eCertMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocument": {
+          "properties": {
+            "name": false,
+            "description": false,
+            "typeCode": {
+              "properties": {
+                "content": {
+                  "enum": [
+                    "864"
+                  ]
+                },
+                "listAgencyId": false
+              }
+            },
+            "statusCode": false,
+            "issueDateTime": {
+              "properties": {
+                "format": {
+                  "enum": [
+                    "205"
+                  ]
+                }
+              }
+            },
+            "isOrHasCopy": false,
+            "information": false,
+            "cancellationDateTime": false,
+            "includedNote": false,
+            "referenceReferencedDocument": false,
+            "issueLogisticsLocation": false,
+            "contractualDocumentClause": false,
+            "firstSignatoryDocumentAuthentication": {
+              "properties": {
+                "typeCode": false,
+                "actualDateTime": {
+                  "properties": {
+                    "format": {
+                      "enum": [
+                        "205"
+                      ]
+                    }
+                  }
+                },
+                "provider": false,
+                "locationProvider": false,
+                "issueLogisticsLocation": {
+                  "properties": {
+                    "id": {
+                      "items": {
+                        "properties": {
+                          "schemeAgencyId": false
+                        }
+                      }
+                    },
+                    "name": false,
+                    "typeCode": false,
+                    "description": false
+                  }
+                }
+              }
+            },
+            "secondSignatoryDocumentAuthentication": false,
+            "thirdSignatoryDocumentAuthentication": false,
+            "fourthSignatoryDocumentAuthentication": false,
+            "issuer": {
+              "properties": {
+                "id": {
+                  "items": {
+                    "properties": {
+                      "schemeId": false,
+                      "schemeAgencyId": false
+                    }
+                  }
+                },
+                "typeCode": false,
+                "name": false,
+                "roleCode": false,
+                "role": false,
+                "definedTradeContact": false,
+                "postalTradeAddress": false,
+                "specifiedAuthoritativeSignatoryPerson": false
+              }
+            },
+            "recipient": false
+          }
+        },
+        "specifiedConsignment": {
+          "items": {
+            "properties": {
+              "availabilityDueDateTime": false,
+              "exportExitDateTime": false,
+              "isOrHasShipStores": false,
+              "consignor": {
+                "properties": {
+                  "id": {
+                    "items": {
+                      "properties": {
+                        "schemeAgencyId": false
+                      }
+                    }
+                  },
+                  "typeCode": false,
+                  "name": false,
+                  "roleCode": false,
+                  "role": false,
+                  "definedTradeContact": false,
+                  "postalTradeAddress": false,
+                  "specifiedAuthoritativeSignatoryPerson": false
+                }
+              },
+              "consignee": {
+                "properties": {
+                  "id": {
+                    "items": {
+                      "properties": {
+                        "schemeAgencyId": false
+                      }
+                    }
+                  },
+                  "typeCode": false,
+                  "name": false,
+                  "roleCode": false,
+                  "role": false,
+                  "definedTradeContact": false,
+                  "postalTradeAddress": false,
+                  "specifiedAuthoritativeSignatoryPerson": false
+                }
+              },
+              "carrier": false,
+              "despatch": false,
+              "delivery": false,
+              "customsTransitAgent": false,
+              "consigneeReceiptLogisticsLocation": false,
+              "loadingBaseportLogisticsLocation": false,
+              "unloadingBaseportLogisticsLocation": false,
+              "transitLogisticsLocation": false,
+              "examinationEvent": false,
+              "storageEvent": false,
+              "vanningEvent": false,
+              "includedConsignmentItem": {
+                "items": {
+                  "properties": {
+                    "natureIdCargo": false,
+                    "manufacturer": false,
+                    "includedTradeLineItem": {
+                      "items": {
+                        "properties": {
+                          "sequenceNumeric": false,
+                          "descriptionCode": false,
+                          "associatedLogisticsTransportEquipment": false,
+                          "assertedDocumentAuthentication": false,
+                          "specifiedTradeProduct": {
+                            "items": {
+                              "properties": {
+                                "globalId": false,
+                                "modelId": false,
+                                "description": false,
+                                "netWeight": false,
+                                "grossWeight": false,
+                                "netVolume": false,
+                                "grossVolume": false,
+                                "batchId": false,
+                                "useDescription": false,
+                                "commonName": false,
+                                "scientificName": false,
+                                "intendedUse": false,
+                                "designatedProductClassification": {
+                                  "items": {
+                                    "properties": {
+                                      "systemId": false,
+                                      "systemName": false,
+                                      "classCode": {
+                                        "properties": {
+                                          "listAgencyId": {
+                                            "enum": [
+                                              "1"
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "className": false
+                                    }
+                                  }
+                                },
+                                "individualTradeProductInstance": false,
+                                "certificationEvidenceReferenceReferencedDocument": false,
+                                "originTradeCountry": {
+                                  "items": {
+                                    "properties": {
+                                      "id": {
+                                        "items": {
+                                          "properties": {
+                                            "content": {
+                                              "enum": [
+                                                "DE"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "name": false,
+                                      "subordinateTradeCountrySubDivision": false
+                                    }
+                                  }
+                                },
+                                "manufacturer": false,
+                                "additionalReferenceReferencedDocument": false,
+                                "informationNote": false,
+                                "originLogisticsLocation": false,
+                                "specifiedProductCertificate": false
+                              }
+                            }
+                          },
+                          "additionalInformationNote": false,
+                          "referenceReferencedDocument": false,
+                          "physicalReferencedLogisticsPackage": {
+                            "items": {
+                              "properties": {
+                                "levelCode": {
+                                  "properties": {
+                                    "content": {
+                                      "enum": [
+                                        "1"
+                                      ]
+                                    },
+                                    "listAgencyId": false
+                                  }
+                                },
+                                "typeCode": {
+                                  "properties": {
+                                    "content": {
+                                      "enum": [
+                                        "SS"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "grossWeight": false,
+                                "nominalGrossWeight": false,
+                                "grossVolume": false,
+                                "nominalGrossVolume": false,
+                                "physicalLogisticsShippingMarks": {
+                                  "items": {
+                                    "properties": {
+                                      "markingInstructionCode": false,
+                                      "barcodeLogisticsLabel": false,
+                                      "rfidLogisticsLabel": false,
+                                      "vinLogisticsLabel": false,
+                                      "radioactiveLogisticsLabel": false
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "referencedLogisticsPackage": false,
+                          "invoiceAssociatedReferencedDocument": false,
+                          "appliedProductHandlingProcess": false
+                        }
+                      }
+                    },
+                    "vanningEvent": false,
+                    "applicableCrossBorderRegulatoryProcedure": false
+                  }
+                }
+              },
+              "utilizedLogisticsTransportEquipment": false,
+              "mainCarriageLogisticsTransportMovement": {
+                "items": {
+                  "properties": {
+                    "modeCode": {
+                      "properties": {
+                        "content": {
+                          "enum": [
+                            "1"
+                          ]
+                        }
+                      }
+                    },
+                    "usedLogisticsTransportMeans": {
+                      "properties": {
+                        "typeCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "1504"
+                              ]
+                            }
+                          }
+                        },
+                        "id": false
+                      }
+                    }
+                  }
+                }
+              },
+              "transitTradeCountry": false,
+              "importTradeCountry": false,
+              "exportTradeCountry": false,
+              "reExportTradeCountry": false,
+              "associated": {
+                "items": {
+                  "properties": {
+                    "id": {
+                      "items": {
+                        "properties": {
+                          "schemeAgencyId": {
+                            "enum": [
+                              "9"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "typeCode": false,
+                    "name": false,
+                    "roleCode": false,
+                    "role": false,
+                    "definedTradeContact": false,
+                    "postalTradeAddress": false,
+                    "specifiedAuthoritativeSignatoryPerson": false
+                  }
+                }
+              },
+              "unloadingLogisticsLocation": {
+                "properties": {
+                  "id": {
+                    "items": {
+                      "properties": {
+                        "schemeAgencyId": {
+                          "enum": [
+                            "6"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "name": false,
+                  "typeCode": false,
+                  "description": false
+                }
+              },
+              "loadingLogisticsLocation": {
+                "properties": {
+                  "id": {
+                    "items": {
+                      "properties": {
+                        "schemeAgencyId": {
+                          "enum": [
+                            "6"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "name": false,
+                  "typeCode": false,
+                  "description": false
+                }
+              }
+            }
+          }
+        },
+        "acknowledgementDocument": false
+      }
+    }
+  ]
+}

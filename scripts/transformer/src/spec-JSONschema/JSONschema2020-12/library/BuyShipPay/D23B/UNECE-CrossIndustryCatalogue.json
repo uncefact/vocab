@@ -1,0 +1,997 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/CrossIndustryCatalogue",
+  "title": "Cross Industry Catalogue",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-SCRDMMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocumentContext": {
+          "properties": {
+            "isOrHasTest": false
+          }
+        },
+        "exchangedDocument": {
+          "properties": {
+            "statusCode": false,
+            "purpose": false,
+            "submissionDateTime": false,
+            "isOrHasControlRequirement": false,
+            "remarks": false,
+            "acceptanceDateTime": false,
+            "purposeCode": {
+              "minItems": 1,
+              "maxItems": 1
+            },
+            "amendmentPurposeCode": false,
+            "information": false,
+            "lineItemQuantity": false,
+            "versionId": false,
+            "categoryCode": false,
+            "cancellationDateTime": false,
+            "rejectionResponseDateTime": false,
+            "responseDateTime": false,
+            "responseReasonCode": false,
+            "requestedResponseTypeCode": false,
+            "creationDateTime": false,
+            "urgencyCode": false,
+            "urgency": false,
+            "offsetProcessingStatus": false,
+            "referenceReferencedDocument": false,
+            "signatoryDocumentAuthentication": false,
+            "effectivePeriod": {
+              "properties": {
+                "isOrHasOpen": false,
+                "purposeCode": false
+              }
+            },
+            "sender": false,
+            "issuer": false,
+            "recipient": false,
+            "attachedBinaryFile": false,
+            "buyerSignatoryDocumentAuthentication": false,
+            "approverSignatoryDocumentAuthentication": false
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "specifiedConsignment": false,
+        "tradeSettlementPayment": false,
+        "tradeTransaction": {
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "properties": {
+              "id": false,
+              "salesAgentAssignedId": false,
+              "typeCode": false,
+              "information": false,
+              "lineItemQuantity": false,
+              "shipmentId": false,
+              "associatedReferencedDocument": false,
+              "includedTradeLineItem": {
+                "items": {
+                  "properties": {
+                    "id": false,
+                    "additionalId": false,
+                    "barcodeId": false,
+                    "typeCode": false,
+                    "typeExtensionCode": false,
+                    "descriptionCode": false,
+                    "associatedDocumentLineDocument": {
+                      "properties": {
+                        "uuidLineId": false,
+                        "parentLineId": false,
+                        "lineStatusReasonCode": false,
+                        "id": false,
+                        "buyerAssignedCategoryCode": false,
+                        "subordinateLineId": false,
+                        "effectivePeriod": {
+                          "properties": {
+                            "isOrHasOpen": false,
+                            "purposeCode": false
+                          }
+                        },
+                        "referenceAcknowledgementDocument": false
+                      },
+                      "required": [
+                        "lineId",
+                        "lineStatusCode"
+                      ]
+                    },
+                    "specifiedTradeProduct": {
+                      "minItems": 1,
+                      "items": {
+                        "properties": {
+                          "geneticModificationExtentCode": false,
+                          "globalExtensionId": false,
+                          "useDescription": false,
+                          "designation": false,
+                          "ultimateCustomerAssignedExtensionId": false,
+                          "applicablePackaging": {
+                            "items": {
+                              "properties": {
+                                "type": false,
+                                "description": false,
+                                "conditionCode": false,
+                                "disposalMethodCode": false,
+                                "weight": false,
+                                "maximumStackabilityQuantity": false,
+                                "maximumStackabilityWeight": false,
+                                "contentLayerQuantity": false,
+                                "minimumLinearSpatialDimension": false,
+                                "maximumLinearSpatialDimension": false
+                              }
+                            }
+                          },
+                          "certificationEvidenceReferenceReferencedDocument": false,
+                          "inspectionReferenceReferencedDocument": false,
+                          "includedReferencedProduct": {
+                            "items": {
+                              "properties": {
+                                "manufacturerAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "industryAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "name": false
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "additionalInformationNote": false,
+                    "substitutedReferencedProduct": false,
+                    "substituteApplicableReferencedProduct": {
+                      "items": {
+                        "properties": {
+                          "manufacturerAssignedId": {
+                            "maxItems": 1
+                          },
+                          "industryAssignedId": {
+                            "maxItems": 1
+                          },
+                          "name": false
+                        }
+                      }
+                    },
+                    "accessoryApplicableReferencedProduct": {
+                      "items": {
+                        "properties": {
+                          "manufacturerAssignedId": {
+                            "maxItems": 1
+                          },
+                          "industryAssignedId": {
+                            "maxItems": 1
+                          },
+                          "name": false
+                        }
+                      }
+                    },
+                    "complementaryApplicableReferencedProduct": {
+                      "items": {
+                        "properties": {
+                          "manufacturerAssignedId": {
+                            "maxItems": 1
+                          },
+                          "industryAssignedId": {
+                            "maxItems": 1
+                          },
+                          "name": false
+                        }
+                      }
+                    },
+                    "additionalApplicableReferencedProduct": {
+                      "items": {
+                        "properties": {
+                          "manufacturerAssignedId": {
+                            "maxItems": 1
+                          },
+                          "industryAssignedId": {
+                            "maxItems": 1
+                          },
+                          "name": false
+                        }
+                      }
+                    },
+                    "componentApplicableReferencedProduct": {
+                      "items": {
+                        "properties": {
+                          "manufacturerAssignedId": {
+                            "maxItems": 1
+                          },
+                          "industryAssignedId": {
+                            "maxItems": 1
+                          },
+                          "name": false
+                        }
+                      }
+                    },
+                    "requiredApplicableReferencedProduct": {
+                      "items": {
+                        "properties": {
+                          "manufacturerAssignedId": {
+                            "maxItems": 1
+                          },
+                          "industryAssignedId": {
+                            "maxItems": 1
+                          },
+                          "name": false
+                        }
+                      }
+                    },
+                    "referenceReferencedDocument": false,
+                    "specifiedLineTradeAgreement": {
+                      "properties": {
+                        "reference": false,
+                        "buyerReference": false,
+                        "deliveryPriorityCode": false,
+                        "id": false,
+                        "revisionId": false,
+                        "buyerApprovedDateTime": false,
+                        "buyerRequisitioner": false,
+                        "productEndUser": false,
+                        "sellerOrderReferencedDocument": false,
+                        "buyerOrderReferencedDocument": false,
+                        "marketplaceOrderReferencedDocument": false,
+                        "quotationReferencedDocument": false,
+                        "quotationRequestReferencedDocument": false,
+                        "requisitionReferencedDocument": false,
+                        "demandForecastReferencedDocument": false,
+                        "promotionalDealReferencedDocument": false,
+                        "additionalReferencedDocument": false,
+                        "grossPriceProductTradePrice": {
+                          "items": {
+                            "properties": {
+                              "appliedTradeAllowanceCharge": {
+                                "items": {
+                                  "properties": {
+                                    "categoryTradeTax": {
+                                      "items": {
+                                        "properties": {
+                                          "lineTotalBasisAmount": false,
+                                          "allowanceChargeBasisAmount": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "includedTradeTax": false
+                            }
+                          }
+                        },
+                        "netPriceProductTradePrice": {
+                          "items": {
+                            "properties": {
+                              "appliedTradeAllowanceCharge": {
+                                "items": {
+                                  "properties": {
+                                    "categoryTradeTax": {
+                                      "items": {
+                                        "properties": {
+                                          "lineTotalBasisAmount": false,
+                                          "allowanceChargeBasisAmount": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "includedTradeTax": false
+                            }
+                          }
+                        },
+                        "requisitionerReferencedDocument": false,
+                        "catalogueReferencedDocument": false,
+                        "carrier": {
+                          "maxItems": 1
+                        },
+                        "salesReportReferencedDocument": false,
+                        "blanketOrderReferencedDocument": false,
+                        "previousOrderReferencedDocument": false,
+                        "originalOrderReferencedDocument": false,
+                        "engineeringChangeReferencedDocument": false,
+                        "letterOfCreditReferencedDocument": false,
+                        "importLicenceReferencedDocument": false,
+                        "exportLicenceReferencedDocument": false,
+                        "quotationProposalReferencedDocument": false,
+                        "quotationProposalResponseReferencedDocument": false,
+                        "quotationRequestResponseReferencedDocument": false,
+                        "itemSeller": false,
+                        "itemBuyer": false,
+                        "includedMarketplace": false,
+                        "orderPriceProductTradePrice": false,
+                        "ultimateCustomerOrderReferencedDocument": false,
+                        "buyer": false,
+                        "applicableForecastTerms": false,
+                        "supplyInstructionReferencedDocument": false,
+                        "primeContractSeller": false,
+                        "relevant": false
+                      }
+                    },
+                    "specifiedLineTradeDelivery": {
+                      "items": {
+                        "properties": {
+                          "isOrHasPartialDeliveryAllowed": false,
+                          "isOrHasFinalDelivery": false,
+                          "requestedQuantity": false,
+                          "remainingRequestedQuantity": false,
+                          "latestDespatchedQuantity": false,
+                          "receivedQuantity": false,
+                          "agreedQuantity": false,
+                          "billedQuantity": false,
+                          "chargeFreeQuantity": false,
+                          "packageQuantity": false,
+                          "productUnitQuantity": false,
+                          "perPackageUnitQuantity": false,
+                          "netWeight": false,
+                          "grossWeight": false,
+                          "theoreticalWeight": false,
+                          "netVolume": false,
+                          "grossVolume": false,
+                          "ultimateShipToDeliveryDateTime": false,
+                          "despatchedQuantity": false,
+                          "chargeableWeight": false,
+                          "statusCode": false,
+                          "dueInAvailableQuantity": false,
+                          "dueInForecastedQuantity": false,
+                          "dueInRequestedQuantity": false,
+                          "dueInReturnedQuantity": false,
+                          "economicOrderQuantity": false,
+                          "isOrHasFullyDelivered": false,
+                          "gfmTransferRejectedQuantity": false,
+                          "individualPackageQuantity": false,
+                          "modificationForecastedQuantity": false,
+                          "isOrHasOverDeliveryAllowed": false,
+                          "reverseBilledQuantity": false,
+                          "turnInReceivedQuantity": false,
+                          "pickUpAvailabilityDateTime": false,
+                          "id": false,
+                          "subordinateId": false,
+                          "rejectedQuantity": false,
+                          "orderQuantity": false,
+                          "returnedQuantity": false,
+                          "destroyedQuantity": false,
+                          "availableQuantity": false,
+                          "unavailableQuantity": false,
+                          "cancelledQuantity": false,
+                          "quantityVariationTypeCode": false,
+                          "quantityVariationReasonCode": false,
+                          "quantityVariationReason": false,
+                          "quantityDiscrepancyNatureCode": false,
+                          "buyerOrderDateTime": false,
+                          "goodsOwnershipChangeDateTime": false,
+                          "availableInventory": false,
+                          "projectedSupplyPlan": false,
+                          "specifiedDeliveryAdjustment": false,
+                          "relatedConsignment": false,
+                          "shipTo": false,
+                          "ultimateShipTo": false,
+                          "shipFrom": false,
+                          "finalDestinationTradeCountry": false,
+                          "specifiedDeliveryInstructions": false,
+                          "specifiedHandlingInstructions": {
+                            "maxItems": 1
+                          },
+                          "requestedDespatchEvent": false,
+                          "plannedDespatchEvent": false,
+                          "actualDespatchEvent": false,
+                          "actualPickUpEvent": false,
+                          "requestedDeliveryEvent": false,
+                          "plannedDeliveryEvent": false,
+                          "actualDeliveryEvent": false,
+                          "actualReceiptEvent": false,
+                          "additionalReferencedDocument": false,
+                          "despatchAdviceReferencedDocument": false,
+                          "receivingAdviceReferencedDocument": false,
+                          "deliveryNoteReferencedDocument": false,
+                          "plannedConsignment": false,
+                          "confirmedDeliveryEvent": false,
+                          "applicableDangerousGoods": {
+                            "properties": {
+                              "mfagId": false,
+                              "explosiveCompatibilityGroupCode": false,
+                              "tunnelRestrictionCode": false,
+                              "aircraftLimitationInformation": false,
+                              "emergencyTradeContact": false,
+                              "handlingInstructions": false
+                            }
+                          },
+                          "consumptionReportReferencedDocument": false,
+                          "packingListReferencedDocument": false,
+                          "specifiedLogisticsPackage": false,
+                          "usedLogisticsLabel": false,
+                          "informationNote": false,
+                          "consignmentInventory": false,
+                          "customerInventory": false,
+                          "logisticsServiceProvider": false,
+                          "inventoryManager": false,
+                          "consumptionSchedule": false,
+                          "deliverySchedule": false,
+                          "despatchSchedule": false,
+                          "orderSchedule": false,
+                          "receiptSchedule": false,
+                          "specifiedSchedule": false,
+                          "supplySpecifiedSchedule": false,
+                          "acceptanceEvent": false,
+                          "plannedShipToDeliveryEvent": false,
+                          "disposal": false,
+                          "actualLoadingEvent": false,
+                          "actualUnloadingEvent": false,
+                          "confirmedReleaseEvent": false,
+                          "confirmedDespatchEvent": false,
+                          "confirmedPickUpEvent": false,
+                          "plannedPickUpEvent": false,
+                          "goodsReceiptNoteReferencedDocument": false,
+                          "shipmentScheduleReferencedDocument": false
+                        }
+                      }
+                    },
+                    "specifiedLineTradeSettlement": {
+                      "maxItems": 1,
+                      "items": {
+                        "properties": {
+                          "paymentReference": false,
+                          "invoiceIssuerReference": false,
+                          "payerReference": false,
+                          "totalAdjustmentAmount": false,
+                          "isOrHasDiscount": false,
+                          "invoiceDateTime": false,
+                          "paymentAmount": false,
+                          "priceCurrencyCode": false,
+                          "invoicee": false,
+                          "payer": false,
+                          "applicableTradeTax": {
+                            "items": {
+                              "properties": {
+                                "lineTotalBasisAmount": false,
+                                "allowanceChargeBasisAmount": false
+                              }
+                            }
+                          },
+                          "billingPeriod": false,
+                          "specifiedTradeAllowanceCharge": false,
+                          "subtotalCalculatedTradeTax": false,
+                          "specifiedLogisticsServiceCharge": false,
+                          "specifiedTradePaymentTerms": false,
+                          "specifiedTradeSettlementLineMonetarySummation": false,
+                          "specifiedFinancialAdjustment": false,
+                          "invoiceReferencedDocument": false,
+                          "additionalReferencedDocument": false,
+                          "payableSpecifiedTradeAccountingAccount": false,
+                          "receivableSpecifiedTradeAccountingAccount": false,
+                          "purchaseSpecifiedTradeAccountingAccount": false,
+                          "salesSpecifiedTradeAccountingAccount": false,
+                          "specifiedTradeSettlementFinancialCard": false,
+                          "associatedDocumentLineDocument": false,
+                          "associatedReferencedDocument": false,
+                          "referencedLineTradeTransaction": false
+                        }
+                      }
+                    },
+                    "physicalReferencedLogisticsPackage": false,
+                    "includedSubordinateTradeLineItem": false,
+                    "specifiedGoodsProduction": false,
+                    "referencedLogisticsPackage": false,
+                    "invoiceAssociatedReferencedDocument": false
+                  }
+                }
+              },
+              "specifiedLogisticsPackage": false,
+              "associatedDocumentLineDocument": false,
+              "includedTradeProductGroup": {
+                "items": {
+                  "properties": {
+                    "id": {
+                      "maxItems": 1
+                    },
+                    "includedTradeLineItem": {
+                      "items": {
+                        "properties": {
+                          "id": false,
+                          "additionalId": false,
+                          "barcodeId": false,
+                          "typeCode": false,
+                          "typeExtensionCode": false,
+                          "descriptionCode": false,
+                          "associatedDocumentLineDocument": {
+                            "properties": {
+                              "uuidLineId": false,
+                              "parentLineId": false,
+                              "lineStatusReasonCode": false,
+                              "id": false,
+                              "buyerAssignedCategoryCode": false,
+                              "subordinateLineId": false,
+                              "referenceAcknowledgementDocument": false
+                            },
+                            "required": [
+                              "lineId",
+                              "lineStatusCode"
+                            ]
+                          },
+                          "specifiedTradeProduct": {
+                            "minItems": 1,
+                            "items": {
+                              "properties": {
+                                "tradeName": false,
+                                "description": false,
+                                "typeCode": false,
+                                "netWeight": false,
+                                "geneticModificationExtentCode": false,
+                                "globalExtensionId": false,
+                                "productGroupId": false,
+                                "endItemTypeCode": false,
+                                "endItemName": false,
+                                "useDescription": false,
+                                "isOrHasVariableMeasure": false,
+                                "designation": false,
+                                "ultimateCustomerAssignedExtensionId": false,
+                                "applicablePackaging": {
+                                  "items": {
+                                    "properties": {
+                                      "type": false,
+                                      "description": false,
+                                      "conditionCode": false,
+                                      "disposalMethodCode": false,
+                                      "weight": false,
+                                      "maximumStackabilityQuantity": false,
+                                      "maximumStackabilityWeight": false,
+                                      "contentLayerQuantity": false,
+                                      "minimumLinearSpatialDimension": false,
+                                      "maximumLinearSpatialDimension": false
+                                    }
+                                  }
+                                },
+                                "certificationEvidenceReferenceReferencedDocument": false,
+                                "inspectionReferenceReferencedDocument": false,
+                                "includedReferencedProduct": {
+                                  "items": {
+                                    "properties": {
+                                      "manufacturerAssignedId": {
+                                        "maxItems": 1
+                                      },
+                                      "industryAssignedId": {
+                                        "maxItems": 1
+                                      },
+                                      "name": false
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "additionalInformationNote": false,
+                          "physicalLogisticsPackage": false,
+                          "substitutedReferencedProduct": false,
+                          "substituteApplicableReferencedProduct": {
+                            "items": {
+                              "properties": {
+                                "manufacturerAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "industryAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "name": false
+                              }
+                            }
+                          },
+                          "accessoryApplicableReferencedProduct": {
+                            "items": {
+                              "properties": {
+                                "manufacturerAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "industryAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "name": false
+                              }
+                            }
+                          },
+                          "complementaryApplicableReferencedProduct": {
+                            "items": {
+                              "properties": {
+                                "manufacturerAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "industryAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "name": false
+                              }
+                            }
+                          },
+                          "additionalApplicableReferencedProduct": {
+                            "items": {
+                              "properties": {
+                                "manufacturerAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "industryAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "name": false
+                              }
+                            }
+                          },
+                          "componentApplicableReferencedProduct": {
+                            "items": {
+                              "properties": {
+                                "manufacturerAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "industryAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "name": false
+                              }
+                            }
+                          },
+                          "requiredApplicableReferencedProduct": {
+                            "items": {
+                              "properties": {
+                                "manufacturerAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "industryAssignedId": {
+                                  "maxItems": 1
+                                },
+                                "name": false
+                              }
+                            }
+                          },
+                          "referenceReferencedDocument": false,
+                          "specifiedLineTradeAgreement": {
+                            "properties": {
+                              "reference": false,
+                              "buyerReference": false,
+                              "deliveryPriorityCode": false,
+                              "economicOrderQuantity": false,
+                              "impactCode": false,
+                              "priorityCode": false,
+                              "sellerReference": false,
+                              "id": false,
+                              "revisionId": false,
+                              "buyerApprovedDateTime": false,
+                              "buyerRequisitioner": false,
+                              "productEndUser": false,
+                              "sellerOrderReferencedDocument": false,
+                              "buyerOrderReferencedDocument": false,
+                              "marketplaceOrderReferencedDocument": false,
+                              "quotationReferencedDocument": false,
+                              "quotationRequestReferencedDocument": false,
+                              "requisitionReferencedDocument": false,
+                              "demandForecastReferencedDocument": false,
+                              "promotionalDealReferencedDocument": false,
+                              "additionalReferencedDocument": false,
+                              "grossPriceProductTradePrice": {
+                                "items": {
+                                  "properties": {
+                                    "appliedTradeAllowanceCharge": {
+                                      "items": {
+                                        "properties": {
+                                          "categoryTradeTax": {
+                                            "items": {
+                                              "properties": {
+                                                "lineTotalBasisAmount": false,
+                                                "allowanceChargeBasisAmount": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "includedTradeTax": false
+                                  }
+                                }
+                              },
+                              "netPriceProductTradePrice": {
+                                "items": {
+                                  "properties": {
+                                    "appliedTradeAllowanceCharge": {
+                                      "items": {
+                                        "properties": {
+                                          "categoryTradeTax": {
+                                            "items": {
+                                              "properties": {
+                                                "lineTotalBasisAmount": false,
+                                                "allowanceChargeBasisAmount": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "includedTradeTax": false
+                                  }
+                                }
+                              },
+                              "requisitionerReferencedDocument": false,
+                              "catalogueReferencedDocument": false,
+                              "carrier": {
+                                "maxItems": 1
+                              },
+                              "salesReportReferencedDocument": false,
+                              "blanketOrderReferencedDocument": false,
+                              "previousOrderReferencedDocument": false,
+                              "originalOrderReferencedDocument": false,
+                              "engineeringChangeReferencedDocument": false,
+                              "letterOfCreditReferencedDocument": false,
+                              "importLicenceReferencedDocument": false,
+                              "exportLicenceReferencedDocument": false,
+                              "quotationProposalReferencedDocument": false,
+                              "quotationProposalResponseReferencedDocument": false,
+                              "quotationRequestResponseReferencedDocument": false,
+                              "itemSeller": false,
+                              "itemBuyer": false,
+                              "includedMarketplace": false,
+                              "orderPriceProductTradePrice": false,
+                              "ultimateCustomerOrderReferencedDocument": false,
+                              "buyer": false,
+                              "applicableForecastTerms": false,
+                              "supplyInstructionReferencedDocument": false,
+                              "primeContractSeller": false,
+                              "relevant": false
+                            }
+                          },
+                          "specifiedLineTradeDelivery": {
+                            "items": {
+                              "properties": {
+                                "isOrHasPartialDeliveryAllowed": false,
+                                "isOrHasFinalDelivery": false,
+                                "requestedQuantity": false,
+                                "remainingRequestedQuantity": false,
+                                "latestDespatchedQuantity": false,
+                                "receivedQuantity": false,
+                                "agreedQuantity": false,
+                                "billedQuantity": false,
+                                "chargeFreeQuantity": false,
+                                "packageQuantity": false,
+                                "productUnitQuantity": false,
+                                "perPackageUnitQuantity": false,
+                                "netWeight": false,
+                                "grossWeight": false,
+                                "theoreticalWeight": false,
+                                "netVolume": false,
+                                "grossVolume": false,
+                                "ultimateShipToDeliveryDateTime": false,
+                                "despatchedQuantity": false,
+                                "chargeableWeight": false,
+                                "statusCode": false,
+                                "dueInAvailableQuantity": false,
+                                "dueInForecastedQuantity": false,
+                                "dueInRequestedQuantity": false,
+                                "dueInReturnedQuantity": false,
+                                "economicOrderQuantity": false,
+                                "isOrHasFullyDelivered": false,
+                                "gfmTransferRejectedQuantity": false,
+                                "individualPackageQuantity": false,
+                                "modificationForecastedQuantity": false,
+                                "isOrHasOverDeliveryAllowed": false,
+                                "reverseBilledQuantity": false,
+                                "turnInReceivedQuantity": false,
+                                "pickUpAvailabilityDateTime": false,
+                                "id": false,
+                                "subordinateId": false,
+                                "rejectedQuantity": false,
+                                "orderQuantity": false,
+                                "returnedQuantity": false,
+                                "destroyedQuantity": false,
+                                "availableQuantity": false,
+                                "unavailableQuantity": false,
+                                "cancelledQuantity": false,
+                                "quantityVariationTypeCode": false,
+                                "quantityVariationReasonCode": false,
+                                "quantityVariationReason": false,
+                                "quantityDiscrepancyNatureCode": false,
+                                "buyerOrderDateTime": false,
+                                "goodsOwnershipChangeDateTime": false,
+                                "availableInventory": false,
+                                "projectedSupplyPlan": false,
+                                "specifiedDeliveryAdjustment": false,
+                                "relatedConsignment": false,
+                                "shipTo": false,
+                                "ultimateShipTo": false,
+                                "shipFrom": false,
+                                "finalDestinationTradeCountry": false,
+                                "specifiedDeliveryInstructions": false,
+                                "specifiedHandlingInstructions": {
+                                  "maxItems": 1
+                                },
+                                "requestedDespatchEvent": false,
+                                "plannedDespatchEvent": false,
+                                "actualDespatchEvent": false,
+                                "actualPickUpEvent": false,
+                                "requestedDeliveryEvent": false,
+                                "plannedDeliveryEvent": false,
+                                "actualDeliveryEvent": false,
+                                "actualReceiptEvent": false,
+                                "additionalReferencedDocument": false,
+                                "despatchAdviceReferencedDocument": false,
+                                "receivingAdviceReferencedDocument": false,
+                                "deliveryNoteReferencedDocument": false,
+                                "plannedConsignment": false,
+                                "confirmedDeliveryEvent": false,
+                                "applicableDangerousGoods": {
+                                  "properties": {
+                                    "mfagId": false,
+                                    "explosiveCompatibilityGroupCode": false,
+                                    "tunnelRestrictionCode": false,
+                                    "aircraftLimitationInformation": false,
+                                    "emergencyTradeContact": false,
+                                    "handlingInstructions": false,
+                                    "specifiedLogisticsPackage": false
+                                  }
+                                },
+                                "consumptionReportReferencedDocument": false,
+                                "packingListReferencedDocument": false,
+                                "specifiedLogisticsPackage": false,
+                                "usedLogisticsLabel": false,
+                                "informationNote": false,
+                                "consignmentInventory": false,
+                                "customerInventory": false,
+                                "logisticsServiceProvider": false,
+                                "inventoryManager": false,
+                                "consumptionSchedule": false,
+                                "deliverySchedule": false,
+                                "despatchSchedule": false,
+                                "orderSchedule": false,
+                                "receiptSchedule": false,
+                                "specifiedSchedule": false,
+                                "supplySpecifiedSchedule": false,
+                                "acceptanceEvent": false,
+                                "plannedShipToDeliveryEvent": false,
+                                "disposal": false,
+                                "actualLoadingEvent": false,
+                                "actualUnloadingEvent": false,
+                                "confirmedReleaseEvent": false,
+                                "confirmedDespatchEvent": false,
+                                "confirmedPickUpEvent": false,
+                                "plannedPickUpEvent": false,
+                                "goodsReceiptNoteReferencedDocument": false,
+                                "shipmentScheduleReferencedDocument": false
+                              }
+                            }
+                          },
+                          "specifiedLineTradeSettlement": {
+                            "maxItems": 1,
+                            "items": {
+                              "properties": {
+                                "paymentReference": false,
+                                "invoiceIssuerReference": false,
+                                "payerReference": false,
+                                "totalAdjustmentAmount": false,
+                                "isOrHasDiscount": false,
+                                "invoiceDateTime": false,
+                                "paymentAmount": false,
+                                "priceCurrencyCode": false,
+                                "invoicee": false,
+                                "payer": false,
+                                "applicableTradeTax": {
+                                  "items": {
+                                    "properties": {
+                                      "lineTotalBasisAmount": false,
+                                      "allowanceChargeBasisAmount": false
+                                    }
+                                  }
+                                },
+                                "billingPeriod": false,
+                                "specifiedTradeAllowanceCharge": false,
+                                "subtotalCalculatedTradeTax": false,
+                                "specifiedLogisticsServiceCharge": false,
+                                "specifiedTradePaymentTerms": false,
+                                "specifiedTradeSettlementLineMonetarySummation": false,
+                                "specifiedFinancialAdjustment": false,
+                                "invoiceReferencedDocument": false,
+                                "additionalReferencedDocument": false,
+                                "payableSpecifiedTradeAccountingAccount": false,
+                                "receivableSpecifiedTradeAccountingAccount": false,
+                                "purchaseSpecifiedTradeAccountingAccount": false,
+                                "salesSpecifiedTradeAccountingAccount": false,
+                                "specifiedTradeSettlementFinancialCard": false,
+                                "associatedDocumentLineDocument": false,
+                                "associatedReferencedDocument": false,
+                                "referencedLineTradeTransaction": false
+                              }
+                            }
+                          },
+                          "physicalReferencedLogisticsPackage": false,
+                          "includedSubordinateTradeLineItem": false,
+                          "specifiedGoodsProduction": false,
+                          "referencedLogisticsPackage": false,
+                          "invoiceAssociatedReferencedDocument": false
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "applicableHeaderTradeAgreement": {
+                "maxItems": 1,
+                "items": {
+                  "properties": {
+                    "reference": false,
+                    "buyerReference": false,
+                    "deliveryPriorityCode": false,
+                    "impactCode": false,
+                    "priorityCode": false,
+                    "sellerReference": false,
+                    "id": false,
+                    "revisionId": false,
+                    "buyerApprovedDateTime": false,
+                    "buyer": false,
+                    "salesAgent": false,
+                    "buyerRequisitioner": false,
+                    "buyerAssignedAccountant": false,
+                    "sellerAssignedAccountant": false,
+                    "buyerTaxRepresentative": false,
+                    "sellerTaxRepresentative": false,
+                    "productEndUser": false,
+                    "applicableTradeDeliveryTerms": false,
+                    "applicableTradePaymentTerms": {
+                      "properties": {
+                        "billStartDateTime": false
+                      }
+                    },
+                    "applicableForecastTerms": false,
+                    "sellerOrderReferencedDocument": false,
+                    "buyerOrderReferencedDocument": false,
+                    "marketplaceOrderReferencedDocument": false,
+                    "quotationReferencedDocument": false,
+                    "orderResponseReferencedDocument": false,
+                    "quotationRequestReferencedDocument": false,
+                    "requisitionReferencedDocument": false,
+                    "demandForecastReferencedDocument": false,
+                    "supplyInstructionReferencedDocument": false,
+                    "promotionalDealReferencedDocument": false,
+                    "additionalReferencedDocument": false,
+                    "requisitionerReferencedDocument": false,
+                    "buyerAgent": false,
+                    "salesReportReferencedDocument": false,
+                    "blanketOrderReferencedDocument": false,
+                    "previousOrderReferencedDocument": false,
+                    "previousOrderChangeReferencedDocument": false,
+                    "previousOrderResponseReferencedDocument": false,
+                    "originalOrderReferencedDocument": false,
+                    "engineeringChangeReferencedDocument": false,
+                    "letterOfCreditReferencedDocument": false,
+                    "importLicenceReferencedDocument": false,
+                    "exportLicenceReferencedDocument": false,
+                    "quotationProposalReferencedDocument": false,
+                    "quotationProposalResponseReferencedDocument": false,
+                    "quotationRequestResponseReferencedDocument": false,
+                    "quoteReferencedTradeWorkflowObject": false,
+                    "specifiedProcuringProject": false,
+                    "relevant": false,
+                    "ultimateCustomerOrderReferencedDocument": false,
+                    "pricingBaseApplicableLogisticsLocation": false,
+                    "carrier": false,
+                    "primeContractSeller": false
+                  },
+                  "required": [
+                    "catalogueInformationProvider",
+                    "catalogueInformationReceiver"
+                  ]
+                }
+              },
+              "applicableHeaderTradeDelivery": false,
+              "applicableHeaderTradeSettlement": false
+            }
+          }
+        },
+        "valuationBreakdownStatement": false
+      },
+      "required": [
+        "exchangedDocument"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/subset/BuyShipPay/D22B/UNECE_UNTDID8155",
+  "title": "UNECE_UNTDID8155",
+  "description": "Copyright (C) UN/CEFACT (2023). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8155Type": {
+          "title": "Equipment size and type description code",
+          "description": "Code specifying the size and type of equipment.\r\n\r\nApplicable codes:\r\n* '1' - Dime coated tank\r\n* '2' - Epoxy coated tank\r\n* '6' - Pressurized tank\r\n* '7' - Refrigerated tank\r\n* '9' - Stainless steel tank\r\n* '10' - Nonworking reefer container 40 ft\r\n* '12' - Europallet\r\n* '13' - Scandinavian pallet\r\n* '14' - Trailer\r\n* '15' - Nonworking reefer container 20 ft\r\n* '16' - Exchangeable pallet\r\n* '17' - Semi-trailer\r\n* '18' - Tank container 20 feet\r\n* '19' - Tank container 30 feet\r\n* '20' - Tank container 40 feet\r\n* '21' - Container IC 20 feet\r\n* '22' - Container IC 30 feet\r\n* '23' - Container IC 40 feet\r\n* '24' - Refrigerated tank 20 feet\r\n* '25' - Refrigerated tank 30 feet\r\n* '26' - Refrigerated tank 40 feet\r\n* '27' - Tank container IC 20 feet\r\n* '28' - Tank container IC 30 feet\r\n* '29' - Tank container IC 40 feet\r\n* '30' - Refrigerated tank IC 20 feet\r\n* '31' - Temperature controlled container 30 ft.\r\n* '32' - Refrigerated tank IC 40 feet\r\n* '33' - Movable case: L < 6,15m\r\n* '34' - Movable case: 6,15m < L < 7,82m\r\n* '35' - Movable case: 7,82m < L < 9,15m\r\n* '36' - Movable case: 9,15m < L < 10,90m\r\n* '37' - Movable case: 10,90m < L < 13,75m\r\n* '38' - Totebin\r\n* '39' - Temperature controlled container 20 ft\r\n* '40' - Temperature controlled container 40 ft\r\n* '41' - Non working refrigerated (reefer) container 30ft.\r\n* '42' - Dual trailers\r\n* '43' - 20 ft IL container (open top)\r\n* '44' - 20 ft IL container (closed top)\r\n* '45' - 40 ft IL container (closed top)\r\n* '46' - Synthetic pallet ISO 1\r\n* '47' - Synthetic pallet ISO 2",
+          "enum": [
+            "1",
+            "2",
+            "6",
+            "7",
+            "9",
+            "10",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

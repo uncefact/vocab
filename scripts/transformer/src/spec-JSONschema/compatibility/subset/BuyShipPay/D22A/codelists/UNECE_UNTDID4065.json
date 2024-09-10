@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/subset/BuyShipPay/D22A/UNECE_UNTDID4065",
+  "title": "UNECE_UNTDID4065",
+  "description": "Copyright (C) UN/CEFACT (2023). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4065Type": {
+          "title": "Contract and carriage condition code",
+          "description": "Code to identify the conditions of contract and\r\ncarriage.\r\n\r\nApplicable codes:\r\n* '1' - AVC conditions\r\n* '2' - Special agreement for parcels transport\r\n* '3' - Special agreement for full loading transport\r\n* '4' - Combined transport\r\n* '5' - FIATA combined transport bill of lading\r\n* '6' - Freight forwarders national conditions\r\n* '7' - Normal tariff, parcels transport\r\n* '8' - Normal tariff, full loading transport\r\n* '9' - Ordinary\r\n* '10' - Port to port\r\n* '11' - CMR carnet\r\n* '12' - Special tariff, parcels transport\r\n* '13' - Special tariff, full transport\r\n* '14' - Through transport\r\n* '15' - Cancel space allocation\r\n* '16' - Report sale of space\r\n* '17' - Alternative space allocation\r\n* '18' - No alternative space allocation\r\n* '19' - Allotment sale\r\n* '20' - Confirmation of space\r\n* '21' - Unable to confirm\r\n* '22' - Non-operative flight\r\n* '23' - Wait list\r\n* '24' - Prior space allocation request\r\n* '25' - Holding confirmed space allocation\r\n* '26' - Holding wait list\r\n* '27' - Door-to-door\r\n* '28' - Door-to-pier\r\n* '29' - Pier-to-door\r\n* '30' - Pier-to-pier\r\n* '31' - Space cancellation noted\r\n* '32' - Mini landbridge service\r\n* '34' - Speed level - required\r\n* '35' - Speed level - adopted\r\n* '36' - Normal tariff, less than full load transport\r\n* '37' - Re-expedition special tariff\r\n* '38' - Transport arrangement by the requester\r\n* '39' - Transport arrangement by the provider\r\n* '40' - Transport arrangement by the patient",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

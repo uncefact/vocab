@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/CDARMaster",
+  "title": "CDAR Master",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-BSPMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocumentContext": {
+          "oneOf": [
+            {
+              "$ref": "UNECE-CDARContextCCL.json#/$defs/exchangedDocumentContextType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "exchangedDocument": {
+          "oneOf": [
+            {
+              "$ref": "UNECE-CDARContextCCL.json#/$defs/exchangedDocumentType"
+            },
+            {
+              "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+            }
+          ]
+        },
+        "exchangedDeclaration": false,
+        "specifiedLogisticsTransportMovement": false,
+        "specifiedConsignment": false,
+        "specifiedLogisticsTransportEquipment": false,
+        "specifiedService": false,
+        "tradeSettlementPayment": false,
+        "tradeTransaction": false,
+        "tradeProduct": false,
+        "productBatch": false,
+        "animalBatch": false,
+        "referencedLocation": false,
+        "productionProcess": false,
+        "productionFacility": false,
+        "headerTradeDelivery": false,
+        "lineTradeDelivery": false,
+        "valuationBreakdownStatement": false,
+        "financingRequestDocument": false,
+        "financingSummaryDocument": false,
+        "acknowledgementDocument": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "UNECE-CDARContextCCL.json#/$defs/acknowledgementDocumentType"
+              },
+              {
+                "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+              }
+            ]
+          }
+        },
+        "ttExchangedDocument": false,
+        "ttObjectEvent": false,
+        "ttTransformationEvent": false,
+        "ttAggregationEvent": false,
+        "ttTransactionEvent": false,
+        "experienceProgramAction": false,
+        "electronicNegotiationExchange": false
+      }
+    }
+  ]
+}

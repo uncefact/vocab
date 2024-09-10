@@ -1,0 +1,7 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Data model: Message MA; D17A Agro; Guide
+
+ERROR: Empty code list: UNECE-MessageMA.json#/$defs/codeList/MIMEMediaTypeType (Binary Object. Mime. Code)
+ERROR: Empty code list: UNECE-MessageMA.json#/$defs/codeList/UNTDID4451Type (Subject_ Code. Content)

@@ -1,0 +1,9 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Data model: D19B CHACCO Mapping Guide; AAA
+
+ERROR: Empty code list: UNECE-D19BBALANCMappingGuide.json#/$defs/codeList/MIMEMediaTypeType (Binary Object. Mime. Code)
+ERROR: Empty code list: UNECE-D19BENTRECMappingGuide.json#/$defs/codeList/MIMEMediaTypeType (Binary Object. Mime. Code)
+ERROR: Empty code list: UNECE-D19BLEDGERMappingGuide.json#/$defs/codeList/MIMEMediaTypeType (Binary Object. Mime. Code)
+ERROR: Empty code list: UNECE-D19BCHACCOMappingGuide.json#/$defs/codeList/MIMEMediaTypeType (Binary Object. Mime. Code)

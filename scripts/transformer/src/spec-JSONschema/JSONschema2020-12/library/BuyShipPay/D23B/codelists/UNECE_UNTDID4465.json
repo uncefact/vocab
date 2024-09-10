@@ -1,0 +1,439 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID4465",
+  "title": "UNECE_UNTDID4465",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4465Type": {
+          "title": "Adjustment reason description code",
+          "description": "Code specifying the adjustment reason.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Agreed settlement"
+            },
+            {
+              "const": "2",
+              "title": "Below specification goods"
+            },
+            {
+              "const": "3",
+              "title": "Damaged goods"
+            },
+            {
+              "const": "4",
+              "title": "Short delivery"
+            },
+            {
+              "const": "5",
+              "title": "Price query"
+            },
+            {
+              "const": "6",
+              "title": "Proof of delivery required"
+            },
+            {
+              "const": "7",
+              "title": "Payment on account"
+            },
+            {
+              "const": "8",
+              "title": "Returnable container charge included"
+            },
+            {
+              "const": "9",
+              "title": "Invoice error"
+            },
+            {
+              "const": "10",
+              "title": "Costs for draft"
+            },
+            {
+              "const": "11",
+              "title": "Bank charges"
+            },
+            {
+              "const": "12",
+              "title": "Agent commission"
+            },
+            {
+              "const": "13",
+              "title": "Counter claim"
+            },
+            {
+              "const": "14",
+              "title": "Wrong delivery"
+            },
+            {
+              "const": "15",
+              "title": "Goods returned to agent"
+            },
+            {
+              "const": "16",
+              "title": "Goods partly returned"
+            },
+            {
+              "const": "17",
+              "title": "Transport damage"
+            },
+            {
+              "const": "18",
+              "title": "Goods on consignment"
+            },
+            {
+              "const": "19",
+              "title": "Trade discount"
+            },
+            {
+              "const": "20",
+              "title": "Deduction for late delivery"
+            },
+            {
+              "const": "21",
+              "title": "Advertising costs"
+            },
+            {
+              "const": "22",
+              "title": "Customs duties"
+            },
+            {
+              "const": "23",
+              "title": "Telephone and postal costs"
+            },
+            {
+              "const": "24",
+              "title": "Repair costs"
+            },
+            {
+              "const": "25",
+              "title": "Attorney fees"
+            },
+            {
+              "const": "26",
+              "title": "Taxes"
+            },
+            {
+              "const": "27",
+              "title": "Reclaimed deduction"
+            },
+            {
+              "const": "28",
+              "title": "See separate advice"
+            },
+            {
+              "const": "29",
+              "title": "Buyer refused to take delivery"
+            },
+            {
+              "const": "30",
+              "title": "Direct payment to seller"
+            },
+            {
+              "const": "31",
+              "title": "Buyer disagrees with due date"
+            },
+            {
+              "const": "32",
+              "title": "Goods not delivered"
+            },
+            {
+              "const": "33",
+              "title": "Late delivery"
+            },
+            {
+              "const": "34",
+              "title": "Quoted as paid to you"
+            },
+            {
+              "const": "35",
+              "title": "Goods returned"
+            },
+            {
+              "const": "36",
+              "title": "Invoice not received"
+            },
+            {
+              "const": "37",
+              "title": "Credit note to debtor/not to us"
+            },
+            {
+              "const": "38",
+              "title": "Deducted bonus"
+            },
+            {
+              "const": "39",
+              "title": "Deducted discount"
+            },
+            {
+              "const": "40",
+              "title": "Deducted freight costs"
+            },
+            {
+              "const": "41",
+              "title": "Deduction against other invoices"
+            },
+            {
+              "const": "42",
+              "title": "Credit balance(s)"
+            },
+            {
+              "const": "43",
+              "title": "Reason unknown"
+            },
+            {
+              "const": "44",
+              "title": "Awaiting message from seller"
+            },
+            {
+              "const": "45",
+              "title": "Debit note to seller"
+            },
+            {
+              "const": "46",
+              "title": "Discount beyond terms"
+            },
+            {
+              "const": "47",
+              "title": "See buyer's letter"
+            },
+            {
+              "const": "48",
+              "title": "Allowance/charge error"
+            },
+            {
+              "const": "49",
+              "title": "Substitute product"
+            },
+            {
+              "const": "50",
+              "title": "Terms of sale error"
+            },
+            {
+              "const": "51",
+              "title": "Required data missing"
+            },
+            {
+              "const": "52",
+              "title": "Wrong invoice"
+            },
+            {
+              "const": "53",
+              "title": "Duplicate invoice"
+            },
+            {
+              "const": "54",
+              "title": "Weight error"
+            },
+            {
+              "const": "55",
+              "title": "Additional charge not authorized"
+            },
+            {
+              "const": "56",
+              "title": "Incorrect discount"
+            },
+            {
+              "const": "57",
+              "title": "Price change"
+            },
+            {
+              "const": "58",
+              "title": "Variation"
+            },
+            {
+              "const": "59",
+              "title": "Chargeback"
+            },
+            {
+              "const": "60",
+              "title": "Offset"
+            },
+            {
+              "const": "61",
+              "title": "Indirect payment"
+            },
+            {
+              "const": "62",
+              "title": "Financial reassignment"
+            },
+            {
+              "const": "63",
+              "title": "Reinstatement of chargeback/offset"
+            },
+            {
+              "const": "64",
+              "title": "Expecting new terms"
+            },
+            {
+              "const": "65",
+              "title": "Settlement to agent"
+            },
+            {
+              "const": "66",
+              "title": "Cash discount"
+            },
+            {
+              "const": "67",
+              "title": "Delcredere costs"
+            },
+            {
+              "const": "68",
+              "title": "Early payment allowance adjustment"
+            },
+            {
+              "const": "69",
+              "title": "Incorrect due date for monetary amount"
+            },
+            {
+              "const": "70",
+              "title": "Wrong monetary amount resulting from incorrect free goods quantity"
+            },
+            {
+              "const": "71",
+              "title": "Rack or shelf replenishment service by a supplier"
+            },
+            {
+              "const": "72",
+              "title": "Temporary special promotion"
+            },
+            {
+              "const": "73",
+              "title": "Difference in tax rate"
+            },
+            {
+              "const": "74",
+              "title": "Quantity discount"
+            },
+            {
+              "const": "75",
+              "title": "Promotion discount"
+            },
+            {
+              "const": "76",
+              "title": "Cancellation deadline passed"
+            },
+            {
+              "const": "77",
+              "title": "Pricing discount"
+            },
+            {
+              "const": "78",
+              "title": "Volume discount"
+            },
+            {
+              "const": "79",
+              "title": "Sundry discount"
+            },
+            {
+              "const": "80",
+              "title": "Card holder signature missing"
+            },
+            {
+              "const": "81",
+              "title": "Card expiry date missing"
+            },
+            {
+              "const": "82",
+              "title": "Card number error"
+            },
+            {
+              "const": "83",
+              "title": "Card expired"
+            },
+            {
+              "const": "84",
+              "title": "Test card transaction"
+            },
+            {
+              "const": "85",
+              "title": "Permission limit exceeded"
+            },
+            {
+              "const": "86",
+              "title": "Wrong authorisation code"
+            },
+            {
+              "const": "87",
+              "title": "Wrong authorised amount"
+            },
+            {
+              "const": "88",
+              "title": "Authorisation failed"
+            },
+            {
+              "const": "89",
+              "title": "Card acceptor data error"
+            },
+            {
+              "const": "90",
+              "title": "Treasury management service charge"
+            },
+            {
+              "const": "91",
+              "title": "Agreed discount"
+            },
+            {
+              "const": "92",
+              "title": "Expediting fee"
+            },
+            {
+              "const": "93",
+              "title": "Invoicing fee"
+            },
+            {
+              "const": "94",
+              "title": "Freight charge"
+            },
+            {
+              "const": "95",
+              "title": "Small order processing service charge"
+            },
+            {
+              "const": "96",
+              "title": "Currency exchange differences"
+            },
+            {
+              "const": "97",
+              "title": "Insolvency"
+            },
+            {
+              "const": "98",
+              "title": "Incorrect references"
+            },
+            {
+              "const": "99",
+              "title": "Incorrect identification of the buyer"
+            },
+            {
+              "const": "100",
+              "title": "Incorrect product identification"
+            },
+            {
+              "const": "101",
+              "title": "New employee"
+            },
+            {
+              "const": "102",
+              "title": "Employee retirement"
+            },
+            {
+              "const": "103",
+              "title": "Salary change"
+            },
+            {
+              "const": "104",
+              "title": "Parental leave"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2591 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/snapshot/BuyShipPay/D22A/RailWagonList",
+  "title": "Rail Wagon List",
+  "description": "Copyright (C) UN/CEFACT (2023). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "type": "object",
+  "properties": {
+    "exchangedDocument": {
+      "title": "BSP Master. Exchanged_ Document",
+      "description": "The header document information for a use of this master message assembly.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/exchangedDocumentType",
+          "properties": {
+            "firstSignatoryDocumentAuthentication": {
+              "properties": {
+                "provider": {
+                  "properties": {
+                    "id": false,
+                    "name": false,
+                    "definedTradeContact": false,
+                    "postalTradeAddress": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "$ref": "#/$defs/resourceType"
+        }
+      ]
+    },
+    "specifiedConsignment": {
+      "title": "BSP Master. Specified. Supply Chain_ Consignment",
+      "description": "A supply chain consignment specified for a use of this master message assembly.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/consignmentType",
+            "properties": {
+              "consignor": {
+                "properties": {
+                  "roleCode": false,
+                  "definedTradeContact": {
+                    "items": {
+                      "properties": {
+                        "faxUniversalCommunication": {
+                          "items": {
+                            "properties": {
+                              "uri": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "consignee": {
+                "properties": {
+                  "roleCode": false,
+                  "definedTradeContact": {
+                    "items": {
+                      "properties": {
+                        "faxUniversalCommunication": {
+                          "items": {
+                            "properties": {
+                              "uri": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "carrier": {
+                "properties": {
+                  "name": false,
+                  "roleCode": false,
+                  "definedTradeContact": false,
+                  "postalTradeAddress": false
+                }
+              },
+              "carrierAcceptanceLogisticsLocation": {
+                "properties": {
+                  "id": false,
+                  "countryId": false
+                }
+              },
+              "deliveryEvent": {
+                "properties": {
+                  "occurrenceLogisticsLocation": {
+                    "properties": {
+                      "postalTradeAddress": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "$ref": "#/$defs/resourceType"
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 1
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/extensibleType"
+    }
+  ],
+  "unevaluatedProperties": false,
+  "$defs": {
+    "pdt": {
+      "$defs": {
+        "binaryType": {
+          "title": "Binary",
+          "description": "",
+          "type": "string",
+          "format": "byte"
+        },
+        "booleanType": {
+          "title": "Boolean",
+          "description": "",
+          "type": "boolean"
+        },
+        "decimalType": {
+          "title": "Decimal",
+          "description": "",
+          "type": "string",
+          "pattern": "^([+-]?(0?|[1-9][0-9]*)(\\.?\\d+))$"
+        },
+        "integerType": {
+          "title": "Integer",
+          "description": "",
+          "type": "integer"
+        },
+        "stringType": {
+          "title": "String",
+          "description": "",
+          "type": "string"
+        }
+      }
+    },
+    "udt": {
+      "$defs": {
+        "amountType": {
+          "title": "Amount. Type",
+          "description": "A number of monetary units specified in a currency where the unit of the currency is explicit or implied.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/decimalType"
+            },
+            "currencyId": {
+              "$ref": "#/$defs/codeList/$defs/ISO3AlphaCurrencyCodeType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "codeType": {
+          "title": "Code. Type",
+          "description": "A character string (letters, figures or symbols) that for brevity and/or language independence may be used to represent or replace a definitive value or text of an Attribute together with relevant supplementary information.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "listAgencyId": {
+              "$ref": "#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "dateTimeType": {
+          "title": "Date Time. Type",
+          "description": "A particular point in the progression of time together with the relevant supplementary information.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "format": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "idType": {
+          "title": "Identifier. Type",
+          "description": "A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "schemeAgencyId": {
+              "$ref": "#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "textType": {
+          "title": "Text. Type",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/stringType"
+            },
+            "languageId": {
+              "$ref": "#/$defs/codeList/$defs/ISOAlpha2LanguageCodeType"
+            }
+          },
+          "required": [
+            "content"
+          ]
+        }
+      }
+    },
+    "extensibleType": {
+      "patternProperties": {
+        "^x-": true
+      }
+    },
+    "resourceType": {
+      "type": "string",
+      "format": "uri"
+    },
+    "codeList": {
+      "$defs": {
+        "ISO3AlphaCurrencyCodeType": {
+          "title": "Currency identification code",
+          "description": "Code specifying a monetary unit.\r\n\r\nCode list responsible agency:\r\nISO\r\n\r\nCode list responsible agency name:\r\nInternational Organization for Standardization\r\n\r\nCode list responsible agency code:\r\n5\r\n\r\nCode list:\r\n4217\r\n\r\nCode list name:\r\nCurrency codes\r\n\r\nCode list version:\r\n2015\r\n\r\nCode list issue date:\r\nCL 2021-10\r\n\r\nApplicable codes:\r\n* 'AED' - Dirham\r\n* 'AFN' - Afghani\r\n* 'ALL' - Lek\r\n* 'AMD' - Dram\r\n* 'ANG' - Netherlands Antillian Guilder\r\n* 'AOA' - Kwanza\r\n* 'ARS' - Argentine Peso\r\n* 'AUD' - Australian Dollar\r\n* 'AWG' - Aruban Florin\r\n* 'AZN' - Azerbaijan Manat\r\n* 'BAM' - Convertible Mark\r\n* 'BBD' - Barbados Dollar\r\n* 'BDT' - Taka\r\n* 'BGN' - Bulgarian Lev\r\n* 'BHD' - Bahraini Dinar\r\n* 'BIF' - Burundi Franc\r\n* 'BMD' - Bermudian Dollar (customarily: Bermuda Dollar)\r\n* 'BND' - Brunei Dollar\r\n* 'BOB' - Boliviano\r\n* 'BOV' - Mvdol\r\n* 'BRL' - Brazilian Real\r\n* 'BSD' - Bahamian Dollar\r\n* 'BTN' - Ngultrum\r\n* 'BWP' - Pula\r\n* 'BYN' - Belarussian Ruble\r\n* 'BZD' - Belize Dollar\r\n* 'CAD' - Canadian Dollar\r\n* 'CDF' - Franc Congolais\r\n* 'CHE' - WIR Euro\r\n* 'CHF' - Swiss Franc\r\n* 'CHW' - WIR Franc\r\n* 'CLF' - Unidad de Fomento\r\n* 'CLP' - Chilean Peso\r\n* 'CNY' - Yuan Renminbi\r\n* 'COP' - Colombian Peso\r\n* 'COU' - Unidad de Valor Real\r\n* 'CRC' - Costa Rican Colon\r\n* 'CUC' - Peso Convertible\r\n* 'CUP' - Cuban Peso\r\n* 'CVE' - Cabo Verde Escudo\r\n* 'CZK' - Czech Koruna\r\n* 'DJF' - Djibouti Franc\r\n* 'DKK' - Danish Krone\r\n* 'DOP' - Dominican Peso\r\n* 'DZD' - Algerian Dinar\r\n* 'EGP' - Egyptian Pound\r\n* 'ERN' - Nakfa\r\n* 'ETB' - Ethopian Birr\r\n* 'EUR' - Euro\r\n* 'FJD' - Fiji Dollar\r\n* 'FKP' - Falkland Islands Pound\r\n* 'GBP' - Pound Sterling\r\n* 'GEL' - Lari\r\n* 'GHS' - Ghana Cedi\r\n* 'GIP' - Gibraltar Pound\r\n* 'GMD' - Dalasi\r\n* 'GNF' - Guinean Franc\r\n* 'GTQ' - Quetzal\r\n* 'GYD' - Guyana Dollar\r\n* 'HKD' - Honk Kong Dollar\r\n* 'HNL' - Lempira\r\n* 'HRK' - Kuna\r\n* 'HTG' - Gourde\r\n* 'HUF' - Forint\r\n* 'IDR' - Rupiah\r\n* 'ILS' - New Israeli Sheqel\r\n* 'INR' - Indian Rupee\r\n* 'IQD' - Iraqi Dinar\r\n* 'IRR' - Iranian Rial\r\n* 'ISK' - Iceland Krona\r\n* 'JMD' - Jamaican Dollar\r\n* 'JOD' - Jordanian Dinar\r\n* 'JPY' - Yen\r\n* 'KES' - Kenyan Shilling\r\n* 'KGS' - Som\r\n* 'KHR' - Riel\r\n* 'KMF' - Comorian Franc\r\n* 'KPW' - North Korean Won\r\n* 'KRW' - Won\r\n* 'KWD' - Kuwaiti Dinar\r\n* 'KYD' - Cayman Islands Dollar\r\n* 'KZT' - Tenge\r\n* 'LAK' - Lao Kip\r\n* 'LBP' - Lebanese Pound\r\n* 'LKR' - Sri Lanka Rupee\r\n* 'LRD' - Liberian Dollar\r\n* 'LSL' - Loti\r\n* 'LYD' - Libyan Dinar\r\n* 'MAD' - Morrocan Dirham\r\n* 'MDL' - Moldovan Leu\r\n* 'MGA' - Ariary\r\n* 'MKD' - Denar\r\n* 'MMK' - Kyat\r\n* 'MNT' - Tugrik\r\n* 'MOP' - Pataca\r\n* 'MRU' - Ouguiya\r\n* 'MUR' - Mauritius Rupee\r\n* 'MVR' - Rufiyaa\r\n* 'MWK' - Malawi Kwacha\r\n* 'MXN' - Mexican Peso\r\n* 'MXV' - Mexican Unidad de Inversion (UDI)\r\n* 'MYR' - Malaysian Ringgit\r\n* 'MZN' - Mozambique Metical\r\n* 'NAD' - Namibia Dollar\r\n* 'NGN' - Naira\r\n* 'NIO' - Cordoba Oro\r\n* 'NOK' - Norwegian Krone\r\n* 'NPR' - Nepalese Rupee\r\n* 'NZD' - New Zealand Dollar\r\n* 'OMR' - Rial Omani\r\n* 'PAB' - Balboa\r\n* 'PEN' - Sol\r\n* 'PGK' - Kina\r\n* 'PHP' - Philippine Piso\r\n* 'PKR' - Pakistan Rupee\r\n* 'PLN' - Zloty\r\n* 'PYG' - Guarani\r\n* 'QAR' - Qatari Rial\r\n* 'RON' - Romanian Leu\r\n* 'RSD' - Serbian Dinar\r\n* 'RUB' - Russian Ruble\r\n* 'RWF' - Rwanda Franc\r\n* 'SAR' - Saudi Riyal\r\n* 'SBD' - Solomon Islands Dollar\r\n* 'SCR' - Seychelles Rupee\r\n* 'SDG' - Sudanese Pound\r\n* 'SEK' - Swedish Krona\r\n* 'SGD' - Singapore Dollar\r\n* 'SHP' - St. Helena Pound\r\n* 'SLL' - Leone\r\n* 'SOS' - Somali Shilling\r\n* 'SRD' - Suriname Dollar\r\n* 'SSP' - South Sudanese Pound\r\n* 'STN' - Dobra\r\n* 'SVC' - El Salvador Colon\r\n* 'SYP' - Syrian Pound\r\n* 'SZL' - Lilangeni\r\n* 'THB' - Baht\r\n* 'TJS' - Somoni\r\n* 'TMT' - Turkmenistan New Manat\r\n* 'TND' - Tunisian Dinar\r\n* 'TOP' - Pa'anga\r\n* 'TRY' - Turkish Lira\r\n* 'TTD' - Trinidad and Tobago Dollar\r\n* 'TWD' - New Taiwan Dollar\r\n* 'TZS' - Tanzanian Shilling\r\n* 'UAH' - Hryvnia\r\n* 'UGX' - Uganda Shilling\r\n* 'USD' - US Dollar\r\n* 'USN' - US Dollar (Next day)\r\n* 'UYI' - Uruguayo Peso en Unidades\r\n* 'UYU' - Peso Uruguayo\r\n* 'UYW' - Unidad Previsional\r\n* 'UZS' - Uzbekistan Sum\r\n* 'VED' - Bolívar Soberano\r\n* 'VES' - Bolívar Soberano\r\n* 'VND' - Dong\r\n* 'VUV' - Vatu\r\n* 'WST' - Tala\r\n* 'XAF' - CFA Franc\r\n* 'XAG' - Silver\r\n* 'XAU' - Gold\r\n* 'XBA' - Bond Markets Units European Composite Unit (EURCO)\r\n* 'XBB' - European Monetary Unit (E.M.U.-6)\r\n* 'XBC' - European Unit of Account 9 (E.U.A.-9)\r\n* 'XBD' - European Unit of Account 17 (E.U.A.-17)\r\n* 'XCD' - East Carribean Dollar\r\n* 'XDR' - SDR\r\n* 'XOF' - CFA Franc\r\n* 'XPD' - Palladium\r\n* 'XPF' - CFP Franc\r\n* 'XPT' - Platinum\r\n* 'XSU' - Sucre\r\n* 'XTS' - Codes specifically reserved for testing purposes\r\n* 'XUA' - ADB Unit of Account\r\n* 'XXX' - The codes assigned for transactions where no currency is involved\r\n* 'YER' - Yemeni Rial\r\n* 'ZAR' - Rand\r\n* 'ZMW' - Zambian Kwacha\r\n* 'ZWL' - Zimbabwe Dollar",
+          "enum": [
+            "AED",
+            "AFN",
+            "ALL",
+            "AMD",
+            "ANG",
+            "AOA",
+            "ARS",
+            "AUD",
+            "AWG",
+            "AZN",
+            "BAM",
+            "BBD",
+            "BDT",
+            "BGN",
+            "BHD",
+            "BIF",
+            "BMD",
+            "BND",
+            "BOB",
+            "BOV",
+            "BRL",
+            "BSD",
+            "BTN",
+            "BWP",
+            "BYN",
+            "BZD",
+            "CAD",
+            "CDF",
+            "CHE",
+            "CHF",
+            "CHW",
+            "CLF",
+            "CLP",
+            "CNY",
+            "COP",
+            "COU",
+            "CRC",
+            "CUC",
+            "CUP",
+            "CVE",
+            "CZK",
+            "DJF",
+            "DKK",
+            "DOP",
+            "DZD",
+            "EGP",
+            "ERN",
+            "ETB",
+            "EUR",
+            "FJD",
+            "FKP",
+            "GBP",
+            "GEL",
+            "GHS",
+            "GIP",
+            "GMD",
+            "GNF",
+            "GTQ",
+            "GYD",
+            "HKD",
+            "HNL",
+            "HRK",
+            "HTG",
+            "HUF",
+            "IDR",
+            "ILS",
+            "INR",
+            "IQD",
+            "IRR",
+            "ISK",
+            "JMD",
+            "JOD",
+            "JPY",
+            "KES",
+            "KGS",
+            "KHR",
+            "KMF",
+            "KPW",
+            "KRW",
+            "KWD",
+            "KYD",
+            "KZT",
+            "LAK",
+            "LBP",
+            "LKR",
+            "LRD",
+            "LSL",
+            "LYD",
+            "MAD",
+            "MDL",
+            "MGA",
+            "MKD",
+            "MMK",
+            "MNT",
+            "MOP",
+            "MRU",
+            "MUR",
+            "MVR",
+            "MWK",
+            "MXN",
+            "MXV",
+            "MYR",
+            "MZN",
+            "NAD",
+            "NGN",
+            "NIO",
+            "NOK",
+            "NPR",
+            "NZD",
+            "OMR",
+            "PAB",
+            "PEN",
+            "PGK",
+            "PHP",
+            "PKR",
+            "PLN",
+            "PYG",
+            "QAR",
+            "RON",
+            "RSD",
+            "RUB",
+            "RWF",
+            "SAR",
+            "SBD",
+            "SCR",
+            "SDG",
+            "SEK",
+            "SGD",
+            "SHP",
+            "SLL",
+            "SOS",
+            "SRD",
+            "SSP",
+            "STN",
+            "SVC",
+            "SYP",
+            "SZL",
+            "THB",
+            "TJS",
+            "TMT",
+            "TND",
+            "TOP",
+            "TRY",
+            "TTD",
+            "TWD",
+            "TZS",
+            "UAH",
+            "UGX",
+            "USD",
+            "USN",
+            "UYI",
+            "UYU",
+            "UYW",
+            "UZS",
+            "VED",
+            "VES",
+            "VND",
+            "VUV",
+            "WST",
+            "XAF",
+            "XAG",
+            "XAU",
+            "XBA",
+            "XBB",
+            "XBC",
+            "XBD",
+            "XCD",
+            "XDR",
+            "XOF",
+            "XPD",
+            "XPF",
+            "XPT",
+            "XSU",
+            "XTS",
+            "XUA",
+            "XXX",
+            "YER",
+            "ZAR",
+            "ZMW",
+            "ZWL"
+          ],
+          "type": "string"
+        },
+        "ISOAlpha2LanguageCodeType": {
+          "title": "Language name code",
+          "description": "Code specifying the language name.\r\n\r\nCode list responsible agency:\r\nISO\r\n\r\nCode list responsible agency name:\r\nInternational Organization for Standardization\r\n\r\nCode list responsible agency code:\r\n5\r\n\r\nCode list:\r\n639-1\r\n\r\nCode list name:\r\nLanguage codes (alpha-2)\r\n\r\nCode list version:\r\n2002\r\n\r\nCode list issue date:\r\nCL 2017-12\r\n\r\nApplicable codes:\r\n* 'aa' - Afar\r\n* 'AA' - Afar\r\n* 'ab' - Abkhazian\r\n* 'AB' - Abkhazian\r\n* 'ae' - Avestan\r\n* 'AE' - Avestan\r\n* 'af' - Afrikaans\r\n* 'AF' - Afrikaans\r\n* 'ak' - Akan\r\n* 'AK' - Akan\r\n* 'am' - Amharic\r\n* 'AM' - Amharic\r\n* 'an' - Aragonese\r\n* 'AN' - Aragonese\r\n* 'ar' - Arabic\r\n* 'AR' - Arabic\r\n* 'as' - Assamese\r\n* 'AS' - Assamese\r\n* 'av' - Avaric\r\n* 'AV' - Avaric\r\n* 'ay' - Aymara\r\n* 'AY' - Aymara\r\n* 'az' - Azerbaijani\r\n* 'AZ' - Azerbaijani\r\n* 'ba' - Bashkir\r\n* 'BA' - Bashkir\r\n* 'be' - Belarusian\r\n* 'BE' - Belarusian\r\n* 'bg' - Bulgarian\r\n* 'BG' - Bulgarian\r\n* 'bh' - Bihari\r\n* 'BH' - Bihari\r\n* 'bi' - Bislama\r\n* 'BI' - Bislama\r\n* 'bm' - Bambara\r\n* 'BM' - Bambara\r\n* 'bn' - Bengali\r\n* 'BN' - Bengali\r\n* 'bo' - Tibetan\r\n* 'BO' - Tibetan\r\n* 'br' - Breton\r\n* 'BR' - Breton\r\n* 'bs' - Bosnian\r\n* 'BS' - Bosnian\r\n* 'ca' - Catalan; Valencian\r\n* 'CA' - Catalan; Valencian\r\n* 'ce' - Chechen\r\n* 'CE' - Chechen\r\n* 'ch' - Chamorro\r\n* 'CH' - Chamorro\r\n* 'co' - Corsican\r\n* 'CO' - Corsican\r\n* 'cr' - Cree\r\n* 'CR' - Cree\r\n* 'cs' - Czech\r\n* 'CS' - Czech\r\n* 'cu' - Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic\r\n* 'CU' - Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic\r\n* 'cv' - Chuvash\r\n* 'CV' - Chuvash\r\n* 'cy' - Welsh\r\n* 'CY' - Welsh\r\n* 'da' - Danish\r\n* 'DA' - Danish\r\n* 'de' - German\r\n* 'DE' - German\r\n* 'dv' - Divehi; Dhivehi; Maldivian\r\n* 'DV' - Divehi; Dhivehi; Maldivian\r\n* 'dz' - Dzongkha\r\n* 'DZ' - Dzongkha\r\n* 'ee' - Ewe\r\n* 'EE' - Ewe\r\n* 'el' - Greek; Modern (1453-)\r\n* 'EL' - Greek; Modern (1453-)\r\n* 'en' - English\r\n* 'EN' - English\r\n* 'eo' - Esperanto\r\n* 'EO' - Esperanto\r\n* 'es' - Spanish; Castilian\r\n* 'ES' - Spanish; Castilian\r\n* 'et' - Estonian\r\n* 'ET' - Estonian\r\n* 'eu' - Basque\r\n* 'EU' - Basque\r\n* 'fa' - Persian\r\n* 'FA' - Persian\r\n* 'ff' - Fulah\r\n* 'FF' - Fulah\r\n* 'fi' - Finnish\r\n* 'FI' - Finnish\r\n* 'fj' - Fijian\r\n* 'FJ' - Fijian\r\n* 'fo' - Faroese\r\n* 'FO' - Faroese\r\n* 'fr' - French\r\n* 'FR' - French\r\n* 'fy' - Western Frisian\r\n* 'FY' - Western Frisian\r\n* 'ga' - Irish\r\n* 'GA' - Irish\r\n* 'gd' - Gaelic; Scottish Gaelic\r\n* 'GD' - Gaelic; Scottish Gaelic\r\n* 'gl' - Galician\r\n* 'GL' - Galician\r\n* 'gn' - Guarani\r\n* 'GN' - Guarani\r\n* 'gu' - Gujarati\r\n* 'GU' - Gujarati\r\n* 'gv' - Manx\r\n* 'GV' - Manx\r\n* 'ha' - Hausa\r\n* 'HA' - Hausa\r\n* 'he' - Hebrew\r\n* 'HE' - Hebrew\r\n* 'hi' - Hindi\r\n* 'HI' - Hindi\r\n* 'ho' - Hiri Motu\r\n* 'HO' - Hiri Motu\r\n* 'hr' - Croatian\r\n* 'HR' - Croatian\r\n* 'ht' - Haitian; Haitian Creole\r\n* 'HT' - Haitian; Haitian Creole\r\n* 'hu' - Hungarian\r\n* 'HU' - Hungarian\r\n* 'hy' - Armenian\r\n* 'HY' - Armenian\r\n* 'hz' - Herero\r\n* 'HZ' - Herero\r\n* 'ia' - Interlingua (International Auxiliary Language Association)\r\n* 'IA' - Interlingua (International Auxiliary Language Association)\r\n* 'id' - Indonesian\r\n* 'ID' - Indonesian\r\n* 'ie' - Interlingue\r\n* 'IE' - Interlingue\r\n* 'ig' - Igbo\r\n* 'IG' - Igbo\r\n* 'ii' - Sichuan Yi\r\n* 'II' - Sichuan Yi\r\n* 'ik' - Inupiaq\r\n* 'IK' - Inupiaq\r\n* 'io' - Ido\r\n* 'IO' - Ido\r\n* 'is' - Icelandic\r\n* 'IS' - Icelandic\r\n* 'it' - Italian\r\n* 'IT' - Italian\r\n* 'iu' - Inuktiut\r\n* 'IU' - Inuktiut\r\n* 'ja' - Japanese\r\n* 'JA' - Japanese\r\n* 'jv' - Javanese\r\n* 'JV' - Javanese\r\n* 'ka' - Georgian\r\n* 'KA' - Georgian\r\n* 'kg' - Kongo\r\n* 'KG' - Kongo\r\n* 'ki' - Kikuyu; Gikuyu\r\n* 'KI' - Kikuyu; Gikuyu\r\n* 'kj' - Kuanyama; Kwanyama\r\n* 'KJ' - Kuanyama; Kwanyama\r\n* 'kk' - Kazakh\r\n* 'KK' - Kazakh\r\n* 'kl' - Kalaallisut; Greenlandic\r\n* 'KL' - Kalaallisut; Greenlandic\r\n* 'km' - Central Khmer\r\n* 'KM' - Central Khmer\r\n* 'kn' - Kannada\r\n* 'KN' - Kannada\r\n* 'ko' - Korean\r\n* 'KO' - Korean\r\n* 'kr' - Kanuri\r\n* 'KR' - Kanuri\r\n* 'ks' - Kashmiri\r\n* 'KS' - Kashmiri\r\n* 'ku' - Kurdish\r\n* 'KU' - Kurdish\r\n* 'kv' - Komi\r\n* 'KV' - Komi\r\n* 'kw' - Cornish\r\n* 'KW' - Cornish\r\n* 'ky' - Kirghiz; Kyrgyz\r\n* 'KY' - Kirghiz; Kyrgyz\r\n* 'la' - Latin\r\n* 'LA' - Latin\r\n* 'lb' - Luxembourgish; Letzeburgesch\r\n* 'LB' - Luxembourgish; Letzeburgesch\r\n* 'lg' - Ganda\r\n* 'LG' - Ganda\r\n* 'li' - Limburgan; Limburger; Limburgish\r\n* 'LI' - Limburgan; Limburger; Limburgish\r\n* 'ln' - Lingala\r\n* 'LN' - Lingala\r\n* 'lo' - Lao\r\n* 'LO' - Lao\r\n* 'lt' - Lithuanian\r\n* 'LT' - Lithuanian\r\n* 'lu' - Luba-Katanga\r\n* 'LU' - Luba-Katanga\r\n* 'lv' - Latvian\r\n* 'LV' - Latvian\r\n* 'mg' - Malagasy\r\n* 'MG' - Malagasy\r\n* 'mh' - Marshallese\r\n* 'MH' - Marshallese\r\n* 'mi' - Maori\r\n* 'MI' - Maori\r\n* 'mk' - Macedonian\r\n* 'MK' - Macedonian\r\n* 'ml' - Malayalam\r\n* 'ML' - Malayalam\r\n* 'mn' - Mongolian\r\n* 'MN' - Mongolian\r\n* 'mo' - Moldavian; Moldovan\r\n* 'MO' - Moldavian; Moldovan\r\n* 'mr' - Marathi\r\n* 'MR' - Marathi\r\n* 'ms' - Malay\r\n* 'MS' - Malay\r\n* 'mt' - Maltese\r\n* 'MT' - Maltese\r\n* 'my' - Burmese\r\n* 'MY' - Burmese\r\n* 'na' - Nauru\r\n* 'NA' - Nauru\r\n* 'nb' - Bokmal Norwegian; Norwegian Bokmal\r\n* 'NB' - Bokmal Norwegian; Norwegian Bokmal\r\n* 'nd' - Ndebele; North; North Ndebele\r\n* 'ND' - Ndebele; North; North Ndebele\r\n* 'ne' - Nepali\r\n* 'NE' - Nepali\r\n* 'ng' - Ndonga\r\n* 'NG' - Ndonga\r\n* 'nl' - Dutch; Flemish\r\n* 'NL' - Dutch; Flemish\r\n* 'nn' - Norwegian Nynorsk; Nynorsk, Norwegian\r\n* 'NN' - Norwegian Nynorsk; Nynorsk, Norwegian\r\n* 'no' - Norwegian\r\n* 'NO' - Norwegian\r\n* 'nr' - Ndebele; South; South Ndebele\r\n* 'NR' - Ndebele; South; South Ndebele\r\n* 'nv' - Navajo; Navaho\r\n* 'NV' - Navajo; Navaho\r\n* 'ny' - Chichewa; Chewa; Nyanja\r\n* 'NY' - Chichewa; Chewa; Nyanja\r\n* 'oc' - Occitan (post 1500); Provencal\r\n* 'OC' - Occitan (post 1500); Provencal\r\n* 'oj' - Ojibwa\r\n* 'OJ' - Ojibwa\r\n* 'om' - Oromo\r\n* 'OM' - Oromo\r\n* 'or' - Oriya\r\n* 'OR' - Oriya\r\n* 'os' - Ossetian; Ossetic\r\n* 'OS' - Ossetian; Ossetic\r\n* 'pa' - Panjabi; Punjabi\r\n* 'PA' - Panjabi; Punjabi\r\n* 'pi' - Pali\r\n* 'PI' - Pali\r\n* 'pl' - Polish\r\n* 'PL' - Polish\r\n* 'ps' - Pushto; Pashto\r\n* 'PS' - Pushto; Pashto\r\n* 'pt' - Portuguese\r\n* 'PT' - Portuguese\r\n* 'qu' - Quechua\r\n* 'QU' - Quechua\r\n* 'rm' - Romansh\r\n* 'RM' - Romansh\r\n* 'rn' - Rundi\r\n* 'RN' - Rundi\r\n* 'ro' - Romanian\r\n* 'RO' - Romanian\r\n* 'ru' - Russian\r\n* 'RU' - Russian\r\n* 'rw' - Kinyarwanda\r\n* 'RW' - Kinyarwanda\r\n* 'sa' - Sanskrit\r\n* 'SA' - Sanskrit\r\n* 'sc' - Sardinian\r\n* 'SC' - Sardinian\r\n* 'sd' - Sindhi\r\n* 'SD' - Sindhi\r\n* 'se' - Northern Sami\r\n* 'SE' - Northern Sami\r\n* 'sg' - Sango\r\n* 'SG' - Sango\r\n* 'si' - Sinhala; Sinhalese\r\n* 'SI' - Sinhala; Sinhalese\r\n* 'sk' - Slovak\r\n* 'SK' - Slovak\r\n* 'sl' - Slovenian\r\n* 'SL' - Slovenian\r\n* 'sm' - Samoan\r\n* 'SM' - Samoan\r\n* 'sn' - Shona\r\n* 'SN' - Shona\r\n* 'so' - Somali\r\n* 'SO' - Somali\r\n* 'sq' - Albanian\r\n* 'SQ' - Albanian\r\n* 'sr' - Serbian\r\n* 'SR' - Serbian\r\n* 'ss' - Swati\r\n* 'SS' - Swati\r\n* 'st' - Sotho, Southern\r\n* 'ST' - Sotho, Southern\r\n* 'su' - Sundanese\r\n* 'SU' - Sundanese\r\n* 'sv' - Swedish\r\n* 'SV' - Swedish\r\n* 'sw' - Swahili\r\n* 'SW' - Swahili\r\n* 'ta' - Tamil\r\n* 'TA' - Tamil\r\n* 'te' - Telugu\r\n* 'TE' - Telugu\r\n* 'tg' - Tajik\r\n* 'TG' - Tajik\r\n* 'th' - Thai\r\n* 'TH' - Thai\r\n* 'ti' - Tigrinya\r\n* 'TI' - Tigrinya\r\n* 'tk' - Turkmen\r\n* 'TK' - Turkmen\r\n* 'tl' - Tagalog\r\n* 'TL' - Tagalog\r\n* 'tn' - Tswana\r\n* 'TN' - Tswana\r\n* 'to' - Tonga (Tonga Islands)\r\n* 'TO' - Tonga (Tonga Islands)\r\n* 'tr' - Turkish\r\n* 'TR' - Turkish\r\n* 'ts' - Tsonga\r\n* 'TS' - Tsonga\r\n* 'tt' - Tatar\r\n* 'TT' - Tatar\r\n* 'tw' - Twi\r\n* 'TW' - Twi\r\n* 'ty' - Tahitian\r\n* 'TY' - Tahitian\r\n* 'ug' - Uighur; Uyghur\r\n* 'UG' - Uighur; Uyghur\r\n* 'uk' - Ukrainian\r\n* 'UK' - Ukrainian\r\n* 'ur' - Urdu\r\n* 'UR' - Urdu\r\n* 'uz' - Uzbek\r\n* 'UZ' - Uzbek\r\n* 've' - Venda\r\n* 'VE' - Venda\r\n* 'vi' - Vietnamese\r\n* 'VI' - Vietnamese\r\n* 'vo' - Volapük\r\n* 'VO' - Volapük\r\n* 'wa' - Walloon\r\n* 'WA' - Walloon\r\n* 'wo' - Wolof\r\n* 'WO' - Wolof\r\n* 'xh' - Xhosa\r\n* 'XH' - Xhosa\r\n* 'yi' - Yiddish\r\n* 'YI' - Yiddish\r\n* 'yo' - Yoruba\r\n* 'YO' - Yoruba\r\n* 'za' - Zhuang; Chuang\r\n* 'ZA' - Zhuang; Chuang\r\n* 'zh' - Chinese\r\n* 'ZH' - Chinese\r\n* 'zu' - Zulu\r\n* 'ZU' - Zulu",
+          "enum": [
+            "aa",
+            "AA",
+            "ab",
+            "AB",
+            "ae",
+            "AE",
+            "af",
+            "AF",
+            "ak",
+            "AK",
+            "am",
+            "AM",
+            "an",
+            "AN",
+            "ar",
+            "AR",
+            "as",
+            "AS",
+            "av",
+            "AV",
+            "ay",
+            "AY",
+            "az",
+            "AZ",
+            "ba",
+            "BA",
+            "be",
+            "BE",
+            "bg",
+            "BG",
+            "bh",
+            "BH",
+            "bi",
+            "BI",
+            "bm",
+            "BM",
+            "bn",
+            "BN",
+            "bo",
+            "BO",
+            "br",
+            "BR",
+            "bs",
+            "BS",
+            "ca",
+            "CA",
+            "ce",
+            "CE",
+            "ch",
+            "CH",
+            "co",
+            "CO",
+            "cr",
+            "CR",
+            "cs",
+            "CS",
+            "cu",
+            "CU",
+            "cv",
+            "CV",
+            "cy",
+            "CY",
+            "da",
+            "DA",
+            "de",
+            "DE",
+            "dv",
+            "DV",
+            "dz",
+            "DZ",
+            "ee",
+            "EE",
+            "el",
+            "EL",
+            "en",
+            "EN",
+            "eo",
+            "EO",
+            "es",
+            "ES",
+            "et",
+            "ET",
+            "eu",
+            "EU",
+            "fa",
+            "FA",
+            "ff",
+            "FF",
+            "fi",
+            "FI",
+            "fj",
+            "FJ",
+            "fo",
+            "FO",
+            "fr",
+            "FR",
+            "fy",
+            "FY",
+            "ga",
+            "GA",
+            "gd",
+            "GD",
+            "gl",
+            "GL",
+            "gn",
+            "GN",
+            "gu",
+            "GU",
+            "gv",
+            "GV",
+            "ha",
+            "HA",
+            "he",
+            "HE",
+            "hi",
+            "HI",
+            "ho",
+            "HO",
+            "hr",
+            "HR",
+            "ht",
+            "HT",
+            "hu",
+            "HU",
+            "hy",
+            "HY",
+            "hz",
+            "HZ",
+            "ia",
+            "IA",
+            "id",
+            "ID",
+            "ie",
+            "IE",
+            "ig",
+            "IG",
+            "ii",
+            "II",
+            "ik",
+            "IK",
+            "io",
+            "IO",
+            "is",
+            "IS",
+            "it",
+            "IT",
+            "iu",
+            "IU",
+            "ja",
+            "JA",
+            "jv",
+            "JV",
+            "ka",
+            "KA",
+            "kg",
+            "KG",
+            "ki",
+            "KI",
+            "kj",
+            "KJ",
+            "kk",
+            "KK",
+            "kl",
+            "KL",
+            "km",
+            "KM",
+            "kn",
+            "KN",
+            "ko",
+            "KO",
+            "kr",
+            "KR",
+            "ks",
+            "KS",
+            "ku",
+            "KU",
+            "kv",
+            "KV",
+            "kw",
+            "KW",
+            "ky",
+            "KY",
+            "la",
+            "LA",
+            "lb",
+            "LB",
+            "lg",
+            "LG",
+            "li",
+            "LI",
+            "ln",
+            "LN",
+            "lo",
+            "LO",
+            "lt",
+            "LT",
+            "lu",
+            "LU",
+            "lv",
+            "LV",
+            "mg",
+            "MG",
+            "mh",
+            "MH",
+            "mi",
+            "MI",
+            "mk",
+            "MK",
+            "ml",
+            "ML",
+            "mn",
+            "MN",
+            "mo",
+            "MO",
+            "mr",
+            "MR",
+            "ms",
+            "MS",
+            "mt",
+            "MT",
+            "my",
+            "MY",
+            "na",
+            "NA",
+            "nb",
+            "NB",
+            "nd",
+            "ND",
+            "ne",
+            "NE",
+            "ng",
+            "NG",
+            "nl",
+            "NL",
+            "nn",
+            "NN",
+            "no",
+            "NO",
+            "nr",
+            "NR",
+            "nv",
+            "NV",
+            "ny",
+            "NY",
+            "oc",
+            "OC",
+            "oj",
+            "OJ",
+            "om",
+            "OM",
+            "or",
+            "OR",
+            "os",
+            "OS",
+            "pa",
+            "PA",
+            "pi",
+            "PI",
+            "pl",
+            "PL",
+            "ps",
+            "PS",
+            "pt",
+            "PT",
+            "qu",
+            "QU",
+            "rm",
+            "RM",
+            "rn",
+            "RN",
+            "ro",
+            "RO",
+            "ru",
+            "RU",
+            "rw",
+            "RW",
+            "sa",
+            "SA",
+            "sc",
+            "SC",
+            "sd",
+            "SD",
+            "se",
+            "SE",
+            "sg",
+            "SG",
+            "si",
+            "SI",
+            "sk",
+            "SK",
+            "sl",
+            "SL",
+            "sm",
+            "SM",
+            "sn",
+            "SN",
+            "so",
+            "SO",
+            "sq",
+            "SQ",
+            "sr",
+            "SR",
+            "ss",
+            "SS",
+            "st",
+            "ST",
+            "su",
+            "SU",
+            "sv",
+            "SV",
+            "sw",
+            "SW",
+            "ta",
+            "TA",
+            "te",
+            "TE",
+            "tg",
+            "TG",
+            "th",
+            "TH",
+            "ti",
+            "TI",
+            "tk",
+            "TK",
+            "tl",
+            "TL",
+            "tn",
+            "TN",
+            "to",
+            "TO",
+            "tr",
+            "TR",
+            "ts",
+            "TS",
+            "tt",
+            "TT",
+            "tw",
+            "TW",
+            "ty",
+            "TY",
+            "ug",
+            "UG",
+            "uk",
+            "UK",
+            "ur",
+            "UR",
+            "uz",
+            "UZ",
+            "ve",
+            "VE",
+            "vi",
+            "VI",
+            "vo",
+            "VO",
+            "wa",
+            "WA",
+            "wo",
+            "WO",
+            "xh",
+            "XH",
+            "yi",
+            "YI",
+            "yo",
+            "YO",
+            "za",
+            "ZA",
+            "zh",
+            "ZH",
+            "zu",
+            "ZU"
+          ],
+          "type": "string"
+        },
+        "AgencyIdentificationCodeType": {
+          "title": "Code list responsible agency code",
+          "description": "Code specifying the agency responsible for a code\r\nlist.\r\n\r\nApplicable codes:\r\n* '1' - CCC (Customs Co-operation Council)\r\n* '2' - CEC (Commission of the European Communities)\r\n* '3' - IATA (International Air Transport Association)\r\n* '4' - ICC (International Chamber of Commerce)\r\n* '5' - ISO (International Organization for Standardization)\r\n* '6' - UN/ECE (United Nations - Economic Commission for Europe)\r\n* '7' - CEFIC (Conseil Europeen des Federations de l'Industrie Chimique)\r\n* '8' - EDIFICE\r\n* '9' - GS1\r\n* '10' - ODETTE\r\n* '11' - Lloyd's register of shipping\r\n* '12' - UIC (International union of railways)\r\n* '13' - ICAO (International Civil Aviation Organization)\r\n* '14' - ICS (International Chamber of Shipping)\r\n* '15' - RINET (Reinsurance and Insurance Network)\r\n* '16' - US, D&B (Dun & Bradstreet Corporation)\r\n* '17' - S.W.I.F.T.\r\n* '18' - Conventions on SAD and transit (EC and EFTA)\r\n* '19' - FRRC (Federal Reserve Routing Code)\r\n* '20' - BIC (Bureau International des Containeurs)\r\n* '21' - Assigned by transport company\r\n* '22' - US, ISA (Information Systems Agreement)\r\n* '23' - FR, EDITRANSPORT\r\n* '24' - AU, ROA (Railways of Australia)\r\n* '25' - EDITEX (Europe)\r\n* '26' - NL, Foundation Uniform Transport Code\r\n* '27' - US, FDA (Food and Drug Administration)\r\n* '28' - EDITEUR (European book sector electronic data interchange group)\r\n* '29' - GB, FLEETNET\r\n* '30' - GB, ABTA (Association of British Travel Agencies)\r\n* '31' - FI, Finish State Railway\r\n* '32' - PL, Polish State Railway\r\n* '33' - BG, Bulgaria State Railway\r\n* '34' - RO, Rumanian State Railway\r\n* '35' - CZ, Tchechian State Railway\r\n* '36' - HU, Hungarian State Railway\r\n* '37' - GB, British Railways\r\n* '38' - ES, Spanish National Railway\r\n* '39' - SE, Swedish State Railway\r\n* '40' - NO, Norwegian State Railway\r\n* '41' - DE, German Railway\r\n* '42' - AT, Austrian Federal Railways\r\n* '43' - LU, Luxembourg National Railway Company\r\n* '44' - IT, Italian State Railways\r\n* '45' - NL, Netherlands Railways\r\n* '46' - CH, Swiss Federal Railways\r\n* '47' - DK, Danish State Railways\r\n* '48' - FR, French National Railway Company\r\n* '49' - BE, Belgian National Railway Company\r\n* '50' - PT, Portuguese Railways\r\n* '51' - SK, Slovakian State Railways\r\n* '52' - IE, Irish Transport Company\r\n* '53' - FIATA (International Federation of Freight Forwarders Associations)\r\n* '54' - IMO (International Maritime Organisation)\r\n* '55' - US, DOT (United States Department of Transportation)\r\n* '56' - TW, Trade-van\r\n* '57' - TW, Chinese Taipei Customs\r\n* '58' - EUROFER\r\n* '59' - DE, EDIBAU\r\n* '60' - Assigned by national trade agency\r\n* '61' - Association Europeenne des Constructeurs de Materiel Aerospatial (AECMA)\r\n* '62' - US, DIstilled Spirits Council of the United States (DISCUS)\r\n* '63' - North Atlantic Treaty Organization (NATO)\r\n* '64' - FR, CLEEP\r\n* '65' - GS1 France\r\n* '66' - MY, Malaysian Customs and Excise\r\n* '67' - MY, Malaysia Central Bank\r\n* '68' - GS1 Italy\r\n* '69' - US, National Alcohol Beverage Control Association (NABCA)\r\n* '70' - MY, Dagang.Net\r\n* '71' - US, FCC (Federal Communications Commission)\r\n* '72' - US, MARAD (Maritime Administration)\r\n* '73' - US, DSAA (Defense Security Assistance Agency)\r\n* '74' - US, NRC (Nuclear Regulatory Commission)\r\n* '75' - US, ODTC (Office of Defense Trade Controls)\r\n* '76' - US, ATF (Bureau of Alcohol, Tobacco and Firearms)\r\n* '77' - US, BXA (Bureau of Export Administration)\r\n* '78' - US, FWS (Fish and Wildlife Service)\r\n* '79' - US, OFAC (Office of Foreign Assets Control)\r\n* '80' - BRMA/RAA - LIMNET - RINET Joint Venture\r\n* '81' - RU, (SFT) Society for Financial Telecommunications\r\n* '82' - NO, Enhetsregisteret ved Bronnoysundregisterne\r\n* '83' - US, National Retail Federation\r\n* '84' - DE, BRD (Gesetzgeber der Bundesrepublik Deutschland)\r\n* '85' - North America, Telecommunications Industry Forum\r\n* '86' - Assigned by party originating the message\r\n* '87' - Assigned by carrier\r\n* '88' - Assigned by owner of operation\r\n* '89' - Assigned by distributor\r\n* '90' - Assigned by manufacturer\r\n* '91' - Assigned by seller or seller's agent\r\n* '92' - Assigned by buyer or buyer's agent\r\n* '93' - AT, Austrian Customs\r\n* '94' - AT, Austrian PTT\r\n* '95' - AU, Australian Customs Service\r\n* '96' - CA, Revenue Canada, Customs and Excise\r\n* '97' - CH, Administration federale des contributions\r\n* '98' - CH, Direction generale des douanes\r\n* '99' - CH, Division des importations et exportations, OFAEE\r\n* '100' - CH, Entreprise des PTT\r\n* '101' - CH, Carbura\r\n* '102' - CH, Centrale suisse pour l'importation du charbon\r\n* '103' - CH, Office fiduciaire des importateurs de denrees alimentaires\r\n* '104' - CH, Association suisse code des articles\r\n* '105' - DK, Ministry of taxation, Central Customs and Tax Administration\r\n* '106' - FR, Direction generale des douanes et droits indirects\r\n* '107' - FR, INSEE\r\n* '108' - FR, Banque de France\r\n* '109' - GB, H.M. Customs & Excise\r\n* '110' - IE, Revenue Commissioners, Customs AEP project\r\n* '111' - US, U.S. Customs Service\r\n* '112' - US, U.S. Census Bureau\r\n* '113' - GS1 US\r\n* '114' - US, ABA (American Bankers Association)\r\n* '116' - US, ANSI ASC X12\r\n* '117' - AT, Geldausgabeautomaten-Service Gesellschaft m.b.H.\r\n* '118' - SE, Svenska Bankfoereningen\r\n* '119' - IT, Associazione Bancaria Italiana\r\n* '120' - IT, Socieata' Interbancaria per l'Automazione\r\n* '121' - CH, Telekurs AG\r\n* '122' - CH, Swiss Securities Clearing Corporation\r\n* '123' - NO, Norwegian Interbank Research Organization\r\n* '124' - NO, Norwegian Bankers' Association\r\n* '125' - FI, The Finnish Bankers' Association\r\n* '126' - US, NCCMA (Account Analysis Codes)\r\n* '127' - DE, ARE (AbRechnungs Einheit)\r\n* '128' - BE, Belgian Bankers' Association\r\n* '129' - BE, Belgian Ministry of Finance\r\n* '130' - DK, Danish Bankers Association\r\n* '131' - DE, German Bankers Association\r\n* '132' - GB, BACS Limited\r\n* '133' - GB, Association for Payment Clearing Services\r\n* '134' - GB, APACS (Association of payment clearing services)\r\n* '135' - GB, The Clearing House\r\n* '136' - GS1 UK\r\n* '137' - AT, Verband oesterreichischer Banken und Bankiers\r\n* '138' - FR, CFONB (Comite francais d'organ. et de normalisation bancaires)\r\n* '139' - Universal Postal Union (UPU)\r\n* '140' - CEC (Commission of the European Communities), DG/XXI-01\r\n* '141' - CEC (Commission of the European Communities), DG/XXI-B-1\r\n* '142' - CEC (Commission of the European Communities), DG/XXXIV\r\n* '143' - NZ, New Zealand Customs\r\n* '144' - NL, Netherlands Customs\r\n* '145' - SE, Swedish Customs\r\n* '146' - DE, German Customs\r\n* '147' - BE, Belgian Customs\r\n* '148' - ES, Spanish Customs\r\n* '149' - IL, Israel Customs\r\n* '150' - HK, Hong Kong Customs\r\n* '151' - JP, Japan Customs\r\n* '152' - SA, Saudi Arabia Customs\r\n* '153' - IT, Italian Customs\r\n* '154' - GR, Greek Customs\r\n* '155' - PT, Portuguese Customs\r\n* '156' - LU, Luxembourg Customs\r\n* '157' - NO, Norwegian Customs\r\n* '158' - FI, Finnish Customs\r\n* '159' - IS, Iceland Customs\r\n* '160' - LI, Liechtenstein authority\r\n* '161' - UNCTAD (United Nations - Conference on Trade And Development)\r\n* '162' - CEC (Commission of the European Communities), DG/XIII-D-5\r\n* '163' - US, FMC (Federal Maritime Commission)\r\n* '164' - US, DEA (Drug Enforcement Agency)\r\n* '165' - US, DCI (Distribution Codes, INC.)\r\n* '166' - US, National Motor Freight Classification Association\r\n* '167' - US, AIAG (Automotive Industry Action Group)\r\n* '168' - US, FIPS (Federal Information Publishing Standard)\r\n* '169' - CA, SCC (Standards Council of Canada)\r\n* '170' - CA, CPA (Canadian Payment Association)\r\n* '171' - NL, Interpay Girale Services\r\n* '172' - NL, Interpay Debit Card Services\r\n* '173' - NO, NORPRO\r\n* '174' - DE, DIN (Deutsches Institut fuer Normung)\r\n* '175' - FCI (Factors Chain International)\r\n* '176' - BR, Banco Central do Brazil\r\n* '177' - AU, LIFA (Life Insurance Federation of Australia)\r\n* '178' - AU, SAA (Standards Association of Australia)\r\n* '179' - US, Air transport association of America\r\n* '180' - DE, BIA (Berufsgenossenschaftliches Institut fuer Arbeitssicherheit)\r\n* '181' - Edibuild\r\n* '182' - US, Standard Carrier Alpha Code (Motor)\r\n* '183' - US, American Petroleum Institute\r\n* '184' - AU, ACOS (Australian Chamber of Shipping)\r\n* '185' - DE, BDI (Bundesverband der Deutschen Industrie e.V.)\r\n* '186' - US, GSA (General Services Administration)\r\n* '187' - US, DLMSO (Defense Logistics Management Standards Office)\r\n* '188' - US, NIST (National Institute of Standards and Technology)\r\n* '189' - US, DoD (Department of Defense)\r\n* '190' - US, VA (Department of Veterans Affairs)\r\n* '191' - IAPSO (United Nations Inter-Agency Procurement Services Office)\r\n* '192' - Shipper's association\r\n* '193' - EU, European Telecommunications Informatics Services (ETIS)\r\n* '194' - AU, AQIS (Australian Quarantine and Inspection Service)\r\n* '195' - CO, DIAN (Direccion de Impuestos y Aduanas Nacionales)\r\n* '196' - US, COPAS (Council of Petroleum Accounting Society)\r\n* '197' - US, DISA (Data Interchange Standards Association)\r\n* '198' - CO, Superintendencia Bancaria De Colombia\r\n* '199' - FR, Direction de la Comptabilite Publique\r\n* '200' - GS1 Netherlands\r\n* '201' - US, WSSA(Wine and Spirits Shippers Association)\r\n* '202' - PT, Banco de Portugal\r\n* '203' - FR, GALIA (Groupement pour l'Amelioration des Liaisons dans l'Industrie Automobile)\r\n* '204' - DE, VDA (Verband der Automobilindustrie E.V.)\r\n* '205' - IT, ODETTE Italy\r\n* '206' - NL, ODETTE Netherlands\r\n* '207' - ES, ODETTE Spain\r\n* '208' - SE, ODETTE Sweden\r\n* '209' - GB, ODETTE United Kingdom\r\n* '210' - EU, EDI for financial, informational, cost, accounting, auditing and social areas (EDIFICAS) - Europe\r\n* '211' - FR, EDI for financial, informational, cost, accounting, auditing and social areas (EDIFICAS) - France\r\n* '212' - DE, Deutsch Telekom AG\r\n* '213' - JP, NACCS Center (Nippon Automated Cargo Clearance System Operations Organization)\r\n* '214' - US, AISI (American Iron and Steel Institute)\r\n* '215' - AU, APCA (Australian Payments Clearing Association)\r\n* '216' - US, Department of Labor\r\n* '217' - US, N.A.I.C. (National Association of Insurance Commissioners)\r\n* '218' - GB, The Association of British Insurers\r\n* '219' - FR, d'ArvA\r\n* '220' - FI, Finnish tax board\r\n* '221' - FR, CNAMTS (Caisse Nationale de l'Assurance Maladie des Travailleurs Salaries)\r\n* '222' - DK, Danish National Board of Health\r\n* '223' - DK, Danish Ministry of Home Affairs\r\n* '224' - US, Aluminum Association\r\n* '225' - US, CIDX (Chemical Industry Data Exchange)\r\n* '226' - US, Carbide Manufacturers\r\n* '227' - US, NWDA (National Wholesale Druggist Association)\r\n* '228' - US, EIA (Electronic Industry Association)\r\n* '229' - US, American Paper Institute\r\n* '230' - US, VICS (Voluntary Inter-Industry Commerce Standards)\r\n* '231' - Copper and Brass Fabricators Council\r\n* '232' - GB, Inland Revenue\r\n* '233' - US, OMB (Office of Management and Budget)\r\n* '234' - DE, Siemens AG\r\n* '235' - AU, Tradegate (Electronic Commerce Australia)\r\n* '236' - US, United States Postal Service (USPS)\r\n* '237' - US, United States health industry\r\n* '238' - US, TDCC (Transportation Data Coordinating Committee)\r\n* '239' - US, HL7 (Health Level 7)\r\n* '240' - US, CHIPS (Clearing House Interbank Payment Systems)\r\n* '241' - PT, SIBS (Sociedade Interbancaria de Servicos)\r\n* '244' - US, Department of Health and Human Services\r\n* '245' - GS1 Denmark\r\n* '246' - GS1 Germany\r\n* '247' - US, HBICC (Health Industry Business Communication Council)\r\n* '248' - US, ASTM (American Society of Testing and Materials)\r\n* '249' - IP (Institute of Petroleum)\r\n* '250' - US, UOP (Universal Oil Products)\r\n* '251' - AU, HIC (Health Insurance Commission)\r\n* '252' - AU, AIHW (Australian Institute of Health and Welfare)\r\n* '253' - AU, NCCH (National Centre for Classification in Health)\r\n* '254' - AU, DOH (Australian Department of Health)\r\n* '255' - AU, ADA (Australian Dental Association)\r\n* '256' - US, AAR (Association of American Railroads)\r\n* '257' - ECCMA (Electronic Commerce Code Management Association)\r\n* '258' - JP, Japanese Ministry of Transport\r\n* '259' - JP, Japanese Maritime Safety Agency\r\n* '260' - ebIX (European forum for energy Business Information eXchange)\r\n* '261' - EEG7, European Expert Group 7 (Insurance)\r\n* '262' - DE, GDV (Gesamtverband der Deutschen Versicherungswirtschaft e.V.)\r\n* '263' - CA, CSIO (Centre for Study of Insurance Operations)\r\n* '264' - FR, AGF (Assurances Generales de France)\r\n* '265' - SE, Central bank\r\n* '266' - US, DoA (Department of Agriculture)\r\n* '267' - RU, Central Bank of Russia\r\n* '268' - FR, DGI (Direction Generale des Impots)\r\n* '269' - GRE (Reference Group of Experts)\r\n* '270' - Concord EDI group\r\n* '271' - InterContainer InterFrigo\r\n* '272' - Joint Automotive Industry agency\r\n* '273' - CH, SCC (Swiss Chambers of Commerce)\r\n* '274' - ITIGG (International Transport Implementation Guidelines Group)\r\n* '275' - ES, Banco de España\r\n* '276' - Assigned by Port Community\r\n* '277' - BIGNet (Business Information Group Network)\r\n* '278' - Eurogate\r\n* '279' - NL, Graydon\r\n* '280' - FR, Euler\r\n* '281' - GS1 Belgium and Luxembourg\r\n* '282' - DE, Creditreform International e.V.\r\n* '283' - DE, Hermes Kreditversicherungs AG\r\n* '284' - TW, Taiwanese Bankers' Association\r\n* '285' - ES, Asociación Española de Banca\r\n* '286' - SE, TCO (Tjänstemännes Central Organisation)\r\n* '287' - DE, FORTRAS (Forschungs- und Entwicklungsgesellschaft für Transportwesen GMBH)\r\n* '288' - OSJD (Organizacija Sotrudnichestva Zeleznih Dorog)\r\n* '289' - JP.JIPDEC\r\n* '290' - JP, JAMA\r\n* '291' - JP, JAPIA\r\n* '292' - FI, TIEKE The Information Technology Development Centre of Finland\r\n* '293' - DE, BDEW (Bundesverband der Energie- und Wasserwirtschaft e.V.)\r\n* '294' - GS1 Austria\r\n* '295' - AU, Australian Therapeutic Goods Administration\r\n* '296' - ITU (International Telecommunication Union)\r\n* '297' - IT, Ufficio IVA\r\n* '298' - GS1 Spain\r\n* '299' - BE, Seagha\r\n* '300' - SE, Swedish International Freight Association\r\n* '301' - DE, BauDatenbank GmbH\r\n* '302' - DE, Bundesverband des Deutschen Textileinzelhandels e.V.\r\n* '303' - GB, Trade Service Information Ltd (TSI)\r\n* '304' - DE, Bundesverband Deutscher Heimwerker-, Bau- und Gartenfachmaerkte e.V.\r\n* '305' - ETSO (European Transmission System Operator)\r\n* '306' - SMDG (Ship-planning Message Design Group)\r\n* '307' - JP, Ministry of Justice\r\n* '309' - JP, JASTPRO (Japan Association for Simplification of International Trade Procedures)\r\n* '310' - DE, SAP AG (Systeme, Anwendungen und Produkte)\r\n* '311' - JP, TDB (Teikoku Databank, Ltd.)\r\n* '312' - FR, AGRO EDI EUROPE\r\n* '313' - FR, Groupement National Interprofessionnel des Semences et Plants\r\n* '314' - OAGi (Open Applications Group, Incorporated)\r\n* '315' - US, STAR (Standards for Technology in Automotive Retail)\r\n* '316' - GS1 Finland\r\n* '317' - GS1 Brazil\r\n* '318' - IETF (Internet Engineering Task Force)\r\n* '319' - FR, GTF\r\n* '320' - DK, Danish National IT and Telcom Agency (ITA)\r\n* '321' - EASEE-Gas (European Association for the Streamlining of Energy Exchange for gas)\r\n* '322' - IS, ICEPRO\r\n* '323' - PROTECT\r\n* '324' - GS1 Ireland\r\n* '325' - GS1 Russia\r\n* '326' - GS1 Poland\r\n* '327' - GS1 Estonia\r\n* '328' - Assigned by ultimate recipient of the message\r\n* '329' - Assigned by loading dock operator\r\n* '330' - Nordic Ediel Group\r\n* '331' - US, Agricultural Marketing Service (AMS)\r\n* '332' - DE, DVGW Service & Consult GmbH\r\n* '333' - US, Animal and Plant Health Inspection Service (APHIS)\r\n* '334' - US, Bureau of Labor Statistics (BLS)\r\n* '335' - US, Bureau of Transportation Statistics (BTS)\r\n* '336' - US, Customs and Border Protection (CBP)\r\n* '337' - US, Center for Disease Control (CDC)\r\n* '338' - US, Consumer Product Safety Commission (CPSC)\r\n* '339' - US, Directorate of Defense Trade Controls (DDTC)\r\n* '340' - US, Environmental Protection Agency (EPA)\r\n* '341' - US, Federal Aviation Administration (FAA)\r\n* '342' - US, Foreign Agriculture Service (FAS)\r\n* '343' - US, Federal Motor Carrier Safety Administration (FMCSA)\r\n* '344' - US, Food Safety Inspection Service (FSIS)\r\n* '345' - US, Foreign Trade Zones Board (FTZB)\r\n* '346' - US, The Grain Inspection, Packers and Stockyards Administration (GIPSA)\r\n* '347' - US, Import Administration (IA)\r\n* '348' - US, Internal Revenue Service (IRS)\r\n* '349' - US, International Trade Commission (ITC)\r\n* '350' - US, National Highway Traffic Safety Administration (NHTSA)\r\n* '351' - US, National Marine Fisheries Service (NMFS)\r\n* '352' - US, Office of Fossil Energy (OFE)\r\n* '353' - US, Office of Foreign Missions (OFM)\r\n* '354' - US, Bureau of Oceans and International Environmental and Scientific Affairs (OES)\r\n* '355' - US, Office of Naval Intelligence (ONI)\r\n* '356' - US, Pipeline and Hazardous Materials Safety Administration (PHMSA)\r\n* '357' - US, Alcohol and Tobacco Tax and Trade Bureau (TTB)\r\n* '358' - US, Army Corp of Engineers (USACE)\r\n* '359' - US, Agency for International Development (USAID)\r\n* '360' - US, Coast Guard (USCG)\r\n* '361' - US, Office of the United States Trade Representative (USTR)\r\n* '362' - International Commission for the Conservation of Atlantic Tunas (ICCAT)\r\n* '363' - Inter-American Tropical Tuna Commission (IATTC)\r\n* '364' - Commission for the Conservation of Southern Bluefin Tuna (CCSBT)\r\n* '365' - Indian Ocean Tuna Commission (IOTC)\r\n* '366' - International Botanical Congress\r\n* '367' - International Commission on Zoological Nomenclature\r\n* '368' - International Society for Horticulture Science\r\n* '369' - Chemical Abstract Service (CAS)\r\n* '370' - Social Security Administration (SSA)\r\n* '371' - INMARSAT\r\n* '372' - Agent of ship at the intended port of arrival\r\n* '373' - US Air Force\r\n* '374' - US, Bureau of Explosives\r\n* '375' - Basel Convention Secretariat\r\n* '376' - PANTONE\r\n* '377' - IS, National Registry of Iceland\r\n* '378' - IS, Internal Revenue Directorate of Iceland\r\n* '379' - IANA (Internet Assigned Numbers Authority)\r\n* '380' - Korea Customs Service\r\n* '381' - Israel Tax Authority\r\n* '382' - Israeli Ministry of Interior\r\n* '383' - FR, LUMD (Logistique Urbaine Mutualisée Durable)\r\n* '384' - DE, BiPRO (Brancheninitiative Prozessoptimierung)\r\n* '385' - JO, Jordan Ministry of Agriculture\r\n* '386' - JO, Jordan Customs\r\n* '387' - JO, Jordan Food & Drug Administration\r\n* '388' - JO, Jordan Institution for Standards and Metrology\r\n* '389' - JO, Jordan Telecommunication Regulatory Commission\r\n* '390' - JO, Jordan Nuclear Regulatory Commission\r\n* '391' - JO, Jordan Ministry of Environment\r\n* '392' - Hazardous waste collector\r\n* '393' - Hazardous waste generator\r\n* '394' - Marketing agent\r\n* '395' - BE, TELEBIB Centre\r\n* '396' - BE, BNB\r\n* '397' - BE, FSMA\r\n* '398' - FR, PHAST\r\n* '399' - EXIS (Exis Technologies Ltd.)\r\n* '400' - FAO (Food and Agriculture Organisation)\r\n* '401' - CH, Spedlogswiss\r\n* '402' - JP, National Tax Agency\r\n* '403' - Comite Européen de Normalisation\r\n* '404' - Assigned by logistics service provider\r\n* '405' - Assigned by transport ministry\r\n* '406' - AR, Customs Administration of Argentina\r\n* '407' - BO, Customs Administration of Bolivia\r\n* '408' - BR, Customs Administration of Brazil\r\n* '409' - PY, Customs Administration of Paraguay\r\n* '410' - UY, Customs Administration of Uruguay\r\n* '411' - VE, Customs Administration of Venezuela\r\n* '412' - IN, Customs Administration of India\r\n* '413' - JP, JEC (UN/CEFACT Japan Committee)\r\n* 'ZZZ' - Mutually defined",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109",
+            "110",
+            "111",
+            "112",
+            "113",
+            "114",
+            "116",
+            "117",
+            "118",
+            "119",
+            "120",
+            "121",
+            "122",
+            "123",
+            "124",
+            "125",
+            "126",
+            "127",
+            "128",
+            "129",
+            "130",
+            "131",
+            "132",
+            "133",
+            "134",
+            "135",
+            "136",
+            "137",
+            "138",
+            "139",
+            "140",
+            "141",
+            "142",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "149",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "155",
+            "156",
+            "157",
+            "158",
+            "159",
+            "160",
+            "161",
+            "162",
+            "163",
+            "164",
+            "165",
+            "166",
+            "167",
+            "168",
+            "169",
+            "170",
+            "171",
+            "172",
+            "173",
+            "174",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "181",
+            "182",
+            "183",
+            "184",
+            "185",
+            "186",
+            "187",
+            "188",
+            "189",
+            "190",
+            "191",
+            "192",
+            "193",
+            "194",
+            "195",
+            "196",
+            "197",
+            "198",
+            "199",
+            "200",
+            "201",
+            "202",
+            "203",
+            "204",
+            "205",
+            "206",
+            "207",
+            "208",
+            "209",
+            "210",
+            "211",
+            "212",
+            "213",
+            "214",
+            "215",
+            "216",
+            "217",
+            "218",
+            "219",
+            "220",
+            "221",
+            "222",
+            "223",
+            "224",
+            "225",
+            "226",
+            "227",
+            "228",
+            "229",
+            "230",
+            "231",
+            "232",
+            "233",
+            "234",
+            "235",
+            "236",
+            "237",
+            "238",
+            "239",
+            "240",
+            "241",
+            "244",
+            "245",
+            "246",
+            "247",
+            "248",
+            "249",
+            "250",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "256",
+            "257",
+            "258",
+            "259",
+            "260",
+            "261",
+            "262",
+            "263",
+            "264",
+            "265",
+            "266",
+            "267",
+            "268",
+            "269",
+            "270",
+            "271",
+            "272",
+            "273",
+            "274",
+            "275",
+            "276",
+            "277",
+            "278",
+            "279",
+            "280",
+            "281",
+            "282",
+            "283",
+            "284",
+            "285",
+            "286",
+            "287",
+            "288",
+            "289",
+            "290",
+            "291",
+            "292",
+            "293",
+            "294",
+            "295",
+            "296",
+            "297",
+            "298",
+            "299",
+            "300",
+            "301",
+            "302",
+            "303",
+            "304",
+            "305",
+            "306",
+            "307",
+            "309",
+            "310",
+            "311",
+            "312",
+            "313",
+            "314",
+            "315",
+            "316",
+            "317",
+            "318",
+            "319",
+            "320",
+            "321",
+            "322",
+            "323",
+            "324",
+            "325",
+            "326",
+            "327",
+            "328",
+            "329",
+            "330",
+            "331",
+            "332",
+            "333",
+            "334",
+            "335",
+            "336",
+            "337",
+            "338",
+            "339",
+            "340",
+            "341",
+            "342",
+            "343",
+            "344",
+            "345",
+            "346",
+            "347",
+            "348",
+            "349",
+            "350",
+            "351",
+            "352",
+            "353",
+            "354",
+            "355",
+            "356",
+            "357",
+            "358",
+            "359",
+            "360",
+            "361",
+            "362",
+            "363",
+            "364",
+            "365",
+            "366",
+            "367",
+            "368",
+            "369",
+            "370",
+            "371",
+            "372",
+            "373",
+            "374",
+            "375",
+            "376",
+            "377",
+            "378",
+            "379",
+            "380",
+            "381",
+            "382",
+            "383",
+            "384",
+            "385",
+            "386",
+            "387",
+            "388",
+            "389",
+            "390",
+            "391",
+            "392",
+            "393",
+            "394",
+            "395",
+            "396",
+            "397",
+            "398",
+            "399",
+            "400",
+            "401",
+            "402",
+            "403",
+            "404",
+            "405",
+            "406",
+            "407",
+            "408",
+            "409",
+            "410",
+            "411",
+            "412",
+            "413",
+            "ZZZ"
+          ],
+          "type": "string"
+        },
+        "MeasurementUnitCommonCodeType": {
+          "title": "Measurement unit code",
+          "description": "Code specifying the unit of measurement.\r\n\r\nCode list responsible agency:\r\nUNECE\r\n\r\nCode list responsible agency name:\r\nUnited Nations Economic Commission for Europe\r\n\r\nCode list responsible agency code:\r\n6\r\n\r\nCode list:\r\nRec 20\r\n\r\nCode list name:\r\nCodes for Units of Measure\r\n\r\nCode list version:\r\n2021\r\n\r\nCode list issue date:\r\nCL 2021-06\r\n\r\nApplicable codes:\r\n* 'KGM' - kilogram\r\n* 'TNE' - tonne (metric ton)",
+          "enum": [
+            "KGM",
+            "TNE"
+          ],
+          "type": "string"
+        },
+        "UNTDID3035Type": {
+          "title": "Party function code qualifier",
+          "description": "Code giving specific meaning to a party.\r\n\r\nApplicable codes:\r\n* 'CZ' - Consignor",
+          "enum": [
+            "CZ"
+          ],
+          "type": "string"
+        },
+        "UNTDID3207Type": {
+          "title": "ISO_ISOTwoletterCountryCode_SecondEdition2006.TXT",
+          "description": "Identification of the name of the country or other geographical entity as defined in ISO 3166-1.\r\n\r\nCode list responsible agency:\r\nISO\r\n\r\nCode list responsible agency name:\r\nInternational Organization for Standardization\r\n\r\nCode list responsible agency code:\r\n5\r\n\r\nCode list:\r\n3166-1\r\n\r\nCode list name:\r\nCountry code\r\n\r\nCode list version:\r\n2020\r\n\r\nCode list issue date:\r\nCL 2020-08\r\n\r\nApplicable codes:\r\n* 'AD' - ANDORRA\r\n* 'AE' - UNITED ARAB EMIRATES\r\n* 'AF' - AFGHANISTAN\r\n* 'AG' - ANTIGUA AND BARBUDA\r\n* 'AI' - ANGUILLA\r\n* 'AL' - ALBANIA\r\n* 'AM' - ARMENIA\r\n* 'AO' - ANGOLA\r\n* 'AQ' - ANTARCTICA\r\n* 'AR' - ARGENTINA\r\n* 'AS' - AMERICAN SAMOA\r\n* 'AT' - AUSTRIA\r\n* 'AU' - AUSTRALIA\r\n* 'AW' - ARUBA\r\n* 'AX' - ÅLAND ISLANDS\r\n* 'AZ' - AZERBAIJAN\r\n* 'BA' - BOSNIA AND HERZEGOVINA\r\n* 'BB' - BARBADOS\r\n* 'BD' - BANGLADESH\r\n* 'BE' - BELGIUM\r\n* 'BF' - BURKINA FASO\r\n* 'BG' - BULGARIA\r\n* 'BH' - BAHRAIN\r\n* 'BI' - BURUNDI\r\n* 'BJ' - BENIN\r\n* 'BL' - SAINT BARTHÉLEMY\r\n* 'BM' - BERMUDA\r\n* 'BN' - BRUNEI DARUSSALAM\r\n* 'BO' - BOLIVIA (PLURINATIONAL STATE OF)\r\n* 'BQ' - BONAIRE, SINT EUSTATIUS AND SABA\r\n* 'BR' - BRAZIL\r\n* 'BS' - BAHAMAS\r\n* 'BT' - BHUTAN\r\n* 'BV' - BOUVET ISLAND\r\n* 'BW' - BOTSWANA\r\n* 'BY' - BELARUS\r\n* 'BZ' - BELIZE\r\n* 'CA' - CANADA\r\n* 'CC' - COCOS (KEELING) ISLANDS\r\n* 'CD' - CONGO, DEMOCRATIC REPUBLIC OF\r\n* 'CF' - CENTRAL AFRICAN REPUBLIC\r\n* 'CG' - CONGO\r\n* 'CH' - SWITZERLAND\r\n* 'CI' - COTE D'IVOIRE\r\n* 'CK' - COOK ISLANDS\r\n* 'CL' - CHILE\r\n* 'CM' - CAMEROON\r\n* 'CN' - CHINA\r\n* 'CO' - COLOMBIA\r\n* 'CR' - COSTA RICA\r\n* 'CU' - CUBA\r\n* 'CV' - CABO VERDE\r\n* 'CW' - CURAÇAO\r\n* 'CX' - CHRISTMAS ISLAND\r\n* 'CY' - CYPRUS\r\n* 'CZ' - CZECHIA\r\n* 'DE' - GERMANY\r\n* 'DJ' - DJIBOUTI\r\n* 'DK' - DENMARK\r\n* 'DM' - DOMINICA\r\n* 'DO' - DOMINICAN REPUBLIC\r\n* 'DZ' - ALGERIA\r\n* 'EC' - ECUADOR\r\n* 'EE' - ESTONIA\r\n* 'EG' - EGYPT\r\n* 'EH' - WESTERN SAHARA\r\n* 'ER' - ERITREA\r\n* 'ES' - SPAIN\r\n* 'ET' - ETHIOPIA\r\n* 'FI' - FINLAND\r\n* 'FJ' - FIJI\r\n* 'FK' - FALKLAND ISLANDS (MALVINAS)\r\n* 'FM' - MICRONESIA (FEDERATED STATES OF)\r\n* 'FO' - FAROE ISLANDS\r\n* 'FR' - FRANCE\r\n* 'GA' - GABON\r\n* 'GB' - UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND\r\n* 'GD' - GRENADA\r\n* 'GE' - GEORGIA\r\n* 'GF' - FRENCH GUIANA\r\n* 'GG' - GUERNSEY\r\n* 'GH' - GHANA\r\n* 'GI' - GIBRALTAR\r\n* 'GL' - GREENLAND\r\n* 'GM' - GAMBIA\r\n* 'GN' - GUINEA\r\n* 'GP' - GUADELOUPE\r\n* 'GQ' - EQUATORIAL GUINEA\r\n* 'GR' - GREECE\r\n* 'GS' - SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS\r\n* 'GT' - GUATEMALA\r\n* 'GU' - GUAM\r\n* 'GW' - GUINEA-BISSAU\r\n* 'GY' - GUYANA\r\n* 'HK' - HONG KONG\r\n* 'HM' - HEARD ISLAND AND MCDONALD ISLANDS\r\n* 'HN' - HONDURAS\r\n* 'HR' - CROATIA\r\n* 'HT' - HAITI\r\n* 'HU' - HUNGARY\r\n* 'ID' - INDONESIA\r\n* 'IE' - IRELAND\r\n* 'IL' - ISRAEL\r\n* 'IM' - ISLE OF MAN\r\n* 'IN' - INDIA\r\n* 'IO' - BRITISH INDIAN OCEAN TERRITORY\r\n* 'IQ' - IRAQ\r\n* 'IR' - IRAN (ISLAMIC REPUBLIC OF)\r\n* 'IS' - ICELAND\r\n* 'IT' - ITALY\r\n* 'JE' - JERSEY\r\n* 'JM' - JAMAICA\r\n* 'JO' - JORDAN\r\n* 'JP' - JAPAN\r\n* 'KE' - KENYA\r\n* 'KG' - KYRGYZSTAN\r\n* 'KH' - CAMBODIA\r\n* 'KI' - KIRIBATI\r\n* 'KM' - COMOROS\r\n* 'KN' - SAINT KITTS AND NEVIS\r\n* 'KP' - KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)\r\n* 'KR' - KOREA, REPUBLIC OF\r\n* 'KW' - KUWAIT\r\n* 'KY' - CAYMAN ISLANDS\r\n* 'KZ' - KAZAKHSTAN\r\n* 'LA' - LAO PEOPLE'S DEMOCRATIC REPUBLIC\r\n* 'LB' - LEBANON\r\n* 'LC' - SAINT LUCIA\r\n* 'LI' - LIECHTENSTEIN\r\n* 'LK' - SRI LANKA\r\n* 'LR' - LIBERIA\r\n* 'LS' - LESOTHO\r\n* 'LT' - LITHUANIA\r\n* 'LU' - LUXEMBOURG\r\n* 'LV' - LATVIA\r\n* 'LY' - LIBYA\r\n* 'MA' - MOROCCO\r\n* 'MC' - MONACO\r\n* 'MD' - MOLDOVA, REPUBLIC OF\r\n* 'ME' - MONTENEGRO\r\n* 'MF' - SAINT MARTIN (FRENCH PART)\r\n* 'MG' - MADAGASCAR\r\n* 'MH' - MARSHALL ISLANDS\r\n* 'MK' - NORTH MACEDONIA\r\n* 'ML' - MALI\r\n* 'MM' - MYANMAR\r\n* 'MN' - MONGOLIA\r\n* 'MO' - MACAO\r\n* 'MP' - NORTHERN MARIANA ISLANDS\r\n* 'MQ' - MARTINIQUE\r\n* 'MR' - MAURITANIA\r\n* 'MS' - MONTSERRAT\r\n* 'MT' - MALTA\r\n* 'MU' - MAURITIUS\r\n* 'MV' - MALDIVES\r\n* 'MW' - MALAWI\r\n* 'MX' - MEXICO\r\n* 'MY' - MALAYSIA\r\n* 'MZ' - MOZAMBIQUE\r\n* 'NA' - NAMIBIA\r\n* 'NC' - NEW CALEDONIA\r\n* 'NE' - NIGER\r\n* 'NF' - NORFOLK ISLAND\r\n* 'NG' - NIGERIA\r\n* 'NI' - NICARAGUA\r\n* 'NL' - NETHERLANDS\r\n* 'NO' - NORWAY\r\n* 'NP' - NEPAL\r\n* 'NR' - NAURU\r\n* 'NU' - NIUE\r\n* 'NZ' - NEW ZEALAND\r\n* 'OM' - OMAN\r\n* 'PA' - PANAMA\r\n* 'PE' - PERU\r\n* 'PF' - FRENCH POLYNESIA\r\n* 'PG' - PAPUA NEW GUINEA\r\n* 'PH' - PHILIPPINES\r\n* 'PK' - PAKISTAN\r\n* 'PL' - POLAND\r\n* 'PM' - SAINT PIERRE AND MIQUELON\r\n* 'PN' - PITCAIRN\r\n* 'PR' - PUERTO RICO\r\n* 'PS' - PALESTINE, STATE OF\r\n* 'PT' - PORTUGAL\r\n* 'PW' - PALAU\r\n* 'PY' - PARAGUAY\r\n* 'QA' - QATAR\r\n* 'RE' - REUNION\r\n* 'RO' - ROMANIA\r\n* 'RS' - SERBIA\r\n* 'RU' - RUSSIAN FEDERATION\r\n* 'RW' - RWANDA\r\n* 'SA' - SAUDI ARABIA\r\n* 'SB' - SOLOMON ISLANDS\r\n* 'SC' - SEYCHELLES\r\n* 'SD' - SUDAN\r\n* 'SE' - SWEDEN\r\n* 'SG' - SINGAPORE\r\n* 'SH' - SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA\r\n* 'SI' - SLOVENIA\r\n* 'SJ' - SVALBARD AND JAN MAYEN\r\n* 'SK' - SLOVAKIA\r\n* 'SL' - SIERRA LEONE\r\n* 'SM' - SAN MARINO\r\n* 'SN' - SENEGAL\r\n* 'SO' - SOMALIA\r\n* 'SR' - SURINAME\r\n* 'SS' - SOUTH SUDAN\r\n* 'ST' - SAO TOME AND PRINCIPE\r\n* 'SV' - EL SALVADOR\r\n* 'SX' - SINT MAARTEN (DUTCH PART)\r\n* 'SY' - SYRIAN ARAB REPUBLIC\r\n* 'SZ' - ESWATINI\r\n* 'TC' - TURKS AND CAICOS ISLANDS\r\n* 'TD' - CHAD\r\n* 'TF' - FRENCH SOUTHERN TERRITORIES\r\n* 'TG' - TOGO\r\n* 'TH' - THAILAND\r\n* 'TJ' - TAJIKISTAN\r\n* 'TK' - TOKELAU\r\n* 'TL' - TIMOR-LESTE\r\n* 'TM' - TURKMENISTAN\r\n* 'TN' - TUNISIA\r\n* 'TO' - TONGA\r\n* 'TR' - TURKEY\r\n* 'TT' - TRINIDAD AND TOBAGO\r\n* 'TV' - TUVALU\r\n* 'TW' - TAIWAN, PROVINCE OF CHINA\r\n* 'TZ' - TANZANIA, UNITED REPUBLIC OF\r\n* 'UA' - UKRAINE\r\n* 'UG' - UGANDA\r\n* 'UM' - UNITED STATES MINOR OUTLYING ISLANDS\r\n* 'US' - UNITED STATES OF AMERICA\r\n* 'UY' - URUGUAY\r\n* 'UZ' - UZBEKISTAN\r\n* 'VA' - HOLY SEE\r\n* 'VC' - SAINT VINCENT AND THE GRENADINES\r\n* 'VE' - VENEZUELA (BOLIVARIAN REPUBLIC OF)\r\n* 'VG' - VIRGIN ISLANDS, BRITISH\r\n* 'VI' - VIRGIN ISLANDS, U.S.\r\n* 'VN' - VIET NAM\r\n* 'VU' - VANUATU\r\n* 'WF' - WALLIS AND FUTUNA\r\n* 'WS' - SAMOA\r\n* 'YE' - YEMEN\r\n* 'YT' - MAYOTTE\r\n* 'ZA' - SOUTH AFRICA\r\n* 'ZM' - ZAMBIA\r\n* 'ZW' - ZIMBABWE",
+          "enum": [
+            "AD",
+            "AE",
+            "AF",
+            "AG",
+            "AI",
+            "AL",
+            "AM",
+            "AO",
+            "AQ",
+            "AR",
+            "AS",
+            "AT",
+            "AU",
+            "AW",
+            "AX",
+            "AZ",
+            "BA",
+            "BB",
+            "BD",
+            "BE",
+            "BF",
+            "BG",
+            "BH",
+            "BI",
+            "BJ",
+            "BL",
+            "BM",
+            "BN",
+            "BO",
+            "BQ",
+            "BR",
+            "BS",
+            "BT",
+            "BV",
+            "BW",
+            "BY",
+            "BZ",
+            "CA",
+            "CC",
+            "CD",
+            "CF",
+            "CG",
+            "CH",
+            "CI",
+            "CK",
+            "CL",
+            "CM",
+            "CN",
+            "CO",
+            "CR",
+            "CU",
+            "CV",
+            "CW",
+            "CX",
+            "CY",
+            "CZ",
+            "DE",
+            "DJ",
+            "DK",
+            "DM",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "EH",
+            "ER",
+            "ES",
+            "ET",
+            "FI",
+            "FJ",
+            "FK",
+            "FM",
+            "FO",
+            "FR",
+            "GA",
+            "GB",
+            "GD",
+            "GE",
+            "GF",
+            "GG",
+            "GH",
+            "GI",
+            "GL",
+            "GM",
+            "GN",
+            "GP",
+            "GQ",
+            "GR",
+            "GS",
+            "GT",
+            "GU",
+            "GW",
+            "GY",
+            "HK",
+            "HM",
+            "HN",
+            "HR",
+            "HT",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IM",
+            "IN",
+            "IO",
+            "IQ",
+            "IR",
+            "IS",
+            "IT",
+            "JE",
+            "JM",
+            "JO",
+            "JP",
+            "KE",
+            "KG",
+            "KH",
+            "KI",
+            "KM",
+            "KN",
+            "KP",
+            "KR",
+            "KW",
+            "KY",
+            "KZ",
+            "LA",
+            "LB",
+            "LC",
+            "LI",
+            "LK",
+            "LR",
+            "LS",
+            "LT",
+            "LU",
+            "LV",
+            "LY",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MF",
+            "MG",
+            "MH",
+            "MK",
+            "ML",
+            "MM",
+            "MN",
+            "MO",
+            "MP",
+            "MQ",
+            "MR",
+            "MS",
+            "MT",
+            "MU",
+            "MV",
+            "MW",
+            "MX",
+            "MY",
+            "MZ",
+            "NA",
+            "NC",
+            "NE",
+            "NF",
+            "NG",
+            "NI",
+            "NL",
+            "NO",
+            "NP",
+            "NR",
+            "NU",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PF",
+            "PG",
+            "PH",
+            "PK",
+            "PL",
+            "PM",
+            "PN",
+            "PR",
+            "PS",
+            "PT",
+            "PW",
+            "PY",
+            "QA",
+            "RE",
+            "RO",
+            "RS",
+            "RU",
+            "RW",
+            "SA",
+            "SB",
+            "SC",
+            "SD",
+            "SE",
+            "SG",
+            "SH",
+            "SI",
+            "SJ",
+            "SK",
+            "SL",
+            "SM",
+            "SN",
+            "SO",
+            "SR",
+            "SS",
+            "ST",
+            "SV",
+            "SX",
+            "SY",
+            "SZ",
+            "TC",
+            "TD",
+            "TF",
+            "TG",
+            "TH",
+            "TJ",
+            "TK",
+            "TL",
+            "TM",
+            "TN",
+            "TO",
+            "TR",
+            "TT",
+            "TV",
+            "TW",
+            "TZ",
+            "UA",
+            "UG",
+            "UM",
+            "US",
+            "UY",
+            "UZ",
+            "VA",
+            "VC",
+            "VE",
+            "VG",
+            "VI",
+            "VN",
+            "VU",
+            "WF",
+            "WS",
+            "YE",
+            "YT",
+            "ZA",
+            "ZM",
+            "ZW"
+          ],
+          "type": "string"
+        },
+        "UNTDID4237Type": {
+          "title": "Payment arrangement code",
+          "description": "Code specifying the arrangements for a payment.\r\n\r\nApplicable codes:\r\n* 'A' - Payable elsewhere\r\n* 'B' - Third party to pay\r\n* 'C' - Collect\r\n* 'P' - Prepaid",
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "P"
+          ],
+          "type": "string"
+        },
+        "UNTDID5237Type": {
+          "title": "Charge category code",
+          "description": "Code specifying the category of charges.\r\n\r\nApplicable codes:\r\n* '1' - All charges\r\n* '2' - Additional charges\r\n* '3' - Transport charges + additional charges\r\n* '4' - Basic freight\r\n* '5' - Destination haulage charges\r\n* '6' - Disbursement\r\n* '7' - Destination port charges\r\n* '8' - Miscellaneous charges\r\n* '9' - Transport charges up to a specified location\r\n* '10' - Origin port charges\r\n* '11' - Origin haulage charges\r\n* '12' - Other charges\r\n* '13' - Specific amount payable\r\n* '14' - Transport costs (carriage charges)\r\n* '15' - All costs up to a specified location\r\n* '16' - Weight/valuation charge\r\n* '17' - All costs\r\n* '19' - Supply of certificate of shipment\r\n* '20' - Supply of consular formalities or certificate of origin\r\n* '21' - Supply of non-categorised documentation in paper form\r\n* '22' - Supply of customs formalities, export\r\n* '23' - Supply of customs formalities, transit\r\n* '24' - Supply of customs formalities, import",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ],
+          "type": "string"
+        },
+        "UNTDID8067Type": {
+          "title": "Transport mode name code",
+          "description": "Code specifying the name of a mode of transport.\r\n\r\nCode list responsible agency:\r\nUNECE\r\n\r\nCode list responsible agency name:\r\nUnited Nations Economic Commission for Europe\r\n\r\nCode list responsible agency code:\r\n6\r\n\r\nCode list:\r\nRec 19\r\n\r\nCode list name:\r\nCode for Modes of Transport\r\n\r\nCode list version:\r\n2001\r\n\r\nCode list issue date:\r\nCL 2001-01\r\n\r\nApplicable codes:\r\n* '0' - Transport mode not specified\r\n* '1' - Maritime transport\r\n* '2' - Rail transport\r\n* '3' - Road transport\r\n* '4' - Air transport\r\n* '6' - Multimodal transport\r\n* '8' - Inland water transport",
+          "enum": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "6",
+            "8"
+          ],
+          "type": "string"
+        },
+        "untdid2379JsonType": {
+          "title": "Date and Time format codes for JSON representation.",
+          "description": "This code list is based on UNTDID 2379. It is adjusted to take JSON date and time representation into account.\n# The following abbreviations are used\n* 'C' – Century\n * 'Y' – Year\n * 'M' – Month\n * 'D' – Day\n * 'h' – Hour\n * 'm' – Minute\n * 's' – Second\n * 'w' – Week\n * 'T' – Time zone offset separator (+/-/Z) \n \n * 'A' – 10 day period within a month of a year\n * 'B' – 1: First half month; 2: second half month\n * 'E' – Week of a month\n * 'G' – Working days\n * 'H' – Half month\n * 'I' – 1-9: Shift in a day\n * 'K' – 1-5: First to fifth week in a month\n * 'M' – Trimester: A period of three months\n * 'N' – 1-7: Numeric representation of the day (Monday = 1, Sunday = 7)\n * 'P' – A period of 4 months\n * 'Q' – Quarter\n * 'RR' – 00-99: Time period\n * 'S' – Semester\n *\n  * Hyphens and additional character in a format string are kept. According to ISO 8601 a slash is used to separate time spans.\n # Codes from UNTDID 2379 and their representation in JSON\n * '2' – is represented as 'date' format\n * '3' – is represented as 'date' format\n * '4' – is represented as 'date' format\n * '5' – is represented as 'date-time' format\n * '6' – is represented as 'CCYY-MM-B'\n * '7' – is represented as 'CCYY-MM-K'\n * '8' – is represented as 'CCYY-MM-DD-I'\n * '9' – is represented as 'CCYY-MM-DD-RR'\n * '10' – is represented as 'date-time' format\n * '101' – is represented as 'date' format\n * '102' – is represented as 'date' format\n * '103' – is represented as 'YY-Www-N'; 01 is first week of January; 1 is always Monday\n * '104' – is represented as 'MM-WEE/MM-WEE'\n * '105' – is represented as 'YY-DDD'; January the first = Day 001; Always start numbering the days of the year from January 1st through December 31st \n * '106' – is represented as '-MM-DD'\n * '107' – is represented as 'DDD'\n  * '108' – is represented as 'WW'\n * '109' – is represented as '-MM-'\n * '110' – is represented as '--DD'\n * '201' – is represented as 'date-time' format\n * '202' – is represented as 'date-time' format\n * '203' – is represented as 'date-time' format\n * '204' – is represented as 'date-time' format\n * '205' – is represented as 'date-time' format\n * '206' – is represented as 'date-time' format\n * '207' – is represented as 'date-time' format\n * '208' – is represented as 'date-time' format\n * '209' – is represented as 'date-time' format\n * '210' – is represented as 'hh:mm:ssZhh:mm/hh:mm:ssZhh:mm'\n * '301' – is represented as 'date-time' format\n * '302' – is represented as 'date-time' format\n * '303' – is represented as 'date-time' format\n * '304' – is represented as 'date-time' format\n * '305' – is represented as '-MM-DDThh:mm' format\n * '306' – is represented as '--DDThh:mm' format\n * '307' – is represented as 'date-time' format\n * '308' – is represented as 'CCYY-MM-DDThh:mmZhh:mm/CCYY-MM-DDThh:mmZhh:mm' \n * '401' – is represented as 'time' format\n * '402' – is represented as 'time' format\n * '404' – is represented as 'time' format\n * '405' – is represented as 'duration' format\n * '406' – is represented as 'Zhh:mm'\n * '501' – is represented as 'hh:mm/hh:mm' \n  * '502' – is represented as 'hh:mm:ss/hh:mm:ss' \n  * '503' – is represented as 'hh:mm:ssZhh:mm/hh:mm:ssZhh:mm' \n  * '600' – is represented as 'CC'\n  * '601' – is represented as 'YY' \n  * '602' – is represented as 'CCYY' \n  * '603' – is represented as 'YY-S' \n  * '604' – is represented as 'CCYY-S' \n  * '608' – is represented as 'CCYY-Q' \n  * '609' – is represented as 'YY-MM' \n  * '610' – is represented as 'CCYY-MM' \n  * '613' – is represented as 'YY-MM-A' \n  * '614' – is represented as 'YY-MM-A' \n  * '615' – is represented as 'YY-Www \n  * '616' – is represented as 'CCYY-Www' \n  * '701' – is represented as 'YY/YY' \n  * '702' – is represented as 'CCYY/CCYY' \n  * '703' – is represented as 'YY-S/YY-S' \n  * '704' – is represented as 'CCYY-S/CCYY-S' \n  * '705' – is represented as 'YY-P/YY-P' \n  * '706' – is represented as 'CCYY-P/CCYY-P' \n  * '707' – is represented as 'YY-Q/YY-Q' \n  * '708' – is represented as 'CCYY-Q/CCYY-Q' \n  * '709' – is represented as 'YY-MM/YY-MM' \n  * '710' – is represented as 'CCYY-MM/CCYY-MM' \n  * '713' – is represented as 'YY-MM-DDThh:mm/YY-MM-DDThh:mm' \n  * '715' – is represented as 'YY-Www/YY-Www' \n  * '716' – is represented as 'CCYY-Www/CCYY-Www' \n  * '717' – is represented as 'YY-MM-DD/YY-MM-DD' \n  * '718' – is represented as 'CCYY-MM-DD/CCYY-MM-DD' \n  * '719' – is represented as 'CCYY-MM-DDThh:mm/CCYY-MM-DDThh:mm' \n  * '720' – is represented as 'NThh:mm/NThh:mm' \n  * '801' – is represented as 'duration' format \n  * '802' – is represented as 'duration' format \n  * '803' – is represented as 'duration' format \n  * '804' – is represented as 'duration' format \n  * '805' – is represented as 'duration' format \n  * '806' – is represented as 'duration' format \n  * '807' – is represented as 'duration' format \n  * '808' – is represented as 'S' \n  * '809' – is represented as 'P' \n  * '810' – is represented as 'M' \n  * '811' – is represented as 'H' \n  * '812' – is represented as 'A' \n  * '813' – is represented as 'N' \n  * '814' – is represented as 'G'",
+          "enum": [
+            "CCYY-MM-B",
+            "CCYY-MM-K",
+            "CCYY-MM-DD-I",
+            "CCYY-MM-DD-RR",
+            "YY-Www-N",
+            "MMWEE/MMWEE",
+            "YY-DDD",
+            "-MM-DD",
+            "DDD",
+            "-WW",
+            "-MM-",
+            "--DD",
+            "hh:mm:ssZhh:mm/hh:mm:ssZhh:mm",
+            "-MM-DDThh:mm",
+            "--DDThh:mm",
+            "CCYY-MM-DDThh:mmZhh:mm/CCYY-MM-DDThh:mmZhh:mm",
+            "Zhh:mm",
+            "hh:mm/hhmm",
+            "hh:mm:ss/hh:mm:ss",
+            "CC",
+            "YY",
+            "CCYY",
+            "CCYY-S",
+            "CCYY-Q",
+            "YY-MM",
+            "CCYY-MM",
+            "YY-MM-A",
+            "CCYY-MM-A",
+            "YY-Www",
+            "CCYY-Www",
+            "YY/YY",
+            "CCYY/CCYY",
+            "YY-S/YY-S",
+            "CCYY-S/CCYY-S",
+            "YY-P/YY-P",
+            "CCYY-P/CCYY-P",
+            "YY-Q/YY-Q",
+            "CCYY-Q/CCYY-Q",
+            "YY-MM/YY-MM",
+            "CCYY-MM/CCYY-MM",
+            "YY-MM-DDThh:mm/YY-MM-DDThh:mm",
+            "YYWww/YYWww",
+            "CCYYWww/CCYYWww",
+            "YY-MM-DD/YY-MM-DD",
+            "CCYY-MM-DD/CCYY-MM-DD",
+            "CCYY-MM-DDThh:mm/CCYY-MM-DDThh:mm",
+            "NThh:mm/NThh:mm",
+            "S",
+            "P",
+            "M",
+            "H",
+            "A",
+            "N",
+            "G"
+          ]
+        }
+      }
+    },
+    "qdt": {
+      "$defs": {
+        "weightUnitMeasureType": {
+          "title": "Weight_ Unit_ Measure. Type",
+          "description": "The numeric value determined by weight measuring.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/pdt/$defs/decimalType"
+            },
+            "unitCode": {
+              "$ref": "#/$defs/codeList/$defs/MeasurementUnitCommonCodeType"
+            }
+          },
+          "required": [
+            "content",
+            "unitCode"
+          ]
+        },
+        "transportModeCodeType": {
+          "title": "Transport Mode_ Code. Type",
+          "description": "A character string used to represent a transport mode.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/codeList/$defs/UNTDID8067Type"
+            },
+            "listAgencyId": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+                },
+                {
+                  "enum": [
+                    "6"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "countryIdType": {
+          "title": "Country_ Identifier. Type",
+          "description": "A character string to identify and distinguish uniquely, one instance of a country in an identification scheme from all other objects within the same scheme.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/codeList/$defs/UNTDID3207Type"
+            },
+            "schemeAgencyId": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+                },
+                {
+                  "enum": [
+                    "5"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "partyRoleCodeType": {
+          "title": "Party Role_ Code. Type",
+          "description": "A character string used to replace or represent a role of a party.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/codeList/$defs/UNTDID3035Type"
+            },
+            "listAgencyId": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+                },
+                {
+                  "enum": [
+                    "6"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "transportServiceCategoryCodeType": {
+          "title": "Transport Service Category_ Code. Type",
+          "description": "A character string used to represent a transport service category.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/codeList/$defs/UNTDID5237Type"
+            },
+            "listAgencyId": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+                },
+                {
+                  "enum": [
+                    "6"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "content"
+          ]
+        },
+        "transportServicePaymentArrangementCodeType": {
+          "title": "Transport Service Payment Arrangement_ Code. Type",
+          "description": "A character string used to represent a transport service payment arrangement.",
+          "type": "object",
+          "properties": {
+            "content": {
+              "$ref": "#/$defs/codeList/$defs/UNTDID4237Type"
+            },
+            "listAgencyId": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/codeList/$defs/AgencyIdentificationCodeType"
+                },
+                {
+                  "enum": [
+                    "6"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "content"
+          ]
+        }
+      }
+    },
+    "crossBorderRegulatoryProcedureType": {
+      "title": "Cross-Border_ Regulatory Procedure. Details",
+      "description": "A set of formal steps to satisfy a cross-border regulation, law or convention.",
+      "type": "object",
+      "properties": {
+        "typeCode": {
+          "title": "Cross-Border_ Regulatory Procedure. Type. Code",
+          "description": "A code specifying a type of cross-border regulatory procedure.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/codeType"
+          }
+        },
+        "previousProcedureTypeCode": {
+          "title": "Cross-Border_ Regulatory Procedure. Previous Procedure Type. Code",
+          "description": "A code specifying a type of previous procedure for this cross-border regulatory procedure.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/codeType"
+          }
+        },
+        "requestOverrideCode": {
+          "title": "Cross-Border_ Regulatory Procedure. Request Override. Code",
+          "description": "A code specifying a request, including a reason, to override previously submitted information for this cross-border regulatory procedure, such as due to an error condition.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/codeType"
+          },
+          "maxItems": 1
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "documentAuthenticationType": {
+      "title": "Document_ Authentication. Details",
+      "description": "A proof that a document is genuine.",
+      "type": "object",
+      "properties": {
+        "statement": {
+          "title": "Document_ Authentication. Statement. Text",
+          "description": "The statement, expressed as text, for this document authentication.",
+          "$ref": "#/$defs/udt/$defs/textType"
+        },
+        "provider": {
+          "title": "Document_ Authentication. Provider. Trade_ Party",
+          "description": "The trade party providing this document authentication.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/tradePartyType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "exchangedDocumentType": {
+      "title": "Exchanged_ Document. Details",
+      "description": "A collection of data for a piece of written, printed or electronic matter that is exchanged between two or more parties.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Exchanged_ Document. Identification. Identifier",
+          "description": "The unique identifier of this exchanged document.",
+          "$ref": "#/$defs/udt/$defs/idType",
+          "properties": {
+            "schemeAgencyId": false
+          }
+        },
+        "issueDateTime": {
+          "title": "Exchanged_ Document. Issue. Date Time",
+          "description": "The date, time, date time or other date time value for the issuance of this exchanged document.",
+          "$ref": "#/$defs/udt/$defs/dateTimeType",
+          "properties": {
+            "format": {
+              "enum": [
+                "102",
+                "205"
+              ]
+            }
+          }
+        },
+        "firstSignatoryDocumentAuthentication": {
+          "title": "Exchanged_ Document. First_ Signatory. Document_ Authentication",
+          "description": "The first or primary signature that authenticates this exchanged document.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/documentAuthenticationType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "logisticsLocationType": {
+      "title": "Logistics_ Location. Details",
+      "description": "A logistics related physical location or place.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Logistics_ Location. Identification. Identifier",
+          "description": "A unique identifier for this logistics related location, such as a United Nations Location Code (UNLOCODE) or GS1 Global Location Number (GLN).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/idType"
+          },
+          "maxItems": 1
+        },
+        "name": {
+          "title": "Logistics_ Location. Name. Text",
+          "description": "A name, expressed as text, of this logistics related location.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/textType"
+          },
+          "maxItems": 1
+        },
+        "countryId": {
+          "title": "Logistics_ Location. Country. Identifier",
+          "description": "The unique identifier of a country for this logistics location.",
+          "$ref": "#/$defs/qdt/$defs/countryIdType"
+        },
+        "postalTradeAddress": {
+          "title": "Logistics_ Location. Postal. Trade_ Address",
+          "description": "The postal trade address information for this logistics related location.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/tradeAddressType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "logisticsSealType": {
+      "title": "Logistics_ Seal. Details",
+      "description": "A device used to secure an object and protect it from unauthorized entry or tampering during transport or other logistics operations.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Logistics_ Seal. Identification. Identifier",
+          "description": "A unique identifier for this logistics seal.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/idType"
+          },
+          "maxItems": 1
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "logisticsServiceChargeType": {
+      "title": "Logistics_ Service Charge. Details",
+      "description": "A charge made for a logistics related service.",
+      "type": "object",
+      "properties": {
+        "paymentArrangementCode": {
+          "title": "Logistics_ Service Charge. Payment Arrangement. Code",
+          "description": "The code specifying the payment arrangement for this logistics service charge [Reference United Nations Code List (UNCL) 4237].",
+          "$ref": "#/$defs/qdt/$defs/transportServicePaymentArrangementCodeType"
+        },
+        "categoryCode": {
+          "title": "Logistics_ Service Charge. Category. Code",
+          "description": "The code specifying the category of this logistics service charge [Reference United Nations Code List (UNCL) 5237].",
+          "$ref": "#/$defs/qdt/$defs/transportServiceCategoryCodeType"
+        },
+        "appliedAmount": {
+          "title": "Logistics_ Service Charge. Applied. Amount",
+          "description": "A monetary value applied to this logistics service charge.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/amountType"
+          },
+          "maxItems": 1
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "logisticsTransportEquipmentType": {
+      "title": "Logistics_ Transport Equipment. Details",
+      "description": "A piece of equipment used to hold, protect or secure cargo for logistics purposes.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Logistics_ Transport Equipment. Identification. Identifier",
+          "description": "The unique identifier of this piece of logistics transport equipment.",
+          "$ref": "#/$defs/udt/$defs/idType",
+          "properties": {
+            "schemeAgencyId": false
+          }
+        },
+        "affixedLogisticsSeal": {
+          "title": "Logistics_ Transport Equipment. Affixed. Logistics_ Seal",
+          "description": "A seal affixed to this piece of logistics transport equipment.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/logisticsSealType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "logisticsTransportMovementType": {
+      "title": "Logistics_ Transport Movement. Details",
+      "description": "The conveyance (physical carriage) of goods or other objects used for logistics transport purposes.",
+      "type": "object",
+      "properties": {
+        "modeCode": {
+          "title": "Logistics_ Transport Movement. Mode. Code",
+          "description": "The code specifying the mode, such as by air, sea, rail, road or inland waterway, for this logistics transport movement.",
+          "$ref": "#/$defs/qdt/$defs/transportModeCodeType"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "noteType": {
+      "title": "Note. Details",
+      "description": "A textual or coded description, such as a remark or additional information.",
+      "type": "object",
+      "properties": {
+        "subject": {
+          "title": "Note. Subject. Text",
+          "description": "The subject, expressed as text, of this note.",
+          "$ref": "#/$defs/udt/$defs/textType"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "consignmentItemType": {
+      "title": "Supply Chain_ Consignment Item. Details",
+      "description": "An item within a supply chain consignment of goods separately identified for transport and customs purposes.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Supply Chain_ Consignment Item. Identification. Identifier",
+          "description": "A unique identifier for this supply chain consignment item.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/idType",
+            "properties": {
+              "schemeAgencyId": false
+            }
+          }
+        },
+        "grossWeight": {
+          "title": "Supply Chain_ Consignment Item. Gross Weight. Measure",
+          "description": "A measure of the gross weight (mass) of this supply chain consignment item which includes packaging but excludes any transport equipment.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/qdt/$defs/weightUnitMeasureType"
+          },
+          "maxItems": 1
+        },
+        "natureIdCargo": {
+          "title": "Supply Chain_ Consignment Item. Nature Identification. Transport_ Cargo",
+          "description": "Transport cargo details of this supply chain consignment item sufficient to identify its nature for customs, statistical or transport purposes.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cargoType"
+          },
+          "maxItems": 1
+        },
+        "applicableDangerousGoods": {
+          "title": "Supply Chain_ Consignment Item. Applicable. Transport_ Dangerous Goods",
+          "description": "Dangerous goods transport details applicable to this supply chain consignment item.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/dangerousGoodsType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        },
+        "applicableCrossBorderRegulatoryProcedure": {
+          "title": "Supply Chain_ Consignment Item. Applicable. Cross-Border_ Regulatory Procedure",
+          "description": "A cross-border regulatory procedure applicable to this supply chain consignment item.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/crossBorderRegulatoryProcedureType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        },
+        "applicableNote": {
+          "title": "Supply Chain_ Consignment Item. Applicable. Note",
+          "description": "A note providing information applicable to this supply chain consignment item.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/noteType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "consignmentType": {
+      "title": "Supply Chain_ Consignment. Details",
+      "description": "A separately identifiable collection of goods items to be transported or available to be transported from one consignor to one consignee in a supply chain via one or more modes of transport where each consignment is the subject of one single transport contract.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Supply Chain_ Consignment. Identification. Identifier",
+          "description": "A unique identifier for this supply chain consignment.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/idType",
+            "properties": {
+              "schemeAgencyId": false
+            }
+          },
+          "maxItems": 1
+        },
+        "carrierAcceptanceDateTime": {
+          "title": "Supply Chain_ Consignment. Carrier Acceptance. Date Time",
+          "description": "The date, time, date time or other date time value when this supply chain consignment will be, or has been, accepted by the carrier.",
+          "$ref": "#/$defs/udt/$defs/dateTimeType"
+        },
+        "grossWeight": {
+          "title": "Supply Chain_ Consignment. Gross Weight. Measure",
+          "description": "A measure of the gross weight (mass) of this supply chain consignment which includes the weight of packaging but which excludes the weight of any transport equipment.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/qdt/$defs/weightUnitMeasureType"
+          },
+          "maxItems": 1
+        },
+        "associatedInvoiceAmount": {
+          "title": "Supply Chain_ Consignment. Associated Invoice. Amount",
+          "description": "A monetary value of an invoice associated with this supply chain consignment.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/amountType"
+          },
+          "maxItems": 1
+        },
+        "consignor": {
+          "title": "Supply Chain_ Consignment. Consignor. Trade_ Party",
+          "description": "The consignor party for this supply chain consignment.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/tradePartyType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        },
+        "consignee": {
+          "title": "Supply Chain_ Consignment. Consignee. Trade_ Party",
+          "description": "The consignee party for this supply chain consignment.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/tradePartyType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        },
+        "carrier": {
+          "title": "Supply Chain_ Consignment. Carrier. Trade_ Party",
+          "description": "The carrier party for this supply chain consignment.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/tradePartyType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        },
+        "carrierAcceptanceLogisticsLocation": {
+          "title": "Supply Chain_ Consignment. Carrier Acceptance. Logistics_ Location",
+          "description": "The location where this supply chain consignment will be, or has been, accepted by the carrier.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/logisticsLocationType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        },
+        "deliveryEvent": {
+          "title": "Supply Chain_ Consignment. Delivery. Transport_ Event",
+          "description": "The delivery event for this supply chain consignment.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/eventType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        },
+        "includedConsignmentItem": {
+          "title": "Supply Chain_ Consignment. Included. Supply Chain_ Consignment Item",
+          "description": "A consignment item included in this supply chain consignment.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/consignmentItemType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        },
+        "utilizedLogisticsTransportEquipment": {
+          "title": "Supply Chain_ Consignment. Utilized. Logistics_ Transport Equipment",
+          "description": "Logistics transport equipment utilized for this supply chain consignment.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/logisticsTransportEquipmentType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        },
+        "mainCarriageLogisticsTransportMovement": {
+          "title": "Supply Chain_ Consignment. Main Carriage. Logistics_ Transport Movement",
+          "description": "A main carriage logistics transport movement for this supply chain consignment.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/logisticsTransportMovementType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        },
+        "applicableLogisticsServiceCharge": {
+          "title": "Supply Chain_ Consignment. Applicable. Logistics_ Service Charge",
+          "description": "A logistics service charge applicable to this supply chain consignment, such as freight or insurance charges.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/logisticsServiceChargeType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "tradeAddressType": {
+      "title": "Trade_ Address. Details",
+      "description": "The location at which a particular trade related organization or person may be found or reached.",
+      "type": "object",
+      "properties": {
+        "postcodeCode": {
+          "title": "Trade_ Address. Postcode. Code",
+          "description": "A code specifying the postcode of this trade address.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/codeType",
+            "properties": {
+              "listAgencyId": false
+            }
+          },
+          "maxItems": 1
+        },
+        "streetName": {
+          "title": "Trade_ Address. Street Name. Text",
+          "description": "A name, expressed as text, of a street or thoroughfare for this trade address.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/textType",
+            "properties": {
+              "languageId": false
+            }
+          },
+          "maxItems": 1
+        },
+        "cityName": {
+          "title": "Trade_ Address. City Name. Text",
+          "description": "The name, expressed as text, of the city, town or village of this trade address.",
+          "$ref": "#/$defs/udt/$defs/textType",
+          "properties": {
+            "languageId": false
+          }
+        },
+        "countryId": {
+          "title": "Trade_ Address. Country. Identifier",
+          "description": "The unique identifier of a country for this trade address.",
+          "$ref": "#/$defs/qdt/$defs/countryIdType"
+        },
+        "countrySubDivisionName": {
+          "title": "Trade_ Address. Country Sub-Division Name. Text",
+          "description": "A name, expressed as text, of the sub-division of a country for this trade address.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/textType",
+            "properties": {
+              "languageId": false
+            }
+          },
+          "maxItems": 1
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "tradeContactType": {
+      "title": "Trade_ Contact. Details",
+      "description": "A person or a department that acts as a point of contact with another person or department in a trading relationship.",
+      "type": "object",
+      "properties": {
+        "telephoneUniversalCommunication": {
+          "title": "Trade_ Contact. Telephone. Universal_ Communication",
+          "description": "Telephone communication information for this trade contact.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/universalCommunicationType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          },
+          "maxItems": 1
+        },
+        "faxUniversalCommunication": {
+          "title": "Trade_ Contact. Fax. Universal_ Communication",
+          "description": "Fax communication information for this trade contact.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/universalCommunicationType"
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          },
+          "maxItems": 1
+        },
+        "emailURIUniversalCommunication": {
+          "title": "Trade_ Contact. Email_ URI. Universal_ Communication",
+          "description": "The email URI communication information for this trade contact.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/universalCommunicationType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "tradePartyType": {
+      "title": "Trade_ Party. Details",
+      "description": "An individual, a group, or a body having a role in a trade business function.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Trade_ Party. Identification. Identifier",
+          "description": "A unique identifier of this trade party.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/idType"
+          }
+        },
+        "name": {
+          "title": "Trade_ Party. Name. Text",
+          "description": "The name, expressed as text, for this trade party.",
+          "$ref": "#/$defs/udt/$defs/textType"
+        },
+        "roleCode": {
+          "title": "Trade_ Party. Role. Code",
+          "description": "A code specifying the role of this trade party.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/qdt/$defs/partyRoleCodeType"
+          }
+        },
+        "definedTradeContact": {
+          "title": "Trade_ Party. Defined. Trade_ Contact",
+          "description": "A trade contact defined for this trade party.",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/tradeContactType",
+                "properties": {
+                  "telephoneUniversalCommunication": {
+                    "items": {
+                      "properties": {
+                        "uri": false
+                      }
+                    }
+                  },
+                  "emailURIUniversalCommunication": {
+                    "properties": {
+                      "completeNumber": false
+                    }
+                  }
+                }
+              },
+              {
+                "$ref": "#/$defs/resourceType"
+              }
+            ]
+          },
+          "maxItems": 1
+        },
+        "postalTradeAddress": {
+          "title": "Trade_ Party. Postal. Trade_ Address",
+          "description": "The postal address for this trade party.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/tradeAddressType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "cargoType": {
+      "title": "Transport_ Cargo. Details",
+      "description": "Information about goods being transported identifying their nature for customs, statistical or transport purposes.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Transport_ Cargo. Identification. Text",
+          "description": "Identification, expressed as text, of this transport cargo that is sufficient to identify it for customs, statistical or transport purposes.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/udt/$defs/textType"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "dangerousGoodsType": {
+      "title": "Transport_ Dangerous Goods. Details",
+      "description": "Goods which may contain a substance which poses risks to people and/or the environment during transportation which is regulated by dangerous goods regulations.",
+      "type": "object",
+      "properties": {
+        "undgIdCode": {
+          "title": "Transport_ Dangerous Goods. UNDG Identification. Code",
+          "description": "The code specifying the unique United Nations Dangerous Goods (UNDG) number assigned to these transported dangerous goods.",
+          "$ref": "#/$defs/udt/$defs/codeType",
+          "properties": {
+            "listAgencyId": false
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "eventType": {
+      "title": "Transport_ Event. Details",
+      "description": "A significant occurrence or happening during transport.",
+      "type": "object",
+      "properties": {
+        "occurrenceLogisticsLocation": {
+          "title": "Transport_ Event. Occurrence. Logistics_ Location",
+          "description": "The logistics location where this transport event occurs.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/logisticsLocationType"
+            },
+            {
+              "$ref": "#/$defs/resourceType"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "universalCommunicationType": {
+      "title": "Universal_ Communication. Details",
+      "description": "The exchange of thoughts, messages, or information, as universally exchanged by speech, signals, writing, or behaviour between persons and/or organizations.",
+      "type": "object",
+      "properties": {
+        "uri": {
+          "title": "Universal_ Communication. URI. Identifier",
+          "description": "The Uniform Resource Identifier (URI), such as a web or an email address, for this universal communication.",
+          "$ref": "#/$defs/udt/$defs/idType"
+        },
+        "completeNumber": {
+          "title": "Universal_ Communication. Complete Number. Text",
+          "description": "The text string of characters that make up the complete number for this universal communication.",
+          "$ref": "#/$defs/udt/$defs/textType"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/extensibleType"
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}

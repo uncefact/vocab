@@ -1,0 +1,1279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID3227",
+  "title": "UNECE_UNTDID3227",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID3227Type": {
+          "title": "Location function code qualifier",
+          "description": "Code identifying the function of a location.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Place of terms of delivery"
+            },
+            {
+              "const": "2",
+              "title": "Payment location"
+            },
+            {
+              "const": "3",
+              "title": "Tare check place"
+            },
+            {
+              "const": "4",
+              "title": "Goods receipt place"
+            },
+            {
+              "const": "5",
+              "title": "Place of departure"
+            },
+            {
+              "const": "6",
+              "title": "Ward bed"
+            },
+            {
+              "const": "7",
+              "title": "Place of delivery"
+            },
+            {
+              "const": "8",
+              "title": "Place of destination"
+            },
+            {
+              "const": "9",
+              "title": "Place of loading"
+            },
+            {
+              "const": "10",
+              "title": "Place of acceptance"
+            },
+            {
+              "const": "11",
+              "title": "Place of discharge"
+            },
+            {
+              "const": "12",
+              "title": "Port of discharge"
+            },
+            {
+              "const": "13",
+              "title": "Place of transhipment"
+            },
+            {
+              "const": "14",
+              "title": "Goods item storage location"
+            },
+            {
+              "const": "15",
+              "title": "Place of transfer responsibility"
+            },
+            {
+              "const": "16",
+              "title": "Place of transfer of ownership"
+            },
+            {
+              "const": "17",
+              "title": "Border crossing place"
+            },
+            {
+              "const": "18",
+              "title": "Warehouse"
+            },
+            {
+              "const": "19",
+              "title": "Factory/plant"
+            },
+            {
+              "const": "20",
+              "title": "Place of ultimate destination of goods"
+            },
+            {
+              "const": "21",
+              "title": "Terms of sale place"
+            },
+            {
+              "const": "22",
+              "title": "Customs clearance location"
+            },
+            {
+              "const": "23",
+              "title": "Port of release"
+            },
+            {
+              "const": "24",
+              "title": "Port of entry"
+            },
+            {
+              "const": "25",
+              "title": "Country"
+            },
+            {
+              "const": "26",
+              "title": "City"
+            },
+            {
+              "const": "27",
+              "title": "Country of origin"
+            },
+            {
+              "const": "28",
+              "title": "Country of destination of goods"
+            },
+            {
+              "const": "29",
+              "title": "Railway station"
+            },
+            {
+              "const": "30",
+              "title": "Country of source"
+            },
+            {
+              "const": "31",
+              "title": "Building"
+            },
+            {
+              "const": "32",
+              "title": "Beginning of chargeable section"
+            },
+            {
+              "const": "33",
+              "title": "Baseport of discharge"
+            },
+            {
+              "const": "34",
+              "title": "Baseport of loading"
+            },
+            {
+              "const": "35",
+              "title": "Exportation country"
+            },
+            {
+              "const": "36",
+              "title": "Country of ultimate destination"
+            },
+            {
+              "const": "37",
+              "title": "Consignment final exportation country"
+            },
+            {
+              "const": "38",
+              "title": "Consignment first destination country"
+            },
+            {
+              "const": "39",
+              "title": "Country of production"
+            },
+            {
+              "const": "40",
+              "title": "Country of trading"
+            },
+            {
+              "const": "41",
+              "title": "Consignment entry customs office location"
+            },
+            {
+              "const": "42",
+              "title": "Consignment exit customs office location"
+            },
+            {
+              "const": "43",
+              "title": "Place of Customs examination"
+            },
+            {
+              "const": "44",
+              "title": "Place of authentication of document"
+            },
+            {
+              "const": "45",
+              "title": "Customs office of destination (transit)"
+            },
+            {
+              "const": "46",
+              "title": "Region of despatch"
+            },
+            {
+              "const": "47",
+              "title": "Region of destination"
+            },
+            {
+              "const": "48",
+              "title": "Region of production"
+            },
+            {
+              "const": "49",
+              "title": "Transit country"
+            },
+            {
+              "const": "50",
+              "title": "Transit customs office location"
+            },
+            {
+              "const": "51",
+              "title": "Country of invalid transit guarantee"
+            },
+            {
+              "const": "52",
+              "title": "Country of destination (transit)"
+            },
+            {
+              "const": "53",
+              "title": "Charge and freight due from"
+            },
+            {
+              "const": "54",
+              "title": "Manufacturing department"
+            },
+            {
+              "const": "55",
+              "title": "Freight charge payable to location"
+            },
+            {
+              "const": "56",
+              "title": "End of chargeable section"
+            },
+            {
+              "const": "57",
+              "title": "Place of payment"
+            },
+            {
+              "const": "58",
+              "title": "Full track loading or unloading"
+            },
+            {
+              "const": "59",
+              "title": "Place of loss"
+            },
+            {
+              "const": "60",
+              "title": "Place of arrival"
+            },
+            {
+              "const": "61",
+              "title": "Next port of call"
+            },
+            {
+              "const": "62",
+              "title": "On-carriage port"
+            },
+            {
+              "const": "63",
+              "title": "Sub-project location"
+            },
+            {
+              "const": "64",
+              "title": "First optional place of discharge"
+            },
+            {
+              "const": "65",
+              "title": "Final port or place of discharge"
+            },
+            {
+              "const": "66",
+              "title": "Express railway station"
+            },
+            {
+              "const": "67",
+              "title": "Mixed cargo railway station"
+            },
+            {
+              "const": "68",
+              "title": "Second optional place of discharge"
+            },
+            {
+              "const": "69",
+              "title": "Next non-discharge port of call"
+            },
+            {
+              "const": "70",
+              "title": "Third optional place of discharge"
+            },
+            {
+              "const": "71",
+              "title": "Reconsolidation point"
+            },
+            {
+              "const": "72",
+              "title": "Fourth optional place of discharge"
+            },
+            {
+              "const": "73",
+              "title": "Bill of lading release office"
+            },
+            {
+              "const": "74",
+              "title": "Transhipment excluding this place"
+            },
+            {
+              "const": "75",
+              "title": "Transhipment limited to this place"
+            },
+            {
+              "const": "76",
+              "title": "Original port of loading"
+            },
+            {
+              "const": "77",
+              "title": "First port of call - non-discharging"
+            },
+            {
+              "const": "78",
+              "title": "First port of call - discharging"
+            },
+            {
+              "const": "79",
+              "title": "Place/port of first entry"
+            },
+            {
+              "const": "80",
+              "title": "Place of despatch"
+            },
+            {
+              "const": "81",
+              "title": "Fifth optional place of discharge"
+            },
+            {
+              "const": "82",
+              "title": "Pre-carriage port"
+            },
+            {
+              "const": "83",
+              "title": "Place of delivery (by on carriage)"
+            },
+            {
+              "const": "84",
+              "title": "Transport contract place of acceptance"
+            },
+            {
+              "const": "85",
+              "title": "Transport contract place of destination"
+            },
+            {
+              "const": "86",
+              "title": "Country of valid transit guarantee"
+            },
+            {
+              "const": "87",
+              "title": "Place/port of conveyance initial arrival"
+            },
+            {
+              "const": "88",
+              "title": "Place of receipt"
+            },
+            {
+              "const": "89",
+              "title": "Place of registration"
+            },
+            {
+              "const": "90",
+              "title": "Special treatment place"
+            },
+            {
+              "const": "91",
+              "title": "Place of document issue"
+            },
+            {
+              "const": "92",
+              "title": "Routing"
+            },
+            {
+              "const": "93",
+              "title": "Station of application of additional costs"
+            },
+            {
+              "const": "94",
+              "title": "Previous port of call"
+            },
+            {
+              "const": "95",
+              "title": "Sailing destination area"
+            },
+            {
+              "const": "96",
+              "title": "Place of lodgement of documents"
+            },
+            {
+              "const": "97",
+              "title": "Optional place of discharge"
+            },
+            {
+              "const": "98",
+              "title": "Place of empty equipment despatch"
+            },
+            {
+              "const": "99",
+              "title": "Place of empty equipment return"
+            },
+            {
+              "const": "100",
+              "title": "Place/port of warehouse entry"
+            },
+            {
+              "const": "101",
+              "title": "Country of first sale"
+            },
+            {
+              "const": "103",
+              "title": "Place of transfer"
+            },
+            {
+              "const": "104",
+              "title": "Place of deconsolidation"
+            },
+            {
+              "const": "105",
+              "title": "Place of consumption"
+            },
+            {
+              "const": "106",
+              "title": "Region of origin"
+            },
+            {
+              "const": "107",
+              "title": "Place of consolidation"
+            },
+            {
+              "const": "108",
+              "title": "Rate combination point"
+            },
+            {
+              "const": "109",
+              "title": "Place of prolongation decision of delivery delay"
+            },
+            {
+              "const": "110",
+              "title": "Recharging place/location"
+            },
+            {
+              "const": "111",
+              "title": "Customs office of despatch"
+            },
+            {
+              "const": "112",
+              "title": "Region of equipment availability"
+            },
+            {
+              "const": "113",
+              "title": "Country of despatch"
+            },
+            {
+              "const": "114",
+              "title": "Customs office of export"
+            },
+            {
+              "const": "115",
+              "title": "Free zone of export"
+            },
+            {
+              "const": "116",
+              "title": "Region of export/despatch"
+            },
+            {
+              "const": "117",
+              "title": "Place of collection"
+            },
+            {
+              "const": "118",
+              "title": "Customs office of departure"
+            },
+            {
+              "const": "119",
+              "title": "Transit guarantee customs office location"
+            },
+            {
+              "const": "120",
+              "title": "Country of transhipment"
+            },
+            {
+              "const": "122",
+              "title": "Customs office of destination"
+            },
+            {
+              "const": "123",
+              "title": "Wagon-load railway station"
+            },
+            {
+              "const": "124",
+              "title": "Siding"
+            },
+            {
+              "const": "125",
+              "title": "Last place/port of call of conveyance"
+            },
+            {
+              "const": "126",
+              "title": "Country of previous Customs procedure"
+            },
+            {
+              "const": "127",
+              "title": "Customs office of registration of previous Customs declaration"
+            },
+            {
+              "const": "128",
+              "title": "Participant sender location"
+            },
+            {
+              "const": "129",
+              "title": "Wage negotiation district"
+            },
+            {
+              "const": "130",
+              "title": "Place of ultimate destination of conveyance"
+            },
+            {
+              "const": "131",
+              "title": "Place of loading of empty equipment"
+            },
+            {
+              "const": "132",
+              "title": "Place of discharge of empty equipment"
+            },
+            {
+              "const": "133",
+              "title": "Region of delivery"
+            },
+            {
+              "const": "134",
+              "title": "Petroleum warehouse"
+            },
+            {
+              "const": "135",
+              "title": "Place of entry (Customs)"
+            },
+            {
+              "const": "136",
+              "title": "Living animals care place"
+            },
+            {
+              "const": "137",
+              "title": "Re-icing place"
+            },
+            {
+              "const": "138",
+              "title": "Weighting place"
+            },
+            {
+              "const": "139",
+              "title": "Marshalling yard"
+            },
+            {
+              "const": "140",
+              "title": "Stopping station"
+            },
+            {
+              "const": "141",
+              "title": "Loading dock"
+            },
+            {
+              "const": "142",
+              "title": "Port connection"
+            },
+            {
+              "const": "143",
+              "title": "Place of expiry"
+            },
+            {
+              "const": "144",
+              "title": "Place of negotiation"
+            },
+            {
+              "const": "145",
+              "title": "Claims payable place"
+            },
+            {
+              "const": "146",
+              "title": "Documentary credit available in"
+            },
+            {
+              "const": "147",
+              "title": "Transport means stowage location"
+            },
+            {
+              "const": "148",
+              "title": "For transportation to"
+            },
+            {
+              "const": "149",
+              "title": "Loading on board/despatch/taking in charge at/from"
+            },
+            {
+              "const": "150",
+              "title": "Container stack position"
+            },
+            {
+              "const": "151",
+              "title": "Private box"
+            },
+            {
+              "const": "152",
+              "title": "Next port of discharge"
+            },
+            {
+              "const": "153",
+              "title": "Port of call"
+            },
+            {
+              "const": "154",
+              "title": "Place/location of on-hire"
+            },
+            {
+              "const": "155",
+              "title": "Place/location of off-hire"
+            },
+            {
+              "const": "156",
+              "title": "Other carriers terminal"
+            },
+            {
+              "const": "157",
+              "title": "Country of Value Added Tax (VAT) jurisdiction"
+            },
+            {
+              "const": "158",
+              "title": "Contact location"
+            },
+            {
+              "const": "159",
+              "title": "Additional internal destination"
+            },
+            {
+              "const": "160",
+              "title": "Foreign port of call"
+            },
+            {
+              "const": "161",
+              "title": "Maintenance location"
+            },
+            {
+              "const": "162",
+              "title": "Place or location of sale"
+            },
+            {
+              "const": "163",
+              "title": "Direct investment country"
+            },
+            {
+              "const": "164",
+              "title": "Berth"
+            },
+            {
+              "const": "165",
+              "title": "Construction country"
+            },
+            {
+              "const": "166",
+              "title": "Donation acting country"
+            },
+            {
+              "const": "167",
+              "title": "Payment transaction country"
+            },
+            {
+              "const": "168",
+              "title": "Physical place of return of item"
+            },
+            {
+              "const": "169",
+              "title": "Relay port"
+            },
+            {
+              "const": "170",
+              "title": "Final port of discharge"
+            },
+            {
+              "const": "171",
+              "title": "Place of destination for pre-stacking prior to stowage"
+            },
+            {
+              "const": "172",
+              "title": "Reporting location"
+            },
+            {
+              "const": "173",
+              "title": "Transport contract place of despatch"
+            },
+            {
+              "const": "174",
+              "title": "Place of residence"
+            },
+            {
+              "const": "175",
+              "title": "Activity location"
+            },
+            {
+              "const": "176",
+              "title": "Pick-up location"
+            },
+            {
+              "const": "177",
+              "title": "Construction site"
+            },
+            {
+              "const": "178",
+              "title": "Place of embarkation"
+            },
+            {
+              "const": "179",
+              "title": "Place of disembarkation"
+            },
+            {
+              "const": "180",
+              "title": "Person birth location"
+            },
+            {
+              "const": "181",
+              "title": "Registered office"
+            },
+            {
+              "const": "182",
+              "title": "Place of incorporation"
+            },
+            {
+              "const": "183",
+              "title": "Place of business"
+            },
+            {
+              "const": "184",
+              "title": "Physical location"
+            },
+            {
+              "const": "185",
+              "title": "Location to send mail"
+            },
+            {
+              "const": "186",
+              "title": "Foreign registration location"
+            },
+            {
+              "const": "187",
+              "title": "Tax filed from location"
+            },
+            {
+              "const": "188",
+              "title": "Filing location"
+            },
+            {
+              "const": "189",
+              "title": "Former location"
+            },
+            {
+              "const": "190",
+              "title": "Head office"
+            },
+            {
+              "const": "191",
+              "title": "Property"
+            },
+            {
+              "const": "192",
+              "title": "Correct location"
+            },
+            {
+              "const": "193",
+              "title": "Branch location"
+            },
+            {
+              "const": "194",
+              "title": "Former registered location"
+            },
+            {
+              "const": "195",
+              "title": "Future location"
+            },
+            {
+              "const": "196",
+              "title": "Changed to location"
+            },
+            {
+              "const": "197",
+              "title": "Place of inquiry"
+            },
+            {
+              "const": "198",
+              "title": "Original location"
+            },
+            {
+              "const": "199",
+              "title": "Country of last source"
+            },
+            {
+              "const": "200",
+              "title": "Place of handling"
+            },
+            {
+              "const": "201",
+              "title": "Country of origin as defined by transportation agency"
+            },
+            {
+              "const": "202",
+              "title": "Terminal"
+            },
+            {
+              "const": "203",
+              "title": "Sample location"
+            },
+            {
+              "const": "204",
+              "title": "Hospital Advanced Dependency Unit (ADU)"
+            },
+            {
+              "const": "205",
+              "title": "Hospital Neonatal Intensive Care Unit (NICU)"
+            },
+            {
+              "const": "206",
+              "title": "Hospital Paediatric Care Unit (PCU)"
+            },
+            {
+              "const": "207",
+              "title": "Hospital Intensive Care Unit (ICU)"
+            },
+            {
+              "const": "208",
+              "title": "Hospital luxury room"
+            },
+            {
+              "const": "209",
+              "title": "Hospital shared room"
+            },
+            {
+              "const": "210",
+              "title": "Hospital private room"
+            },
+            {
+              "const": "211",
+              "title": "Bidding area"
+            },
+            {
+              "const": "212",
+              "title": "Price area"
+            },
+            {
+              "const": "213",
+              "title": "Country of destination of equipment"
+            },
+            {
+              "const": "214",
+              "title": "Aircraft airport stand"
+            },
+            {
+              "const": "215",
+              "title": "Airport passenger terminal"
+            },
+            {
+              "const": "216",
+              "title": "Previous berth"
+            },
+            {
+              "const": "217",
+              "title": "Next berth"
+            },
+            {
+              "const": "218",
+              "title": "Entity location"
+            },
+            {
+              "const": "219",
+              "title": "Goods depot"
+            },
+            {
+              "const": "220",
+              "title": "Disinfecting place"
+            },
+            {
+              "const": "221",
+              "title": "Harbour rail station"
+            },
+            {
+              "const": "222",
+              "title": "Place of live animal care"
+            },
+            {
+              "const": "223",
+              "title": "Phytosanitary control place"
+            },
+            {
+              "const": "224",
+              "title": "Place for re-icing or de-icing"
+            },
+            {
+              "const": "225",
+              "title": "Place of refuelling"
+            },
+            {
+              "const": "226",
+              "title": "Place of provision of an unexpected service"
+            },
+            {
+              "const": "227",
+              "title": "Private container terminal"
+            },
+            {
+              "const": "228",
+              "title": "Railway container terminal"
+            },
+            {
+              "const": "229",
+              "title": "Inspection site"
+            },
+            {
+              "const": "230",
+              "title": "Request only stop"
+            },
+            {
+              "const": "231",
+              "title": "Grid area"
+            },
+            {
+              "const": "232",
+              "title": "Source power area"
+            },
+            {
+              "const": "233",
+              "title": "Sink power area"
+            },
+            {
+              "const": "234",
+              "title": "Scheduled berth"
+            },
+            {
+              "const": "235",
+              "title": "Scheduled berth, bow"
+            },
+            {
+              "const": "236",
+              "title": "Scheduled berth, stern"
+            },
+            {
+              "const": "237",
+              "title": "Balance settlement area"
+            },
+            {
+              "const": "238",
+              "title": "Market area"
+            },
+            {
+              "const": "239",
+              "title": "Metering grid area"
+            },
+            {
+              "const": "240",
+              "title": "Climate zone"
+            },
+            {
+              "const": "241",
+              "title": "Country of birth"
+            },
+            {
+              "const": "242",
+              "title": "Country of fattening"
+            },
+            {
+              "const": "243",
+              "title": "Country of slaughter"
+            },
+            {
+              "const": "244",
+              "title": "Country of meat cutting"
+            },
+            {
+              "const": "245",
+              "title": "Meat cutting location"
+            },
+            {
+              "const": "246",
+              "title": "Slaughterhouse"
+            },
+            {
+              "const": "247",
+              "title": "Country of meat mincing"
+            },
+            {
+              "const": "248",
+              "title": "Place of discharge and loading"
+            },
+            {
+              "const": "249",
+              "title": "Cargo facility location"
+            },
+            {
+              "const": "250",
+              "title": "Tourist point of interest"
+            },
+            {
+              "const": "251",
+              "title": "Customs office of payment"
+            },
+            {
+              "const": "252",
+              "title": "Conveyance facility location at departure"
+            },
+            {
+              "const": "253",
+              "title": "Conveyance facility location at arrival"
+            },
+            {
+              "const": "254",
+              "title": "Bus station"
+            },
+            {
+              "const": "255",
+              "title": "Ferry terminal"
+            },
+            {
+              "const": "256",
+              "title": "Place of packing"
+            },
+            {
+              "const": "257",
+              "title": "Country of assembly"
+            },
+            {
+              "const": "258",
+              "title": "Town sales office"
+            },
+            {
+              "const": "259",
+              "title": "Travel agency"
+            },
+            {
+              "const": "260",
+              "title": "Inland clearance depot"
+            },
+            {
+              "const": "261",
+              "title": "Place of final production"
+            },
+            {
+              "const": "262",
+              "title": "Place of growth"
+            },
+            {
+              "const": "263",
+              "title": "Place of intermediate production"
+            },
+            {
+              "const": "264",
+              "title": "Place of nutrient origin"
+            },
+            {
+              "const": "265",
+              "title": "Place of package material production"
+            },
+            {
+              "const": "266",
+              "title": "Place of processing"
+            },
+            {
+              "const": "267",
+              "title": "Place of species origin"
+            },
+            {
+              "const": "268",
+              "title": "Place of catch"
+            },
+            {
+              "const": "269",
+              "title": "Government appeal office"
+            },
+            {
+              "const": "270",
+              "title": "Regulatory office of cross-border goods entry"
+            },
+            {
+              "const": "271",
+              "title": "Regulatory office of cross-border goods exit"
+            },
+            {
+              "const": "272",
+              "title": "Government approved establishment"
+            },
+            {
+              "const": "273",
+              "title": "Free trade zone"
+            },
+            {
+              "const": "274",
+              "title": "Place of physical examination"
+            },
+            {
+              "const": "275",
+              "title": "Permitted location"
+            },
+            {
+              "const": "276",
+              "title": "Landing location"
+            },
+            {
+              "const": "277",
+              "title": "Place of loading on final means of transport"
+            },
+            {
+              "const": "278",
+              "title": "Place of regulatory declaration review"
+            },
+            {
+              "const": "279",
+              "title": "Travel document issuing country or political entity"
+            },
+            {
+              "const": "280",
+              "title": "Compliant facility, registered"
+            },
+            {
+              "const": "281",
+              "title": "Bonded warehouse"
+            },
+            {
+              "const": "282",
+              "title": "Goods destruction site, designated"
+            },
+            {
+              "const": "283",
+              "title": "Goods disposal location, designated"
+            },
+            {
+              "const": "284",
+              "title": "Incineration facility"
+            },
+            {
+              "const": "285",
+              "title": "Laboratory"
+            },
+            {
+              "const": "286",
+              "title": "Place of assembly"
+            },
+            {
+              "const": "287",
+              "title": "Processing site"
+            },
+            {
+              "const": "288",
+              "title": "Quarantine facility"
+            },
+            {
+              "const": "289",
+              "title": "Reclamation facility"
+            },
+            {
+              "const": "290",
+              "title": "Refinery"
+            },
+            {
+              "const": "291",
+              "title": "Smelter"
+            },
+            {
+              "const": "292",
+              "title": "Prescribed treatment facility"
+            },
+            {
+              "const": "293",
+              "title": "Embassy"
+            },
+            {
+              "const": "294",
+              "title": "Region of source"
+            },
+            {
+              "const": "295",
+              "title": "Region of storage"
+            },
+            {
+              "const": "296",
+              "title": "Ship security incident location"
+            },
+            {
+              "const": "297",
+              "title": "Ship-to-ship activity location"
+            },
+            {
+              "const": "298",
+              "title": "Country of last processing"
+            },
+            {
+              "const": "299",
+              "title": "Fishing vessel"
+            },
+            {
+              "const": "300",
+              "title": "Location of status"
+            },
+            {
+              "const": "301",
+              "title": "Location of meter"
+            },
+            {
+              "const": "302",
+              "title": "Country of provenance"
+            },
+            {
+              "const": "303",
+              "title": "Meat mincing plant"
+            },
+            {
+              "const": "304",
+              "title": "Place of fattening"
+            },
+            {
+              "const": "305",
+              "title": "Animal birth place"
+            },
+            {
+              "const": "306",
+              "title": "Global Good Agricultural Practice Number (GGN)"
+            },
+            {
+              "const": "307",
+              "title": "Port of last waste delivery"
+            },
+            {
+              "const": "308",
+              "title": "Port of next waste delivery"
+            },
+            {
+              "const": "309",
+              "title": "Effluent Treatment Plant"
+            },
+            {
+              "const": "310",
+              "title": "Farm"
+            },
+            {
+              "const": "311",
+              "title": "Manufacturing facility"
+            },
+            {
+              "const": "312",
+              "title": "Animal Farm"
+            },
+            {
+              "const": "313",
+              "title": "Tannery"
+            },
+            {
+              "const": "314",
+              "title": "Textile mill"
+            },
+            {
+              "const": "315",
+              "title": "Textile dyeing mill"
+            },
+            {
+              "const": "316",
+              "title": "Forest Management Unit"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

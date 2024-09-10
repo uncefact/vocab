@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID5237",
+  "title": "UNECE_UNTDID5237",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5237Type": {
+          "title": "Charge category code",
+          "description": "Code specifying the category of charges.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "All charges"
+            },
+            {
+              "const": "2",
+              "title": "Additional charges"
+            },
+            {
+              "const": "3",
+              "title": "Transport charges + additional charges"
+            },
+            {
+              "const": "4",
+              "title": "Basic freight"
+            },
+            {
+              "const": "5",
+              "title": "Destination haulage charges"
+            },
+            {
+              "const": "6",
+              "title": "Disbursement"
+            },
+            {
+              "const": "7",
+              "title": "Destination port charges"
+            },
+            {
+              "const": "8",
+              "title": "Miscellaneous charges"
+            },
+            {
+              "const": "9",
+              "title": "Transport charges up to a specified location"
+            },
+            {
+              "const": "10",
+              "title": "Origin port charges"
+            },
+            {
+              "const": "11",
+              "title": "Origin haulage charges"
+            },
+            {
+              "const": "12",
+              "title": "Other charges"
+            },
+            {
+              "const": "13",
+              "title": "Specific amount payable"
+            },
+            {
+              "const": "14",
+              "title": "Transport costs (carriage charges)"
+            },
+            {
+              "const": "15",
+              "title": "All costs up to a specified location"
+            },
+            {
+              "const": "16",
+              "title": "Weight/valuation charge"
+            },
+            {
+              "const": "17",
+              "title": "All costs"
+            },
+            {
+              "const": "19",
+              "title": "Supply of certificate of shipment"
+            },
+            {
+              "const": "20",
+              "title": "Supply of consular formalities or certificate of origin"
+            },
+            {
+              "const": "21",
+              "title": "Supply of non-categorised documentation in paper form"
+            },
+            {
+              "const": "22",
+              "title": "Supply of customs formalities, export"
+            },
+            {
+              "const": "23",
+              "title": "Supply of customs formalities, transit"
+            },
+            {
+              "const": "24",
+              "title": "Supply of customs formalities, import"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

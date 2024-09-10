@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/subset/BuyShipPay/D22B/UNECE_DocumentNameCode_Invoice",
+  "title": "UNECE_DocumentNameCode_Invoice",
+  "description": "Copyright (C) UN/CEFACT (2023). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "DocumentNameCode_InvoiceType": {
+          "title": "Document name code",
+          "description": "Code specifying the document name.",
+          "oneOf": [
+            {
+              "const": "80",
+              "title": "Debit note related to goods or services"
+            },
+            {
+              "const": "81",
+              "title": "Credit note related to goods or services"
+            },
+            {
+              "const": "82",
+              "title": "Metered services invoice"
+            },
+            {
+              "const": "83",
+              "title": "Credit note related to financial adjustments"
+            },
+            {
+              "const": "84",
+              "title": "Debit note related to financial adjustments"
+            },
+            {
+              "const": "261",
+              "title": "Self billed credit note"
+            },
+            {
+              "const": "262",
+              "title": "Consolidated credit note - goods and services"
+            },
+            {
+              "const": "325",
+              "title": "Proforma invoice"
+            },
+            {
+              "const": "380",
+              "title": "Commercial invoice"
+            },
+            {
+              "const": "381",
+              "title": "Credit note"
+            },
+            {
+              "const": "383",
+              "title": "Debit note"
+            },
+            {
+              "const": "384",
+              "title": "Corrected invoice"
+            },
+            {
+              "const": "385",
+              "title": "Consolidated invoice"
+            },
+            {
+              "const": "386",
+              "title": "Prepayment invoice"
+            },
+            {
+              "const": "389",
+              "title": "Self-billed invoice"
+            },
+            {
+              "const": "395",
+              "title": "Consignment invoice"
+            },
+            {
+              "const": "396",
+              "title": "Factored credit note"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

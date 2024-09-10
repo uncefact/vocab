@@ -1,0 +1,3287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID1153",
+  "title": "UNECE_UNTDID1153",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID1153Type": {
+          "title": "Reference code qualifier",
+          "description": "Code qualifying a reference.",
+          "oneOf": [
+            {
+              "const": "AAA",
+              "title": "Order acknowledgement document identifier"
+            },
+            {
+              "const": "AAB",
+              "title": "Proforma invoice document identifier"
+            },
+            {
+              "const": "AAC",
+              "title": "Documentary credit identifier"
+            },
+            {
+              "const": "AAD",
+              "title": "Contract document addendum identifier"
+            },
+            {
+              "const": "AAE",
+              "title": "Goods declaration number"
+            },
+            {
+              "const": "AAF",
+              "title": "Debit card number"
+            },
+            {
+              "const": "AAG",
+              "title": "Offer number"
+            },
+            {
+              "const": "AAH",
+              "title": "Bank's batch interbank transaction reference number"
+            },
+            {
+              "const": "AAI",
+              "title": "Bank's individual interbank transaction reference number"
+            },
+            {
+              "const": "AAJ",
+              "title": "Delivery order number"
+            },
+            {
+              "const": "AAK",
+              "title": "Despatch advice number"
+            },
+            {
+              "const": "AAL",
+              "title": "Drawing number"
+            },
+            {
+              "const": "AAM",
+              "title": "Waybill number"
+            },
+            {
+              "const": "AAN",
+              "title": "Delivery schedule number"
+            },
+            {
+              "const": "AAO",
+              "title": "Consignment identifier, consignee assigned"
+            },
+            {
+              "const": "AAP",
+              "title": "Partial shipment identifier"
+            },
+            {
+              "const": "AAQ",
+              "title": "Transport equipment identifier"
+            },
+            {
+              "const": "AAR",
+              "title": "Municipality assigned business registry number"
+            },
+            {
+              "const": "AAS",
+              "title": "Transport contract document identifier"
+            },
+            {
+              "const": "AAT",
+              "title": "Master label number"
+            },
+            {
+              "const": "AAU",
+              "title": "Despatch note document identifier"
+            },
+            {
+              "const": "AAV",
+              "title": "Enquiry number"
+            },
+            {
+              "const": "AAW",
+              "title": "Docket number"
+            },
+            {
+              "const": "AAX",
+              "title": "Civil action number"
+            },
+            {
+              "const": "AAY",
+              "title": "Carrier's agent reference number"
+            },
+            {
+              "const": "AAZ",
+              "title": "Standard Carrier Alpha Code (SCAC) number"
+            },
+            {
+              "const": "ABA",
+              "title": "Customs valuation decision number"
+            },
+            {
+              "const": "ABB",
+              "title": "End use authorization number"
+            },
+            {
+              "const": "ABC",
+              "title": "Anti-dumping case number"
+            },
+            {
+              "const": "ABD",
+              "title": "Customs tariff number"
+            },
+            {
+              "const": "ABE",
+              "title": "Declarant's reference number"
+            },
+            {
+              "const": "ABF",
+              "title": "Repair estimate number"
+            },
+            {
+              "const": "ABG",
+              "title": "Customs decision request number"
+            },
+            {
+              "const": "ABH",
+              "title": "Sub-house bill of lading number"
+            },
+            {
+              "const": "ABI",
+              "title": "Tax payment identifier"
+            },
+            {
+              "const": "ABJ",
+              "title": "Quota number"
+            },
+            {
+              "const": "ABK",
+              "title": "Transit (onward carriage) guarantee (bond) number"
+            },
+            {
+              "const": "ABL",
+              "title": "Customs guarantee number"
+            },
+            {
+              "const": "ABM",
+              "title": "Replacing part number"
+            },
+            {
+              "const": "ABN",
+              "title": "Seller's catalogue number"
+            },
+            {
+              "const": "ABO",
+              "title": "Originator's reference"
+            },
+            {
+              "const": "ABP",
+              "title": "Declarant's Customs identity number"
+            },
+            {
+              "const": "ABQ",
+              "title": "Importer reference number"
+            },
+            {
+              "const": "ABR",
+              "title": "Export clearance instruction reference number"
+            },
+            {
+              "const": "ABS",
+              "title": "Import clearance instruction reference number"
+            },
+            {
+              "const": "ABT",
+              "title": "Goods declaration document identifier, Customs"
+            },
+            {
+              "const": "ABU",
+              "title": "Article number"
+            },
+            {
+              "const": "ABV",
+              "title": "Intra-plant routing"
+            },
+            {
+              "const": "ABW",
+              "title": "Stock keeping unit number"
+            },
+            {
+              "const": "ABX",
+              "title": "Text Element Identifier deletion reference"
+            },
+            {
+              "const": "ABY",
+              "title": "Allotment identification (Air)"
+            },
+            {
+              "const": "ABZ",
+              "title": "Vehicle licence number"
+            },
+            {
+              "const": "AC",
+              "title": "Air cargo transfer manifest"
+            },
+            {
+              "const": "ACA",
+              "title": "Cargo acceptance order reference number"
+            },
+            {
+              "const": "ACB",
+              "title": "US government agency number"
+            },
+            {
+              "const": "ACC",
+              "title": "Shipping unit identification"
+            },
+            {
+              "const": "ACD",
+              "title": "Additional reference number"
+            },
+            {
+              "const": "ACE",
+              "title": "Related document number"
+            },
+            {
+              "const": "ACF",
+              "title": "Addressee reference"
+            },
+            {
+              "const": "ACG",
+              "title": "ATA carnet number"
+            },
+            {
+              "const": "ACH",
+              "title": "Packaging unit identification"
+            },
+            {
+              "const": "ACI",
+              "title": "Outerpackaging unit identification"
+            },
+            {
+              "const": "ACJ",
+              "title": "Customer material specification number"
+            },
+            {
+              "const": "ACK",
+              "title": "Bank reference"
+            },
+            {
+              "const": "ACL",
+              "title": "Principal reference number"
+            },
+            {
+              "const": "ACN",
+              "title": "Collection advice document identifier"
+            },
+            {
+              "const": "ACO",
+              "title": "Iron charge number"
+            },
+            {
+              "const": "ACP",
+              "title": "Hot roll number"
+            },
+            {
+              "const": "ACQ",
+              "title": "Cold roll number"
+            },
+            {
+              "const": "ACR",
+              "title": "Railway wagon number"
+            },
+            {
+              "const": "ACT",
+              "title": "Unique claims reference number of the sender"
+            },
+            {
+              "const": "ACU",
+              "title": "Loss/event number"
+            },
+            {
+              "const": "ACV",
+              "title": "Estimate order reference number"
+            },
+            {
+              "const": "ACW",
+              "title": "Reference number to previous message"
+            },
+            {
+              "const": "ACX",
+              "title": "Banker's acceptance"
+            },
+            {
+              "const": "ACY",
+              "title": "Duty memo number"
+            },
+            {
+              "const": "ACZ",
+              "title": "Equipment transport charge number"
+            },
+            {
+              "const": "ADA",
+              "title": "Buyer's item number"
+            },
+            {
+              "const": "ADB",
+              "title": "Matured certificate of deposit"
+            },
+            {
+              "const": "ADC",
+              "title": "Loan"
+            },
+            {
+              "const": "ADD",
+              "title": "Analysis number/test number"
+            },
+            {
+              "const": "ADE",
+              "title": "Account number"
+            },
+            {
+              "const": "ADF",
+              "title": "Treaty number"
+            },
+            {
+              "const": "ADG",
+              "title": "Catastrophe number"
+            },
+            {
+              "const": "ADI",
+              "title": "Bureau signing (statement reference)"
+            },
+            {
+              "const": "ADJ",
+              "title": "Company / syndicate reference 1"
+            },
+            {
+              "const": "ADK",
+              "title": "Company / syndicate reference 2"
+            },
+            {
+              "const": "ADL",
+              "title": "Ordering customer consignment reference number"
+            },
+            {
+              "const": "ADM",
+              "title": "Shipowner's authorization number"
+            },
+            {
+              "const": "ADN",
+              "title": "Inland transport order number"
+            },
+            {
+              "const": "ADO",
+              "title": "Container work order reference number"
+            },
+            {
+              "const": "ADP",
+              "title": "Statement number"
+            },
+            {
+              "const": "ADQ",
+              "title": "Unique market reference"
+            },
+            {
+              "const": "ADT",
+              "title": "Group accounting"
+            },
+            {
+              "const": "ADU",
+              "title": "Broker reference 1"
+            },
+            {
+              "const": "ADV",
+              "title": "Broker reference 2"
+            },
+            {
+              "const": "ADW",
+              "title": "Lloyd's claims office reference"
+            },
+            {
+              "const": "ADX",
+              "title": "Secure delivery terms and conditions agreement reference"
+            },
+            {
+              "const": "ADY",
+              "title": "Report number"
+            },
+            {
+              "const": "ADZ",
+              "title": "Trader account number"
+            },
+            {
+              "const": "AE",
+              "title": "Authorization for expense (AFE) number"
+            },
+            {
+              "const": "AEA",
+              "title": "Government agency reference number"
+            },
+            {
+              "const": "AEB",
+              "title": "Assembly number"
+            },
+            {
+              "const": "AEC",
+              "title": "Symbol number"
+            },
+            {
+              "const": "AED",
+              "title": "Commodity number"
+            },
+            {
+              "const": "AEE",
+              "title": "Eur 1 certificate number"
+            },
+            {
+              "const": "AEF",
+              "title": "Customer process specification number"
+            },
+            {
+              "const": "AEG",
+              "title": "Customer specification number"
+            },
+            {
+              "const": "AEH",
+              "title": "Applicable instructions or standards"
+            },
+            {
+              "const": "AEI",
+              "title": "Registration number of previous Customs declaration"
+            },
+            {
+              "const": "AEJ",
+              "title": "Post-entry reference"
+            },
+            {
+              "const": "AEK",
+              "title": "Payment order number"
+            },
+            {
+              "const": "AEL",
+              "title": "Delivery number (transport)"
+            },
+            {
+              "const": "AEM",
+              "title": "Transport route"
+            },
+            {
+              "const": "AEN",
+              "title": "Customer's unit inventory number"
+            },
+            {
+              "const": "AEO",
+              "title": "Product reservation number"
+            },
+            {
+              "const": "AEP",
+              "title": "Project number"
+            },
+            {
+              "const": "AEQ",
+              "title": "Drawing list number"
+            },
+            {
+              "const": "AER",
+              "title": "Project specification number"
+            },
+            {
+              "const": "AES",
+              "title": "Primary reference"
+            },
+            {
+              "const": "AET",
+              "title": "Request for cancellation number"
+            },
+            {
+              "const": "AEU",
+              "title": "Supplier's control number"
+            },
+            {
+              "const": "AEV",
+              "title": "Shipping note number"
+            },
+            {
+              "const": "AEW",
+              "title": "Empty container bill number"
+            },
+            {
+              "const": "AEX",
+              "title": "Non-negotiable maritime transport document number"
+            },
+            {
+              "const": "AEY",
+              "title": "Substitute air waybill number"
+            },
+            {
+              "const": "AEZ",
+              "title": "Despatch note (post parcels) number"
+            },
+            {
+              "const": "AF",
+              "title": "Airlines flight identification number"
+            },
+            {
+              "const": "AFA",
+              "title": "Through bill of lading number"
+            },
+            {
+              "const": "AFB",
+              "title": "Cargo manifest number"
+            },
+            {
+              "const": "AFC",
+              "title": "Bordereau number"
+            },
+            {
+              "const": "AFD",
+              "title": "Customs item number"
+            },
+            {
+              "const": "AFE",
+              "title": "Export Control Commodity number (ECCN)"
+            },
+            {
+              "const": "AFF",
+              "title": "Marking/label reference"
+            },
+            {
+              "const": "AFG",
+              "title": "Tariff number"
+            },
+            {
+              "const": "AFH",
+              "title": "Replenishment purchase order number"
+            },
+            {
+              "const": "AFI",
+              "title": "Immediate transportation no. for in bond movement"
+            },
+            {
+              "const": "AFJ",
+              "title": "Transportation exportation no. for in bond movement"
+            },
+            {
+              "const": "AFK",
+              "title": "Immediate exportation no. for in bond movement"
+            },
+            {
+              "const": "AFL",
+              "title": "Associated invoices"
+            },
+            {
+              "const": "AFM",
+              "title": "Secondary Customs reference"
+            },
+            {
+              "const": "AFN",
+              "title": "Account party's reference"
+            },
+            {
+              "const": "AFO",
+              "title": "Beneficiary's reference"
+            },
+            {
+              "const": "AFP",
+              "title": "Second beneficiary's reference"
+            },
+            {
+              "const": "AFQ",
+              "title": "Applicant's bank reference"
+            },
+            {
+              "const": "AFR",
+              "title": "Issuing bank's reference"
+            },
+            {
+              "const": "AFS",
+              "title": "Beneficiary's bank reference"
+            },
+            {
+              "const": "AFT",
+              "title": "Direct payment valuation number"
+            },
+            {
+              "const": "AFU",
+              "title": "Direct payment valuation request number"
+            },
+            {
+              "const": "AFV",
+              "title": "Quantity valuation number"
+            },
+            {
+              "const": "AFW",
+              "title": "Quantity valuation request number"
+            },
+            {
+              "const": "AFX",
+              "title": "Bill of quantities number"
+            },
+            {
+              "const": "AFY",
+              "title": "Payment valuation number"
+            },
+            {
+              "const": "AFZ",
+              "title": "Situation number"
+            },
+            {
+              "const": "AGA",
+              "title": "Agreement to pay number"
+            },
+            {
+              "const": "AGB",
+              "title": "Contract party reference number"
+            },
+            {
+              "const": "AGC",
+              "title": "Account party's bank reference"
+            },
+            {
+              "const": "AGD",
+              "title": "Agent's bank reference"
+            },
+            {
+              "const": "AGE",
+              "title": "Agent's reference"
+            },
+            {
+              "const": "AGF",
+              "title": "Applicant's reference"
+            },
+            {
+              "const": "AGG",
+              "title": "Dispute number"
+            },
+            {
+              "const": "AGH",
+              "title": "Credit rating agency's reference number"
+            },
+            {
+              "const": "AGI",
+              "title": "Request number"
+            },
+            {
+              "const": "AGJ",
+              "title": "Single transaction sequence number"
+            },
+            {
+              "const": "AGK",
+              "title": "Application reference number"
+            },
+            {
+              "const": "AGL",
+              "title": "Delivery verification certificate"
+            },
+            {
+              "const": "AGM",
+              "title": "Number of temporary importation document"
+            },
+            {
+              "const": "AGN",
+              "title": "Reference number quoted on statement"
+            },
+            {
+              "const": "AGO",
+              "title": "Sender's reference to the original message"
+            },
+            {
+              "const": "AGP",
+              "title": "Company issued equipment ID"
+            },
+            {
+              "const": "AGQ",
+              "title": "Domestic flight number"
+            },
+            {
+              "const": "AGR",
+              "title": "International flight number"
+            },
+            {
+              "const": "AGS",
+              "title": "Employer identification number of service bureau"
+            },
+            {
+              "const": "AGT",
+              "title": "Service group identification number"
+            },
+            {
+              "const": "AGU",
+              "title": "Member number"
+            },
+            {
+              "const": "AGV",
+              "title": "Previous member number"
+            },
+            {
+              "const": "AGW",
+              "title": "Scheme/plan number"
+            },
+            {
+              "const": "AGX",
+              "title": "Previous scheme/plan number"
+            },
+            {
+              "const": "AGY",
+              "title": "Receiving party's member identification"
+            },
+            {
+              "const": "AGZ",
+              "title": "Payroll number"
+            },
+            {
+              "const": "AHA",
+              "title": "Packaging specification number"
+            },
+            {
+              "const": "AHB",
+              "title": "Authority issued equipment identification"
+            },
+            {
+              "const": "AHC",
+              "title": "Training flight number"
+            },
+            {
+              "const": "AHD",
+              "title": "Fund code number"
+            },
+            {
+              "const": "AHE",
+              "title": "Signal code number"
+            },
+            {
+              "const": "AHF",
+              "title": "Major force program number"
+            },
+            {
+              "const": "AHG",
+              "title": "Nomination number"
+            },
+            {
+              "const": "AHH",
+              "title": "Laboratory registration number"
+            },
+            {
+              "const": "AHI",
+              "title": "Transport contract reference number"
+            },
+            {
+              "const": "AHJ",
+              "title": "Payee's reference number"
+            },
+            {
+              "const": "AHK",
+              "title": "Payer's reference number"
+            },
+            {
+              "const": "AHL",
+              "title": "Creditor's reference number"
+            },
+            {
+              "const": "AHM",
+              "title": "Debtor's reference number"
+            },
+            {
+              "const": "AHN",
+              "title": "Joint venture reference number"
+            },
+            {
+              "const": "AHO",
+              "title": "Chamber of Commerce registration number"
+            },
+            {
+              "const": "AHP",
+              "title": "Tax registration number"
+            },
+            {
+              "const": "AHQ",
+              "title": "Wool identification number"
+            },
+            {
+              "const": "AHR",
+              "title": "Wool tax reference number"
+            },
+            {
+              "const": "AHS",
+              "title": "Meat processing establishment registration number"
+            },
+            {
+              "const": "AHT",
+              "title": "Quarantine/treatment status reference number"
+            },
+            {
+              "const": "AHU",
+              "title": "Request for quote number"
+            },
+            {
+              "const": "AHV",
+              "title": "Manual processing authority number"
+            },
+            {
+              "const": "AHX",
+              "title": "Rate note number"
+            },
+            {
+              "const": "AHY",
+              "title": "Freight Forwarder number"
+            },
+            {
+              "const": "AHZ",
+              "title": "Customs release code"
+            },
+            {
+              "const": "AIA",
+              "title": "Compliance code number"
+            },
+            {
+              "const": "AIB",
+              "title": "Department of transportation bond number"
+            },
+            {
+              "const": "AIC",
+              "title": "Export establishment number"
+            },
+            {
+              "const": "AID",
+              "title": "Certificate of conformity"
+            },
+            {
+              "const": "AIE",
+              "title": "Ministerial certificate of homologation"
+            },
+            {
+              "const": "AIF",
+              "title": "Previous delivery instruction number"
+            },
+            {
+              "const": "AIG",
+              "title": "Passport number"
+            },
+            {
+              "const": "AIH",
+              "title": "Common transaction reference number"
+            },
+            {
+              "const": "AII",
+              "title": "Bank's common transaction reference number"
+            },
+            {
+              "const": "AIJ",
+              "title": "Customer's individual transaction reference number"
+            },
+            {
+              "const": "AIK",
+              "title": "Bank's individual transaction reference number"
+            },
+            {
+              "const": "AIL",
+              "title": "Customer's common transaction reference number"
+            },
+            {
+              "const": "AIM",
+              "title": "Individual transaction reference number"
+            },
+            {
+              "const": "AIN",
+              "title": "Product sourcing agreement number"
+            },
+            {
+              "const": "AIO",
+              "title": "Customs transhipment number"
+            },
+            {
+              "const": "AIP",
+              "title": "Customs preference inquiry number"
+            },
+            {
+              "const": "AIQ",
+              "title": "Packing plant number"
+            },
+            {
+              "const": "AIR",
+              "title": "Original certificate number"
+            },
+            {
+              "const": "AIS",
+              "title": "Processing plant number"
+            },
+            {
+              "const": "AIT",
+              "title": "Slaughter plant number"
+            },
+            {
+              "const": "AIU",
+              "title": "Charge card account number"
+            },
+            {
+              "const": "AIV",
+              "title": "Event reference number"
+            },
+            {
+              "const": "AIW",
+              "title": "Transport section reference number"
+            },
+            {
+              "const": "AIX",
+              "title": "Referred product for mechanical analysis"
+            },
+            {
+              "const": "AIY",
+              "title": "Referred product for chemical analysis"
+            },
+            {
+              "const": "AIZ",
+              "title": "Consolidated invoice number"
+            },
+            {
+              "const": "AJA",
+              "title": "Part reference indicator in a drawing"
+            },
+            {
+              "const": "AJB",
+              "title": "U.S. Code of Federal Regulations (CFR)"
+            },
+            {
+              "const": "AJC",
+              "title": "Purchasing activity clause number"
+            },
+            {
+              "const": "AJD",
+              "title": "U.S. Defense Federal Acquisition Regulation Supplement"
+            },
+            {
+              "const": "AJE",
+              "title": "Agency clause number"
+            },
+            {
+              "const": "AJF",
+              "title": "Circular publication number"
+            },
+            {
+              "const": "AJG",
+              "title": "U.S. Federal Acquisition Regulation"
+            },
+            {
+              "const": "AJH",
+              "title": "U.S. General Services Administration Regulation"
+            },
+            {
+              "const": "AJI",
+              "title": "U.S. Federal Information Resources Management Regulation"
+            },
+            {
+              "const": "AJJ",
+              "title": "Paragraph"
+            },
+            {
+              "const": "AJK",
+              "title": "Special instructions number"
+            },
+            {
+              "const": "AJL",
+              "title": "Site specific procedures, terms, and conditions number"
+            },
+            {
+              "const": "AJM",
+              "title": "Master solicitation procedures, terms, and conditions number"
+            },
+            {
+              "const": "AJN",
+              "title": "U.S. Department of Veterans Affairs Acquisition Regulation"
+            },
+            {
+              "const": "AJO",
+              "title": "Military Interdepartmental Purchase Request (MIPR) number"
+            },
+            {
+              "const": "AJP",
+              "title": "Foreign military sales number"
+            },
+            {
+              "const": "AJQ",
+              "title": "Defense priorities allocation system priority rating"
+            },
+            {
+              "const": "AJR",
+              "title": "Wage determination number"
+            },
+            {
+              "const": "AJS",
+              "title": "Agreement number"
+            },
+            {
+              "const": "AJT",
+              "title": "Standard Industry Classification (SIC) number"
+            },
+            {
+              "const": "AJU",
+              "title": "End item number"
+            },
+            {
+              "const": "AJV",
+              "title": "Federal supply schedule item number"
+            },
+            {
+              "const": "AJW",
+              "title": "Technical document number"
+            },
+            {
+              "const": "AJX",
+              "title": "Technical order number"
+            },
+            {
+              "const": "AJY",
+              "title": "Suffix"
+            },
+            {
+              "const": "AJZ",
+              "title": "Transportation account number"
+            },
+            {
+              "const": "AKA",
+              "title": "Container disposition order reference number"
+            },
+            {
+              "const": "AKB",
+              "title": "Container prefix"
+            },
+            {
+              "const": "AKC",
+              "title": "Transport equipment return reference"
+            },
+            {
+              "const": "AKD",
+              "title": "Transport equipment survey reference"
+            },
+            {
+              "const": "AKE",
+              "title": "Transport equipment survey report number"
+            },
+            {
+              "const": "AKF",
+              "title": "Transport equipment stuffing order"
+            },
+            {
+              "const": "AKG",
+              "title": "Vehicle Identification Number (VIN)"
+            },
+            {
+              "const": "AKH",
+              "title": "Government bill of lading"
+            },
+            {
+              "const": "AKI",
+              "title": "Ordering customer's second reference number"
+            },
+            {
+              "const": "AKJ",
+              "title": "Direct debit reference"
+            },
+            {
+              "const": "AKK",
+              "title": "Meter reading at the beginning of the delivery"
+            },
+            {
+              "const": "AKL",
+              "title": "Meter reading at the end of delivery"
+            },
+            {
+              "const": "AKM",
+              "title": "Replenishment purchase order range start number"
+            },
+            {
+              "const": "AKN",
+              "title": "Third bank's reference"
+            },
+            {
+              "const": "AKO",
+              "title": "Action authorization number"
+            },
+            {
+              "const": "AKP",
+              "title": "Appropriation number"
+            },
+            {
+              "const": "AKQ",
+              "title": "Product change authority number"
+            },
+            {
+              "const": "AKR",
+              "title": "General cargo consignment reference number"
+            },
+            {
+              "const": "AKS",
+              "title": "Catalogue sequence number"
+            },
+            {
+              "const": "AKT",
+              "title": "Forwarding order number"
+            },
+            {
+              "const": "AKU",
+              "title": "Transport equipment survey reference number"
+            },
+            {
+              "const": "AKV",
+              "title": "Lease contract reference"
+            },
+            {
+              "const": "AKW",
+              "title": "Transport costs reference number"
+            },
+            {
+              "const": "AKX",
+              "title": "Transport equipment stripping order"
+            },
+            {
+              "const": "AKY",
+              "title": "Prior policy number"
+            },
+            {
+              "const": "AKZ",
+              "title": "Policy number"
+            },
+            {
+              "const": "ALA",
+              "title": "Procurement budget number"
+            },
+            {
+              "const": "ALB",
+              "title": "Domestic inventory management code"
+            },
+            {
+              "const": "ALC",
+              "title": "Customer reference number assigned to previous balance of payment information"
+            },
+            {
+              "const": "ALD",
+              "title": "Previous credit advice reference number"
+            },
+            {
+              "const": "ALE",
+              "title": "Reporting form number"
+            },
+            {
+              "const": "ALF",
+              "title": "Authorization number for exception to dangerous goods regulations"
+            },
+            {
+              "const": "ALG",
+              "title": "Dangerous goods security number"
+            },
+            {
+              "const": "ALH",
+              "title": "Dangerous goods transport licence number"
+            },
+            {
+              "const": "ALI",
+              "title": "Previous rental agreement number"
+            },
+            {
+              "const": "ALJ",
+              "title": "Next rental agreement reason number"
+            },
+            {
+              "const": "ALK",
+              "title": "Consignee's invoice number"
+            },
+            {
+              "const": "ALL",
+              "title": "Message batch number"
+            },
+            {
+              "const": "ALM",
+              "title": "Previous delivery schedule number"
+            },
+            {
+              "const": "ALN",
+              "title": "Physical inventory recount reference number"
+            },
+            {
+              "const": "ALO",
+              "title": "Receiving advice number"
+            },
+            {
+              "const": "ALP",
+              "title": "Returnable container reference number"
+            },
+            {
+              "const": "ALQ",
+              "title": "Returns notice number"
+            },
+            {
+              "const": "ALR",
+              "title": "Sales forecast number"
+            },
+            {
+              "const": "ALS",
+              "title": "Sales report number"
+            },
+            {
+              "const": "ALT",
+              "title": "Previous tax control number"
+            },
+            {
+              "const": "ALU",
+              "title": "AGERD (Aerospace Ground Equipment Requirement Data) number"
+            },
+            {
+              "const": "ALV",
+              "title": "Registered capital reference"
+            },
+            {
+              "const": "ALW",
+              "title": "Standard number of inspection document"
+            },
+            {
+              "const": "ALX",
+              "title": "Model"
+            },
+            {
+              "const": "ALY",
+              "title": "Financial management reference"
+            },
+            {
+              "const": "ALZ",
+              "title": "NOTIfication for COLlection number (NOTICOL)"
+            },
+            {
+              "const": "AMA",
+              "title": "Previous request for metered reading reference number"
+            },
+            {
+              "const": "AMB",
+              "title": "Next rental agreement number"
+            },
+            {
+              "const": "AMC",
+              "title": "Reference number of a request for metered reading"
+            },
+            {
+              "const": "AMD",
+              "title": "Hastening number"
+            },
+            {
+              "const": "AME",
+              "title": "Repair data request number"
+            },
+            {
+              "const": "AMF",
+              "title": "Consumption data request number"
+            },
+            {
+              "const": "AMG",
+              "title": "Profile number"
+            },
+            {
+              "const": "AMH",
+              "title": "Case number"
+            },
+            {
+              "const": "AMI",
+              "title": "Government quality assurance and control level Number"
+            },
+            {
+              "const": "AMJ",
+              "title": "Payment plan reference"
+            },
+            {
+              "const": "AMK",
+              "title": "Replaced meter unit number"
+            },
+            {
+              "const": "AML",
+              "title": "Replenishment purchase order range end number"
+            },
+            {
+              "const": "AMM",
+              "title": "Insurer assigned reference number"
+            },
+            {
+              "const": "AMN",
+              "title": "Canadian excise entry number"
+            },
+            {
+              "const": "AMO",
+              "title": "Premium rate table"
+            },
+            {
+              "const": "AMP",
+              "title": "Advise through bank's reference"
+            },
+            {
+              "const": "AMQ",
+              "title": "US, Department of Transportation bond surety code"
+            },
+            {
+              "const": "AMR",
+              "title": "US, Food and Drug Administration establishment indicator"
+            },
+            {
+              "const": "AMS",
+              "title": "US, Federal Communications Commission (FCC) import condition number"
+            },
+            {
+              "const": "AMT",
+              "title": "Goods and Services Tax identification number"
+            },
+            {
+              "const": "AMU",
+              "title": "Integrated logistic support cross reference number"
+            },
+            {
+              "const": "AMV",
+              "title": "Department number"
+            },
+            {
+              "const": "AMW",
+              "title": "Buyer's catalogue number"
+            },
+            {
+              "const": "AMX",
+              "title": "Financial settlement party's reference number"
+            },
+            {
+              "const": "AMY",
+              "title": "Standard's version number"
+            },
+            {
+              "const": "AMZ",
+              "title": "Pipeline number"
+            },
+            {
+              "const": "ANA",
+              "title": "Account servicing bank's reference number"
+            },
+            {
+              "const": "ANB",
+              "title": "Completed units payment request reference"
+            },
+            {
+              "const": "ANC",
+              "title": "Payment in advance request reference"
+            },
+            {
+              "const": "AND",
+              "title": "Parent file"
+            },
+            {
+              "const": "ANE",
+              "title": "Sub file"
+            },
+            {
+              "const": "ANF",
+              "title": "CAD file layer convention"
+            },
+            {
+              "const": "ANG",
+              "title": "Technical regulation"
+            },
+            {
+              "const": "ANH",
+              "title": "Plot file"
+            },
+            {
+              "const": "ANI",
+              "title": "File conversion journal"
+            },
+            {
+              "const": "ANJ",
+              "title": "Authorization number"
+            },
+            {
+              "const": "ANK",
+              "title": "Reference number assigned by third party"
+            },
+            {
+              "const": "ANL",
+              "title": "Deposit reference number"
+            },
+            {
+              "const": "ANM",
+              "title": "Named bank's reference"
+            },
+            {
+              "const": "ANN",
+              "title": "Drawee's reference"
+            },
+            {
+              "const": "ANO",
+              "title": "Case of need party's reference"
+            },
+            {
+              "const": "ANP",
+              "title": "Collecting bank's reference"
+            },
+            {
+              "const": "ANQ",
+              "title": "Remitting bank's reference"
+            },
+            {
+              "const": "ANR",
+              "title": "Principal's bank reference"
+            },
+            {
+              "const": "ANS",
+              "title": "Presenting bank's reference"
+            },
+            {
+              "const": "ANT",
+              "title": "Consignee's reference"
+            },
+            {
+              "const": "ANU",
+              "title": "Financial transaction reference number"
+            },
+            {
+              "const": "ANV",
+              "title": "Credit reference number"
+            },
+            {
+              "const": "ANW",
+              "title": "Receiving bank's authorization number"
+            },
+            {
+              "const": "ANX",
+              "title": "Clearing reference"
+            },
+            {
+              "const": "ANY",
+              "title": "Sending bank's reference number"
+            },
+            {
+              "const": "AOA",
+              "title": "Documentary payment reference"
+            },
+            {
+              "const": "AOD",
+              "title": "Accounting file reference"
+            },
+            {
+              "const": "AOE",
+              "title": "Sender's file reference number"
+            },
+            {
+              "const": "AOF",
+              "title": "Receiver's file reference number"
+            },
+            {
+              "const": "AOG",
+              "title": "Source document internal reference"
+            },
+            {
+              "const": "AOH",
+              "title": "Principal's reference"
+            },
+            {
+              "const": "AOI",
+              "title": "Debit reference number"
+            },
+            {
+              "const": "AOJ",
+              "title": "Calendar"
+            },
+            {
+              "const": "AOK",
+              "title": "Work shift"
+            },
+            {
+              "const": "AOL",
+              "title": "Work breakdown structure"
+            },
+            {
+              "const": "AOM",
+              "title": "Organisation breakdown structure"
+            },
+            {
+              "const": "AON",
+              "title": "Work task charge number"
+            },
+            {
+              "const": "AOO",
+              "title": "Functional work group"
+            },
+            {
+              "const": "AOP",
+              "title": "Work team"
+            },
+            {
+              "const": "AOQ",
+              "title": "Department"
+            },
+            {
+              "const": "AOR",
+              "title": "Statement of work"
+            },
+            {
+              "const": "AOS",
+              "title": "Work package"
+            },
+            {
+              "const": "AOT",
+              "title": "Planning package"
+            },
+            {
+              "const": "AOU",
+              "title": "Cost account"
+            },
+            {
+              "const": "AOV",
+              "title": "Work order"
+            },
+            {
+              "const": "AOW",
+              "title": "Transportation Control Number (TCN)"
+            },
+            {
+              "const": "AOX",
+              "title": "Constraint notation"
+            },
+            {
+              "const": "AOY",
+              "title": "ETERMS reference"
+            },
+            {
+              "const": "AOZ",
+              "title": "Implementation version number"
+            },
+            {
+              "const": "AP",
+              "title": "Accounts receivable number"
+            },
+            {
+              "const": "APA",
+              "title": "Incorporated legal reference"
+            },
+            {
+              "const": "APB",
+              "title": "Payment instalment reference number"
+            },
+            {
+              "const": "APC",
+              "title": "Equipment owner reference number"
+            },
+            {
+              "const": "APD",
+              "title": "Cedent's claim number"
+            },
+            {
+              "const": "APE",
+              "title": "Reinsurer's claim number"
+            },
+            {
+              "const": "APF",
+              "title": "Price/sales catalogue response reference number"
+            },
+            {
+              "const": "APG",
+              "title": "General purpose message reference number"
+            },
+            {
+              "const": "APH",
+              "title": "Invoicing data sheet reference number"
+            },
+            {
+              "const": "API",
+              "title": "Inventory report reference number"
+            },
+            {
+              "const": "APJ",
+              "title": "Ceiling formula reference number"
+            },
+            {
+              "const": "APK",
+              "title": "Price variation formula reference number"
+            },
+            {
+              "const": "APL",
+              "title": "Reference to account servicing bank's message"
+            },
+            {
+              "const": "APM",
+              "title": "Party sequence number"
+            },
+            {
+              "const": "APN",
+              "title": "Purchaser's request reference"
+            },
+            {
+              "const": "APO",
+              "title": "Contractor request reference"
+            },
+            {
+              "const": "APP",
+              "title": "Accident reference number"
+            },
+            {
+              "const": "APQ",
+              "title": "Commercial account summary reference number"
+            },
+            {
+              "const": "APR",
+              "title": "Contract breakdown reference"
+            },
+            {
+              "const": "APS",
+              "title": "Contractor registration number"
+            },
+            {
+              "const": "APT",
+              "title": "Applicable coefficient identification number"
+            },
+            {
+              "const": "APU",
+              "title": "Special budget account number"
+            },
+            {
+              "const": "APV",
+              "title": "Authorisation for repair reference"
+            },
+            {
+              "const": "APW",
+              "title": "Manufacturer defined repair rates reference"
+            },
+            {
+              "const": "APX",
+              "title": "Original submitter log number"
+            },
+            {
+              "const": "APY",
+              "title": "Original submitter, parent Data Maintenance Request (DMR) log number"
+            },
+            {
+              "const": "APZ",
+              "title": "Original submitter, child Data Maintenance Request (DMR) log number"
+            },
+            {
+              "const": "AQA",
+              "title": "Entry point assessment log number"
+            },
+            {
+              "const": "AQB",
+              "title": "Entry point assessment log number, parent DMR"
+            },
+            {
+              "const": "AQC",
+              "title": "Entry point assessment log number, child DMR"
+            },
+            {
+              "const": "AQD",
+              "title": "Data structure tag"
+            },
+            {
+              "const": "AQE",
+              "title": "Central secretariat log number"
+            },
+            {
+              "const": "AQF",
+              "title": "Central secretariat log number, parent Data Maintenance Request (DMR)"
+            },
+            {
+              "const": "AQG",
+              "title": "Central secretariat log number, child Data Maintenance Request (DMR)"
+            },
+            {
+              "const": "AQH",
+              "title": "International assessment log number"
+            },
+            {
+              "const": "AQI",
+              "title": "International assessment log number, parent Data Maintenance Request (DMR)"
+            },
+            {
+              "const": "AQJ",
+              "title": "International assessment log number, child Data Maintenance Request (DMR)"
+            },
+            {
+              "const": "AQK",
+              "title": "Status report number"
+            },
+            {
+              "const": "AQL",
+              "title": "Message design group number"
+            },
+            {
+              "const": "AQM",
+              "title": "US Customs Service (USCS) entry code"
+            },
+            {
+              "const": "AQN",
+              "title": "Beginning job sequence number"
+            },
+            {
+              "const": "AQO",
+              "title": "Sender's clause number"
+            },
+            {
+              "const": "AQP",
+              "title": "Dun and Bradstreet Canada's 8 digit Standard Industrial Classification (SIC) code"
+            },
+            {
+              "const": "AQQ",
+              "title": "Activite Principale Exercee (APE) identifier"
+            },
+            {
+              "const": "AQR",
+              "title": "Dun and Bradstreet US 8 digit Standard Industrial Classification (SIC) code"
+            },
+            {
+              "const": "AQS",
+              "title": "Nomenclature Activity Classification Economy (NACE) identifier"
+            },
+            {
+              "const": "AQT",
+              "title": "Norme Activite Francaise (NAF) identifier"
+            },
+            {
+              "const": "AQU",
+              "title": "Registered contractor activity type"
+            },
+            {
+              "const": "AQV",
+              "title": "Statistic Bundes Amt (SBA) identifier"
+            },
+            {
+              "const": "AQW",
+              "title": "State or province assigned entity identification"
+            },
+            {
+              "const": "AQX",
+              "title": "Institute of Security and Future Market Development (ISFMD) serial number"
+            },
+            {
+              "const": "AQY",
+              "title": "File identification number"
+            },
+            {
+              "const": "AQZ",
+              "title": "Bankruptcy procedure number"
+            },
+            {
+              "const": "ARA",
+              "title": "National government business identification number"
+            },
+            {
+              "const": "ARB",
+              "title": "Prior Data Universal Number System (DUNS) number"
+            },
+            {
+              "const": "ARC",
+              "title": "Companies Registry Office (CRO) number"
+            },
+            {
+              "const": "ARD",
+              "title": "Costa Rican judicial number"
+            },
+            {
+              "const": "ARE",
+              "title": "Numero de Identificacion Tributaria (NIT)"
+            },
+            {
+              "const": "ARF",
+              "title": "Patron number"
+            },
+            {
+              "const": "ARG",
+              "title": "Registro Informacion Fiscal (RIF) number"
+            },
+            {
+              "const": "ARH",
+              "title": "Registro Unico de Contribuyente (RUC) number"
+            },
+            {
+              "const": "ARI",
+              "title": "Tokyo SHOKO Research (TSR) business identifier"
+            },
+            {
+              "const": "ARJ",
+              "title": "Personal identity card number"
+            },
+            {
+              "const": "ARK",
+              "title": "Systeme Informatique pour le Repertoire des ENtreprises (SIREN) number"
+            },
+            {
+              "const": "ARL",
+              "title": "Systeme Informatique pour le Repertoire des ETablissements (SIRET) number"
+            },
+            {
+              "const": "ARM",
+              "title": "Publication issue number"
+            },
+            {
+              "const": "ARN",
+              "title": "Original filing number"
+            },
+            {
+              "const": "ARO",
+              "title": "Document page identifier"
+            },
+            {
+              "const": "ARP",
+              "title": "Public filing registration number"
+            },
+            {
+              "const": "ARQ",
+              "title": "Regiristo Federal de Contribuyentes"
+            },
+            {
+              "const": "ARR",
+              "title": "Social security number"
+            },
+            {
+              "const": "ARS",
+              "title": "Document volume number"
+            },
+            {
+              "const": "ART",
+              "title": "Book number"
+            },
+            {
+              "const": "ARU",
+              "title": "Stock exchange company identifier"
+            },
+            {
+              "const": "ARV",
+              "title": "Imputation account"
+            },
+            {
+              "const": "ARW",
+              "title": "Financial phase reference"
+            },
+            {
+              "const": "ARX",
+              "title": "Technical phase reference"
+            },
+            {
+              "const": "ARY",
+              "title": "Prior contractor registration number"
+            },
+            {
+              "const": "ARZ",
+              "title": "Stock adjustment number"
+            },
+            {
+              "const": "ASA",
+              "title": "Dispensation reference"
+            },
+            {
+              "const": "ASB",
+              "title": "Investment reference number"
+            },
+            {
+              "const": "ASC",
+              "title": "Assuming company"
+            },
+            {
+              "const": "ASD",
+              "title": "Budget chapter"
+            },
+            {
+              "const": "ASE",
+              "title": "Duty free products security number"
+            },
+            {
+              "const": "ASF",
+              "title": "Duty free products receipt authorisation number"
+            },
+            {
+              "const": "ASG",
+              "title": "Party information message reference"
+            },
+            {
+              "const": "ASH",
+              "title": "Formal statement reference"
+            },
+            {
+              "const": "ASI",
+              "title": "Proof of delivery reference number"
+            },
+            {
+              "const": "ASJ",
+              "title": "Supplier's credit claim reference number"
+            },
+            {
+              "const": "ASK",
+              "title": "Picture of actual product"
+            },
+            {
+              "const": "ASL",
+              "title": "Picture of a generic product"
+            },
+            {
+              "const": "ASM",
+              "title": "Trading partner identification number"
+            },
+            {
+              "const": "ASN",
+              "title": "Prior trading partner identification number"
+            },
+            {
+              "const": "ASO",
+              "title": "Password"
+            },
+            {
+              "const": "ASP",
+              "title": "Formal report number"
+            },
+            {
+              "const": "ASQ",
+              "title": "Fund account number"
+            },
+            {
+              "const": "ASR",
+              "title": "Safe custody number"
+            },
+            {
+              "const": "ASS",
+              "title": "Master account number"
+            },
+            {
+              "const": "AST",
+              "title": "Group reference number"
+            },
+            {
+              "const": "ASU",
+              "title": "Accounting transmission number"
+            },
+            {
+              "const": "ASV",
+              "title": "Product data file number"
+            },
+            {
+              "const": "ASW",
+              "title": "Cadastro Geral do Contribuinte (CGC)"
+            },
+            {
+              "const": "ASX",
+              "title": "Foreign resident identification number"
+            },
+            {
+              "const": "ASY",
+              "title": "CD-ROM"
+            },
+            {
+              "const": "ASZ",
+              "title": "Physical medium"
+            },
+            {
+              "const": "ATA",
+              "title": "Financial cancellation reference number"
+            },
+            {
+              "const": "ATB",
+              "title": "Purchase for export Customs agreement number"
+            },
+            {
+              "const": "ATC",
+              "title": "Judgment number"
+            },
+            {
+              "const": "ATD",
+              "title": "Secretariat number"
+            },
+            {
+              "const": "ATE",
+              "title": "Previous banking status message reference"
+            },
+            {
+              "const": "ATF",
+              "title": "Last received banking status message reference"
+            },
+            {
+              "const": "ATG",
+              "title": "Bank's documentary procedure reference"
+            },
+            {
+              "const": "ATH",
+              "title": "Customer's documentary procedure reference"
+            },
+            {
+              "const": "ATI",
+              "title": "Safe deposit box number"
+            },
+            {
+              "const": "ATJ",
+              "title": "Receiving Bankgiro number"
+            },
+            {
+              "const": "ATK",
+              "title": "Sending Bankgiro number"
+            },
+            {
+              "const": "ATL",
+              "title": "Bankgiro reference"
+            },
+            {
+              "const": "ATM",
+              "title": "Guarantee number"
+            },
+            {
+              "const": "ATN",
+              "title": "Collection instrument number"
+            },
+            {
+              "const": "ATO",
+              "title": "Converted Postgiro number"
+            },
+            {
+              "const": "ATP",
+              "title": "Cost centre alignment number"
+            },
+            {
+              "const": "ATQ",
+              "title": "Kamer Van Koophandel (KVK) number"
+            },
+            {
+              "const": "ATR",
+              "title": "Institut Belgo-Luxembourgeois de Codification (IBLC) number"
+            },
+            {
+              "const": "ATS",
+              "title": "External object reference"
+            },
+            {
+              "const": "ATT",
+              "title": "Exceptional transport authorisation number"
+            },
+            {
+              "const": "ATU",
+              "title": "Clave Unica de Identificacion Tributaria (CUIT)"
+            },
+            {
+              "const": "ATV",
+              "title": "Registro Unico Tributario (RUT)"
+            },
+            {
+              "const": "ATW",
+              "title": "Flat rack container bundle identification number"
+            },
+            {
+              "const": "ATX",
+              "title": "Transport equipment acceptance order reference"
+            },
+            {
+              "const": "ATY",
+              "title": "Transport equipment release order reference"
+            },
+            {
+              "const": "ATZ",
+              "title": "Ship's stay reference number"
+            },
+            {
+              "const": "AU",
+              "title": "Authorization to meet competition number"
+            },
+            {
+              "const": "AUA",
+              "title": "Place of positioning reference"
+            },
+            {
+              "const": "AUB",
+              "title": "Party reference"
+            },
+            {
+              "const": "AUC",
+              "title": "Issued prescription identification"
+            },
+            {
+              "const": "AUD",
+              "title": "Collection reference"
+            },
+            {
+              "const": "AUE",
+              "title": "Travel service"
+            },
+            {
+              "const": "AUF",
+              "title": "Consignment stock contract"
+            },
+            {
+              "const": "AUG",
+              "title": "Importer's letter of credit reference"
+            },
+            {
+              "const": "AUH",
+              "title": "Performed prescription identification"
+            },
+            {
+              "const": "AUI",
+              "title": "Image reference"
+            },
+            {
+              "const": "AUJ",
+              "title": "Proposed purchase order reference number"
+            },
+            {
+              "const": "AUK",
+              "title": "Application for financial support reference number"
+            },
+            {
+              "const": "AUL",
+              "title": "Manufacturing quality agreement number"
+            },
+            {
+              "const": "AUM",
+              "title": "Software editor reference"
+            },
+            {
+              "const": "AUN",
+              "title": "Software reference"
+            },
+            {
+              "const": "AUO",
+              "title": "Software quality reference"
+            },
+            {
+              "const": "AUP",
+              "title": "Consolidated orders' reference"
+            },
+            {
+              "const": "AUQ",
+              "title": "Customs binding ruling number"
+            },
+            {
+              "const": "AUR",
+              "title": "Customs non-binding ruling number"
+            },
+            {
+              "const": "AUS",
+              "title": "Delivery route reference"
+            },
+            {
+              "const": "AUT",
+              "title": "Net area supplier reference"
+            },
+            {
+              "const": "AUU",
+              "title": "Time series reference"
+            },
+            {
+              "const": "AUV",
+              "title": "Connecting point to central grid"
+            },
+            {
+              "const": "AUW",
+              "title": "Marketing plan identification number (MPIN)"
+            },
+            {
+              "const": "AUX",
+              "title": "Entity reference number, previous"
+            },
+            {
+              "const": "AUY",
+              "title": "International Standard Industrial Classification (ISIC) code"
+            },
+            {
+              "const": "AUZ",
+              "title": "Customs pre-approval ruling number"
+            },
+            {
+              "const": "AV",
+              "title": "Account payable number"
+            },
+            {
+              "const": "AVA",
+              "title": "First financial institution's transaction reference"
+            },
+            {
+              "const": "AVB",
+              "title": "Product characteristics directory"
+            },
+            {
+              "const": "AVC",
+              "title": "Supplier's customer reference number"
+            },
+            {
+              "const": "AVD",
+              "title": "Inventory report request number"
+            },
+            {
+              "const": "AVE",
+              "title": "Metering point"
+            },
+            {
+              "const": "AVF",
+              "title": "Passenger reservation number"
+            },
+            {
+              "const": "AVG",
+              "title": "Slaughterhouse approval number"
+            },
+            {
+              "const": "AVH",
+              "title": "Meat cutting plant approval number"
+            },
+            {
+              "const": "AVI",
+              "title": "Customer travel service identifier"
+            },
+            {
+              "const": "AVJ",
+              "title": "Export control classification number"
+            },
+            {
+              "const": "AVK",
+              "title": "Broker reference 3"
+            },
+            {
+              "const": "AVL",
+              "title": "Consignment information"
+            },
+            {
+              "const": "AVM",
+              "title": "Goods item information"
+            },
+            {
+              "const": "AVN",
+              "title": "Dangerous Goods information"
+            },
+            {
+              "const": "AVO",
+              "title": "Pilotage services exemption number"
+            },
+            {
+              "const": "AVP",
+              "title": "Person registration number"
+            },
+            {
+              "const": "AVQ",
+              "title": "Place of packing approval number"
+            },
+            {
+              "const": "AVR",
+              "title": "Original Mandate Reference"
+            },
+            {
+              "const": "AVS",
+              "title": "Mandate Reference"
+            },
+            {
+              "const": "AVT",
+              "title": "Reservation station indentifier"
+            },
+            {
+              "const": "AVU",
+              "title": "Unique goods shipment identifier"
+            },
+            {
+              "const": "AVV",
+              "title": "Framework Agreement Number"
+            },
+            {
+              "const": "AVW",
+              "title": "Hash value"
+            },
+            {
+              "const": "AVX",
+              "title": "Movement reference number"
+            },
+            {
+              "const": "AVY",
+              "title": "Economic Operators Registration and Identification Number (EORI)"
+            },
+            {
+              "const": "AVZ",
+              "title": "Local Reference Number"
+            },
+            {
+              "const": "AWA",
+              "title": "Rate code number"
+            },
+            {
+              "const": "AWB",
+              "title": "Air waybill number"
+            },
+            {
+              "const": "AWC",
+              "title": "Documentary credit amendment number"
+            },
+            {
+              "const": "AWD",
+              "title": "Advising bank's reference"
+            },
+            {
+              "const": "AWE",
+              "title": "Cost centre"
+            },
+            {
+              "const": "AWF",
+              "title": "Work item quantity determination"
+            },
+            {
+              "const": "AWG",
+              "title": "Internal data process number"
+            },
+            {
+              "const": "AWH",
+              "title": "Category of work reference"
+            },
+            {
+              "const": "AWI",
+              "title": "Policy form number"
+            },
+            {
+              "const": "AWJ",
+              "title": "Net area"
+            },
+            {
+              "const": "AWK",
+              "title": "Service provider"
+            },
+            {
+              "const": "AWL",
+              "title": "Error position"
+            },
+            {
+              "const": "AWM",
+              "title": "Service category reference"
+            },
+            {
+              "const": "AWN",
+              "title": "Connected location"
+            },
+            {
+              "const": "AWO",
+              "title": "Related party"
+            },
+            {
+              "const": "AWP",
+              "title": "Latest accounting entry record reference"
+            },
+            {
+              "const": "AWQ",
+              "title": "Accounting entry"
+            },
+            {
+              "const": "AWR",
+              "title": "Document reference, original"
+            },
+            {
+              "const": "AWS",
+              "title": "Hygienic Certificate number, national"
+            },
+            {
+              "const": "AWT",
+              "title": "Administrative Reference Code"
+            },
+            {
+              "const": "AWU",
+              "title": "Pick-up sheet number"
+            },
+            {
+              "const": "AWV",
+              "title": "Phone number"
+            },
+            {
+              "const": "AWW",
+              "title": "Buyer's fund number"
+            },
+            {
+              "const": "AWX",
+              "title": "Company trading account number"
+            },
+            {
+              "const": "AWY",
+              "title": "Reserved goods identifier"
+            },
+            {
+              "const": "AWZ",
+              "title": "Handling and movement reference number"
+            },
+            {
+              "const": "AXA",
+              "title": "Instruction to despatch reference number"
+            },
+            {
+              "const": "AXB",
+              "title": "Instruction for returns number"
+            },
+            {
+              "const": "AXC",
+              "title": "Metered services consumption report number"
+            },
+            {
+              "const": "AXD",
+              "title": "Order status enquiry number"
+            },
+            {
+              "const": "AXE",
+              "title": "Firm booking reference number"
+            },
+            {
+              "const": "AXF",
+              "title": "Product inquiry number"
+            },
+            {
+              "const": "AXG",
+              "title": "Split delivery number"
+            },
+            {
+              "const": "AXH",
+              "title": "Service relation number"
+            },
+            {
+              "const": "AXI",
+              "title": "Serial shipping container code"
+            },
+            {
+              "const": "AXJ",
+              "title": "Test specification number"
+            },
+            {
+              "const": "AXK",
+              "title": "Transport status report number"
+            },
+            {
+              "const": "AXL",
+              "title": "Tooling contract number"
+            },
+            {
+              "const": "AXM",
+              "title": "Formula reference number"
+            },
+            {
+              "const": "AXN",
+              "title": "Pre-agreement number"
+            },
+            {
+              "const": "AXO",
+              "title": "Product certification number"
+            },
+            {
+              "const": "AXP",
+              "title": "Consignment contract number"
+            },
+            {
+              "const": "AXQ",
+              "title": "Product specification reference number"
+            },
+            {
+              "const": "AXR",
+              "title": "Payroll deduction advice reference"
+            },
+            {
+              "const": "AXS",
+              "title": "TRACES party identification"
+            },
+            {
+              "const": "BA",
+              "title": "Beginning meter reading actual"
+            },
+            {
+              "const": "BC",
+              "title": "Buyer's contract number"
+            },
+            {
+              "const": "BD",
+              "title": "Bid number"
+            },
+            {
+              "const": "BE",
+              "title": "Beginning meter reading estimated"
+            },
+            {
+              "const": "BH",
+              "title": "House bill of lading number"
+            },
+            {
+              "const": "BM",
+              "title": "Bill of lading number"
+            },
+            {
+              "const": "BN",
+              "title": "Consignment identifier, carrier assigned"
+            },
+            {
+              "const": "BO",
+              "title": "Blanket order number"
+            },
+            {
+              "const": "BR",
+              "title": "Broker or sales office number"
+            },
+            {
+              "const": "BT",
+              "title": "Batch number/lot number"
+            },
+            {
+              "const": "BTP",
+              "title": "Battery and accumulator producer registration number"
+            },
+            {
+              "const": "BW",
+              "title": "Blended with number"
+            },
+            {
+              "const": "CAS",
+              "title": "IATA Cargo Agent CASS Address number"
+            },
+            {
+              "const": "CAT",
+              "title": "Matching of entries, balanced"
+            },
+            {
+              "const": "CAU",
+              "title": "Entry flagging"
+            },
+            {
+              "const": "CAV",
+              "title": "Matching of entries, unbalanced"
+            },
+            {
+              "const": "CAW",
+              "title": "Document reference, internal"
+            },
+            {
+              "const": "CAX",
+              "title": "European Value Added Tax identification"
+            },
+            {
+              "const": "CAY",
+              "title": "Cost accounting document"
+            },
+            {
+              "const": "CAZ",
+              "title": "Grid operator's customer reference number"
+            },
+            {
+              "const": "CBA",
+              "title": "Ticket control number"
+            },
+            {
+              "const": "CBB",
+              "title": "Order shipment grouping reference"
+            },
+            {
+              "const": "CD",
+              "title": "Credit note number"
+            },
+            {
+              "const": "CEC",
+              "title": "Ceding company"
+            },
+            {
+              "const": "CED",
+              "title": "Debit letter number"
+            },
+            {
+              "const": "CFE",
+              "title": "Consignee's further order"
+            },
+            {
+              "const": "CFF",
+              "title": "Animal farm licence number"
+            },
+            {
+              "const": "CFO",
+              "title": "Consignor's further order"
+            },
+            {
+              "const": "CG",
+              "title": "Consignee's order number"
+            },
+            {
+              "const": "CH",
+              "title": "Customer catalogue number"
+            },
+            {
+              "const": "CK",
+              "title": "Cheque number"
+            },
+            {
+              "const": "CKN",
+              "title": "Checking number"
+            },
+            {
+              "const": "CM",
+              "title": "Credit memo number"
+            },
+            {
+              "const": "CMR",
+              "title": "Road consignment note number"
+            },
+            {
+              "const": "CN",
+              "title": "Carrier's reference number"
+            },
+            {
+              "const": "CNO",
+              "title": "Charges note document attachment indicator"
+            },
+            {
+              "const": "COF",
+              "title": "Call off order number"
+            },
+            {
+              "const": "CP",
+              "title": "Condition of purchase document number"
+            },
+            {
+              "const": "CR",
+              "title": "Customer reference number"
+            },
+            {
+              "const": "CRN",
+              "title": "Transport means journey identifier"
+            },
+            {
+              "const": "CS",
+              "title": "Condition of sale document number"
+            },
+            {
+              "const": "CST",
+              "title": "Team assignment number"
+            },
+            {
+              "const": "CT",
+              "title": "Contract number"
+            },
+            {
+              "const": "CU",
+              "title": "Consignment identifier, consignor assigned"
+            },
+            {
+              "const": "CV",
+              "title": "Container operators reference number"
+            },
+            {
+              "const": "CW",
+              "title": "Package number"
+            },
+            {
+              "const": "CZ",
+              "title": "Cooperation contract number"
+            },
+            {
+              "const": "DA",
+              "title": "Deferment approval number"
+            },
+            {
+              "const": "DAN",
+              "title": "Debit account number"
+            },
+            {
+              "const": "DB",
+              "title": "Buyer's debtor number"
+            },
+            {
+              "const": "DI",
+              "title": "Distributor invoice number"
+            },
+            {
+              "const": "DL",
+              "title": "Debit note number"
+            },
+            {
+              "const": "DM",
+              "title": "Document identifier"
+            },
+            {
+              "const": "DQ",
+              "title": "Delivery note number"
+            },
+            {
+              "const": "DR",
+              "title": "Dock receipt number"
+            },
+            {
+              "const": "EA",
+              "title": "Ending meter reading actual"
+            },
+            {
+              "const": "EB",
+              "title": "Embargo permit number"
+            },
+            {
+              "const": "ED",
+              "title": "Export declaration"
+            },
+            {
+              "const": "EE",
+              "title": "Ending meter reading estimated"
+            },
+            {
+              "const": "EEP",
+              "title": "Electrical and electronic equipment producer registration number"
+            },
+            {
+              "const": "EI",
+              "title": "Employer's identification number"
+            },
+            {
+              "const": "EN",
+              "title": "Embargo number"
+            },
+            {
+              "const": "EQ",
+              "title": "Equipment number"
+            },
+            {
+              "const": "ER",
+              "title": "Container/equipment receipt number"
+            },
+            {
+              "const": "ERN",
+              "title": "Exporter's reference number"
+            },
+            {
+              "const": "ET",
+              "title": "Excess transportation number"
+            },
+            {
+              "const": "EX",
+              "title": "Export permit identifier"
+            },
+            {
+              "const": "FC",
+              "title": "Fiscal number"
+            },
+            {
+              "const": "FF",
+              "title": "Consignment identifier, freight forwarder assigned"
+            },
+            {
+              "const": "FI",
+              "title": "File line identifier"
+            },
+            {
+              "const": "FLW",
+              "title": "Flow reference number"
+            },
+            {
+              "const": "FN",
+              "title": "Freight bill number"
+            },
+            {
+              "const": "FO",
+              "title": "Foreign exchange"
+            },
+            {
+              "const": "FS",
+              "title": "Final sequence number"
+            },
+            {
+              "const": "FT",
+              "title": "Free zone identifier"
+            },
+            {
+              "const": "FV",
+              "title": "File version number"
+            },
+            {
+              "const": "FX",
+              "title": "Foreign exchange contract number"
+            },
+            {
+              "const": "GA",
+              "title": "Standard's number"
+            },
+            {
+              "const": "GC",
+              "title": "Government contract number"
+            },
+            {
+              "const": "GD",
+              "title": "Standard's code number"
+            },
+            {
+              "const": "GDN",
+              "title": "General declaration number"
+            },
+            {
+              "const": "GN",
+              "title": "Government reference number"
+            },
+            {
+              "const": "HS",
+              "title": "Harmonised system number"
+            },
+            {
+              "const": "HWB",
+              "title": "House waybill number"
+            },
+            {
+              "const": "IA",
+              "title": "Internal vendor number"
+            },
+            {
+              "const": "IB",
+              "title": "In bond number"
+            },
+            {
+              "const": "ICA",
+              "title": "IATA cargo agent code number"
+            },
+            {
+              "const": "ICE",
+              "title": "Insurance certificate reference number"
+            },
+            {
+              "const": "ICO",
+              "title": "Insurance contract reference number"
+            },
+            {
+              "const": "II",
+              "title": "Initial sample inspection report number"
+            },
+            {
+              "const": "IL",
+              "title": "Internal order number"
+            },
+            {
+              "const": "INB",
+              "title": "Intermediary broker"
+            },
+            {
+              "const": "INN",
+              "title": "Interchange number new"
+            },
+            {
+              "const": "INO",
+              "title": "Interchange number old"
+            },
+            {
+              "const": "IP",
+              "title": "Import permit identifier"
+            },
+            {
+              "const": "IS",
+              "title": "Invoice number suffix"
+            },
+            {
+              "const": "IT",
+              "title": "Internal customer number"
+            },
+            {
+              "const": "IV",
+              "title": "Invoice document identifier"
+            },
+            {
+              "const": "JB",
+              "title": "Job number"
+            },
+            {
+              "const": "JE",
+              "title": "Ending job sequence number"
+            },
+            {
+              "const": "LA",
+              "title": "Shipping label serial number"
+            },
+            {
+              "const": "LAN",
+              "title": "Loading authorisation identifier"
+            },
+            {
+              "const": "LAR",
+              "title": "Lower number in range"
+            },
+            {
+              "const": "LB",
+              "title": "Lockbox"
+            },
+            {
+              "const": "LC",
+              "title": "Letter of credit number"
+            },
+            {
+              "const": "LI",
+              "title": "Document line identifier"
+            },
+            {
+              "const": "LO",
+              "title": "Load planning number"
+            },
+            {
+              "const": "LRC",
+              "title": "Reservation office identifier"
+            },
+            {
+              "const": "LS",
+              "title": "Bar coded label serial number"
+            },
+            {
+              "const": "MA",
+              "title": "Ship notice/manifest number"
+            },
+            {
+              "const": "MB",
+              "title": "Master bill of lading number"
+            },
+            {
+              "const": "MF",
+              "title": "Manufacturer's part number"
+            },
+            {
+              "const": "MG",
+              "title": "Meter unit number"
+            },
+            {
+              "const": "MH",
+              "title": "Manufacturing order number"
+            },
+            {
+              "const": "MR",
+              "title": "Message recipient"
+            },
+            {
+              "const": "MRN",
+              "title": "Mailing reference number"
+            },
+            {
+              "const": "MS",
+              "title": "Message sender"
+            },
+            {
+              "const": "MSS",
+              "title": "Manufacturer's material safety data sheet number"
+            },
+            {
+              "const": "MWB",
+              "title": "Master air waybill number"
+            },
+            {
+              "const": "NA",
+              "title": "North American hazardous goods classification number"
+            },
+            {
+              "const": "NF",
+              "title": "Nota Fiscal"
+            },
+            {
+              "const": "OH",
+              "title": "Current invoice number"
+            },
+            {
+              "const": "OI",
+              "title": "Previous invoice number"
+            },
+            {
+              "const": "ON",
+              "title": "Order document identifier, buyer assigned"
+            },
+            {
+              "const": "OP",
+              "title": "Original purchase order"
+            },
+            {
+              "const": "OR",
+              "title": "General order number"
+            },
+            {
+              "const": "PB",
+              "title": "Payer's financial institution account number"
+            },
+            {
+              "const": "PC",
+              "title": "Production code"
+            },
+            {
+              "const": "PD",
+              "title": "Promotion deal number"
+            },
+            {
+              "const": "PE",
+              "title": "Plant number"
+            },
+            {
+              "const": "PF",
+              "title": "Prime contractor contract number"
+            },
+            {
+              "const": "PI",
+              "title": "Price list version number"
+            },
+            {
+              "const": "PK",
+              "title": "Packing list number"
+            },
+            {
+              "const": "PL",
+              "title": "Price list number"
+            },
+            {
+              "const": "POR",
+              "title": "Purchase order response number"
+            },
+            {
+              "const": "PP",
+              "title": "Purchase order change number"
+            },
+            {
+              "const": "PQ",
+              "title": "Payment reference"
+            },
+            {
+              "const": "PR",
+              "title": "Price quote number"
+            },
+            {
+              "const": "PS",
+              "title": "Purchase order number suffix"
+            },
+            {
+              "const": "PW",
+              "title": "Prior purchase order number"
+            },
+            {
+              "const": "PY",
+              "title": "Payee's financial institution account number"
+            },
+            {
+              "const": "RA",
+              "title": "Remittance advice number"
+            },
+            {
+              "const": "RC",
+              "title": "Rail/road routing code"
+            },
+            {
+              "const": "RCN",
+              "title": "Railway consignment note number"
+            },
+            {
+              "const": "RE",
+              "title": "Release number"
+            },
+            {
+              "const": "REN",
+              "title": "Consignment receipt identifier"
+            },
+            {
+              "const": "RF",
+              "title": "Export reference number"
+            },
+            {
+              "const": "RR",
+              "title": "Payer's financial institution transit routing No.(ACH transfers)"
+            },
+            {
+              "const": "RT",
+              "title": "Payee's financial institution transit routing No."
+            },
+            {
+              "const": "SA",
+              "title": "Sales person number"
+            },
+            {
+              "const": "SB",
+              "title": "Sales region number"
+            },
+            {
+              "const": "SD",
+              "title": "Sales department number"
+            },
+            {
+              "const": "SE",
+              "title": "Serial number"
+            },
+            {
+              "const": "SEA",
+              "title": "Allocated seat"
+            },
+            {
+              "const": "SF",
+              "title": "Ship from"
+            },
+            {
+              "const": "SH",
+              "title": "Previous highest schedule number"
+            },
+            {
+              "const": "SI",
+              "title": "SID (Shipper's identifying number for shipment)"
+            },
+            {
+              "const": "SM",
+              "title": "Sales office number"
+            },
+            {
+              "const": "SN",
+              "title": "Transport equipment seal identifier"
+            },
+            {
+              "const": "SP",
+              "title": "Scan line"
+            },
+            {
+              "const": "SQ",
+              "title": "Equipment sequence number"
+            },
+            {
+              "const": "SRN",
+              "title": "Shipment reference number"
+            },
+            {
+              "const": "SS",
+              "title": "Sellers reference number"
+            },
+            {
+              "const": "STA",
+              "title": "Station reference number"
+            },
+            {
+              "const": "SW",
+              "title": "Swap order number"
+            },
+            {
+              "const": "SZ",
+              "title": "Specification number"
+            },
+            {
+              "const": "TB",
+              "title": "Trucker's bill of lading"
+            },
+            {
+              "const": "TCR",
+              "title": "Terminal operator's consignment reference"
+            },
+            {
+              "const": "TE",
+              "title": "Telex message number"
+            },
+            {
+              "const": "TF",
+              "title": "Transfer number"
+            },
+            {
+              "const": "TI",
+              "title": "TIR carnet number"
+            },
+            {
+              "const": "TIN",
+              "title": "Transport instruction number"
+            },
+            {
+              "const": "TL",
+              "title": "Tax exemption licence number"
+            },
+            {
+              "const": "TN",
+              "title": "Transaction reference number"
+            },
+            {
+              "const": "TP",
+              "title": "Test report number"
+            },
+            {
+              "const": "UAR",
+              "title": "Upper number of range"
+            },
+            {
+              "const": "UC",
+              "title": "Ultimate customer's reference number"
+            },
+            {
+              "const": "UCN",
+              "title": "Unique consignment reference number"
+            },
+            {
+              "const": "UN",
+              "title": "United Nations Dangerous Goods identifier"
+            },
+            {
+              "const": "UO",
+              "title": "Ultimate customer's order number"
+            },
+            {
+              "const": "URI",
+              "title": "Uniform Resource Identifier"
+            },
+            {
+              "const": "VA",
+              "title": "VAT registration number"
+            },
+            {
+              "const": "VC",
+              "title": "Vendor contract number"
+            },
+            {
+              "const": "VGR",
+              "title": "Transport equipment gross mass verification reference number"
+            },
+            {
+              "const": "VM",
+              "title": "Vessel identifier"
+            },
+            {
+              "const": "VN",
+              "title": "Order number (vendor)"
+            },
+            {
+              "const": "VON",
+              "title": "Voyage number"
+            },
+            {
+              "const": "VOR",
+              "title": "Transport equipment gross mass verification order reference"
+            },
+            {
+              "const": "VP",
+              "title": "Vendor product number"
+            },
+            {
+              "const": "VR",
+              "title": "Vendor ID number"
+            },
+            {
+              "const": "VS",
+              "title": "Vendor order number suffix"
+            },
+            {
+              "const": "VT",
+              "title": "Motor vehicle identification number"
+            },
+            {
+              "const": "VV",
+              "title": "Voucher number"
+            },
+            {
+              "const": "WE",
+              "title": "Warehouse entry number"
+            },
+            {
+              "const": "WM",
+              "title": "Weight agreement number"
+            },
+            {
+              "const": "WN",
+              "title": "Well number"
+            },
+            {
+              "const": "WR",
+              "title": "Warehouse receipt number"
+            },
+            {
+              "const": "WS",
+              "title": "Warehouse storage location number"
+            },
+            {
+              "const": "WY",
+              "title": "Rail waybill number"
+            },
+            {
+              "const": "XA",
+              "title": "Company/place registration number"
+            },
+            {
+              "const": "XC",
+              "title": "Cargo control number"
+            },
+            {
+              "const": "XP",
+              "title": "Previous cargo control number"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined reference number"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

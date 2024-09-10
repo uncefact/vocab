@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/EDIFICAS-EU_AccountingPeriodFunctionType",
+  "title": "EDIFICAS-EU_AccountingPeriodFunctionType",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "AccountingPeriodFunctionTypeType": {
+          "title": "Accounting Period Function Type",
+          "oneOf": [
+            {
+              "const": "246",
+              "title": "Accounting year"
+            },
+            {
+              "const": "263",
+              "title": "Invoicing period"
+            },
+            {
+              "const": "322",
+              "title": "Accounting period"
+            },
+            {
+              "const": "325",
+              "title": "Tax period"
+            },
+            {
+              "const": "452",
+              "title": "Trial balance period"
+            },
+            {
+              "const": "456",
+              "title": "Chart of account period"
+            },
+            {
+              "const": "492",
+              "title": "Balance data/time/period"
+            },
+            {
+              "const": "567",
+              "title": "Report period"
+            },
+            {
+              "const": "E001",
+              "title": "Fiscal consideration period"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

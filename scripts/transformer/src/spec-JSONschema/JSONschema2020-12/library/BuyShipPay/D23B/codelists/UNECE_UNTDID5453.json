@@ -1,0 +1,1499 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID5453",
+  "title": "UNECE_UNTDID5453",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5453Type": {
+          "title": "Language name code",
+          "description": "Code specifying the language name.\r\n\r\nCode list responsible agency:\r\nISO\r\n\r\nCode list responsible agency name:\r\nInternational Organization for Standardization\r\n\r\nCode list responsible agency code:\r\n5\r\n\r\nCode list:\r\n639-1\r\n\r\nCode list name:\r\nLanguage codes (alpha-2)\r\n\r\nCode list version:\r\n2002\r\n\r\nCode list issue date:\r\nCL 2017-12",
+          "oneOf": [
+            {
+              "const": "aa",
+              "title": "Afar"
+            },
+            {
+              "const": "AA",
+              "title": "Afar"
+            },
+            {
+              "const": "ab",
+              "title": "Abkhazian"
+            },
+            {
+              "const": "AB",
+              "title": "Abkhazian"
+            },
+            {
+              "const": "ae",
+              "title": "Avestan"
+            },
+            {
+              "const": "AE",
+              "title": "Avestan"
+            },
+            {
+              "const": "af",
+              "title": "Afrikaans"
+            },
+            {
+              "const": "AF",
+              "title": "Afrikaans"
+            },
+            {
+              "const": "ak",
+              "title": "Akan"
+            },
+            {
+              "const": "AK",
+              "title": "Akan"
+            },
+            {
+              "const": "am",
+              "title": "Amharic"
+            },
+            {
+              "const": "AM",
+              "title": "Amharic"
+            },
+            {
+              "const": "an",
+              "title": "Aragonese"
+            },
+            {
+              "const": "AN",
+              "title": "Aragonese"
+            },
+            {
+              "const": "ar",
+              "title": "Arabic"
+            },
+            {
+              "const": "AR",
+              "title": "Arabic"
+            },
+            {
+              "const": "as",
+              "title": "Assamese"
+            },
+            {
+              "const": "AS",
+              "title": "Assamese"
+            },
+            {
+              "const": "av",
+              "title": "Avaric"
+            },
+            {
+              "const": "AV",
+              "title": "Avaric"
+            },
+            {
+              "const": "ay",
+              "title": "Aymara"
+            },
+            {
+              "const": "AY",
+              "title": "Aymara"
+            },
+            {
+              "const": "az",
+              "title": "Azerbaijani"
+            },
+            {
+              "const": "AZ",
+              "title": "Azerbaijani"
+            },
+            {
+              "const": "ba",
+              "title": "Bashkir"
+            },
+            {
+              "const": "BA",
+              "title": "Bashkir"
+            },
+            {
+              "const": "be",
+              "title": "Belarusian"
+            },
+            {
+              "const": "BE",
+              "title": "Belarusian"
+            },
+            {
+              "const": "bg",
+              "title": "Bulgarian"
+            },
+            {
+              "const": "BG",
+              "title": "Bulgarian"
+            },
+            {
+              "const": "bh",
+              "title": "Bihari"
+            },
+            {
+              "const": "BH",
+              "title": "Bihari"
+            },
+            {
+              "const": "bi",
+              "title": "Bislama"
+            },
+            {
+              "const": "BI",
+              "title": "Bislama"
+            },
+            {
+              "const": "bm",
+              "title": "Bambara"
+            },
+            {
+              "const": "BM",
+              "title": "Bambara"
+            },
+            {
+              "const": "bn",
+              "title": "Bengali"
+            },
+            {
+              "const": "BN",
+              "title": "Bengali"
+            },
+            {
+              "const": "bo",
+              "title": "Tibetan"
+            },
+            {
+              "const": "BO",
+              "title": "Tibetan"
+            },
+            {
+              "const": "br",
+              "title": "Breton"
+            },
+            {
+              "const": "BR",
+              "title": "Breton"
+            },
+            {
+              "const": "bs",
+              "title": "Bosnian"
+            },
+            {
+              "const": "BS",
+              "title": "Bosnian"
+            },
+            {
+              "const": "ca",
+              "title": "Catalan; Valencian"
+            },
+            {
+              "const": "CA",
+              "title": "Catalan; Valencian"
+            },
+            {
+              "const": "ce",
+              "title": "Chechen"
+            },
+            {
+              "const": "CE",
+              "title": "Chechen"
+            },
+            {
+              "const": "ch",
+              "title": "Chamorro"
+            },
+            {
+              "const": "CH",
+              "title": "Chamorro"
+            },
+            {
+              "const": "co",
+              "title": "Corsican"
+            },
+            {
+              "const": "CO",
+              "title": "Corsican"
+            },
+            {
+              "const": "cr",
+              "title": "Cree"
+            },
+            {
+              "const": "CR",
+              "title": "Cree"
+            },
+            {
+              "const": "cs",
+              "title": "Czech"
+            },
+            {
+              "const": "CS",
+              "title": "Czech"
+            },
+            {
+              "const": "cu",
+              "title": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic"
+            },
+            {
+              "const": "CU",
+              "title": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic"
+            },
+            {
+              "const": "cv",
+              "title": "Chuvash"
+            },
+            {
+              "const": "CV",
+              "title": "Chuvash"
+            },
+            {
+              "const": "cy",
+              "title": "Welsh"
+            },
+            {
+              "const": "CY",
+              "title": "Welsh"
+            },
+            {
+              "const": "da",
+              "title": "Danish"
+            },
+            {
+              "const": "DA",
+              "title": "Danish"
+            },
+            {
+              "const": "de",
+              "title": "German"
+            },
+            {
+              "const": "DE",
+              "title": "German"
+            },
+            {
+              "const": "dv",
+              "title": "Divehi; Dhivehi; Maldivian"
+            },
+            {
+              "const": "DV",
+              "title": "Divehi; Dhivehi; Maldivian"
+            },
+            {
+              "const": "dz",
+              "title": "Dzongkha"
+            },
+            {
+              "const": "DZ",
+              "title": "Dzongkha"
+            },
+            {
+              "const": "ee",
+              "title": "Ewe"
+            },
+            {
+              "const": "EE",
+              "title": "Ewe"
+            },
+            {
+              "const": "el",
+              "title": "Greek; Modern (1453-)"
+            },
+            {
+              "const": "EL",
+              "title": "Greek; Modern (1453-)"
+            },
+            {
+              "const": "en",
+              "title": "English"
+            },
+            {
+              "const": "EN",
+              "title": "English"
+            },
+            {
+              "const": "eo",
+              "title": "Esperanto"
+            },
+            {
+              "const": "EO",
+              "title": "Esperanto"
+            },
+            {
+              "const": "es",
+              "title": "Spanish; Castilian"
+            },
+            {
+              "const": "ES",
+              "title": "Spanish; Castilian"
+            },
+            {
+              "const": "et",
+              "title": "Estonian"
+            },
+            {
+              "const": "ET",
+              "title": "Estonian"
+            },
+            {
+              "const": "eu",
+              "title": "Basque"
+            },
+            {
+              "const": "EU",
+              "title": "Basque"
+            },
+            {
+              "const": "fa",
+              "title": "Persian"
+            },
+            {
+              "const": "FA",
+              "title": "Persian"
+            },
+            {
+              "const": "ff",
+              "title": "Fulah"
+            },
+            {
+              "const": "FF",
+              "title": "Fulah"
+            },
+            {
+              "const": "fi",
+              "title": "Finnish"
+            },
+            {
+              "const": "FI",
+              "title": "Finnish"
+            },
+            {
+              "const": "fj",
+              "title": "Fijian"
+            },
+            {
+              "const": "FJ",
+              "title": "Fijian"
+            },
+            {
+              "const": "fo",
+              "title": "Faroese"
+            },
+            {
+              "const": "FO",
+              "title": "Faroese"
+            },
+            {
+              "const": "fr",
+              "title": "French"
+            },
+            {
+              "const": "FR",
+              "title": "French"
+            },
+            {
+              "const": "fy",
+              "title": "Western Frisian"
+            },
+            {
+              "const": "FY",
+              "title": "Western Frisian"
+            },
+            {
+              "const": "ga",
+              "title": "Irish"
+            },
+            {
+              "const": "GA",
+              "title": "Irish"
+            },
+            {
+              "const": "gd",
+              "title": "Gaelic; Scottish Gaelic"
+            },
+            {
+              "const": "GD",
+              "title": "Gaelic; Scottish Gaelic"
+            },
+            {
+              "const": "gl",
+              "title": "Galician"
+            },
+            {
+              "const": "GL",
+              "title": "Galician"
+            },
+            {
+              "const": "gn",
+              "title": "Guarani"
+            },
+            {
+              "const": "GN",
+              "title": "Guarani"
+            },
+            {
+              "const": "gu",
+              "title": "Gujarati"
+            },
+            {
+              "const": "GU",
+              "title": "Gujarati"
+            },
+            {
+              "const": "gv",
+              "title": "Manx"
+            },
+            {
+              "const": "GV",
+              "title": "Manx"
+            },
+            {
+              "const": "ha",
+              "title": "Hausa"
+            },
+            {
+              "const": "HA",
+              "title": "Hausa"
+            },
+            {
+              "const": "he",
+              "title": "Hebrew"
+            },
+            {
+              "const": "HE",
+              "title": "Hebrew"
+            },
+            {
+              "const": "hi",
+              "title": "Hindi"
+            },
+            {
+              "const": "HI",
+              "title": "Hindi"
+            },
+            {
+              "const": "ho",
+              "title": "Hiri Motu"
+            },
+            {
+              "const": "HO",
+              "title": "Hiri Motu"
+            },
+            {
+              "const": "hr",
+              "title": "Croatian"
+            },
+            {
+              "const": "HR",
+              "title": "Croatian"
+            },
+            {
+              "const": "ht",
+              "title": "Haitian; Haitian Creole"
+            },
+            {
+              "const": "HT",
+              "title": "Haitian; Haitian Creole"
+            },
+            {
+              "const": "hu",
+              "title": "Hungarian"
+            },
+            {
+              "const": "HU",
+              "title": "Hungarian"
+            },
+            {
+              "const": "hy",
+              "title": "Armenian"
+            },
+            {
+              "const": "HY",
+              "title": "Armenian"
+            },
+            {
+              "const": "hz",
+              "title": "Herero"
+            },
+            {
+              "const": "HZ",
+              "title": "Herero"
+            },
+            {
+              "const": "ia",
+              "title": "Interlingua (International Auxiliary Language Association)"
+            },
+            {
+              "const": "IA",
+              "title": "Interlingua (International Auxiliary Language Association)"
+            },
+            {
+              "const": "id",
+              "title": "Indonesian"
+            },
+            {
+              "const": "ID",
+              "title": "Indonesian"
+            },
+            {
+              "const": "ie",
+              "title": "Interlingue"
+            },
+            {
+              "const": "IE",
+              "title": "Interlingue"
+            },
+            {
+              "const": "ig",
+              "title": "Igbo"
+            },
+            {
+              "const": "IG",
+              "title": "Igbo"
+            },
+            {
+              "const": "ii",
+              "title": "Sichuan Yi"
+            },
+            {
+              "const": "II",
+              "title": "Sichuan Yi"
+            },
+            {
+              "const": "ik",
+              "title": "Inupiaq"
+            },
+            {
+              "const": "IK",
+              "title": "Inupiaq"
+            },
+            {
+              "const": "io",
+              "title": "Ido"
+            },
+            {
+              "const": "IO",
+              "title": "Ido"
+            },
+            {
+              "const": "is",
+              "title": "Icelandic"
+            },
+            {
+              "const": "IS",
+              "title": "Icelandic"
+            },
+            {
+              "const": "it",
+              "title": "Italian"
+            },
+            {
+              "const": "IT",
+              "title": "Italian"
+            },
+            {
+              "const": "iu",
+              "title": "Inuktiut"
+            },
+            {
+              "const": "IU",
+              "title": "Inuktiut"
+            },
+            {
+              "const": "ja",
+              "title": "Japanese"
+            },
+            {
+              "const": "JA",
+              "title": "Japanese"
+            },
+            {
+              "const": "jv",
+              "title": "Javanese"
+            },
+            {
+              "const": "JV",
+              "title": "Javanese"
+            },
+            {
+              "const": "ka",
+              "title": "Georgian"
+            },
+            {
+              "const": "KA",
+              "title": "Georgian"
+            },
+            {
+              "const": "kg",
+              "title": "Kongo"
+            },
+            {
+              "const": "KG",
+              "title": "Kongo"
+            },
+            {
+              "const": "ki",
+              "title": "Kikuyu; Gikuyu"
+            },
+            {
+              "const": "KI",
+              "title": "Kikuyu; Gikuyu"
+            },
+            {
+              "const": "kj",
+              "title": "Kuanyama; Kwanyama"
+            },
+            {
+              "const": "KJ",
+              "title": "Kuanyama; Kwanyama"
+            },
+            {
+              "const": "kk",
+              "title": "Kazakh"
+            },
+            {
+              "const": "KK",
+              "title": "Kazakh"
+            },
+            {
+              "const": "kl",
+              "title": "Kalaallisut; Greenlandic"
+            },
+            {
+              "const": "KL",
+              "title": "Kalaallisut; Greenlandic"
+            },
+            {
+              "const": "km",
+              "title": "Central Khmer"
+            },
+            {
+              "const": "KM",
+              "title": "Central Khmer"
+            },
+            {
+              "const": "kn",
+              "title": "Kannada"
+            },
+            {
+              "const": "KN",
+              "title": "Kannada"
+            },
+            {
+              "const": "ko",
+              "title": "Korean"
+            },
+            {
+              "const": "KO",
+              "title": "Korean"
+            },
+            {
+              "const": "kr",
+              "title": "Kanuri"
+            },
+            {
+              "const": "KR",
+              "title": "Kanuri"
+            },
+            {
+              "const": "ks",
+              "title": "Kashmiri"
+            },
+            {
+              "const": "KS",
+              "title": "Kashmiri"
+            },
+            {
+              "const": "ku",
+              "title": "Kurdish"
+            },
+            {
+              "const": "KU",
+              "title": "Kurdish"
+            },
+            {
+              "const": "kv",
+              "title": "Komi"
+            },
+            {
+              "const": "KV",
+              "title": "Komi"
+            },
+            {
+              "const": "kw",
+              "title": "Cornish"
+            },
+            {
+              "const": "KW",
+              "title": "Cornish"
+            },
+            {
+              "const": "ky",
+              "title": "Kirghiz; Kyrgyz"
+            },
+            {
+              "const": "KY",
+              "title": "Kirghiz; Kyrgyz"
+            },
+            {
+              "const": "la",
+              "title": "Latin"
+            },
+            {
+              "const": "LA",
+              "title": "Latin"
+            },
+            {
+              "const": "lb",
+              "title": "Luxembourgish; Letzeburgesch"
+            },
+            {
+              "const": "LB",
+              "title": "Luxembourgish; Letzeburgesch"
+            },
+            {
+              "const": "lg",
+              "title": "Ganda"
+            },
+            {
+              "const": "LG",
+              "title": "Ganda"
+            },
+            {
+              "const": "li",
+              "title": "Limburgan; Limburger; Limburgish"
+            },
+            {
+              "const": "LI",
+              "title": "Limburgan; Limburger; Limburgish"
+            },
+            {
+              "const": "ln",
+              "title": "Lingala"
+            },
+            {
+              "const": "LN",
+              "title": "Lingala"
+            },
+            {
+              "const": "lo",
+              "title": "Lao"
+            },
+            {
+              "const": "LO",
+              "title": "Lao"
+            },
+            {
+              "const": "lt",
+              "title": "Lithuanian"
+            },
+            {
+              "const": "LT",
+              "title": "Lithuanian"
+            },
+            {
+              "const": "lu",
+              "title": "Luba-Katanga"
+            },
+            {
+              "const": "LU",
+              "title": "Luba-Katanga"
+            },
+            {
+              "const": "lv",
+              "title": "Latvian"
+            },
+            {
+              "const": "LV",
+              "title": "Latvian"
+            },
+            {
+              "const": "mg",
+              "title": "Malagasy"
+            },
+            {
+              "const": "MG",
+              "title": "Malagasy"
+            },
+            {
+              "const": "mh",
+              "title": "Marshallese"
+            },
+            {
+              "const": "MH",
+              "title": "Marshallese"
+            },
+            {
+              "const": "mi",
+              "title": "Maori"
+            },
+            {
+              "const": "MI",
+              "title": "Maori"
+            },
+            {
+              "const": "mk",
+              "title": "Macedonian"
+            },
+            {
+              "const": "MK",
+              "title": "Macedonian"
+            },
+            {
+              "const": "ml",
+              "title": "Malayalam"
+            },
+            {
+              "const": "ML",
+              "title": "Malayalam"
+            },
+            {
+              "const": "mn",
+              "title": "Mongolian"
+            },
+            {
+              "const": "MN",
+              "title": "Mongolian"
+            },
+            {
+              "const": "mo",
+              "title": "Moldavian; Moldovan"
+            },
+            {
+              "const": "MO",
+              "title": "Moldavian; Moldovan"
+            },
+            {
+              "const": "mr",
+              "title": "Marathi"
+            },
+            {
+              "const": "MR",
+              "title": "Marathi"
+            },
+            {
+              "const": "ms",
+              "title": "Malay"
+            },
+            {
+              "const": "MS",
+              "title": "Malay"
+            },
+            {
+              "const": "mt",
+              "title": "Maltese"
+            },
+            {
+              "const": "MT",
+              "title": "Maltese"
+            },
+            {
+              "const": "my",
+              "title": "Burmese"
+            },
+            {
+              "const": "MY",
+              "title": "Burmese"
+            },
+            {
+              "const": "na",
+              "title": "Nauru"
+            },
+            {
+              "const": "NA",
+              "title": "Nauru"
+            },
+            {
+              "const": "nb",
+              "title": "Bokmal Norwegian; Norwegian Bokmal"
+            },
+            {
+              "const": "NB",
+              "title": "Bokmal Norwegian; Norwegian Bokmal"
+            },
+            {
+              "const": "nd",
+              "title": "Ndebele; North; North Ndebele"
+            },
+            {
+              "const": "ND",
+              "title": "Ndebele; North; North Ndebele"
+            },
+            {
+              "const": "ne",
+              "title": "Nepali"
+            },
+            {
+              "const": "NE",
+              "title": "Nepali"
+            },
+            {
+              "const": "ng",
+              "title": "Ndonga"
+            },
+            {
+              "const": "NG",
+              "title": "Ndonga"
+            },
+            {
+              "const": "nl",
+              "title": "Dutch; Flemish"
+            },
+            {
+              "const": "NL",
+              "title": "Dutch; Flemish"
+            },
+            {
+              "const": "nn",
+              "title": "Norwegian Nynorsk; Nynorsk, Norwegian"
+            },
+            {
+              "const": "NN",
+              "title": "Norwegian Nynorsk; Nynorsk, Norwegian"
+            },
+            {
+              "const": "no",
+              "title": "Norwegian"
+            },
+            {
+              "const": "NO",
+              "title": "Norwegian"
+            },
+            {
+              "const": "nr",
+              "title": "Ndebele; South; South Ndebele"
+            },
+            {
+              "const": "NR",
+              "title": "Ndebele; South; South Ndebele"
+            },
+            {
+              "const": "nv",
+              "title": "Navajo; Navaho"
+            },
+            {
+              "const": "NV",
+              "title": "Navajo; Navaho"
+            },
+            {
+              "const": "ny",
+              "title": "Chichewa; Chewa; Nyanja"
+            },
+            {
+              "const": "NY",
+              "title": "Chichewa; Chewa; Nyanja"
+            },
+            {
+              "const": "oc",
+              "title": "Occitan (post 1500); Provencal"
+            },
+            {
+              "const": "OC",
+              "title": "Occitan (post 1500); Provencal"
+            },
+            {
+              "const": "oj",
+              "title": "Ojibwa"
+            },
+            {
+              "const": "OJ",
+              "title": "Ojibwa"
+            },
+            {
+              "const": "om",
+              "title": "Oromo"
+            },
+            {
+              "const": "OM",
+              "title": "Oromo"
+            },
+            {
+              "const": "or",
+              "title": "Oriya"
+            },
+            {
+              "const": "OR",
+              "title": "Oriya"
+            },
+            {
+              "const": "os",
+              "title": "Ossetian; Ossetic"
+            },
+            {
+              "const": "OS",
+              "title": "Ossetian; Ossetic"
+            },
+            {
+              "const": "pa",
+              "title": "Panjabi; Punjabi"
+            },
+            {
+              "const": "PA",
+              "title": "Panjabi; Punjabi"
+            },
+            {
+              "const": "pi",
+              "title": "Pali"
+            },
+            {
+              "const": "PI",
+              "title": "Pali"
+            },
+            {
+              "const": "pl",
+              "title": "Polish"
+            },
+            {
+              "const": "PL",
+              "title": "Polish"
+            },
+            {
+              "const": "ps",
+              "title": "Pushto; Pashto"
+            },
+            {
+              "const": "PS",
+              "title": "Pushto; Pashto"
+            },
+            {
+              "const": "pt",
+              "title": "Portuguese"
+            },
+            {
+              "const": "PT",
+              "title": "Portuguese"
+            },
+            {
+              "const": "qu",
+              "title": "Quechua"
+            },
+            {
+              "const": "QU",
+              "title": "Quechua"
+            },
+            {
+              "const": "rm",
+              "title": "Romansh"
+            },
+            {
+              "const": "RM",
+              "title": "Romansh"
+            },
+            {
+              "const": "rn",
+              "title": "Rundi"
+            },
+            {
+              "const": "RN",
+              "title": "Rundi"
+            },
+            {
+              "const": "ro",
+              "title": "Romanian"
+            },
+            {
+              "const": "RO",
+              "title": "Romanian"
+            },
+            {
+              "const": "ru",
+              "title": "Russian"
+            },
+            {
+              "const": "RU",
+              "title": "Russian"
+            },
+            {
+              "const": "rw",
+              "title": "Kinyarwanda"
+            },
+            {
+              "const": "RW",
+              "title": "Kinyarwanda"
+            },
+            {
+              "const": "sa",
+              "title": "Sanskrit"
+            },
+            {
+              "const": "SA",
+              "title": "Sanskrit"
+            },
+            {
+              "const": "sc",
+              "title": "Sardinian"
+            },
+            {
+              "const": "SC",
+              "title": "Sardinian"
+            },
+            {
+              "const": "sd",
+              "title": "Sindhi"
+            },
+            {
+              "const": "SD",
+              "title": "Sindhi"
+            },
+            {
+              "const": "se",
+              "title": "Northern Sami"
+            },
+            {
+              "const": "SE",
+              "title": "Northern Sami"
+            },
+            {
+              "const": "sg",
+              "title": "Sango"
+            },
+            {
+              "const": "SG",
+              "title": "Sango"
+            },
+            {
+              "const": "si",
+              "title": "Sinhala; Sinhalese"
+            },
+            {
+              "const": "SI",
+              "title": "Sinhala; Sinhalese"
+            },
+            {
+              "const": "sk",
+              "title": "Slovak"
+            },
+            {
+              "const": "SK",
+              "title": "Slovak"
+            },
+            {
+              "const": "sl",
+              "title": "Slovenian"
+            },
+            {
+              "const": "SL",
+              "title": "Slovenian"
+            },
+            {
+              "const": "sm",
+              "title": "Samoan"
+            },
+            {
+              "const": "SM",
+              "title": "Samoan"
+            },
+            {
+              "const": "sn",
+              "title": "Shona"
+            },
+            {
+              "const": "SN",
+              "title": "Shona"
+            },
+            {
+              "const": "so",
+              "title": "Somali"
+            },
+            {
+              "const": "SO",
+              "title": "Somali"
+            },
+            {
+              "const": "sq",
+              "title": "Albanian"
+            },
+            {
+              "const": "SQ",
+              "title": "Albanian"
+            },
+            {
+              "const": "sr",
+              "title": "Serbian"
+            },
+            {
+              "const": "SR",
+              "title": "Serbian"
+            },
+            {
+              "const": "ss",
+              "title": "Swati"
+            },
+            {
+              "const": "SS",
+              "title": "Swati"
+            },
+            {
+              "const": "st",
+              "title": "Sotho, Southern"
+            },
+            {
+              "const": "ST",
+              "title": "Sotho, Southern"
+            },
+            {
+              "const": "su",
+              "title": "Sundanese"
+            },
+            {
+              "const": "SU",
+              "title": "Sundanese"
+            },
+            {
+              "const": "sv",
+              "title": "Swedish"
+            },
+            {
+              "const": "SV",
+              "title": "Swedish"
+            },
+            {
+              "const": "sw",
+              "title": "Swahili"
+            },
+            {
+              "const": "SW",
+              "title": "Swahili"
+            },
+            {
+              "const": "ta",
+              "title": "Tamil"
+            },
+            {
+              "const": "TA",
+              "title": "Tamil"
+            },
+            {
+              "const": "te",
+              "title": "Telugu"
+            },
+            {
+              "const": "TE",
+              "title": "Telugu"
+            },
+            {
+              "const": "tg",
+              "title": "Tajik"
+            },
+            {
+              "const": "TG",
+              "title": "Tajik"
+            },
+            {
+              "const": "th",
+              "title": "Thai"
+            },
+            {
+              "const": "TH",
+              "title": "Thai"
+            },
+            {
+              "const": "ti",
+              "title": "Tigrinya"
+            },
+            {
+              "const": "TI",
+              "title": "Tigrinya"
+            },
+            {
+              "const": "tk",
+              "title": "Turkmen"
+            },
+            {
+              "const": "TK",
+              "title": "Turkmen"
+            },
+            {
+              "const": "tl",
+              "title": "Tagalog"
+            },
+            {
+              "const": "TL",
+              "title": "Tagalog"
+            },
+            {
+              "const": "tn",
+              "title": "Tswana"
+            },
+            {
+              "const": "TN",
+              "title": "Tswana"
+            },
+            {
+              "const": "to",
+              "title": "Tonga (Tonga Islands)"
+            },
+            {
+              "const": "TO",
+              "title": "Tonga (Tonga Islands)"
+            },
+            {
+              "const": "tr",
+              "title": "Turkish"
+            },
+            {
+              "const": "TR",
+              "title": "Turkish"
+            },
+            {
+              "const": "ts",
+              "title": "Tsonga"
+            },
+            {
+              "const": "TS",
+              "title": "Tsonga"
+            },
+            {
+              "const": "tt",
+              "title": "Tatar"
+            },
+            {
+              "const": "TT",
+              "title": "Tatar"
+            },
+            {
+              "const": "tw",
+              "title": "Twi"
+            },
+            {
+              "const": "TW",
+              "title": "Twi"
+            },
+            {
+              "const": "ty",
+              "title": "Tahitian"
+            },
+            {
+              "const": "TY",
+              "title": "Tahitian"
+            },
+            {
+              "const": "ug",
+              "title": "Uighur; Uyghur"
+            },
+            {
+              "const": "UG",
+              "title": "Uighur; Uyghur"
+            },
+            {
+              "const": "uk",
+              "title": "Ukrainian"
+            },
+            {
+              "const": "UK",
+              "title": "Ukrainian"
+            },
+            {
+              "const": "ur",
+              "title": "Urdu"
+            },
+            {
+              "const": "UR",
+              "title": "Urdu"
+            },
+            {
+              "const": "uz",
+              "title": "Uzbek"
+            },
+            {
+              "const": "UZ",
+              "title": "Uzbek"
+            },
+            {
+              "const": "ve",
+              "title": "Venda"
+            },
+            {
+              "const": "VE",
+              "title": "Venda"
+            },
+            {
+              "const": "vi",
+              "title": "Vietnamese"
+            },
+            {
+              "const": "VI",
+              "title": "Vietnamese"
+            },
+            {
+              "const": "vo",
+              "title": "Volapük"
+            },
+            {
+              "const": "VO",
+              "title": "Volapük"
+            },
+            {
+              "const": "wa",
+              "title": "Walloon"
+            },
+            {
+              "const": "WA",
+              "title": "Walloon"
+            },
+            {
+              "const": "wo",
+              "title": "Wolof"
+            },
+            {
+              "const": "WO",
+              "title": "Wolof"
+            },
+            {
+              "const": "xh",
+              "title": "Xhosa"
+            },
+            {
+              "const": "XH",
+              "title": "Xhosa"
+            },
+            {
+              "const": "yi",
+              "title": "Yiddish"
+            },
+            {
+              "const": "YI",
+              "title": "Yiddish"
+            },
+            {
+              "const": "yo",
+              "title": "Yoruba"
+            },
+            {
+              "const": "YO",
+              "title": "Yoruba"
+            },
+            {
+              "const": "za",
+              "title": "Zhuang; Chuang"
+            },
+            {
+              "const": "ZA",
+              "title": "Zhuang; Chuang"
+            },
+            {
+              "const": "zh",
+              "title": "Chinese"
+            },
+            {
+              "const": "ZH",
+              "title": "Chinese"
+            },
+            {
+              "const": "zu",
+              "title": "Zulu"
+            },
+            {
+              "const": "ZU",
+              "title": "Zulu"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

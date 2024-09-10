@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID4233",
+  "title": "UNECE_UNTDID4233",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4233Type": {
+          "title": "Marking instructions code",
+          "description": "Code specifying instructions for marking.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Do not mark suppliers company name"
+            },
+            {
+              "const": "2",
+              "title": "Mark customers company name"
+            },
+            {
+              "const": "3",
+              "title": "Mark customers references"
+            },
+            {
+              "const": "4",
+              "title": "Mark additionally customers article description"
+            },
+            {
+              "const": "5",
+              "title": "Mark exclusively customers article description"
+            },
+            {
+              "const": "6",
+              "title": "Mark packages dimensions"
+            },
+            {
+              "const": "7",
+              "title": "Mark net weight"
+            },
+            {
+              "const": "8",
+              "title": "Mark gross weight"
+            },
+            {
+              "const": "9",
+              "title": "Mark tare weight"
+            },
+            {
+              "const": "10",
+              "title": "Mark batch number"
+            },
+            {
+              "const": "11",
+              "title": "Mark article number customer"
+            },
+            {
+              "const": "12",
+              "title": "Mark running number of packages"
+            },
+            {
+              "const": "13",
+              "title": "Mark date of production"
+            },
+            {
+              "const": "14",
+              "title": "Mark expiry date"
+            },
+            {
+              "const": "15",
+              "title": "Mark supplier number"
+            },
+            {
+              "const": "16",
+              "title": "Buyer's instructions"
+            },
+            {
+              "const": "17",
+              "title": "Seller's instructions"
+            },
+            {
+              "const": "18",
+              "title": "Carrier's instructions"
+            },
+            {
+              "const": "19",
+              "title": "Legal requirements"
+            },
+            {
+              "const": "20",
+              "title": "Industry instructions"
+            },
+            {
+              "const": "21",
+              "title": "Line item only"
+            },
+            {
+              "const": "22",
+              "title": "Pre-marked by buyer"
+            },
+            {
+              "const": "23",
+              "title": "Entire shipment"
+            },
+            {
+              "const": "24",
+              "title": "Shipper assigned"
+            },
+            {
+              "const": "25",
+              "title": "Shipper assigned roll number"
+            },
+            {
+              "const": "26",
+              "title": "Shipper assigned skid number"
+            },
+            {
+              "const": "27",
+              "title": "Uniform Code Council (UCC) format"
+            },
+            {
+              "const": "28",
+              "title": "Mark free text"
+            },
+            {
+              "const": "29",
+              "title": "Mark case number"
+            },
+            {
+              "const": "30",
+              "title": "Mark serial shipping container code"
+            },
+            {
+              "const": "31",
+              "title": "Marked with ISO 10374 (permanent container tag)"
+            },
+            {
+              "const": "32",
+              "title": "Mark date of packaging"
+            },
+            {
+              "const": "33",
+              "title": "Mark reference to source entity"
+            },
+            {
+              "const": "34",
+              "title": "Marked GS1 Global Individual Asset Identifier"
+            },
+            {
+              "const": "35",
+              "title": "Marked with a product serial number"
+            },
+            {
+              "const": "36",
+              "title": "Marked with a GS1 Global Identification Number for Consignment (GINC)"
+            },
+            {
+              "const": "37",
+              "title": "Marked with a GS1 Global Shipment Identification Number (GSIN)"
+            },
+            {
+              "const": "38",
+              "title": "Marked price"
+            },
+            {
+              "const": "39",
+              "title": "Marked with Serial Shipping Container Code (SSCC)"
+            },
+            {
+              "const": "40",
+              "title": "Marked with first freezing date"
+            },
+            {
+              "const": "41",
+              "title": "Marked with batch number"
+            },
+            {
+              "const": "42",
+              "title": "Marked with production date"
+            },
+            {
+              "const": "43",
+              "title": "Marked with expiry date"
+            },
+            {
+              "const": "44",
+              "title": "Marked with best before date"
+            },
+            {
+              "const": "45",
+              "title": "Marked with net weight"
+            },
+            {
+              "const": "46",
+              "title": "Marked with packaging date"
+            },
+            {
+              "const": "47",
+              "title": "Marked with GS1 Global Returnable Asset Identifier (GRAI)"
+            },
+            {
+              "const": "48",
+              "title": "Marked with a greeting message"
+            },
+            {
+              "const": "49",
+              "title": "Price per unit of measure marked on product"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID6145",
+  "title": "UNECE_UNTDID6145",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID6145Type": {
+          "title": "Dimension type code qualifier",
+          "description": "Code qualifying the type of the dimension.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Gross dimensions"
+            },
+            {
+              "const": "2",
+              "title": "Package dimensions (including goods)"
+            },
+            {
+              "const": "3",
+              "title": "Pallet dimensions (excluding goods)"
+            },
+            {
+              "const": "4",
+              "title": "Pallet dimensions (including goods)"
+            },
+            {
+              "const": "5",
+              "title": "Off-standard dimension front"
+            },
+            {
+              "const": "6",
+              "title": "Off-standard dimension back"
+            },
+            {
+              "const": "7",
+              "title": "Off-standard dimension right"
+            },
+            {
+              "const": "8",
+              "title": "Off-standard dimension left"
+            },
+            {
+              "const": "9",
+              "title": "Off-standard dimension general"
+            },
+            {
+              "const": "10",
+              "title": "External equipment dimension"
+            },
+            {
+              "const": "11",
+              "title": "Internal equipment dimensions"
+            },
+            {
+              "const": "12",
+              "title": "Damage dimensions"
+            },
+            {
+              "const": "13",
+              "title": "Off-standard dimensions height"
+            },
+            {
+              "const": "14",
+              "title": "Equipment door dimensions"
+            },
+            {
+              "const": "15",
+              "title": "Off-standard dimension width"
+            },
+            {
+              "const": "16",
+              "title": "Off-standard dimension length"
+            },
+            {
+              "const": "17",
+              "title": "Bundled equipment total height"
+            },
+            {
+              "const": "18",
+              "title": "Equipment off-standard dimension height, actual"
+            },
+            {
+              "const": "19",
+              "title": "Folded equipment height"
+            },
+            {
+              "const": "20",
+              "title": "Adjustable equipment height"
+            },
+            {
+              "const": "21",
+              "title": "Equipment floor height"
+            },
+            {
+              "const": "22",
+              "title": "Container off-standard dimension width at corner posts"
+            },
+            {
+              "const": "23",
+              "title": "Container off-standard dimension width of body"
+            },
+            {
+              "const": "24",
+              "title": "Transport unit gross dimensions"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

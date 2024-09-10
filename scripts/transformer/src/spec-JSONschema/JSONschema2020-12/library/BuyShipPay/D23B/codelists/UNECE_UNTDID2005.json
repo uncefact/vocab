@@ -1,0 +1,3283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID2005",
+  "title": "UNECE_UNTDID2005",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID2005Type": {
+          "title": "Date or time or period function code qualifier",
+          "description": "Code qualifying the function of a date, time or\r\nperiod.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Service completion date/time, actual"
+            },
+            {
+              "const": "2",
+              "title": "Delivery date/time, requested"
+            },
+            {
+              "const": "3",
+              "title": "Invoice document issue date time"
+            },
+            {
+              "const": "4",
+              "title": "Order document issue date time"
+            },
+            {
+              "const": "5",
+              "title": "Saleable stock demand cover period, expected"
+            },
+            {
+              "const": "6",
+              "title": "Moved from location date"
+            },
+            {
+              "const": "7",
+              "title": "Effective from date/time"
+            },
+            {
+              "const": "8",
+              "title": "Order received date/time"
+            },
+            {
+              "const": "9",
+              "title": "Processing date/time"
+            },
+            {
+              "const": "10",
+              "title": "Shipment date/time, requested"
+            },
+            {
+              "const": "11",
+              "title": "Despatch date and or time"
+            },
+            {
+              "const": "12",
+              "title": "Terms discount due date/time"
+            },
+            {
+              "const": "13",
+              "title": "Terms net due date"
+            },
+            {
+              "const": "14",
+              "title": "Payment date/time, deferred"
+            },
+            {
+              "const": "15",
+              "title": "Promotion start date/time"
+            },
+            {
+              "const": "16",
+              "title": "Promotion end date/time"
+            },
+            {
+              "const": "17",
+              "title": "Delivery date/time, estimated"
+            },
+            {
+              "const": "18",
+              "title": "Installation date/time/period"
+            },
+            {
+              "const": "19",
+              "title": "Meat ageing period"
+            },
+            {
+              "const": "20",
+              "title": "Cheque date/time"
+            },
+            {
+              "const": "21",
+              "title": "Charge back date/time"
+            },
+            {
+              "const": "22",
+              "title": "Freight bill date/time"
+            },
+            {
+              "const": "23",
+              "title": "Equipment reconditioning date/time, actual"
+            },
+            {
+              "const": "24",
+              "title": "Transfer note acceptance date and time"
+            },
+            {
+              "const": "35",
+              "title": "Delivery date/time, actual"
+            },
+            {
+              "const": "36",
+              "title": "Expiry date"
+            },
+            {
+              "const": "37",
+              "title": "Ship not before date/time"
+            },
+            {
+              "const": "38",
+              "title": "Ship not later than date/time"
+            },
+            {
+              "const": "39",
+              "title": "Ship week of date"
+            },
+            {
+              "const": "40",
+              "title": "Clinical information issue date and/or time"
+            },
+            {
+              "const": "41",
+              "title": "Event duration, expected"
+            },
+            {
+              "const": "42",
+              "title": "Superseded date/time"
+            },
+            {
+              "const": "43",
+              "title": "Event duration, intended"
+            },
+            {
+              "const": "44",
+              "title": "Availability"
+            },
+            {
+              "const": "45",
+              "title": "Compilation date and time"
+            },
+            {
+              "const": "46",
+              "title": "Cancellation date"
+            },
+            {
+              "const": "47",
+              "title": "Statistical time series date"
+            },
+            {
+              "const": "48",
+              "title": "Duration"
+            },
+            {
+              "const": "49",
+              "title": "Deliver not before and not after dates"
+            },
+            {
+              "const": "50",
+              "title": "Goods receipt date/time"
+            },
+            {
+              "const": "51",
+              "title": "Cumulative quantity start date"
+            },
+            {
+              "const": "52",
+              "title": "Cumulative quantity end date"
+            },
+            {
+              "const": "53",
+              "title": "Buyer's local time"
+            },
+            {
+              "const": "54",
+              "title": "Seller's local time"
+            },
+            {
+              "const": "55",
+              "title": "Confirmed date/time"
+            },
+            {
+              "const": "56",
+              "title": "Original authorisation date and/or time"
+            },
+            {
+              "const": "57",
+              "title": "Precaution relevant period"
+            },
+            {
+              "const": "58",
+              "title": "Clearance date (Customs)"
+            },
+            {
+              "const": "59",
+              "title": "Inbound movement authorization date"
+            },
+            {
+              "const": "60",
+              "title": "Engineering change level date"
+            },
+            {
+              "const": "61",
+              "title": "Cancel if not delivered by this date"
+            },
+            {
+              "const": "62",
+              "title": "Excluded date"
+            },
+            {
+              "const": "63",
+              "title": "Delivery date time, last"
+            },
+            {
+              "const": "64",
+              "title": "Delivery date/time, earliest"
+            },
+            {
+              "const": "65",
+              "title": "Delivery date/time, 1st schedule"
+            },
+            {
+              "const": "66",
+              "title": "Excluded period"
+            },
+            {
+              "const": "67",
+              "title": "Delivery date/time, current schedule"
+            },
+            {
+              "const": "68",
+              "title": "Additional period"
+            },
+            {
+              "const": "69",
+              "title": "Delivery date time, promised before"
+            },
+            {
+              "const": "70",
+              "title": "Additional date"
+            },
+            {
+              "const": "71",
+              "title": "Delivery date/time, requested for (after and including)"
+            },
+            {
+              "const": "72",
+              "title": "Delivery date/time, promised for (after and including)"
+            },
+            {
+              "const": "73",
+              "title": "Guarantee period"
+            },
+            {
+              "const": "74",
+              "title": "Delivery date/time, requested for (prior to and including)"
+            },
+            {
+              "const": "75",
+              "title": "Delivery date/time, promised for (prior to and including)"
+            },
+            {
+              "const": "76",
+              "title": "Delivery date/time, scheduled for"
+            },
+            {
+              "const": "77",
+              "title": "Specification revision date"
+            },
+            {
+              "const": "78",
+              "title": "Event date/time/period, actual"
+            },
+            {
+              "const": "79",
+              "title": "Shipment date/time, promised for"
+            },
+            {
+              "const": "80",
+              "title": "Planning end date and/or time, actual"
+            },
+            {
+              "const": "81",
+              "title": "Shipment date/time, requested for (after and including)"
+            },
+            {
+              "const": "82",
+              "title": "Medicine administration time"
+            },
+            {
+              "const": "83",
+              "title": "Dispensing interval, minimum"
+            },
+            {
+              "const": "84",
+              "title": "Shipment date/time, requested for (prior to and including)"
+            },
+            {
+              "const": "85",
+              "title": "Shipment date/time, promised for (prior to and including)"
+            },
+            {
+              "const": "86",
+              "title": "Medication date/time, start"
+            },
+            {
+              "const": "87",
+              "title": "Travel service connection time"
+            },
+            {
+              "const": "88",
+              "title": "Summer time, start"
+            },
+            {
+              "const": "89",
+              "title": "Inquiry date"
+            },
+            {
+              "const": "90",
+              "title": "Report start date"
+            },
+            {
+              "const": "91",
+              "title": "Report end date"
+            },
+            {
+              "const": "92",
+              "title": "Contract effective date"
+            },
+            {
+              "const": "93",
+              "title": "Contract expiry date"
+            },
+            {
+              "const": "94",
+              "title": "Production/manufacture date"
+            },
+            {
+              "const": "95",
+              "title": "Bill of lading date"
+            },
+            {
+              "const": "96",
+              "title": "Discharge date/time"
+            },
+            {
+              "const": "97",
+              "title": "Transaction creation date"
+            },
+            {
+              "const": "98",
+              "title": "Winter time, start"
+            },
+            {
+              "const": "99",
+              "title": "Quotation opening date"
+            },
+            {
+              "const": "100",
+              "title": "Product ageing period before delivery"
+            },
+            {
+              "const": "101",
+              "title": "Production date, no schedule established as of"
+            },
+            {
+              "const": "102",
+              "title": "Health problem period"
+            },
+            {
+              "const": "103",
+              "title": "Closing date/time for breakbulk STORO"
+            },
+            {
+              "const": "104",
+              "title": "Closing date/time for container RO-RO"
+            },
+            {
+              "const": "105",
+              "title": "Starting date/time for breakbulk STORO"
+            },
+            {
+              "const": "106",
+              "title": "Starting date/time for container RO-RO"
+            },
+            {
+              "const": "107",
+              "title": "Deposit date/time"
+            },
+            {
+              "const": "108",
+              "title": "Postmark date/time"
+            },
+            {
+              "const": "109",
+              "title": "Receive at lockbox date"
+            },
+            {
+              "const": "110",
+              "title": "Ship date, originally scheduled"
+            },
+            {
+              "const": "111",
+              "title": "Manifest/ship notice date"
+            },
+            {
+              "const": "112",
+              "title": "First interest-bearing date"
+            },
+            {
+              "const": "113",
+              "title": "Sample required date"
+            },
+            {
+              "const": "114",
+              "title": "Tooling required date"
+            },
+            {
+              "const": "115",
+              "title": "Sample available date"
+            },
+            {
+              "const": "116",
+              "title": "Equipment return period, expected"
+            },
+            {
+              "const": "117",
+              "title": "Delivery date/time, first"
+            },
+            {
+              "const": "118",
+              "title": "Cargo booking confirmed date/time"
+            },
+            {
+              "const": "119",
+              "title": "Test completion date"
+            },
+            {
+              "const": "120",
+              "title": "Last interest-bearing date"
+            },
+            {
+              "const": "121",
+              "title": "Entry date"
+            },
+            {
+              "const": "122",
+              "title": "Contract completion date"
+            },
+            {
+              "const": "123",
+              "title": "Documentary credit expiry date/time"
+            },
+            {
+              "const": "124",
+              "title": "Despatch note document issue date time"
+            },
+            {
+              "const": "125",
+              "title": "Import permit issue date time"
+            },
+            {
+              "const": "126",
+              "title": "Contract document issue date time"
+            },
+            {
+              "const": "127",
+              "title": "Previous report date"
+            },
+            {
+              "const": "128",
+              "title": "Delivery date/time, last"
+            },
+            {
+              "const": "129",
+              "title": "Exportation date"
+            },
+            {
+              "const": "130",
+              "title": "Current report date"
+            },
+            {
+              "const": "131",
+              "title": "Tax point date time"
+            },
+            {
+              "const": "132",
+              "title": "Transport means arrival date time, estimated"
+            },
+            {
+              "const": "133",
+              "title": "Transport means departure date/time, estimated"
+            },
+            {
+              "const": "134",
+              "title": "Rate of exchange date/time"
+            },
+            {
+              "const": "135",
+              "title": "Telex date"
+            },
+            {
+              "const": "136",
+              "title": "Transport means departure date time, actual"
+            },
+            {
+              "const": "137",
+              "title": "Document issue date time"
+            },
+            {
+              "const": "138",
+              "title": "Payment availability date time"
+            },
+            {
+              "const": "139",
+              "title": "Property mortgage date, start"
+            },
+            {
+              "const": "140",
+              "title": "Payment due date"
+            },
+            {
+              "const": "141",
+              "title": "Customs declaration document lodgement date time"
+            },
+            {
+              "const": "142",
+              "title": "Labour wage determination date"
+            },
+            {
+              "const": "143",
+              "title": "Consignment acceptance date time, actual"
+            },
+            {
+              "const": "144",
+              "title": "Quota date"
+            },
+            {
+              "const": "145",
+              "title": "Event date"
+            },
+            {
+              "const": "146",
+              "title": "Entry date, estimated (Customs)"
+            },
+            {
+              "const": "147",
+              "title": "Export permit effective end date time"
+            },
+            {
+              "const": "148",
+              "title": "Goods declaration document acceptance date time"
+            },
+            {
+              "const": "149",
+              "title": "Invoice date, required"
+            },
+            {
+              "const": "150",
+              "title": "Declaration/presentation date"
+            },
+            {
+              "const": "151",
+              "title": "Importation date"
+            },
+            {
+              "const": "152",
+              "title": "Exportation date for textiles"
+            },
+            {
+              "const": "153",
+              "title": "Cancellation date/time, latest"
+            },
+            {
+              "const": "154",
+              "title": "Acceptance date of document"
+            },
+            {
+              "const": "155",
+              "title": "Accounting period start date"
+            },
+            {
+              "const": "156",
+              "title": "Accounting period end date"
+            },
+            {
+              "const": "157",
+              "title": "Validity start date"
+            },
+            {
+              "const": "158",
+              "title": "Horizon start date"
+            },
+            {
+              "const": "159",
+              "title": "Horizon end date"
+            },
+            {
+              "const": "160",
+              "title": "Authorization date"
+            },
+            {
+              "const": "161",
+              "title": "Release date of customer"
+            },
+            {
+              "const": "162",
+              "title": "Release date of supplier"
+            },
+            {
+              "const": "163",
+              "title": "Processing start date/time"
+            },
+            {
+              "const": "164",
+              "title": "Processing end date/time"
+            },
+            {
+              "const": "165",
+              "title": "Tax period start date"
+            },
+            {
+              "const": "166",
+              "title": "Tax period end date"
+            },
+            {
+              "const": "167",
+              "title": "Charge period start date"
+            },
+            {
+              "const": "168",
+              "title": "Charge period end date"
+            },
+            {
+              "const": "169",
+              "title": "Lead time"
+            },
+            {
+              "const": "170",
+              "title": "Settlement due date"
+            },
+            {
+              "const": "171",
+              "title": "Reference date/time"
+            },
+            {
+              "const": "172",
+              "title": "Hired from date"
+            },
+            {
+              "const": "173",
+              "title": "Hired until date"
+            },
+            {
+              "const": "174",
+              "title": "Advise after date/time"
+            },
+            {
+              "const": "175",
+              "title": "Advise before date/time"
+            },
+            {
+              "const": "176",
+              "title": "Advise completed date/time"
+            },
+            {
+              "const": "177",
+              "title": "Advise on date/time"
+            },
+            {
+              "const": "178",
+              "title": "Transport means arrival date time, actual"
+            },
+            {
+              "const": "179",
+              "title": "Booking date/time"
+            },
+            {
+              "const": "180",
+              "title": "Closing date/time"
+            },
+            {
+              "const": "181",
+              "title": "Positioning date/time of equipment"
+            },
+            {
+              "const": "182",
+              "title": "Issue date"
+            },
+            {
+              "const": "183",
+              "title": "Date, as at"
+            },
+            {
+              "const": "184",
+              "title": "Notification date/time"
+            },
+            {
+              "const": "185",
+              "title": "Commenced tank cleaning date/time"
+            },
+            {
+              "const": "186",
+              "title": "Transport means departure date/time, actual"
+            },
+            {
+              "const": "187",
+              "title": "Authentication date/time of document"
+            },
+            {
+              "const": "188",
+              "title": "Previous current account date"
+            },
+            {
+              "const": "189",
+              "title": "Transport means departure date/time, scheduled"
+            },
+            {
+              "const": "190",
+              "title": "Transhipment date/time"
+            },
+            {
+              "const": "191",
+              "title": "Delivery date/time, expected"
+            },
+            {
+              "const": "192",
+              "title": "Expiration date/time of customs document"
+            },
+            {
+              "const": "193",
+              "title": "Execution date"
+            },
+            {
+              "const": "194",
+              "title": "Start date/time"
+            },
+            {
+              "const": "195",
+              "title": "Import permit effective end date time"
+            },
+            {
+              "const": "196",
+              "title": "Transport means departure date/time, earliest"
+            },
+            {
+              "const": "197",
+              "title": "Lay-time first day"
+            },
+            {
+              "const": "198",
+              "title": "Lay-time last day"
+            },
+            {
+              "const": "199",
+              "title": "Positioning date/time of goods"
+            },
+            {
+              "const": "200",
+              "title": "Cargo pick-up date / time"
+            },
+            {
+              "const": "201",
+              "title": "Equipment pick-up date / time"
+            },
+            {
+              "const": "202",
+              "title": "Posting date"
+            },
+            {
+              "const": "203",
+              "title": "Execution date/time, requested"
+            },
+            {
+              "const": "204",
+              "title": "Release date (Customs)"
+            },
+            {
+              "const": "205",
+              "title": "Settlement date"
+            },
+            {
+              "const": "206",
+              "title": "End date/time"
+            },
+            {
+              "const": "207",
+              "title": "Commenced pumping ballast date/time"
+            },
+            {
+              "const": "208",
+              "title": "Transport means departure date/time, ultimate"
+            },
+            {
+              "const": "209",
+              "title": "Value date"
+            },
+            {
+              "const": "210",
+              "title": "Reinsurance current account period"
+            },
+            {
+              "const": "211",
+              "title": "360/30"
+            },
+            {
+              "const": "212",
+              "title": "360/28-31"
+            },
+            {
+              "const": "213",
+              "title": "365-6/30"
+            },
+            {
+              "const": "214",
+              "title": "365-6/28-31"
+            },
+            {
+              "const": "215",
+              "title": "365/28-31"
+            },
+            {
+              "const": "216",
+              "title": "365/30"
+            },
+            {
+              "const": "217",
+              "title": "From date of award to latest delivery"
+            },
+            {
+              "const": "218",
+              "title": "Authentication/validation date/time"
+            },
+            {
+              "const": "219",
+              "title": "Crossborder date/time"
+            },
+            {
+              "const": "220",
+              "title": "Property mortgage scheduled date, end"
+            },
+            {
+              "const": "221",
+              "title": "Interest period"
+            },
+            {
+              "const": "222",
+              "title": "Presentation date, latest"
+            },
+            {
+              "const": "223",
+              "title": "Delivery date/time, deferred"
+            },
+            {
+              "const": "224",
+              "title": "Permit to admit date"
+            },
+            {
+              "const": "225",
+              "title": "Certification of weight date/time"
+            },
+            {
+              "const": "226",
+              "title": "Discrepancy date/time"
+            },
+            {
+              "const": "227",
+              "title": "Beneficiary's banks due date"
+            },
+            {
+              "const": "228",
+              "title": "Debit value date, requested"
+            },
+            {
+              "const": "229",
+              "title": "Hoses connected date/time"
+            },
+            {
+              "const": "230",
+              "title": "Hoses disconnected date/time"
+            },
+            {
+              "const": "231",
+              "title": "Transport means arrival date/time, earliest"
+            },
+            {
+              "const": "232",
+              "title": "Transport means arrival date/time, scheduled"
+            },
+            {
+              "const": "233",
+              "title": "Transport means arrival date/time, ultimate"
+            },
+            {
+              "const": "234",
+              "title": "Collection date/time, earliest"
+            },
+            {
+              "const": "235",
+              "title": "Collection date/time, latest"
+            },
+            {
+              "const": "236",
+              "title": "Completed pumping ballast date/time"
+            },
+            {
+              "const": "237",
+              "title": "Completed tank cleaning date/time"
+            },
+            {
+              "const": "238",
+              "title": "Tanks accepted date/time"
+            },
+            {
+              "const": "239",
+              "title": "Tanks inspected date/time"
+            },
+            {
+              "const": "240",
+              "title": "Reinsurance accounting period"
+            },
+            {
+              "const": "241",
+              "title": "From date of award to earliest delivery"
+            },
+            {
+              "const": "242",
+              "title": "Preparation date/time of document"
+            },
+            {
+              "const": "243",
+              "title": "Transmission date/time of document"
+            },
+            {
+              "const": "244",
+              "title": "Settlement date, planned"
+            },
+            {
+              "const": "245",
+              "title": "Underwriting year"
+            },
+            {
+              "const": "246",
+              "title": "Accounting year"
+            },
+            {
+              "const": "247",
+              "title": "Year of occurrence"
+            },
+            {
+              "const": "248",
+              "title": "Loss"
+            },
+            {
+              "const": "249",
+              "title": "Cash call date"
+            },
+            {
+              "const": "250",
+              "title": "Re-exportation date"
+            },
+            {
+              "const": "251",
+              "title": "Re-importation date"
+            },
+            {
+              "const": "252",
+              "title": "Arrival date/time at initial port"
+            },
+            {
+              "const": "253",
+              "title": "Departure date/time from last port of call"
+            },
+            {
+              "const": "254",
+              "title": "Registration date of previous Customs declaration"
+            },
+            {
+              "const": "255",
+              "title": "Availability due date"
+            },
+            {
+              "const": "256",
+              "title": "From date of award to completion"
+            },
+            {
+              "const": "257",
+              "title": "Calculation date time"
+            },
+            {
+              "const": "258",
+              "title": "Guarantee date"
+            },
+            {
+              "const": "259",
+              "title": "Conveyance registration date"
+            },
+            {
+              "const": "260",
+              "title": "Valuation date (Customs)"
+            },
+            {
+              "const": "261",
+              "title": "Release date/time"
+            },
+            {
+              "const": "262",
+              "title": "Closure date/time/period"
+            },
+            {
+              "const": "263",
+              "title": "Invoicing period"
+            },
+            {
+              "const": "264",
+              "title": "Release frequency"
+            },
+            {
+              "const": "265",
+              "title": "Due date"
+            },
+            {
+              "const": "266",
+              "title": "Validation date"
+            },
+            {
+              "const": "267",
+              "title": "Rate/price date/time"
+            },
+            {
+              "const": "268",
+              "title": "Transit time/limits"
+            },
+            {
+              "const": "269",
+              "title": "Discharge date/time, started"
+            },
+            {
+              "const": "270",
+              "title": "Ship during date"
+            },
+            {
+              "const": "271",
+              "title": "Ship on or about date"
+            },
+            {
+              "const": "272",
+              "title": "Documentary credit presentation period"
+            },
+            {
+              "const": "273",
+              "title": "Validity period"
+            },
+            {
+              "const": "274",
+              "title": "From date of order receipt to sample ready"
+            },
+            {
+              "const": "275",
+              "title": "From date of tooling authorization to sample ready"
+            },
+            {
+              "const": "276",
+              "title": "From date of receipt of tooling aids to sample ready"
+            },
+            {
+              "const": "277",
+              "title": "From date of sample approval to first product shipment"
+            },
+            {
+              "const": "278",
+              "title": "From date of order receipt to shipment"
+            },
+            {
+              "const": "279",
+              "title": "From date of order receipt to delivery"
+            },
+            {
+              "const": "280",
+              "title": "From last booked order to delivery"
+            },
+            {
+              "const": "281",
+              "title": "Date of order lead time"
+            },
+            {
+              "const": "282",
+              "title": "Confirmation date lead time"
+            },
+            {
+              "const": "283",
+              "title": "Arrival date/time of transport lead time"
+            },
+            {
+              "const": "284",
+              "title": "Before inventory is replenished based on stock check lead time"
+            },
+            {
+              "const": "285",
+              "title": "Invitation to tender date/time"
+            },
+            {
+              "const": "286",
+              "title": "Tender submission date/time"
+            },
+            {
+              "const": "287",
+              "title": "Contract award date/time"
+            },
+            {
+              "const": "288",
+              "title": "Price base date/time"
+            },
+            {
+              "const": "289",
+              "title": "Interest rate validity period"
+            },
+            {
+              "const": "290",
+              "title": "Contractual start date/time"
+            },
+            {
+              "const": "291",
+              "title": "Start date/time, planned"
+            },
+            {
+              "const": "292",
+              "title": "Works completion date/time, planned"
+            },
+            {
+              "const": "293",
+              "title": "Works completion date/time, actual"
+            },
+            {
+              "const": "294",
+              "title": "Hand over date/time, planned"
+            },
+            {
+              "const": "295",
+              "title": "Hand over date/time, actual"
+            },
+            {
+              "const": "296",
+              "title": "Retention release date/time"
+            },
+            {
+              "const": "297",
+              "title": "Retention release date/time, partial"
+            },
+            {
+              "const": "298",
+              "title": "Goods pick-up date / time, planned"
+            },
+            {
+              "const": "299",
+              "title": "Price adjustment start date"
+            },
+            {
+              "const": "300",
+              "title": "Price adjustment limit date"
+            },
+            {
+              "const": "301",
+              "title": "Value date of index"
+            },
+            {
+              "const": "302",
+              "title": "Publication date"
+            },
+            {
+              "const": "303",
+              "title": "Escalation date"
+            },
+            {
+              "const": "304",
+              "title": "Price adjustment date"
+            },
+            {
+              "const": "305",
+              "title": "Latest price adjustment date"
+            },
+            {
+              "const": "306",
+              "title": "Work period"
+            },
+            {
+              "const": "307",
+              "title": "Payment instruction date/time"
+            },
+            {
+              "const": "308",
+              "title": "Payment valuation presentation date/time"
+            },
+            {
+              "const": "309",
+              "title": "Banks' value date"
+            },
+            {
+              "const": "310",
+              "title": "Received date/time"
+            },
+            {
+              "const": "311",
+              "title": "On"
+            },
+            {
+              "const": "312",
+              "title": "Ship not before and not after date/time"
+            },
+            {
+              "const": "313",
+              "title": "Order to proceed date"
+            },
+            {
+              "const": "314",
+              "title": "Planned duration of works"
+            },
+            {
+              "const": "315",
+              "title": "Agreement to pay date"
+            },
+            {
+              "const": "316",
+              "title": "Valuation date/time"
+            },
+            {
+              "const": "317",
+              "title": "Reply date"
+            },
+            {
+              "const": "318",
+              "title": "Request date"
+            },
+            {
+              "const": "319",
+              "title": "Customer value date"
+            },
+            {
+              "const": "320",
+              "title": "Declaration reference period"
+            },
+            {
+              "const": "321",
+              "title": "Promotion date/period"
+            },
+            {
+              "const": "322",
+              "title": "Accounting period"
+            },
+            {
+              "const": "323",
+              "title": "Horizon period"
+            },
+            {
+              "const": "324",
+              "title": "Processing date/period"
+            },
+            {
+              "const": "325",
+              "title": "Tax period"
+            },
+            {
+              "const": "326",
+              "title": "Charge period"
+            },
+            {
+              "const": "327",
+              "title": "Instalment payment due date"
+            },
+            {
+              "const": "328",
+              "title": "Payroll deduction date/time"
+            },
+            {
+              "const": "329",
+              "title": "Person birth date time"
+            },
+            {
+              "const": "330",
+              "title": "Joined employer date"
+            },
+            {
+              "const": "331",
+              "title": "Contributions ceasing date/time"
+            },
+            {
+              "const": "332",
+              "title": "Contribution period end date/time"
+            },
+            {
+              "const": "333",
+              "title": "Part-time working change date/time"
+            },
+            {
+              "const": "334",
+              "title": "Status change date/time"
+            },
+            {
+              "const": "335",
+              "title": "Contribution period start date/time"
+            },
+            {
+              "const": "336",
+              "title": "Salary change effective date"
+            },
+            {
+              "const": "337",
+              "title": "Left employer date"
+            },
+            {
+              "const": "338",
+              "title": "Benefit change date/time"
+            },
+            {
+              "const": "339",
+              "title": "Category change date/time"
+            },
+            {
+              "const": "340",
+              "title": "Joined fund date/time"
+            },
+            {
+              "const": "341",
+              "title": "Waiting time"
+            },
+            {
+              "const": "342",
+              "title": "Consignment loading date time"
+            },
+            {
+              "const": "343",
+              "title": "Date/time of discount termination"
+            },
+            {
+              "const": "344",
+              "title": "Date/time of interest due"
+            },
+            {
+              "const": "345",
+              "title": "Days of operation"
+            },
+            {
+              "const": "346",
+              "title": "Latest check-in time"
+            },
+            {
+              "const": "347",
+              "title": "Slaughtering start date"
+            },
+            {
+              "const": "348",
+              "title": "Packing start date"
+            },
+            {
+              "const": "349",
+              "title": "Packing end date"
+            },
+            {
+              "const": "350",
+              "title": "Test start date"
+            },
+            {
+              "const": "351",
+              "title": "Inspection date"
+            },
+            {
+              "const": "352",
+              "title": "Slaughtering end date"
+            },
+            {
+              "const": "353",
+              "title": "Accounting transaction date"
+            },
+            {
+              "const": "354",
+              "title": "Activity period date range"
+            },
+            {
+              "const": "355",
+              "title": "Contractual delivery date"
+            },
+            {
+              "const": "356",
+              "title": "Sales date, and or time, and or period"
+            },
+            {
+              "const": "357",
+              "title": "Cancel if not published by this date"
+            },
+            {
+              "const": "358",
+              "title": "Scheduled for delivery on or after"
+            },
+            {
+              "const": "359",
+              "title": "Scheduled for delivery on or before"
+            },
+            {
+              "const": "360",
+              "title": "Sell by date"
+            },
+            {
+              "const": "361",
+              "title": "Product best before date time"
+            },
+            {
+              "const": "362",
+              "title": "End availability date"
+            },
+            {
+              "const": "363",
+              "title": "Total shelf life period"
+            },
+            {
+              "const": "364",
+              "title": "Minimum shelf life remaining at time of despatch period"
+            },
+            {
+              "const": "365",
+              "title": "Packaging date"
+            },
+            {
+              "const": "366",
+              "title": "Inventory report date"
+            },
+            {
+              "const": "367",
+              "title": "Meter reading date, previous"
+            },
+            {
+              "const": "368",
+              "title": "Meter reading date, latest"
+            },
+            {
+              "const": "369",
+              "title": "Date and or time of handling, estimated"
+            },
+            {
+              "const": "370",
+              "title": "Date when container equipment becomes domestic"
+            },
+            {
+              "const": "371",
+              "title": "Hydrotest date"
+            },
+            {
+              "const": "372",
+              "title": "Equipment pre-trip date"
+            },
+            {
+              "const": "373",
+              "title": "Mooring, date and time"
+            },
+            {
+              "const": "374",
+              "title": "Road fund tax expiry date"
+            },
+            {
+              "const": "375",
+              "title": "Date of first registration"
+            },
+            {
+              "const": "376",
+              "title": "Biannual terminal inspection date"
+            },
+            {
+              "const": "377",
+              "title": "Federal HighWay Administration (FHWA) inspection date"
+            },
+            {
+              "const": "378",
+              "title": "Container Safety Convention (CSC) inspection date"
+            },
+            {
+              "const": "379",
+              "title": "Periodic inspection date"
+            },
+            {
+              "const": "380",
+              "title": "Drawing revision date"
+            },
+            {
+              "const": "381",
+              "title": "Product lifespan at time of production"
+            },
+            {
+              "const": "382",
+              "title": "Earliest sale date"
+            },
+            {
+              "const": "383",
+              "title": "Cancel if not shipped by this date"
+            },
+            {
+              "const": "384",
+              "title": "Previous invoice date"
+            },
+            {
+              "const": "385",
+              "title": "Payment cancelled, violation of agreement"
+            },
+            {
+              "const": "386",
+              "title": "Payment cancelled due to administrative error"
+            },
+            {
+              "const": "387",
+              "title": "Repair turnaround time"
+            },
+            {
+              "const": "388",
+              "title": "Order amendment binding date"
+            },
+            {
+              "const": "389",
+              "title": "Cure time"
+            },
+            {
+              "const": "390",
+              "title": "From date of award to delivery"
+            },
+            {
+              "const": "391",
+              "title": "From date of receipt of item to approval"
+            },
+            {
+              "const": "392",
+              "title": "Equipment pick-up date / time, earliest"
+            },
+            {
+              "const": "393",
+              "title": "Equipment pick-up date / time, planned"
+            },
+            {
+              "const": "394",
+              "title": "Equipment positioning date/time, actual"
+            },
+            {
+              "const": "395",
+              "title": "Equipment positioning date/time, estimated"
+            },
+            {
+              "const": "396",
+              "title": "Equipment positioning date/time, requested"
+            },
+            {
+              "const": "397",
+              "title": "Equipment positioning date/time, ultimate"
+            },
+            {
+              "const": "398",
+              "title": "Goods collection or pick-up date/time, planned"
+            },
+            {
+              "const": "399",
+              "title": "Goods positioning date/time, expected"
+            },
+            {
+              "const": "400",
+              "title": "Cargo release date/time, ultimate"
+            },
+            {
+              "const": "401",
+              "title": "Container Safety Convention (CSC) plate expiration date"
+            },
+            {
+              "const": "402",
+              "title": "Document received date/time"
+            },
+            {
+              "const": "403",
+              "title": "Discharge date/time, actual"
+            },
+            {
+              "const": "404",
+              "title": "Transport means loading date/time, actual"
+            },
+            {
+              "const": "405",
+              "title": "Equipment pick-up date / time, actual"
+            },
+            {
+              "const": "406",
+              "title": "Goods positioning date/time, planned"
+            },
+            {
+              "const": "407",
+              "title": "Document requested date/time"
+            },
+            {
+              "const": "408",
+              "title": "Expected container hire from date/time"
+            },
+            {
+              "const": "409",
+              "title": "Order completion date/time, ultimate"
+            },
+            {
+              "const": "410",
+              "title": "Equipment repair ready date/time, ultimate"
+            },
+            {
+              "const": "411",
+              "title": "Container stuffing date/time, ultimate"
+            },
+            {
+              "const": "412",
+              "title": "Container stripping date/time, ultimate"
+            },
+            {
+              "const": "413",
+              "title": "Discharge and loading completed date/time"
+            },
+            {
+              "const": "414",
+              "title": "Equipment stock check date/time"
+            },
+            {
+              "const": "415",
+              "title": "Activity reporting date"
+            },
+            {
+              "const": "416",
+              "title": "Submission date"
+            },
+            {
+              "const": "417",
+              "title": "Previous booking date/time"
+            },
+            {
+              "const": "418",
+              "title": "Minimum shelf life remaining at time of receipt"
+            },
+            {
+              "const": "419",
+              "title": "Forecast period"
+            },
+            {
+              "const": "420",
+              "title": "Unloaded, date and time"
+            },
+            {
+              "const": "421",
+              "title": "Estimated acceptance date"
+            },
+            {
+              "const": "422",
+              "title": "Documentary credit issue date"
+            },
+            {
+              "const": "423",
+              "title": "First date of ordering"
+            },
+            {
+              "const": "424",
+              "title": "Last date of ordering"
+            },
+            {
+              "const": "425",
+              "title": "Original posting date"
+            },
+            {
+              "const": "426",
+              "title": "Reinsurance payment frequency"
+            },
+            {
+              "const": "427",
+              "title": "Adjusted age"
+            },
+            {
+              "const": "428",
+              "title": "Original issue age"
+            },
+            {
+              "const": "429",
+              "title": "Coverage duration"
+            },
+            {
+              "const": "430",
+              "title": "Coverage issue date"
+            },
+            {
+              "const": "431",
+              "title": "Flat extra period"
+            },
+            {
+              "const": "432",
+              "title": "Paid to date"
+            },
+            {
+              "const": "433",
+              "title": "Reinsurance coverage duration"
+            },
+            {
+              "const": "434",
+              "title": "Maturity date"
+            },
+            {
+              "const": "435",
+              "title": "Reinsurance issue age"
+            },
+            {
+              "const": "436",
+              "title": "Reinsurance paid-up date"
+            },
+            {
+              "const": "437",
+              "title": "Benefit period"
+            },
+            {
+              "const": "438",
+              "title": "Disability wait period"
+            },
+            {
+              "const": "439",
+              "title": "Deferred Period"
+            },
+            {
+              "const": "440",
+              "title": "Documentary credit amendment date"
+            },
+            {
+              "const": "441",
+              "title": "Last on hire date"
+            },
+            {
+              "const": "442",
+              "title": "Last off hire date"
+            },
+            {
+              "const": "443",
+              "title": "Direct interchange date"
+            },
+            {
+              "const": "444",
+              "title": "Approval date"
+            },
+            {
+              "const": "445",
+              "title": "Original estimate date"
+            },
+            {
+              "const": "446",
+              "title": "Revised estimate date"
+            },
+            {
+              "const": "447",
+              "title": "Creditor's requested value date"
+            },
+            {
+              "const": "448",
+              "title": "Referenced item creation date"
+            },
+            {
+              "const": "449",
+              "title": "Date for the last update"
+            },
+            {
+              "const": "450",
+              "title": "Opening date"
+            },
+            {
+              "const": "451",
+              "title": "Source document capture date"
+            },
+            {
+              "const": "452",
+              "title": "Trial balance period"
+            },
+            {
+              "const": "453",
+              "title": "Date of source document"
+            },
+            {
+              "const": "454",
+              "title": "Accounting value date"
+            },
+            {
+              "const": "455",
+              "title": "Expected value date"
+            },
+            {
+              "const": "456",
+              "title": "Chart of account period"
+            },
+            {
+              "const": "457",
+              "title": "Date of separation"
+            },
+            {
+              "const": "458",
+              "title": "Date of divorce"
+            },
+            {
+              "const": "459",
+              "title": "Date of marriage"
+            },
+            {
+              "const": "460",
+              "title": "Wage period, start date"
+            },
+            {
+              "const": "461",
+              "title": "Wage period, end date"
+            },
+            {
+              "const": "462",
+              "title": "Working period, start date"
+            },
+            {
+              "const": "463",
+              "title": "Working period, end date"
+            },
+            {
+              "const": "464",
+              "title": "Embarkation date and time"
+            },
+            {
+              "const": "465",
+              "title": "Disembarkation date and time"
+            },
+            {
+              "const": "466",
+              "title": "Time now date"
+            },
+            {
+              "const": "467",
+              "title": "Holiday"
+            },
+            {
+              "const": "468",
+              "title": "Non working"
+            },
+            {
+              "const": "469",
+              "title": "Start date or time, earliest"
+            },
+            {
+              "const": "470",
+              "title": "Start date or time, latest"
+            },
+            {
+              "const": "471",
+              "title": "Finish date or time, earliest"
+            },
+            {
+              "const": "472",
+              "title": "Finish date or time, latest"
+            },
+            {
+              "const": "473",
+              "title": "Start date or time, mandatory"
+            },
+            {
+              "const": "474",
+              "title": "Finish date or time, mandatory"
+            },
+            {
+              "const": "475",
+              "title": "Start date or time, actual"
+            },
+            {
+              "const": "476",
+              "title": "Start date or time, estimated"
+            },
+            {
+              "const": "477",
+              "title": "Completion date or time, estimated"
+            },
+            {
+              "const": "478",
+              "title": "Start date or time, scheduled"
+            },
+            {
+              "const": "479",
+              "title": "Completion date or time, scheduled"
+            },
+            {
+              "const": "480",
+              "title": "Start date or time, not before"
+            },
+            {
+              "const": "481",
+              "title": "Start date or time, not after"
+            },
+            {
+              "const": "482",
+              "title": "Completion date or time, not before"
+            },
+            {
+              "const": "483",
+              "title": "Completion date or time, not after"
+            },
+            {
+              "const": "484",
+              "title": "Illness recovery date, expected"
+            },
+            {
+              "const": "485",
+              "title": "Period of illness, start date"
+            },
+            {
+              "const": "486",
+              "title": "Period of illness, end date"
+            },
+            {
+              "const": "487",
+              "title": "Decease date"
+            },
+            {
+              "const": "488",
+              "title": "Benefit period, start date"
+            },
+            {
+              "const": "489",
+              "title": "Benefit period, end date"
+            },
+            {
+              "const": "490",
+              "title": "Selection period, start date"
+            },
+            {
+              "const": "491",
+              "title": "Selection period, end date"
+            },
+            {
+              "const": "492",
+              "title": "Balance date/time/period"
+            },
+            {
+              "const": "493",
+              "title": "Benefit payments termination date"
+            },
+            {
+              "const": "494",
+              "title": "Covered income period"
+            },
+            {
+              "const": "495",
+              "title": "Current income period"
+            },
+            {
+              "const": "496",
+              "title": "Reinstatement date"
+            },
+            {
+              "const": "497",
+              "title": "Definition of disability duration"
+            },
+            {
+              "const": "498",
+              "title": "Previous termination date"
+            },
+            {
+              "const": "499",
+              "title": "Premium change period"
+            },
+            {
+              "const": "500",
+              "title": "Off-hire survey date"
+            },
+            {
+              "const": "501",
+              "title": "In service survey date"
+            },
+            {
+              "const": "502",
+              "title": "On hire survey date"
+            },
+            {
+              "const": "503",
+              "title": "Production inspection date"
+            },
+            {
+              "const": "504",
+              "title": "Overtime, start date"
+            },
+            {
+              "const": "505",
+              "title": "Overtime, end date"
+            },
+            {
+              "const": "506",
+              "title": "Back order delivery date/time/period"
+            },
+            {
+              "const": "507",
+              "title": "Negotiations start date"
+            },
+            {
+              "const": "508",
+              "title": "Work effective start date"
+            },
+            {
+              "const": "510",
+              "title": "Notification time limit"
+            },
+            {
+              "const": "511",
+              "title": "Time limit"
+            },
+            {
+              "const": "512",
+              "title": "Attendance date and or time and or period"
+            },
+            {
+              "const": "513",
+              "title": "Accident date and or time"
+            },
+            {
+              "const": "514",
+              "title": "Adoption date, actual"
+            },
+            {
+              "const": "515",
+              "title": "Reimbursement claim issue date and or time"
+            },
+            {
+              "const": "516",
+              "title": "Hospital admission date and or time"
+            },
+            {
+              "const": "517",
+              "title": "Hospital discharge date and or time"
+            },
+            {
+              "const": "518",
+              "title": "Period of care start date and or time"
+            },
+            {
+              "const": "519",
+              "title": "Period of care end date and or time"
+            },
+            {
+              "const": "520",
+              "title": "Department admission date and or time"
+            },
+            {
+              "const": "521",
+              "title": "Department discharge date and or time"
+            },
+            {
+              "const": "522",
+              "title": "Childbirth date and or time, actual"
+            },
+            {
+              "const": "523",
+              "title": "Prescription issue date and or time"
+            },
+            {
+              "const": "524",
+              "title": "Prescription dispensing date and or time"
+            },
+            {
+              "const": "525",
+              "title": "Clinical examination date and or time"
+            },
+            {
+              "const": "526",
+              "title": "Death date and or time"
+            },
+            {
+              "const": "527",
+              "title": "Childbirth date, estimated"
+            },
+            {
+              "const": "528",
+              "title": "Last menstrual cycle, start date"
+            },
+            {
+              "const": "529",
+              "title": "Pregnancy duration, actual"
+            },
+            {
+              "const": "530",
+              "title": "Fumigation date and/or time"
+            },
+            {
+              "const": "531",
+              "title": "Payment period"
+            },
+            {
+              "const": "532",
+              "title": "Average delivery delay"
+            },
+            {
+              "const": "533",
+              "title": "Budget line application date"
+            },
+            {
+              "const": "534",
+              "title": "Date of repair or service"
+            },
+            {
+              "const": "535",
+              "title": "Date of product failure"
+            },
+            {
+              "const": "536",
+              "title": "Review date"
+            },
+            {
+              "const": "537",
+              "title": "International review cycle start date"
+            },
+            {
+              "const": "538",
+              "title": "International assessment approval for publication date"
+            },
+            {
+              "const": "539",
+              "title": "Status assignment date"
+            },
+            {
+              "const": "540",
+              "title": "Instruction's original execution date"
+            },
+            {
+              "const": "541",
+              "title": "First published date"
+            },
+            {
+              "const": "542",
+              "title": "Last published date"
+            },
+            {
+              "const": "543",
+              "title": "Balance sheet date, latest"
+            },
+            {
+              "const": "544",
+              "title": "Security share price as of given date"
+            },
+            {
+              "const": "545",
+              "title": "Assigned date"
+            },
+            {
+              "const": "546",
+              "title": "Business opened date"
+            },
+            {
+              "const": "547",
+              "title": "Initial financial accounts filed date"
+            },
+            {
+              "const": "548",
+              "title": "Stop work as of given date"
+            },
+            {
+              "const": "549",
+              "title": "Completion date"
+            },
+            {
+              "const": "550",
+              "title": "Lease term, start date"
+            },
+            {
+              "const": "551",
+              "title": "Lease term, end date"
+            },
+            {
+              "const": "552",
+              "title": "Start date, actual"
+            },
+            {
+              "const": "553",
+              "title": "Start date, estimated"
+            },
+            {
+              "const": "554",
+              "title": "Filed date"
+            },
+            {
+              "const": "555",
+              "title": "Return to work date"
+            },
+            {
+              "const": "556",
+              "title": "Purchased date"
+            },
+            {
+              "const": "557",
+              "title": "Returned date"
+            },
+            {
+              "const": "558",
+              "title": "Changed date"
+            },
+            {
+              "const": "559",
+              "title": "Terminated date"
+            },
+            {
+              "const": "560",
+              "title": "Evaluation date"
+            },
+            {
+              "const": "561",
+              "title": "Business termination date"
+            },
+            {
+              "const": "562",
+              "title": "Release from bankruptcy date"
+            },
+            {
+              "const": "563",
+              "title": "Placement date, initial"
+            },
+            {
+              "const": "564",
+              "title": "Signature date"
+            },
+            {
+              "const": "565",
+              "title": "Bankruptcy filed date"
+            },
+            {
+              "const": "566",
+              "title": "End date, scheduled"
+            },
+            {
+              "const": "567",
+              "title": "Report period"
+            },
+            {
+              "const": "568",
+              "title": "Suspended date"
+            },
+            {
+              "const": "569",
+              "title": "Renewal date"
+            },
+            {
+              "const": "570",
+              "title": "Reported date"
+            },
+            {
+              "const": "571",
+              "title": "Checked date"
+            },
+            {
+              "const": "572",
+              "title": "Present residence, start date"
+            },
+            {
+              "const": "573",
+              "title": "Employment position, start date"
+            },
+            {
+              "const": "574",
+              "title": "Account closed date"
+            },
+            {
+              "const": "575",
+              "title": "Construction date, actual"
+            },
+            {
+              "const": "576",
+              "title": "Employment profession start date"
+            },
+            {
+              "const": "577",
+              "title": "Next review date"
+            },
+            {
+              "const": "578",
+              "title": "Meeting date"
+            },
+            {
+              "const": "579",
+              "title": "Administrator ordered date"
+            },
+            {
+              "const": "580",
+              "title": "Last date to file a claim"
+            },
+            {
+              "const": "581",
+              "title": "Convicted date"
+            },
+            {
+              "const": "582",
+              "title": "Interviewed date"
+            },
+            {
+              "const": "583",
+              "title": "Last visit date"
+            },
+            {
+              "const": "584",
+              "title": "Future period"
+            },
+            {
+              "const": "585",
+              "title": "Preceding period"
+            },
+            {
+              "const": "586",
+              "title": "Expected problem resolution date"
+            },
+            {
+              "const": "587",
+              "title": "Action date"
+            },
+            {
+              "const": "588",
+              "title": "Accountant's opinion date"
+            },
+            {
+              "const": "589",
+              "title": "Last activity date"
+            },
+            {
+              "const": "590",
+              "title": "Resolved date"
+            },
+            {
+              "const": "591",
+              "title": "Recorded date"
+            },
+            {
+              "const": "592",
+              "title": "Date of birth, estimated"
+            },
+            {
+              "const": "593",
+              "title": "Last annual report date"
+            },
+            {
+              "const": "594",
+              "title": "Net worth date"
+            },
+            {
+              "const": "595",
+              "title": "Payment cancellation rejected"
+            },
+            {
+              "const": "596",
+              "title": "Profit period"
+            },
+            {
+              "const": "597",
+              "title": "Registration date"
+            },
+            {
+              "const": "598",
+              "title": "Consolidation date"
+            },
+            {
+              "const": "599",
+              "title": "Board of directors not authorised as of given date"
+            },
+            {
+              "const": "600",
+              "title": "Board of directors not complete as of given date"
+            },
+            {
+              "const": "601",
+              "title": "Manager not registered as of given date"
+            },
+            {
+              "const": "602",
+              "title": "Citizenship change date"
+            },
+            {
+              "const": "603",
+              "title": "Participation date"
+            },
+            {
+              "const": "604",
+              "title": "Capitalisation date"
+            },
+            {
+              "const": "605",
+              "title": "Board of directors registration date"
+            },
+            {
+              "const": "606",
+              "title": "Operations ceased date"
+            },
+            {
+              "const": "607",
+              "title": "Satisfaction date"
+            },
+            {
+              "const": "608",
+              "title": "Legal settlement terms met date"
+            },
+            {
+              "const": "609",
+              "title": "Business control change date"
+            },
+            {
+              "const": "610",
+              "title": "Court registration date"
+            },
+            {
+              "const": "611",
+              "title": "Annual report due date"
+            },
+            {
+              "const": "612",
+              "title": "Asset and liability schedule date"
+            },
+            {
+              "const": "613",
+              "title": "Annual report mailing date"
+            },
+            {
+              "const": "614",
+              "title": "Annual report filing date"
+            },
+            {
+              "const": "615",
+              "title": "Annual report delinquent on date"
+            },
+            {
+              "const": "616",
+              "title": "Accounting methodology change date"
+            },
+            {
+              "const": "617",
+              "title": "Closed until date"
+            },
+            {
+              "const": "618",
+              "title": "Conversion into holding company date"
+            },
+            {
+              "const": "619",
+              "title": "Deed not available as of given date"
+            },
+            {
+              "const": "620",
+              "title": "Detrimental information receipt date"
+            },
+            {
+              "const": "621",
+              "title": "Construction date, estimated"
+            },
+            {
+              "const": "622",
+              "title": "Financial information date"
+            },
+            {
+              "const": "623",
+              "title": "Graduation date"
+            },
+            {
+              "const": "624",
+              "title": "Insolvency discharge granted date"
+            },
+            {
+              "const": "625",
+              "title": "Incorporation date"
+            },
+            {
+              "const": "626",
+              "title": "Inactivity end date"
+            },
+            {
+              "const": "627",
+              "title": "Last check for balance sheet update date"
+            },
+            {
+              "const": "628",
+              "title": "Last capital change date"
+            },
+            {
+              "const": "629",
+              "title": "Letter of agreement date"
+            },
+            {
+              "const": "630",
+              "title": "Letter of liability date"
+            },
+            {
+              "const": "631",
+              "title": "Liquidation date"
+            },
+            {
+              "const": "632",
+              "title": "Lowest activity period"
+            },
+            {
+              "const": "633",
+              "title": "Legal structure change date"
+            },
+            {
+              "const": "634",
+              "title": "Current name effective date"
+            },
+            {
+              "const": "635",
+              "title": "Not registered as of given date"
+            },
+            {
+              "const": "636",
+              "title": "Current authority control start date"
+            },
+            {
+              "const": "637",
+              "title": "Privilege details verification date"
+            },
+            {
+              "const": "638",
+              "title": "Current legal structure effective date"
+            },
+            {
+              "const": "639",
+              "title": "Peak activity period"
+            },
+            {
+              "const": "640",
+              "title": "Presentation to bankruptcy receivers date"
+            },
+            {
+              "const": "641",
+              "title": "Resignation date"
+            },
+            {
+              "const": "642",
+              "title": "Legal action closed date"
+            },
+            {
+              "const": "643",
+              "title": "Mail receipt date"
+            },
+            {
+              "const": "644",
+              "title": "Social security claims verification date"
+            },
+            {
+              "const": "645",
+              "title": "Sole directorship registration date"
+            },
+            {
+              "const": "646",
+              "title": "Trade style registration date"
+            },
+            {
+              "const": "647",
+              "title": "Trial start date, scheduled"
+            },
+            {
+              "const": "648",
+              "title": "Trial start date, actual"
+            },
+            {
+              "const": "649",
+              "title": "Value Added Tax (VAT) claims verification date"
+            },
+            {
+              "const": "650",
+              "title": "Receivership result date"
+            },
+            {
+              "const": "651",
+              "title": "Investigation end date"
+            },
+            {
+              "const": "652",
+              "title": "Employee temporary laid-off period end date"
+            },
+            {
+              "const": "653",
+              "title": "Investigation start date"
+            },
+            {
+              "const": "654",
+              "title": "Income period"
+            },
+            {
+              "const": "655",
+              "title": "Criminal sentence duration"
+            },
+            {
+              "const": "656",
+              "title": "Age"
+            },
+            {
+              "const": "657",
+              "title": "Receivables collection period"
+            },
+            {
+              "const": "658",
+              "title": "Comparison period"
+            },
+            {
+              "const": "659",
+              "title": "Adjournment"
+            },
+            {
+              "const": "660",
+              "title": "Court dismissal date"
+            },
+            {
+              "const": "661",
+              "title": "Insufficient assets judgement date"
+            },
+            {
+              "const": "662",
+              "title": "Average payment period"
+            },
+            {
+              "const": "663",
+              "title": "Forecast period start"
+            },
+            {
+              "const": "664",
+              "title": "Period extended"
+            },
+            {
+              "const": "665",
+              "title": "Employee temporary laid-off period start date"
+            },
+            {
+              "const": "666",
+              "title": "Management available date"
+            },
+            {
+              "const": "667",
+              "title": "Withdrawn date"
+            },
+            {
+              "const": "668",
+              "title": "Claim incurred date"
+            },
+            {
+              "const": "669",
+              "title": "Financial coverage period"
+            },
+            {
+              "const": "670",
+              "title": "Claim made date"
+            },
+            {
+              "const": "671",
+              "title": "Stop distribution date"
+            },
+            {
+              "const": "672",
+              "title": "Period assigned"
+            },
+            {
+              "const": "673",
+              "title": "Lease period"
+            },
+            {
+              "const": "674",
+              "title": "Forecast period end date"
+            },
+            {
+              "const": "675",
+              "title": "Judgement date"
+            },
+            {
+              "const": "676",
+              "title": "Period worked for the company"
+            },
+            {
+              "const": "677",
+              "title": "Transport equipment stuffing date and/or time"
+            },
+            {
+              "const": "678",
+              "title": "Transport equipment stripping date and/or time"
+            },
+            {
+              "const": "679",
+              "title": "Initial request date"
+            },
+            {
+              "const": "680",
+              "title": "Period overdue"
+            },
+            {
+              "const": "681",
+              "title": "Implementation date/time/period"
+            },
+            {
+              "const": "682",
+              "title": "Refusal period"
+            },
+            {
+              "const": "683",
+              "title": "Suspension period"
+            },
+            {
+              "const": "684",
+              "title": "Deletion date"
+            },
+            {
+              "const": "685",
+              "title": "First sale date and/or time and/or period"
+            },
+            {
+              "const": "686",
+              "title": "Last sale date and/or time and/or period"
+            },
+            {
+              "const": "687",
+              "title": "Date ready for collection"
+            },
+            {
+              "const": "688",
+              "title": "Shipping date, no schedule established as of"
+            },
+            {
+              "const": "689",
+              "title": "Shipping date and/or time, current schedule"
+            },
+            {
+              "const": "690",
+              "title": "Suppliers' average credit period"
+            },
+            {
+              "const": "691",
+              "title": "Advising date"
+            },
+            {
+              "const": "692",
+              "title": "Project over target baseline date"
+            },
+            {
+              "const": "693",
+              "title": "Established date"
+            },
+            {
+              "const": "694",
+              "title": "Latest filing period"
+            },
+            {
+              "const": "695",
+              "title": "Mailing date"
+            },
+            {
+              "const": "696",
+              "title": "Date/time of latest accounts filing at public registry"
+            },
+            {
+              "const": "697",
+              "title": "Date placed in disfavour"
+            },
+            {
+              "const": "698",
+              "title": "Employment position start date, estimated"
+            },
+            {
+              "const": "699",
+              "title": "Registered contractor number assignment date, original"
+            },
+            {
+              "const": "700",
+              "title": "Ownership change date"
+            },
+            {
+              "const": "701",
+              "title": "Original duration"
+            },
+            {
+              "const": "702",
+              "title": "Period between changes"
+            },
+            {
+              "const": "703",
+              "title": "From date of notice to proceed to commencement of performance"
+            },
+            {
+              "const": "704",
+              "title": "From date of notice to proceed to completion"
+            },
+            {
+              "const": "705",
+              "title": "Period an event is late due to customer"
+            },
+            {
+              "const": "706",
+              "title": "File generation date and/or time"
+            },
+            {
+              "const": "707",
+              "title": "Endorsed certificate issue date"
+            },
+            {
+              "const": "708",
+              "title": "Patient first visit for condition"
+            },
+            {
+              "const": "709",
+              "title": "Admission date and/or time, expected"
+            },
+            {
+              "const": "710",
+              "title": "Symptoms onset, patient alleged"
+            },
+            {
+              "const": "711",
+              "title": "Accident benefit period"
+            },
+            {
+              "const": "712",
+              "title": "Accident benefit age limit"
+            },
+            {
+              "const": "713",
+              "title": "Accident lifetime benefit qualification age"
+            },
+            {
+              "const": "714",
+              "title": "Sickness benefit period"
+            },
+            {
+              "const": "715",
+              "title": "Sickness benefit age limit"
+            },
+            {
+              "const": "716",
+              "title": "Sickness lifetime benefit qualification age"
+            },
+            {
+              "const": "717",
+              "title": "Accident insurance elimination period"
+            },
+            {
+              "const": "718",
+              "title": "Sickness insurance elimination period"
+            },
+            {
+              "const": "719",
+              "title": "Provider signature date"
+            },
+            {
+              "const": "720",
+              "title": "Condition initial treatment date"
+            },
+            {
+              "const": "721",
+              "title": "Information release authorization date"
+            },
+            {
+              "const": "722",
+              "title": "Benefit release authorization date"
+            },
+            {
+              "const": "723",
+              "title": "Last seen date"
+            },
+            {
+              "const": "724",
+              "title": "Acute manifestation date"
+            },
+            {
+              "const": "725",
+              "title": "Similar illness onset date"
+            },
+            {
+              "const": "726",
+              "title": "Last X-ray date"
+            },
+            {
+              "const": "727",
+              "title": "Placement date, previous"
+            },
+            {
+              "const": "728",
+              "title": "Placement date"
+            },
+            {
+              "const": "729",
+              "title": "Temporary prosthesis date"
+            },
+            {
+              "const": "730",
+              "title": "Orthodontic treatment period, remaining"
+            },
+            {
+              "const": "731",
+              "title": "Orthodontic treatment period, total"
+            },
+            {
+              "const": "732",
+              "title": "Maximum credit granted date"
+            },
+            {
+              "const": "733",
+              "title": "Last date of accounts filed at public register"
+            },
+            {
+              "const": "734",
+              "title": "Allowed renewal duration period"
+            },
+            {
+              "const": "735",
+              "title": "Offset from Coordinated Universal Time (UTC)"
+            },
+            {
+              "const": "736",
+              "title": "Appointment expiry date"
+            },
+            {
+              "const": "737",
+              "title": "Earliest filing period"
+            },
+            {
+              "const": "738",
+              "title": "Original name change date"
+            },
+            {
+              "const": "739",
+              "title": "Education start date"
+            },
+            {
+              "const": "740",
+              "title": "Education end date"
+            },
+            {
+              "const": "741",
+              "title": "Receivership period"
+            },
+            {
+              "const": "742",
+              "title": "Financial information submission date/time"
+            },
+            {
+              "const": "743",
+              "title": "Purchase order latest possible change date"
+            },
+            {
+              "const": "744",
+              "title": "Investment number allocation date"
+            },
+            {
+              "const": "745",
+              "title": "Payment impossible"
+            },
+            {
+              "const": "746",
+              "title": "Record extraction period"
+            },
+            {
+              "const": "747",
+              "title": "Cost accounting value date"
+            },
+            {
+              "const": "748",
+              "title": "Open period"
+            },
+            {
+              "const": "749",
+              "title": "Period between issue date and maturity date"
+            },
+            {
+              "const": "750",
+              "title": "Before date"
+            },
+            {
+              "const": "751",
+              "title": "After date"
+            },
+            {
+              "const": "752",
+              "title": "Meter reading date, next scheduled"
+            },
+            {
+              "const": "753",
+              "title": "Maturity date, optimal"
+            },
+            {
+              "const": "754",
+              "title": "Product ageing duration, maximum"
+            },
+            {
+              "const": "755",
+              "title": "Product ageing duration, minimum"
+            },
+            {
+              "const": "756",
+              "title": "Ultimate documentation date/time for 24-hour rule regulation of CBP (United States Customs and Border Protection)"
+            },
+            {
+              "const": "757",
+              "title": "Departure date/time from place of loading"
+            },
+            {
+              "const": "758",
+              "title": "Trade item ship date/time, earliest possible"
+            },
+            {
+              "const": "759",
+              "title": "Trade item ship date/time, latest possible"
+            },
+            {
+              "const": "760",
+              "title": "Start date/time, maximum buying quantity"
+            },
+            {
+              "const": "761",
+              "title": "Start date/time, minimum buying quantity"
+            },
+            {
+              "const": "762",
+              "title": "Marketing campaign end date/time, suggested"
+            },
+            {
+              "const": "763",
+              "title": "Marketing campaign start date/time, suggested"
+            },
+            {
+              "const": "764",
+              "title": "Start availability date"
+            },
+            {
+              "const": "765",
+              "title": "Seasonal availabilty calendar year"
+            },
+            {
+              "const": "766",
+              "title": "Goods pickup lead time"
+            },
+            {
+              "const": "767",
+              "title": "Change date/time, latest"
+            },
+            {
+              "const": "768",
+              "title": "End date/time, maximum buying quantity"
+            },
+            {
+              "const": "769",
+              "title": "End dat/time, minimum buying quantity"
+            },
+            {
+              "const": "770",
+              "title": "End date/time of exclusivity"
+            },
+            {
+              "const": "771",
+              "title": "Data release date"
+            },
+            {
+              "const": "772",
+              "title": "Handling start date and/or time, actual"
+            },
+            {
+              "const": "773",
+              "title": "Handling end date and/or time, estimated"
+            },
+            {
+              "const": "774",
+              "title": "Handling end date and/or time, actual"
+            },
+            {
+              "const": "775",
+              "title": "Minimum product lifespan for consumer"
+            },
+            {
+              "const": "776",
+              "title": "Entry date, elected"
+            },
+            {
+              "const": "777",
+              "title": "Arrival date/time at initial port with the intent to unload"
+            },
+            {
+              "const": "778",
+              "title": "Conveyance port activity date/ time"
+            },
+            {
+              "const": "779",
+              "title": "Date and time of importation into port limits"
+            },
+            {
+              "const": "780",
+              "title": "Free trade zone commodity status assignment date"
+            },
+            {
+              "const": "781",
+              "title": "Jurisdiction entry date/time, actual"
+            },
+            {
+              "const": "782",
+              "title": "Inspection start date/time"
+            },
+            {
+              "const": "783",
+              "title": "Inspection end date/time"
+            },
+            {
+              "const": "784",
+              "title": "Document/message rejection date/time"
+            },
+            {
+              "const": "785",
+              "title": "Government service date/time, requested"
+            },
+            {
+              "const": "786",
+              "title": "Crop year"
+            },
+            {
+              "const": "787",
+              "title": "Date of original manufacture"
+            },
+            {
+              "const": "788",
+              "title": "Model year"
+            },
+            {
+              "const": "789",
+              "title": "Opened trade item life span"
+            },
+            {
+              "const": "790",
+              "title": "Unmooring, date and time"
+            },
+            {
+              "const": "791",
+              "title": "First crane lift"
+            },
+            {
+              "const": "792",
+              "title": "Last crane lift"
+            },
+            {
+              "const": "793",
+              "title": "Reprocessing date/time"
+            },
+            {
+              "const": "794",
+              "title": "First returnable date/time"
+            },
+            {
+              "const": "795",
+              "title": "Community visibility date/time"
+            },
+            {
+              "const": "796",
+              "title": "Catch date/time"
+            },
+            {
+              "const": "797",
+              "title": "First freezing date"
+            },
+            {
+              "const": "798",
+              "title": "Verified gross mass determination date/time"
+            },
+            {
+              "const": "799",
+              "title": "Validity end date"
+            },
+            {
+              "const": "800",
+              "title": "Next status report date"
+            },
+            {
+              "const": "801",
+              "title": "Service connection date/time, actual"
+            },
+            {
+              "const": "802",
+              "title": "Service disconnection date/time, actual"
+            },
+            {
+              "const": "803",
+              "title": "Empty equipment required date/time/period"
+            },
+            {
+              "const": "804",
+              "title": "Product sterilisation date"
+            },
+            {
+              "const": "805",
+              "title": "Stock demand cover period, expected"
+            },
+            {
+              "const": "806",
+              "title": "Shipment date/time, expected"
+            },
+            {
+              "const": "807",
+              "title": "Slaughtering date/time"
+            },
+            {
+              "const": "808",
+              "title": "Animal birth date/time"
+            },
+            {
+              "const": "809",
+              "title": "Seasonal availability end date"
+            },
+            {
+              "const": "810",
+              "title": "Verified gross mass cut-off date/time"
+            },
+            {
+              "const": "811",
+              "title": "Dangerous goods acceptance cut-off date/time"
+            },
+            {
+              "const": "812",
+              "title": "Out of gauge or break bulk acceptance cut-off date/time"
+            },
+            {
+              "const": "813",
+              "title": "Reefer acceptance cut-off date/time"
+            },
+            {
+              "const": "814",
+              "title": "Laden transport equipment acceptance cut-off date/time"
+            },
+            {
+              "const": "815",
+              "title": "Transshipment booking acceptance cut-off date/time"
+            },
+            {
+              "const": "816",
+              "title": "Ordered labour team start time"
+            },
+            {
+              "const": "817",
+              "title": "Ordered labour team end time"
+            },
+            {
+              "const": "818",
+              "title": "Means of transport ready for cargo operations date/time"
+            },
+            {
+              "const": "819",
+              "title": "Means of transport ready for departure date/time"
+            },
+            {
+              "const": "820",
+              "title": "Vessel arrival at pilot area date/time, estimated"
+            },
+            {
+              "const": "821",
+              "title": "Vessel arrival at pilot area date/time, actual"
+            },
+            {
+              "const": "822",
+              "title": "Delivery place booking date/time"
+            },
+            {
+              "const": "823",
+              "title": "Pickup place booking date/time"
+            },
+            {
+              "const": "824",
+              "title": "Discharge date/time, ended"
+            },
+            {
+              "const": "825",
+              "title": "Loading date/time, ended"
+            },
+            {
+              "const": "826",
+              "title": "Loading date/time, started"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

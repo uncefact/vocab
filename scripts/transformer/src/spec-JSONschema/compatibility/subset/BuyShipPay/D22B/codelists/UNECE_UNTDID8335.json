@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/subset/BuyShipPay/D22B/UNECE_UNTDID8335",
+  "title": "UNECE_UNTDID8335",
+  "description": "Copyright (C) UN/CEFACT (2023). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID8335Type": {
+          "title": "Movement type description code",
+          "description": "Code specifying a type of movement.\r\n\r\nApplicable codes:\r\n* '1' - Breakbulk\r\n* '2' - LCL/LCL\r\n* '3' - FCL/FCL\r\n* '4' - FCL/LCL\r\n* '5' - LCL/FCL\r\n* '6' - Consolidation\r\n* '7' - Parcel post\r\n* '8' - Expedited truck\r\n* '9' - Consignor determined means\r\n* '10' - Private parcel service\r\n* '11' - House to house\r\n* '12' - House to terminal\r\n* '13' - House to pier\r\n* '14' - Air charter\r\n* '15' - Air express\r\n* '16' - Geographic grouped transport\r\n* '17' - Less than truck load\r\n* '18' - Pooled piggyback\r\n* '19' - Consignee transportation provided\r\n* '20' - Rail\r\n* '21' - Terminal to house\r\n* '22' - Terminal to terminal\r\n* '23' - Terminal to pier\r\n* '31' - Pier to house\r\n* '32' - Pier to terminal\r\n* '33' - Pier to pier\r\n* '41' - Station to station\r\n* '42' - House to warehouse\r\n* '43' - Warehouse to house\r\n* '44' - Station to house\r\n* '45' - Geographic grouped transport, multiple origins, multiple destinations\r\n* '46' - Geographic grouped transport, multiple origins, single destination\r\n* '47' - Geographic receiving",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "31",
+            "32",
+            "33",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

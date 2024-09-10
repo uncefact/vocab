@@ -1,0 +1,355 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID4461",
+  "title": "UNECE_UNTDID4461",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4461Type": {
+          "title": "Payment means code",
+          "description": "Code identifying a means of payment.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Instrument not defined"
+            },
+            {
+              "const": "2",
+              "title": "Automated clearing house credit"
+            },
+            {
+              "const": "3",
+              "title": "Automated clearing house debit"
+            },
+            {
+              "const": "4",
+              "title": "ACH demand debit reversal"
+            },
+            {
+              "const": "5",
+              "title": "ACH demand credit reversal"
+            },
+            {
+              "const": "6",
+              "title": "ACH demand credit"
+            },
+            {
+              "const": "7",
+              "title": "ACH demand debit"
+            },
+            {
+              "const": "8",
+              "title": "Hold"
+            },
+            {
+              "const": "9",
+              "title": "National or regional clearing"
+            },
+            {
+              "const": "10",
+              "title": "In cash"
+            },
+            {
+              "const": "11",
+              "title": "ACH savings credit reversal"
+            },
+            {
+              "const": "12",
+              "title": "ACH savings debit reversal"
+            },
+            {
+              "const": "13",
+              "title": "ACH savings credit"
+            },
+            {
+              "const": "14",
+              "title": "ACH savings debit"
+            },
+            {
+              "const": "15",
+              "title": "Bookentry credit"
+            },
+            {
+              "const": "16",
+              "title": "Bookentry debit"
+            },
+            {
+              "const": "17",
+              "title": "ACH demand cash concentration/disbursement (CCD) credit"
+            },
+            {
+              "const": "18",
+              "title": "ACH demand cash concentration/disbursement (CCD) debit"
+            },
+            {
+              "const": "19",
+              "title": "ACH demand corporate trade payment (CTP) credit"
+            },
+            {
+              "const": "20",
+              "title": "Cheque"
+            },
+            {
+              "const": "21",
+              "title": "Banker's draft"
+            },
+            {
+              "const": "22",
+              "title": "Certified banker's draft"
+            },
+            {
+              "const": "23",
+              "title": "Bank cheque (issued by a banking or similar establishment)"
+            },
+            {
+              "const": "24",
+              "title": "Bill of exchange awaiting acceptance"
+            },
+            {
+              "const": "25",
+              "title": "Certified cheque"
+            },
+            {
+              "const": "26",
+              "title": "Local cheque"
+            },
+            {
+              "const": "27",
+              "title": "ACH demand corporate trade payment (CTP) debit"
+            },
+            {
+              "const": "28",
+              "title": "ACH demand corporate trade exchange (CTX) credit"
+            },
+            {
+              "const": "29",
+              "title": "ACH demand corporate trade exchange (CTX) debit"
+            },
+            {
+              "const": "30",
+              "title": "Credit transfer"
+            },
+            {
+              "const": "31",
+              "title": "Debit transfer"
+            },
+            {
+              "const": "32",
+              "title": "ACH demand cash concentration/disbursement plus (CCD+) credit"
+            },
+            {
+              "const": "33",
+              "title": "ACH demand cash concentration/disbursement plus (CCD+) debit"
+            },
+            {
+              "const": "34",
+              "title": "ACH prearranged payment and deposit (PPD)"
+            },
+            {
+              "const": "35",
+              "title": "ACH savings cash concentration/disbursement (CCD) credit"
+            },
+            {
+              "const": "36",
+              "title": "ACH savings cash concentration/disbursement (CCD) debit"
+            },
+            {
+              "const": "37",
+              "title": "ACH savings corporate trade payment (CTP) credit"
+            },
+            {
+              "const": "38",
+              "title": "ACH savings corporate trade payment (CTP) debit"
+            },
+            {
+              "const": "39",
+              "title": "ACH savings corporate trade exchange (CTX) credit"
+            },
+            {
+              "const": "40",
+              "title": "ACH savings corporate trade exchange (CTX) debit"
+            },
+            {
+              "const": "41",
+              "title": "ACH savings cash concentration/disbursement plus (CCD+) credit"
+            },
+            {
+              "const": "42",
+              "title": "Payment to bank account"
+            },
+            {
+              "const": "43",
+              "title": "ACH savings cash concentration/disbursement plus (CCD+) debit"
+            },
+            {
+              "const": "44",
+              "title": "Accepted bill of exchange"
+            },
+            {
+              "const": "45",
+              "title": "Referenced home-banking credit transfer"
+            },
+            {
+              "const": "46",
+              "title": "Interbank debit transfer"
+            },
+            {
+              "const": "47",
+              "title": "Home-banking debit transfer"
+            },
+            {
+              "const": "48",
+              "title": "Bank card"
+            },
+            {
+              "const": "49",
+              "title": "Direct debit"
+            },
+            {
+              "const": "50",
+              "title": "Payment by postgiro"
+            },
+            {
+              "const": "51",
+              "title": "FR, norme 6 97-Telereglement CFONB (French Organisation for Banking Standards)  - Option A"
+            },
+            {
+              "const": "52",
+              "title": "Urgent commercial payment"
+            },
+            {
+              "const": "53",
+              "title": "Urgent Treasury Payment"
+            },
+            {
+              "const": "54",
+              "title": "Credit card"
+            },
+            {
+              "const": "55",
+              "title": "Debit card"
+            },
+            {
+              "const": "56",
+              "title": "Bankgiro"
+            },
+            {
+              "const": "57",
+              "title": "Standing agreement"
+            },
+            {
+              "const": "58",
+              "title": "SEPA credit transfer"
+            },
+            {
+              "const": "59",
+              "title": "SEPA direct debit"
+            },
+            {
+              "const": "60",
+              "title": "Promissory note"
+            },
+            {
+              "const": "61",
+              "title": "Promissory note signed by the debtor"
+            },
+            {
+              "const": "62",
+              "title": "Promissory note signed by the debtor and endorsed by a bank"
+            },
+            {
+              "const": "63",
+              "title": "Promissory note signed by the debtor and endorsed by a third party"
+            },
+            {
+              "const": "64",
+              "title": "Promissory note signed by a bank"
+            },
+            {
+              "const": "65",
+              "title": "Promissory note signed by a bank and endorsed by another bank"
+            },
+            {
+              "const": "66",
+              "title": "Promissory note signed by a third party"
+            },
+            {
+              "const": "67",
+              "title": "Promissory note signed by a third party and endorsed by a bank"
+            },
+            {
+              "const": "68",
+              "title": "Online payment service"
+            },
+            {
+              "const": "69",
+              "title": "Transfer Advice"
+            },
+            {
+              "const": "70",
+              "title": "Bill drawn by the creditor on the debtor"
+            },
+            {
+              "const": "74",
+              "title": "Bill drawn by the creditor on a bank"
+            },
+            {
+              "const": "75",
+              "title": "Bill drawn by the creditor, endorsed by another bank"
+            },
+            {
+              "const": "76",
+              "title": "Bill drawn by the creditor on a bank and endorsed by a third party"
+            },
+            {
+              "const": "77",
+              "title": "Bill drawn by the creditor on a third party"
+            },
+            {
+              "const": "78",
+              "title": "Bill drawn by creditor on third party, accepted and endorsed by bank"
+            },
+            {
+              "const": "91",
+              "title": "Not transferable banker's draft"
+            },
+            {
+              "const": "92",
+              "title": "Not transferable local cheque"
+            },
+            {
+              "const": "93",
+              "title": "Reference giro"
+            },
+            {
+              "const": "94",
+              "title": "Urgent giro"
+            },
+            {
+              "const": "95",
+              "title": "Free format giro"
+            },
+            {
+              "const": "96",
+              "title": "Requested method for payment was not used"
+            },
+            {
+              "const": "97",
+              "title": "Clearing between partners"
+            },
+            {
+              "const": "98",
+              "title": "JP, Electronically Recorded Monetary Claims"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

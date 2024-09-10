@@ -1,0 +1,442 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/EDIFICAS-EU_AdditionalPostponement",
+  "title": "EDIFICAS-EU_AdditionalPostponement",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "AdditionalPostponementType": {
+          "title": "Additional Postponement",
+          "oneOf": [
+            {
+              "const": "00",
+              "title": "Cash"
+            },
+            {
+              "const": "01",
+              "title": "1 day"
+            },
+            {
+              "const": "02",
+              "title": "2 days"
+            },
+            {
+              "const": "03",
+              "title": "3 days"
+            },
+            {
+              "const": "04",
+              "title": "4 days"
+            },
+            {
+              "const": "05",
+              "title": "5 days"
+            },
+            {
+              "const": "06",
+              "title": "6 days"
+            },
+            {
+              "const": "07",
+              "title": "7 days"
+            },
+            {
+              "const": "08",
+              "title": "8 days"
+            },
+            {
+              "const": "09",
+              "title": "9 days"
+            },
+            {
+              "const": "10",
+              "title": "10 days"
+            },
+            {
+              "const": "11",
+              "title": "11 days"
+            },
+            {
+              "const": "12",
+              "title": "12 days"
+            },
+            {
+              "const": "13",
+              "title": "13 days"
+            },
+            {
+              "const": "14",
+              "title": "14 days"
+            },
+            {
+              "const": "15",
+              "title": "15 days"
+            },
+            {
+              "const": "16",
+              "title": "16 days"
+            },
+            {
+              "const": "17",
+              "title": "17 days"
+            },
+            {
+              "const": "18",
+              "title": "18 days"
+            },
+            {
+              "const": "19",
+              "title": "19 days"
+            },
+            {
+              "const": "20",
+              "title": "20 days"
+            },
+            {
+              "const": "21",
+              "title": "21 days"
+            },
+            {
+              "const": "22",
+              "title": "22 days"
+            },
+            {
+              "const": "23",
+              "title": "23 days"
+            },
+            {
+              "const": "24",
+              "title": "24 days"
+            },
+            {
+              "const": "25",
+              "title": "25 days"
+            },
+            {
+              "const": "26",
+              "title": "26 days"
+            },
+            {
+              "const": "27",
+              "title": "27 days"
+            },
+            {
+              "const": "28",
+              "title": "28 days"
+            },
+            {
+              "const": "29",
+              "title": "29 days"
+            },
+            {
+              "const": "30",
+              "title": "30 days"
+            },
+            {
+              "const": "120M00",
+              "title": "120 days end of month"
+            },
+            {
+              "const": "120M05",
+              "title": "120 days end of month postponed on the 05"
+            },
+            {
+              "const": "120M10",
+              "title": "120 days end of month postponed on the 10"
+            },
+            {
+              "const": "120M15",
+              "title": "120 days end of month postponed on the 15"
+            },
+            {
+              "const": "120M20",
+              "title": "120 days end of month postponed on the 20"
+            },
+            {
+              "const": "120M25",
+              "title": "120 days end of month postponed on the 25"
+            },
+            {
+              "const": "150M00",
+              "title": "150 days end of month"
+            },
+            {
+              "const": "150M05",
+              "title": "150 days end of month postponed on the 05"
+            },
+            {
+              "const": "150M10",
+              "title": "150 days end of month postponed on the 10"
+            },
+            {
+              "const": "150M15",
+              "title": "150 days end of month postponed on the 15"
+            },
+            {
+              "const": "150M20",
+              "title": "150 days end of month postponed on the 20"
+            },
+            {
+              "const": "150M25",
+              "title": "150 days end of month postponed on the 25"
+            },
+            {
+              "const": "180M00",
+              "title": "180 days end of month"
+            },
+            {
+              "const": "180M05",
+              "title": "180 days end of month postponed on the 05"
+            },
+            {
+              "const": "180M10",
+              "title": "180 days end of month postponed on the 10"
+            },
+            {
+              "const": "180M15",
+              "title": "180 days end of month postponed on the 15"
+            },
+            {
+              "const": "180M20",
+              "title": "180 days end of month postponed on the 20"
+            },
+            {
+              "const": "180M25",
+              "title": "180 days end of month postponed on the 25"
+            },
+            {
+              "const": "1D",
+              "title": "End of the next first day decade"
+            },
+            {
+              "const": "210M00",
+              "title": "210 days end of month"
+            },
+            {
+              "const": "210M05",
+              "title": "210 days end of month postponed on the 05"
+            },
+            {
+              "const": "210M10",
+              "title": "210 days end of month postponed on the 10"
+            },
+            {
+              "const": "210M15",
+              "title": "210 days end of month postponed on the 15"
+            },
+            {
+              "const": "210M20",
+              "title": "210 days end of month postponed on the 20"
+            },
+            {
+              "const": "210M25",
+              "title": "210 days end of month postponed on the 25"
+            },
+            {
+              "const": "240M00",
+              "title": "240 days end of month"
+            },
+            {
+              "const": "240M05",
+              "title": "240 days end of month postponed on the 05"
+            },
+            {
+              "const": "240M10",
+              "title": "240 days end of month postponed on the 10"
+            },
+            {
+              "const": "240M15",
+              "title": "240 days end of month postponed on the 15"
+            },
+            {
+              "const": "240M20",
+              "title": "240 days end of month postponed on the 20"
+            },
+            {
+              "const": "240M25",
+              "title": "240 days end of month postponed on the 25"
+            },
+            {
+              "const": "270M00",
+              "title": "270 days end of month"
+            },
+            {
+              "const": "270M05",
+              "title": "270 days end of month postponed on the 05"
+            },
+            {
+              "const": "270M10",
+              "title": "270 days end of month postponed on the 10"
+            },
+            {
+              "const": "270M15",
+              "title": "270 days end of month postponed on the 15"
+            },
+            {
+              "const": "270M20",
+              "title": "270 days end of month postponed on the 20"
+            },
+            {
+              "const": "270M25",
+              "title": "270 days end of month postponed on the 25"
+            },
+            {
+              "const": "2D",
+              "title": "End of the next second day decade"
+            },
+            {
+              "const": "300M00",
+              "title": "300 days end of month"
+            },
+            {
+              "const": "300M05",
+              "title": "300 days end of month postponed on the 05"
+            },
+            {
+              "const": "300M10",
+              "title": "300 days end of month postponed on the 10"
+            },
+            {
+              "const": "300M15",
+              "title": "300 days end of month postponed on the 15"
+            },
+            {
+              "const": "300M20",
+              "title": "300 days end of month postponed on the 20"
+            },
+            {
+              "const": "300M25",
+              "title": "300 days end of month postponed on the 25"
+            },
+            {
+              "const": "30M00",
+              "title": "30 days end of month"
+            },
+            {
+              "const": "30M05",
+              "title": "30 days end of month postponed on the 05"
+            },
+            {
+              "const": "30M10",
+              "title": "30 days end of month postponed on the 10"
+            },
+            {
+              "const": "30M15",
+              "title": "30 days end of month postponed on the 15"
+            },
+            {
+              "const": "30M20",
+              "title": "30 days end of month postponed on the 20"
+            },
+            {
+              "const": "30M25",
+              "title": "30 days end of month postponed on the 25"
+            },
+            {
+              "const": "330M00",
+              "title": "330 days end of month"
+            },
+            {
+              "const": "330M05",
+              "title": "330 days end of month postponed on the 05"
+            },
+            {
+              "const": "330M10",
+              "title": "330 days end of month postponed on the 10"
+            },
+            {
+              "const": "330M15",
+              "title": "330 days end of month postponed on the 15"
+            },
+            {
+              "const": "330M20",
+              "title": "330 days end of month postponed on the 20"
+            },
+            {
+              "const": "330M25",
+              "title": "330 days end of month postponed on the 25"
+            },
+            {
+              "const": "360M00",
+              "title": "360 days end of month"
+            },
+            {
+              "const": "360M05",
+              "title": "360 days end of month postponed on the 05"
+            },
+            {
+              "const": "360M10",
+              "title": "360 days end of month postponed on the 10"
+            },
+            {
+              "const": "360M15",
+              "title": "360 days end of month postponed on the 15"
+            },
+            {
+              "const": "360M20",
+              "title": "360 days end of month postponed on the 20"
+            },
+            {
+              "const": "360M25",
+              "title": "360 days end of month postponed on the 25"
+            },
+            {
+              "const": "3D",
+              "title": "End of the next third day decade"
+            },
+            {
+              "const": "60M00",
+              "title": "60 days end of month"
+            },
+            {
+              "const": "60M05",
+              "title": "60 days end of month postponed on the 05"
+            },
+            {
+              "const": "60M10",
+              "title": "60 days end of month postponed on the 10"
+            },
+            {
+              "const": "60M15",
+              "title": "60 days end of month postponed on the 15"
+            },
+            {
+              "const": "60M20",
+              "title": "60 days end of month postponed on the 20"
+            },
+            {
+              "const": "60M25",
+              "title": "60 days end of month postponed on the 25"
+            },
+            {
+              "const": "90M00",
+              "title": "90 days end of month"
+            },
+            {
+              "const": "90M05",
+              "title": "90 days end of month postponed on the 05"
+            },
+            {
+              "const": "90M10",
+              "title": "90 days end of month postponed on the 10"
+            },
+            {
+              "const": "90M15",
+              "title": "90 days end of month postponed on the 15"
+            },
+            {
+              "const": "90M20",
+              "title": "90 days end of month postponed on the 20"
+            },
+            {
+              "const": "90M25",
+              "title": "90 days end of month postponed on the 25"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

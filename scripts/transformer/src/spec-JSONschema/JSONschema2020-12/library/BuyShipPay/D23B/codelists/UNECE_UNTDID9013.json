@@ -1,0 +1,1363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID9013",
+  "title": "UNECE_UNTDID9013",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID9013Type": {
+          "title": "Status description code",
+          "description": "Code specifying a status.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Arrival, completed"
+            },
+            {
+              "const": "2",
+              "title": "Loading, authorized"
+            },
+            {
+              "const": "3",
+              "title": "Arrival, in defective condition"
+            },
+            {
+              "const": "4",
+              "title": "Defective equipment returned to service"
+            },
+            {
+              "const": "5",
+              "title": "Process, begun"
+            },
+            {
+              "const": "6",
+              "title": "Booking, completed"
+            },
+            {
+              "const": "7",
+              "title": "Booking, cancelled"
+            },
+            {
+              "const": "8",
+              "title": "Cleared, import restrictions"
+            },
+            {
+              "const": "9",
+              "title": "Cleared, export restrictions"
+            },
+            {
+              "const": "10",
+              "title": "Cleared, by agriculture, food or fisheries authorities"
+            },
+            {
+              "const": "11",
+              "title": "Cleared, by port authority"
+            },
+            {
+              "const": "12",
+              "title": "Cleared, by customs"
+            },
+            {
+              "const": "13",
+              "title": "Collection/pick-up, completed"
+            },
+            {
+              "const": "14",
+              "title": "Process, completed"
+            },
+            {
+              "const": "15",
+              "title": "Consolidated"
+            },
+            {
+              "const": "16",
+              "title": "Crossed border"
+            },
+            {
+              "const": "17",
+              "title": "Customs clearance, refused"
+            },
+            {
+              "const": "18",
+              "title": "Damaged in the course of transportation"
+            },
+            {
+              "const": "19",
+              "title": "Equipment, damage quoted for"
+            },
+            {
+              "const": "20",
+              "title": "Delayed, in the course of transportation"
+            },
+            {
+              "const": "21",
+              "title": "Delivery, completed"
+            },
+            {
+              "const": "22",
+              "title": "Delivery, completed as per instruction"
+            },
+            {
+              "const": "23",
+              "title": "Delivery, not completed"
+            },
+            {
+              "const": "24",
+              "title": "Departure, completed"
+            },
+            {
+              "const": "25",
+              "title": "Departure, delayed"
+            },
+            {
+              "const": "26",
+              "title": "Deramped"
+            },
+            {
+              "const": "27",
+              "title": "Despatch, completed"
+            },
+            {
+              "const": "28",
+              "title": "Stripped"
+            },
+            {
+              "const": "29",
+              "title": "Unloaded"
+            },
+            {
+              "const": "30",
+              "title": "Empty on inspection"
+            },
+            {
+              "const": "31",
+              "title": "En route"
+            },
+            {
+              "const": "32",
+              "title": "Equipment, returned from repair"
+            },
+            {
+              "const": "33",
+              "title": "Equipment, sent for repair"
+            },
+            {
+              "const": "34",
+              "title": "Equipment, repaired"
+            },
+            {
+              "const": "35",
+              "title": "Forwarded to destination"
+            },
+            {
+              "const": "36",
+              "title": "Not found"
+            },
+            {
+              "const": "37",
+              "title": "Found"
+            },
+            {
+              "const": "38",
+              "title": "Freight paid"
+            },
+            {
+              "const": "39",
+              "title": "Released from bond"
+            },
+            {
+              "const": "40",
+              "title": "Arrival, at port"
+            },
+            {
+              "const": "41",
+              "title": "Handed over under continued responsibility"
+            },
+            {
+              "const": "44",
+              "title": "Misrouted consignment corrected"
+            },
+            {
+              "const": "45",
+              "title": "Arrival, consignee informed"
+            },
+            {
+              "const": "46",
+              "title": "Moved, into bond"
+            },
+            {
+              "const": "47",
+              "title": "Moved, into packing depot"
+            },
+            {
+              "const": "48",
+              "title": "Loading, completed onto a means of transport"
+            },
+            {
+              "const": "49",
+              "title": "Lost"
+            },
+            {
+              "const": "50",
+              "title": "Manifested"
+            },
+            {
+              "const": "51",
+              "title": "Onloaded from a means of transport"
+            },
+            {
+              "const": "53",
+              "title": "Collection/pick-up, not completed"
+            },
+            {
+              "const": "54",
+              "title": "Unidentifiable"
+            },
+            {
+              "const": "57",
+              "title": "Not loaded onto a means of transport"
+            },
+            {
+              "const": "58",
+              "title": "Equipment, off hire"
+            },
+            {
+              "const": "59",
+              "title": "Premature onloading"
+            },
+            {
+              "const": "60",
+              "title": "Equipment, on hire"
+            },
+            {
+              "const": "61",
+              "title": "Outstanding claims settled"
+            },
+            {
+              "const": "62",
+              "title": "Overlanded"
+            },
+            {
+              "const": "63",
+              "title": "Not available for collection/pick-up"
+            },
+            {
+              "const": "64",
+              "title": "Collection/pick-up, awaited"
+            },
+            {
+              "const": "65",
+              "title": "Equipment, plugged-in"
+            },
+            {
+              "const": "66",
+              "title": "Plundered"
+            },
+            {
+              "const": "67",
+              "title": "Positioned"
+            },
+            {
+              "const": "68",
+              "title": "Pre-informed"
+            },
+            {
+              "const": "69",
+              "title": "Disposed of"
+            },
+            {
+              "const": "70",
+              "title": "Ramped equipment"
+            },
+            {
+              "const": "71",
+              "title": "Ready for transportation"
+            },
+            {
+              "const": "72",
+              "title": "Receipt of goods fully acknowledged"
+            },
+            {
+              "const": "73",
+              "title": "Receipt of goods partially acknowledged"
+            },
+            {
+              "const": "74",
+              "title": "Received"
+            },
+            {
+              "const": "75",
+              "title": "Consignee changed"
+            },
+            {
+              "const": "76",
+              "title": "Transport re-arranged"
+            },
+            {
+              "const": "77",
+              "title": "Refused, action"
+            },
+            {
+              "const": "78",
+              "title": "Released"
+            },
+            {
+              "const": "79",
+              "title": "Reloaded onto a means of transport"
+            },
+            {
+              "const": "80",
+              "title": "Returned as instructed"
+            },
+            {
+              "const": "81",
+              "title": "Returned wrecked"
+            },
+            {
+              "const": "82",
+              "title": "Returned"
+            },
+            {
+              "const": "83",
+              "title": "Sealed equipment"
+            },
+            {
+              "const": "84",
+              "title": "Service ordered"
+            },
+            {
+              "const": "85",
+              "title": "Short landed"
+            },
+            {
+              "const": "86",
+              "title": "Short shipped"
+            },
+            {
+              "const": "87",
+              "title": "Despatched, completed via a wrong route"
+            },
+            {
+              "const": "88",
+              "title": "Split consignment"
+            },
+            {
+              "const": "89",
+              "title": "Steam cleaned"
+            },
+            {
+              "const": "90",
+              "title": "Movement stopped"
+            },
+            {
+              "const": "91",
+              "title": "Stored"
+            },
+            {
+              "const": "92",
+              "title": "Stowed"
+            },
+            {
+              "const": "93",
+              "title": "Stuffed"
+            },
+            {
+              "const": "94",
+              "title": "Stuffed and sealed"
+            },
+            {
+              "const": "95",
+              "title": "Sub-lease notice in"
+            },
+            {
+              "const": "96",
+              "title": "Sub-lease notice out"
+            },
+            {
+              "const": "97",
+              "title": "Damage surveyed"
+            },
+            {
+              "const": "98",
+              "title": "Transferred in"
+            },
+            {
+              "const": "99",
+              "title": "Transferred out"
+            },
+            {
+              "const": "100",
+              "title": "Transshipment"
+            },
+            {
+              "const": "101",
+              "title": "Delayed in transit"
+            },
+            {
+              "const": "102",
+              "title": "Unknown"
+            },
+            {
+              "const": "103",
+              "title": "Equipment, unplugged"
+            },
+            {
+              "const": "104",
+              "title": "Delivery refused, to be re-arranged"
+            },
+            {
+              "const": "105",
+              "title": "Delivery, postponed"
+            },
+            {
+              "const": "106",
+              "title": "Delivery refused"
+            },
+            {
+              "const": "107",
+              "title": "Anomaly on arrival"
+            },
+            {
+              "const": "108",
+              "title": "Delivery claim"
+            },
+            {
+              "const": "109",
+              "title": "Delivery, impossible, delivery notice left"
+            },
+            {
+              "const": "110",
+              "title": "Delivery, impossible, no delivery notice left"
+            },
+            {
+              "const": "111",
+              "title": "Transport terminated"
+            },
+            {
+              "const": "112",
+              "title": "Held, at consignee's disposal"
+            },
+            {
+              "const": "113",
+              "title": "Delivery, in progress"
+            },
+            {
+              "const": "114",
+              "title": "Delivery, accepted subject to further inspection"
+            },
+            {
+              "const": "115",
+              "title": "Discrepancy"
+            },
+            {
+              "const": "116",
+              "title": "Export inhibited"
+            },
+            {
+              "const": "117",
+              "title": "Missing"
+            },
+            {
+              "const": "118",
+              "title": "Stowed on deck"
+            },
+            {
+              "const": "119",
+              "title": "Unable to be located"
+            },
+            {
+              "const": "120",
+              "title": "Unacceptable condition"
+            },
+            {
+              "const": "121",
+              "title": "Stowed under deck"
+            },
+            {
+              "const": "123",
+              "title": "Accompanying documents delivered"
+            },
+            {
+              "const": "124",
+              "title": "For transfer"
+            },
+            {
+              "const": "125",
+              "title": "No status"
+            },
+            {
+              "const": "126",
+              "title": "Customs clearance, in progress"
+            },
+            {
+              "const": "127",
+              "title": "Departed, completed on a means of transport"
+            },
+            {
+              "const": "128",
+              "title": "Awaiting customs import release"
+            },
+            {
+              "const": "129",
+              "title": "In-bond movement"
+            },
+            {
+              "const": "130",
+              "title": "Consignment received from shipper"
+            },
+            {
+              "const": "131",
+              "title": "For transfer, to another carrier"
+            },
+            {
+              "const": "132",
+              "title": "Loading, in progress"
+            },
+            {
+              "const": "133",
+              "title": "Special loading operations"
+            },
+            {
+              "const": "134",
+              "title": "Embarking passengers"
+            },
+            {
+              "const": "135",
+              "title": "Unloading, in progress"
+            },
+            {
+              "const": "136",
+              "title": "Special unloading"
+            },
+            {
+              "const": "137",
+              "title": "Disembarking passengers"
+            },
+            {
+              "const": "138",
+              "title": "Relocation of a means of transport"
+            },
+            {
+              "const": "139",
+              "title": "Manoeuvring operations, entering port"
+            },
+            {
+              "const": "140",
+              "title": "Manoeuvring operations, leaving port"
+            },
+            {
+              "const": "141",
+              "title": "Manoeuvring operations, within the port"
+            },
+            {
+              "const": "142",
+              "title": "Means of transport, under preparation"
+            },
+            {
+              "const": "143",
+              "title": "Ballast loading"
+            },
+            {
+              "const": "144",
+              "title": "Ballast unloading"
+            },
+            {
+              "const": "145",
+              "title": "Cargo space under preparation"
+            },
+            {
+              "const": "146",
+              "title": "Provisioning"
+            },
+            {
+              "const": "147",
+              "title": "Provisioning, fuel"
+            },
+            {
+              "const": "148",
+              "title": "Provisioning, water"
+            },
+            {
+              "const": "149",
+              "title": "Provisioning, oil"
+            },
+            {
+              "const": "150",
+              "title": "Provisioning, food"
+            },
+            {
+              "const": "151",
+              "title": "Sanitary operations"
+            },
+            {
+              "const": "152",
+              "title": "Fumigation operations"
+            },
+            {
+              "const": "153",
+              "title": "Disinfestation operations"
+            },
+            {
+              "const": "154",
+              "title": "Deratization operations"
+            },
+            {
+              "const": "155",
+              "title": "Degasation operations"
+            },
+            {
+              "const": "156",
+              "title": "Crew recruitment operation"
+            },
+            {
+              "const": "157",
+              "title": "Training operations"
+            },
+            {
+              "const": "158",
+              "title": "Salvage operations"
+            },
+            {
+              "const": "159",
+              "title": "Loading, alongside"
+            },
+            {
+              "const": "161",
+              "title": "Loading, at anchor"
+            },
+            {
+              "const": "162",
+              "title": "Unloading, at wharf"
+            },
+            {
+              "const": "163",
+              "title": "Unloading on board"
+            },
+            {
+              "const": "164",
+              "title": "Unloading, at anchor"
+            },
+            {
+              "const": "165",
+              "title": "Loading and unloading, simultaneously"
+            },
+            {
+              "const": "166",
+              "title": "Idle time operations"
+            },
+            {
+              "const": "167",
+              "title": "Technical operations"
+            },
+            {
+              "const": "168",
+              "title": "Compass calibration"
+            },
+            {
+              "const": "169",
+              "title": "Document, clearance operation"
+            },
+            {
+              "const": "170",
+              "title": "Customs formalities operation"
+            },
+            {
+              "const": "171",
+              "title": "Medical control operations"
+            },
+            {
+              "const": "172",
+              "title": "Loading, preparation for"
+            },
+            {
+              "const": "174",
+              "title": "Unloading, preparation for"
+            },
+            {
+              "const": "175",
+              "title": "Unloading, polluted ballast"
+            },
+            {
+              "const": "176",
+              "title": "Obtaining documents from shipping register"
+            },
+            {
+              "const": "177",
+              "title": "Obtaining wreckage documentation"
+            },
+            {
+              "const": "178",
+              "title": "Waiting, to enter or leave"
+            },
+            {
+              "const": "179",
+              "title": "Waiting, for a pilot"
+            },
+            {
+              "const": "180",
+              "title": "Waiting, for a tug"
+            },
+            {
+              "const": "181",
+              "title": "Waiting, for day light"
+            },
+            {
+              "const": "182",
+              "title": "Waiting, due to meteorological circumstances"
+            },
+            {
+              "const": "183",
+              "title": "Waiting, to form a convoy"
+            },
+            {
+              "const": "184",
+              "title": "Waiting, for action by authorities"
+            },
+            {
+              "const": "185",
+              "title": "Waiting, due to a ban"
+            },
+            {
+              "const": "186",
+              "title": "Waiting, for entry permission"
+            },
+            {
+              "const": "187",
+              "title": "Waiting, due to an action taken by authorities"
+            },
+            {
+              "const": "188",
+              "title": "Waiting, due to the terms of charter"
+            },
+            {
+              "const": "189",
+              "title": "Waiting, for a location"
+            },
+            {
+              "const": "190",
+              "title": "Waiting, for cargo"
+            },
+            {
+              "const": "191",
+              "title": "Waiting, for workers"
+            },
+            {
+              "const": "192",
+              "title": "Waiting, for storage area"
+            },
+            {
+              "const": "193",
+              "title": "Waiting, for equipment"
+            },
+            {
+              "const": "194",
+              "title": "Waiting, for other means of transport"
+            },
+            {
+              "const": "195",
+              "title": "Waiting, for handling equipment"
+            },
+            {
+              "const": "196",
+              "title": "Waiting, for on board handling equipment"
+            },
+            {
+              "const": "197",
+              "title": "Waiting, for cargo to be ready for loading"
+            },
+            {
+              "const": "198",
+              "title": "Waiting, for means of transport to be  ready"
+            },
+            {
+              "const": "199",
+              "title": "Waiting, due to damaged cargo"
+            },
+            {
+              "const": "200",
+              "title": "Waiting, for operational periods"
+            },
+            {
+              "const": "201",
+              "title": "Waiting, for repair and/or maintenance of the means of transport"
+            },
+            {
+              "const": "202",
+              "title": "Waiting, for repair and/or maintenance of handling equipment"
+            },
+            {
+              "const": "203",
+              "title": "Embarking passengers from tender"
+            },
+            {
+              "const": "204",
+              "title": "Waiting, for a counter convoy to pass"
+            },
+            {
+              "const": "205",
+              "title": "Delivery address outside delivery area"
+            },
+            {
+              "const": "206",
+              "title": "Arrival, after means of transport departed"
+            },
+            {
+              "const": "207",
+              "title": "Delivery refused, agent"
+            },
+            {
+              "const": "208",
+              "title": "Seals, replaced"
+            },
+            {
+              "const": "209",
+              "title": "Delivery, scheduled"
+            },
+            {
+              "const": "210",
+              "title": "Delivery, unsuccessful attempt"
+            },
+            {
+              "const": "211",
+              "title": "Delivery not completed, business closed"
+            },
+            {
+              "const": "212",
+              "title": "Delivery, changed schedule"
+            },
+            {
+              "const": "213",
+              "title": "Delivery, further address needed"
+            },
+            {
+              "const": "214",
+              "title": "Computer system not in operation"
+            },
+            {
+              "const": "215",
+              "title": "Delivery, awaiting credit approval"
+            },
+            {
+              "const": "216",
+              "title": "Delivery, awaiting customer arrangements"
+            },
+            {
+              "const": "218",
+              "title": "Damaged"
+            },
+            {
+              "const": "219",
+              "title": "Delivery pending, awaiting specified dates/times/periods"
+            },
+            {
+              "const": "220",
+              "title": "Destination incorrect"
+            },
+            {
+              "const": "222",
+              "title": "Derailment"
+            },
+            {
+              "const": "224",
+              "title": "Delivery, industrial dispute"
+            },
+            {
+              "const": "225",
+              "title": "Operation affected by customer action"
+            },
+            {
+              "const": "227",
+              "title": "Delivery, equipment failure"
+            },
+            {
+              "const": "228",
+              "title": "Inspection required by authority"
+            },
+            {
+              "const": "229",
+              "title": "Export suspended"
+            },
+            {
+              "const": "231",
+              "title": "Missing, goods item"
+            },
+            {
+              "const": "232",
+              "title": "Import suspended"
+            },
+            {
+              "const": "233",
+              "title": "Incorrect picklist"
+            },
+            {
+              "const": "234",
+              "title": "Incorrect address"
+            },
+            {
+              "const": "235",
+              "title": "Industrial dispute"
+            },
+            {
+              "const": "236",
+              "title": "Waiting, for instructions"
+            },
+            {
+              "const": "238",
+              "title": "Means of transport, damaged"
+            },
+            {
+              "const": "239",
+              "title": "Mechanical breakdown"
+            },
+            {
+              "const": "240",
+              "title": "Mechanical inspection required"
+            },
+            {
+              "const": "241",
+              "title": "Missing, document"
+            },
+            {
+              "const": "242",
+              "title": "New delivery arrangements advised"
+            },
+            {
+              "const": "243",
+              "title": "No recipient contact information"
+            },
+            {
+              "const": "247",
+              "title": "Collection/pick-up, package not available"
+            },
+            {
+              "const": "248",
+              "title": "Tracking number unknown"
+            },
+            {
+              "const": "250",
+              "title": "Transport payment not received"
+            },
+            {
+              "const": "251",
+              "title": "Refused, non-payment by payer"
+            },
+            {
+              "const": "253",
+              "title": "Refused, no reason given"
+            },
+            {
+              "const": "254",
+              "title": "Delivery, scheduled past cut-off time"
+            },
+            {
+              "const": "255",
+              "title": "Shunted to siding"
+            },
+            {
+              "const": "256",
+              "title": "Signature not required"
+            },
+            {
+              "const": "258",
+              "title": "Special service required"
+            },
+            {
+              "const": "260",
+              "title": "Tracking information unavailable"
+            },
+            {
+              "const": "265",
+              "title": "Reason unknown"
+            },
+            {
+              "const": "266",
+              "title": "Delivery delayed, adverse weather conditions"
+            },
+            {
+              "const": "267",
+              "title": "Free storage time expired"
+            },
+            {
+              "const": "269",
+              "title": "Delivery, consignee absent"
+            },
+            {
+              "const": "270",
+              "title": "Delayed operation, local circumstances"
+            },
+            {
+              "const": "271",
+              "title": "Delayed operation, consignee's instructions"
+            },
+            {
+              "const": "272",
+              "title": "Delayed operation, consignor's instructions"
+            },
+            {
+              "const": "273",
+              "title": "Delayed operation"
+            },
+            {
+              "const": "274",
+              "title": "Incomplete address"
+            },
+            {
+              "const": "275",
+              "title": "Delivery refused, purchase order cancelled"
+            },
+            {
+              "const": "276",
+              "title": "Delivery refused, return to the consignor"
+            },
+            {
+              "const": "277",
+              "title": "Delivery refused, inconsistent with purchase order"
+            },
+            {
+              "const": "278",
+              "title": "Delivery refused, incorrect delivery date"
+            },
+            {
+              "const": "279",
+              "title": "Delivery refused, automatic return"
+            },
+            {
+              "const": "280",
+              "title": "Delivery refused, duplicate delivery"
+            },
+            {
+              "const": "281",
+              "title": "Delivery refused, instructions requested"
+            },
+            {
+              "const": "282",
+              "title": "Delivery refused, consignee's condition"
+            },
+            {
+              "const": "283",
+              "title": "Delivery refused, delivery incomplete"
+            },
+            {
+              "const": "284",
+              "title": "Delivery refused, not ordered"
+            },
+            {
+              "const": "285",
+              "title": "Delivery refused, remainder not accepted"
+            },
+            {
+              "const": "286",
+              "title": "Delivery refused, spoilt state"
+            },
+            {
+              "const": "287",
+              "title": "Missing, contents"
+            },
+            {
+              "const": "288",
+              "title": "Not on package list"
+            },
+            {
+              "const": "291",
+              "title": "Delivery refused, collect freight charges not paid"
+            },
+            {
+              "const": "292",
+              "title": "Delivery refused, reimbursement not paid"
+            },
+            {
+              "const": "295",
+              "title": "Delivery refused, opened"
+            },
+            {
+              "const": "297",
+              "title": "Delivery refused, commercial dispute"
+            },
+            {
+              "const": "298",
+              "title": "Delivery refused, error on product or packaging"
+            },
+            {
+              "const": "299",
+              "title": "Delivery refused, delivery date/time changed"
+            },
+            {
+              "const": "300",
+              "title": "Document, received without goods"
+            },
+            {
+              "const": "301",
+              "title": "Goods, received without documentation"
+            },
+            {
+              "const": "302",
+              "title": "Overcarried consignment"
+            },
+            {
+              "const": "306",
+              "title": "Document, found"
+            },
+            {
+              "const": "307",
+              "title": "Damaged but deliverable"
+            },
+            {
+              "const": "308",
+              "title": "Spoilt"
+            },
+            {
+              "const": "309",
+              "title": "Packaging/equipment opened"
+            },
+            {
+              "const": "310",
+              "title": "Processed as contractually agreed"
+            },
+            {
+              "const": "311",
+              "title": "Claim folder opened"
+            },
+            {
+              "const": "312",
+              "title": "Moved, completed"
+            },
+            {
+              "const": "313",
+              "title": "Returned by recipient"
+            },
+            {
+              "const": "314",
+              "title": "Delayed, at origin"
+            },
+            {
+              "const": "315",
+              "title": "Held, by logistic service provider"
+            },
+            {
+              "const": "316",
+              "title": "Incident occurred but accepted by ordering party"
+            },
+            {
+              "const": "317",
+              "title": "Delivery party' premises closed during normal hours"
+            },
+            {
+              "const": "318",
+              "title": "Delivery incomplete, time shortage"
+            },
+            {
+              "const": "319",
+              "title": "Despatch, preparation error"
+            },
+            {
+              "const": "320",
+              "title": "Undefined incident attributed to logistic server provider"
+            },
+            {
+              "const": "321",
+              "title": "Instruction to despatch, received"
+            },
+            {
+              "const": "322",
+              "title": "Despatch, under preparation"
+            },
+            {
+              "const": "323",
+              "title": "Return in progress"
+            },
+            {
+              "const": "324",
+              "title": "Instruction to despatch, cancelled"
+            },
+            {
+              "const": "325",
+              "title": "Delivery refused, by recipient"
+            },
+            {
+              "const": "326",
+              "title": "Goods, held by third party on instruction from owner"
+            },
+            {
+              "const": "327",
+              "title": "Weight or volume loss"
+            },
+            {
+              "const": "328",
+              "title": "Moved, internally"
+            },
+            {
+              "const": "329",
+              "title": "Consignment partially stolen"
+            },
+            {
+              "const": "330",
+              "title": "Consignment partially lost or missing"
+            },
+            {
+              "const": "331",
+              "title": "Destroyed"
+            },
+            {
+              "const": "332",
+              "title": "Action by logistics service provider"
+            },
+            {
+              "const": "333",
+              "title": "Action by logistics service provider on instruction by owner"
+            },
+            {
+              "const": "334",
+              "title": "Document, refused"
+            },
+            {
+              "const": "335",
+              "title": "Seals, damaged"
+            },
+            {
+              "const": "336",
+              "title": "Seals, broken"
+            },
+            {
+              "const": "337",
+              "title": "Seals, tampered"
+            },
+            {
+              "const": "338",
+              "title": "Collection/pick-up, business closed"
+            },
+            {
+              "const": "339",
+              "title": "Collection/pick-up, changed schedule"
+            },
+            {
+              "const": "340",
+              "title": "Collection/pick-up, further address needed"
+            },
+            {
+              "const": "341",
+              "title": "Collection/pick-up, industrial dispute"
+            },
+            {
+              "const": "342",
+              "title": "Collection/pick-up, equipment failure"
+            },
+            {
+              "const": "343",
+              "title": "Document, incorrect"
+            },
+            {
+              "const": "344",
+              "title": "Collection/pick-up, scheduled past cut-off time"
+            },
+            {
+              "const": "345",
+              "title": "Collection/pick-up, adverse weather conditions"
+            },
+            {
+              "const": "346",
+              "title": "Unloading, completed from a means of transport"
+            },
+            {
+              "const": "347",
+              "title": "Deliverable"
+            },
+            {
+              "const": "348",
+              "title": "Not deliverable"
+            },
+            {
+              "const": "349",
+              "title": "Handed over"
+            },
+            {
+              "const": "350",
+              "title": "Signature required"
+            },
+            {
+              "const": "351",
+              "title": "Defined incident attributed to logistic server provider"
+            },
+            {
+              "const": "352",
+              "title": "Delivery not completed, business closed, inventory count"
+            },
+            {
+              "const": "353",
+              "title": "Delivery not completed, business closed on Saturday"
+            },
+            {
+              "const": "354",
+              "title": "Delivery not completed, business closed on national holiday"
+            },
+            {
+              "const": "355",
+              "title": "En route, via local route"
+            },
+            {
+              "const": "356",
+              "title": "En route, via national route"
+            },
+            {
+              "const": "357",
+              "title": "En route, via international route"
+            },
+            {
+              "const": "358",
+              "title": "Transport terminated, mail not received"
+            },
+            {
+              "const": "359",
+              "title": "Bill of Lading issued"
+            },
+            {
+              "const": "360",
+              "title": "Cleared, by logistics service provider"
+            },
+            {
+              "const": "361",
+              "title": "Delivery, expected"
+            },
+            {
+              "const": "362",
+              "title": "Measured"
+            },
+            {
+              "const": "363",
+              "title": "Loading, ready"
+            },
+            {
+              "const": "364",
+              "title": "Arrival, at yard"
+            },
+            {
+              "const": "365",
+              "title": "Departure, from yard"
+            },
+            {
+              "const": "366",
+              "title": "Accepted at interchange point"
+            },
+            {
+              "const": "367",
+              "title": "Alerted, no action taken"
+            },
+            {
+              "const": "368",
+              "title": "Transshipment to another wagon"
+            },
+            {
+              "const": "369",
+              "title": "Trip plan revised manually"
+            },
+            {
+              "const": "370",
+              "title": "Special wagon handling arranged"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

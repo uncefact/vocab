@@ -1,0 +1,1225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/SMGSConsignmentNote",
+  "title": "SMGS Consignment Note",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-MMTContractMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocumentContext": {
+          "allOf": [
+            {
+              "oneOf": [
+                {
+                  "$ref": "UNECE-MMTITIGGP_RContextCCL.json#/$defs/exchangedDocumentContextType"
+                },
+                {
+                  "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                }
+              ]
+            },
+            {
+              "properties": {
+                "businessProcessSpecifiedDocumentContextParameter": false,
+                "bimSpecifiedDocumentContextParameter": false,
+                "scenarioSpecifiedDocumentContextParameter": false,
+                "guidelineSpecifiedDocumentContextParameter": {
+                  "items": {
+                    "properties": {
+                      "specifiedDocumentVersion": {
+                        "properties": {
+                          "issueDateTime": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "exchangedDocument": {
+          "allOf": [
+            {
+              "oneOf": [
+                {
+                  "$ref": "UNECE-MMTITIGGP_RContextCCL.json#/$defs/exchangedDocumentType"
+                },
+                {
+                  "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                }
+              ]
+            },
+            {
+              "properties": {
+                "name": false,
+                "issueDateTime": {
+                  "properties": {
+                    "format": {
+                      "enum": [
+                        "102",
+                        "205"
+                      ]
+                    }
+                  }
+                },
+                "remarks": false,
+                "originalRequiredQuantity": false,
+                "copyRequiredQuantity": false,
+                "originalIssuedQuantity": false,
+                "copyIssuedQuantity": false,
+                "purposeCode": {
+                  "items": {
+                    "properties": {
+                      "content": {
+                        "enum": [
+                          "9"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "isOrHasElectronicPresentation": false,
+                "traderAssignedId": false,
+                "cancellationDateTime": false,
+                "requestedResponseTypeCode": false,
+                "includedNote": {
+                  "items": {
+                    "properties": {
+                      "subject": false
+                    }
+                  }
+                },
+                "referenceReferencedDocument": {
+                  "items": {
+                    "properties": {
+                      "referenceDateTime": false
+                    }
+                  }
+                },
+                "issueLogisticsLocation": false,
+                "contractualDocumentClause": {
+                  "items": {
+                    "properties": {
+                      "id": false
+                    }
+                  }
+                },
+                "firstSignatoryDocumentAuthentication": {
+                  "properties": {
+                    "typeCode": false,
+                    "id": false,
+                    "statementCode": false,
+                    "representationTypeCode": false,
+                    "signatory": false,
+                    "signatoryImageBinaryObject": false,
+                    "provider": false,
+                    "issueLogisticsLocation": {
+                      "properties": {
+                        "id": false,
+                        "typeCode": false
+                      }
+                    }
+                  }
+                },
+                "secondSignatoryDocumentAuthentication": {
+                  "properties": {
+                    "typeCode": false,
+                    "actualDateTime": false,
+                    "id": false,
+                    "statementCode": false,
+                    "representationTypeCode": false,
+                    "signatory": false,
+                    "signatoryImageBinaryObject": false,
+                    "provider": false,
+                    "issueLogisticsLocation": false
+                  }
+                },
+                "thirdSignatoryDocumentAuthentication": false,
+                "fourthSignatoryDocumentAuthentication": false,
+                "sender": {
+                  "properties": {
+                    "name": false,
+                    "definedTradeContact": false
+                  }
+                },
+                "issuer": false,
+                "recipient": {
+                  "items": {
+                    "properties": {
+                      "name": false,
+                      "roleCode": false,
+                      "definedTradeContact": false
+                    }
+                  }
+                },
+                "platformProvider": false
+              }
+            }
+          ]
+        },
+        "exchangedDeclaration": {
+          "allOf": [
+            {
+              "oneOf": [
+                {
+                  "$ref": "UNECE-MMTITIGGP_RContextCCL.json#/$defs/exchangedDeclarationType"
+                },
+                {
+                  "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                }
+              ]
+            },
+            {
+              "properties": {
+                "typeCode": {
+                  "properties": {
+                    "content": {
+                      "enum": [
+                        "722"
+                      ]
+                    }
+                  }
+                },
+                "additionalStatementNote": false,
+                "associatedReferencedDocument": false
+              }
+            }
+          ]
+        },
+        "specifiedLogisticsTransportMovement": false,
+        "specifiedConsignment": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-MMTITIGGP_RContextCCL.json#/$defs/consignmentType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "consigneeAssignedId": false,
+                  "freightForwarderAssignedId": false,
+                  "availabilityDueDateTime": false,
+                  "netWeight": false,
+                  "grossVolume": false,
+                  "fobAmount": false,
+                  "associatedInvoiceAmount": false,
+                  "totalPrepaidChargeAmount": false,
+                  "totalDisbursementAmount": false,
+                  "declaredValueForCustomsAmount": false,
+                  "codAmount": false,
+                  "isOrHasNilInsuranceValue": false,
+                  "isOrHasContainerization": false,
+                  "consignmentItemQuantity": false,
+                  "packageQuantity": false,
+                  "summaryDescription": false,
+                  "isOrHasTransportEquipmentSplitGoods": false,
+                  "packageType": false,
+                  "cargoInsuranceInstructionsInformation": false,
+                  "isOrHasTransshipmentPermission": false,
+                  "consignorProvidedInformation": false,
+                  "contractId": false,
+                  "shippedOnboardDateTime": false,
+                  "serviceChargeCurrencyCode": false,
+                  "serviceTariffCurrencyCode": false,
+                  "consignor": {
+                    "properties": {
+                      "id": {
+                        "items": {
+                          "properties": {
+                            "schemeId": false
+                          }
+                        }
+                      },
+                      "definedTradeContact": {
+                        "items": {
+                          "properties": {
+                            "mobileTelephoneUniversalCommunication": false,
+                            "specifiedNote": false
+                          }
+                        }
+                      },
+                      "postalTradeAddress": {
+                        "properties": {
+                          "id": false,
+                          "postOfficeBox": false,
+                          "countryName": false,
+                          "buildingNumber": false,
+                          "additionalStreetName": false
+                        }
+                      },
+                      "uriUniversalCommunication": false,
+                      "specifiedTaxRegistration": false,
+                      "specifiedGovernmentRegistration": false
+                    }
+                  },
+                  "consignee": {
+                    "properties": {
+                      "id": {
+                        "items": {
+                          "properties": {
+                            "schemeId": false
+                          }
+                        }
+                      },
+                      "definedTradeContact": {
+                        "items": {
+                          "properties": {
+                            "mobileTelephoneUniversalCommunication": false,
+                            "specifiedNote": false
+                          }
+                        }
+                      },
+                      "postalTradeAddress": {
+                        "properties": {
+                          "id": false,
+                          "postOfficeBox": false,
+                          "countryName": false,
+                          "buildingNumber": false,
+                          "additionalStreetName": false
+                        }
+                      },
+                      "uriUniversalCommunication": false,
+                      "specifiedTaxRegistration": false,
+                      "specifiedGovernmentRegistration": false
+                    }
+                  },
+                  "carrier": {
+                    "properties": {
+                      "definedTradeContact": {
+                        "items": {
+                          "properties": {
+                            "telephoneUniversalCommunication": false,
+                            "mobileTelephoneUniversalCommunication": false,
+                            "faxUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false,
+                            "telexUniversalCommunication": false,
+                            "specifiedNote": false
+                          }
+                        }
+                      },
+                      "postalTradeAddress": {
+                        "properties": {
+                          "id": false,
+                          "postOfficeBox": false,
+                          "countryName": false,
+                          "buildingNumber": false,
+                          "additionalStreetName": false
+                        }
+                      },
+                      "uriUniversalCommunication": false,
+                      "specifiedTaxRegistration": false,
+                      "specifiedAuthoritativeSignatoryPerson": false,
+                      "specifiedGovernmentRegistration": false
+                    }
+                  },
+                  "carrierAgent": false,
+                  "freightForwarder": false,
+                  "importer": false,
+                  "exporter": false,
+                  "despatch": false,
+                  "delivery": false,
+                  "shipFrom": false,
+                  "shipTo": {
+                    "properties": {
+                      "name": false,
+                      "languageCode": false,
+                      "specifiedTaxRegistration": false,
+                      "specifiedGovernmentRegistration": false
+                    }
+                  },
+                  "notified": false,
+                  "connectingCarrier": false,
+                  "consignorAgent": {
+                    "properties": {
+                      "roleCode": false,
+                      "definedTradeContact": {
+                        "items": {
+                          "properties": {
+                            "telephoneUniversalCommunication": false,
+                            "faxUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false
+                          }
+                        }
+                      },
+                      "postalTradeAddress": {
+                        "properties": {
+                          "postOfficeBox": false,
+                          "countryName": false,
+                          "buildingNumber": false,
+                          "additionalStreetName": false
+                        }
+                      },
+                      "uriUniversalCommunication": false,
+                      "specifiedTaxRegistration": false,
+                      "specifiedAuthoritativeSignatoryPerson": false,
+                      "specifiedGovernmentRegistration": false
+                    }
+                  },
+                  "consigneeAgent": false,
+                  "carrierAcceptanceLogisticsLocation": false,
+                  "consigneeReceiptLogisticsLocation": false,
+                  "loadingBaseportLogisticsLocation": false,
+                  "unloadingBaseportLogisticsLocation": false,
+                  "transitLogisticsLocation": false,
+                  "declaredForCustomsLogisticsLocation": {
+                    "properties": {
+                      "typeCode": {
+                        "items": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "42"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "finalDestinationLogisticsLocation": {
+                    "properties": {
+                      "name": false,
+                      "typeCode": {
+                        "items": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "28"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "postalTradeAddress": false
+                    }
+                  },
+                  "transportContractReferencedDocument": {
+                    "properties": {
+                      "id": false,
+                      "issueDateTime": false,
+                      "issuer": false
+                    }
+                  },
+                  "customsRequiredInvoiceReferencedDocument": false,
+                  "associatedReferencedDocument": {
+                    "maxItems": 9,
+                    "items": {
+                      "properties": {
+                        "statusCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "2"
+                              ]
+                            }
+                          }
+                        },
+                        "typeCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "916"
+                              ]
+                            }
+                          }
+                        },
+                        "remarks": false,
+                        "issueDateTime": false,
+                        "effectivePeriod": false,
+                        "attachedBinaryFile": false
+                      }
+                    }
+                  },
+                  "handlingInstructions": {
+                    "maxItems": 99,
+                    "items": {
+                      "properties": {
+                        "applicableTransportSettingTemperature": false
+                      }
+                    }
+                  },
+                  "haulageInstructions": false,
+                  "loadingInstructions": false,
+                  "deliveryEvent": {
+                    "properties": {
+                      "estimatedOccurrenceDateTime": false,
+                      "scheduledOccurrenceDateTime": false,
+                      "requestedOccurrenceDateTime": false,
+                      "occurrencePeriod": false,
+                      "certifying": false,
+                      "applicableNote": false
+                    }
+                  },
+                  "transportEvent": {
+                    "items": {
+                      "properties": {
+                        "typeCode": false,
+                        "estimatedOccurrenceDateTime": false,
+                        "scheduledOccurrenceDateTime": false,
+                        "requestedOccurrenceDateTime": false,
+                        "arrivalRelatedDateTime": false,
+                        "departureRelatedDateTime": false,
+                        "occurrenceLogisticsLocation": false,
+                        "delaySpecifiedReferencedEvent": {
+                          "items": {
+                            "properties": {
+                              "occurrencePeriod": {
+                                "items": {
+                                  "properties": {
+                                    "startDateTime": false,
+                                    "endDateTime": false
+                                  }
+                                }
+                              },
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "id": false,
+                                  "typeCode": false
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "examinationEvent": {
+                    "items": {
+                      "properties": {
+                        "actualOccurrenceDateTime": false,
+                        "occurrenceLogisticsLocation": false,
+                        "certifying": false,
+                        "applicableNote": false
+                      }
+                    }
+                  },
+                  "pickUpEvent": false,
+                  "includedConsignmentItem": {
+                    "items": {
+                      "properties": {
+                        "typeExtensionCode": false,
+                        "firstTypeExtensionCode": false,
+                        "declaredValueForCustomsAmount": false,
+                        "declaredValueForCarriageAmount": false,
+                        "declaredValueForStatisticsAmount": false,
+                        "fobAmount": false,
+                        "insuranceValueAmount": false,
+                        "netWeight": false,
+                        "chargeableWeight": false,
+                        "grossVolume": false,
+                        "specialInstructions": false,
+                        "deliveryInstructions": false,
+                        "damageRemarks": false,
+                        "information": false,
+                        "loadingLength": false,
+                        "tariffQuantity": false,
+                        "packageQuantity": false,
+                        "globalId": false,
+                        "natureIdCargo": {
+                          "items": {
+                            "properties": {
+                              "typeCode": false,
+                              "operationalCategoryCode": false,
+                              "statisticalClassificationCode": false
+                            }
+                          }
+                        },
+                        "applicableDangerousGoods": {
+                          "items": {
+                            "properties": {
+                              "regulatoryAuthorityName": false,
+                              "regulationName": false,
+                              "information": false,
+                              "lowerPartOrangeHazardPlacardId": false,
+                              "packingInstructionTypeCode": false,
+                              "pollutantLevelCode": false,
+                              "grossWeight": false,
+                              "hazardTypeCode": false,
+                              "additionalHazardClassificationId": false,
+                              "hazardClassVersionId": false,
+                              "grossVolume": false,
+                              "isOrHasPollutant": false,
+                              "isOrHasMarinePollutant": false,
+                              "supplementaryInformation": false,
+                              "explosiveCompatibilityGroupCode": false,
+                              "reportableQuantity": false,
+                              "tunnelRestrictionCode": false,
+                              "specialProvisionId": false,
+                              "hazardCategoryCode": false,
+                              "imdgSegregationGroupCode": false,
+                              "authorizationInformation": false,
+                              "allPackedInOneInformation": false,
+                              "qValueNumeric": false,
+                              "overpackInformation": false,
+                              "aircraftLimitationInformation": false,
+                              "complianceDeclarationInformation": false,
+                              "shipperDeclarationInformation": false,
+                              "limitedQuantityCode": false,
+                              "isOrHasRadioactive": false,
+                              "transportExpertTradeContact": {
+                                "properties": {
+                                  "personName": false,
+                                  "telephoneUniversalCommunication": false,
+                                  "mobileTelephoneUniversalCommunication": false,
+                                  "emailURIUniversalCommunication": false
+                                }
+                              },
+                              "emergencyTradeContact": false,
+                              "emergencyTemperatureMeasurement": false,
+                              "radioactiveMaterial": false,
+                              "handlingInstructions": false,
+                              "associatedReferencedLogisticsTransportEquipment": false,
+                              "specifiedLogisticsPackage": false,
+                              "statedCondition": false
+                            }
+                          }
+                        },
+                        "handlingInstructions": false,
+                        "quarantineInstructions": false,
+                        "transportSettingTemperature": false,
+                        "physicalLogisticsShippingMarks": {
+                          "items": {
+                            "properties": {
+                              "barcodeLogisticsLabel": false,
+                              "vinLogisticsLabel": false
+                            }
+                          }
+                        },
+                        "linearSpatialDimension": false,
+                        "originTradeCountry": false,
+                        "destinationTradeCountry": false,
+                        "associatedReferencedLogisticsTransportEquipment": {
+                          "items": {
+                            "properties": {
+                              "loadedPackageQuantity": false,
+                              "grossWeight": false,
+                              "netWeight": false,
+                              "grossVolume": false
+                            }
+                          }
+                        },
+                        "manufacturer": false,
+                        "despatch": false,
+                        "delivery": false,
+                        "associatedReferencedDocument": {
+                          "items": {
+                            "properties": {
+                              "id": false,
+                              "remarks": false,
+                              "effectivePeriod": false,
+                              "attachedBinaryFile": false
+                            }
+                          }
+                        },
+                        "applicableLogisticsTransportMeans": false,
+                        "transportLogisticsPackage": {
+                          "items": {
+                            "properties": {
+                              "levelCode": false,
+                              "id": false,
+                              "isOrHasReturnable": false,
+                              "physicalLogisticsShippingMarks": false,
+                              "linearSpatialDimension": false,
+                              "usedPackaging": false
+                            }
+                          }
+                        },
+                        "applicableLogisticsServiceCharge": false,
+                        "deliveryEvent": false,
+                        "applicableCrossBorderRegulatoryProcedure": false,
+                        "pickUpEvent": false,
+                        "previousAdministrativeReferencedDocument": false,
+                        "applicableNote": {
+                          "items": {
+                            "properties": {
+                              "subject": false
+                            }
+                          }
+                        },
+                        "specifiedLogisticsRiskAnalysisResult": false
+                      }
+                    }
+                  },
+                  "includedReferencedConsignment": {
+                    "items": {
+                      "properties": {
+                        "grossWeight": false,
+                        "consignmentItemQuantity": false,
+                        "includedReferencedConsignmentItem": false,
+                        "consignor": false,
+                        "consignee": false,
+                        "carrier": false,
+                        "applicableCrossBorderRegulatoryProcedure": false,
+                        "transportContractReferencedDocument": {
+                          "properties": {
+                            "id": false
+                          }
+                        },
+                        "utilizedLogisticsTransportEquipment": false,
+                        "specifiedLogisticsRiskAnalysisResult": false
+                      }
+                    }
+                  },
+                  "utilizedLogisticsTransportEquipment": {
+                    "items": {
+                      "properties": {
+                        "grossVolume": false,
+                        "loadedPackageQuantity": false,
+                        "humidityPercent": false,
+                        "characteristic": false,
+                        "usedCapacityCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "5"
+                              ]
+                            }
+                          }
+                        },
+                        "operationalStatusCode": false,
+                        "legalStatusCode": false,
+                        "sequenceNumeric": false,
+                        "sealQuantity": false,
+                        "airFlow": false,
+                        "isOrHasSealed": false,
+                        "isOrHasReturnable": false,
+                        "stowagePositionId": false,
+                        "handlingInstructions": false,
+                        "deliveryInstructions": false,
+                        "loadingInstructions": {
+                          "items": {
+                            "properties": {
+                              "descriptionCode": false
+                            }
+                          }
+                        },
+                        "additionalInstructions": false,
+                        "loadedDangerousGoods": false,
+                        "affixedLogisticsSeal": {
+                          "items": {
+                            "properties": {
+                              "conditionCode": {
+                                "items": {
+                                  "properties": {
+                                    "content": {
+                                      "enum": [
+                                        "2"
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "sealingPartyRoleCode": {
+                                "properties": {
+                                  "content": {
+                                    "enum": [
+                                      "CA",
+                                      "CU",
+                                      "SH"
+                                    ]
+                                  }
+                                }
+                              },
+                              "issuing": {
+                                "properties": {
+                                  "id": false,
+                                  "roleCode": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "linearSpatialDimension": false,
+                        "attachedTransportEquipment": false,
+                        "carriedAssociatedTransportEquipment": {
+                          "items": {
+                            "properties": {
+                              "categoryCode": {
+                                "items": {
+                                  "properties": {
+                                    "content": {
+                                      "enum": [
+                                        "TE"
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "characteristicCode": false,
+                              "affixedLogisticsSeal": false
+                            }
+                          }
+                        },
+                        "settingTransportSettingTemperature": false,
+                        "applicableLogisticsServiceCharge": false,
+                        "operating": false,
+                        "specifiedLogisticsTransportMeans": {
+                          "items": {
+                            "properties": {
+                              "typeCode": false,
+                              "name": false
+                            }
+                          }
+                        },
+                        "deliveryEvent": false,
+                        "associatedReferencedDocument": false,
+                        "applicableNote": {
+                          "items": {
+                            "properties": {
+                              "subject": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "mainCarriageLogisticsTransportMovement": {
+                    "items": {
+                      "properties": {
+                        "loadingEvent": false,
+                        "unloadingEvent": {
+                          "properties": {
+                            "estimatedOccurrenceDateTime": false,
+                            "actualOccurrenceDateTime": false,
+                            "scheduledOccurrenceDateTime": false,
+                            "requestedOccurrenceDateTime": false,
+                            "occurrenceLogisticsLocation": false
+                          }
+                        },
+                        "arrivalEvent": {
+                          "items": {
+                            "properties": {
+                              "id": false,
+                              "estimatedOccurrenceDateTime": false,
+                              "scheduledOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "typeCode": {
+                                    "items": {
+                                      "properties": {
+                                        "content": {
+                                          "enum": [
+                                            "5"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "subordinateLocation": {
+                                    "items": {
+                                      "properties": {
+                                        "name": false
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "departureEvent": {
+                          "items": {
+                            "properties": {
+                              "estimatedOccurrenceDateTime": false,
+                              "actualOccurrenceDateTime": false,
+                              "scheduledOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "typeCode": {
+                                    "items": {
+                                      "properties": {
+                                        "content": {
+                                          "enum": [
+                                            "5"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "subordinateLocation": {
+                                    "items": {
+                                      "properties": {
+                                        "name": false
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "usedLogisticsTransportMeans": false,
+                        "applicableLogisticsServiceCharge": false,
+                        "itineraryRoute": {
+                          "items": {
+                            "properties": {
+                              "itineraryStopEvent": {
+                                "items": {
+                                  "properties": {
+                                    "estimatedOccurrenceDateTime": false,
+                                    "actualOccurrenceDateTime": false,
+                                    "scheduledOccurrenceDateTime": false,
+                                    "requestedOccurrenceDateTime": false,
+                                    "applicableNote": {
+                                      "items": {
+                                        "properties": {
+                                          "contentCode": false,
+                                          "subjectCode": {
+                                            "items": {
+                                              "properties": {
+                                                "content": {
+                                                  "enum": [
+                                                    "IRP"
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "specialSpecifiedInstructions": {
+                          "items": {
+                            "properties": {
+                              "descriptionCode": false
+                            }
+                          }
+                        },
+                        "transportContractRelatedReferencedDocument": false,
+                        "transshipmentIntermediateEvent": {
+                          "items": {
+                            "properties": {
+                              "estimatedOccurrenceDateTime": false,
+                              "scheduledOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "subordinateLocation": false
+                                }
+                              },
+                              "preTranshipmentTransportEquipmentApplicableNote": {
+                                "items": {
+                                  "properties": {
+                                    "contentCode": false,
+                                    "content": false
+                                  }
+                                }
+                              },
+                              "transportInformationApplicableNote": {
+                                "items": {
+                                  "properties": {
+                                    "contentCode": false,
+                                    "content": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "excessTransportService": false,
+                        "callEvent": false,
+                        "specifiedEvent": false,
+                        "reportedTransportationWasteMaterial": false,
+                        "damageEvent": {
+                          "items": {
+                            "properties": {
+                              "id": false,
+                              "typeCode": false,
+                              "estimatedOccurrenceDateTime": false,
+                              "scheduledOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "occurrenceLogisticsLocation": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "preCarriageLogisticsTransportMovement": false,
+                  "onCarriageLogisticsTransportMovement": false,
+                  "specifiedLogisticsTransportMovement": {
+                    "maxItems": 1,
+                    "items": {
+                      "properties": {
+                        "stageCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "21"
+                              ]
+                            }
+                          }
+                        },
+                        "modeCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "2"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "originTradeCountry": false,
+                  "destinationTradeCountry": false,
+                  "finalDestinationTradeCountry": false,
+                  "importTradeCountry": false,
+                  "exportTradeCountry": {
+                    "properties": {
+                      "name": false
+                    }
+                  },
+                  "applicableTradeCurrencyExchange": {
+                    "items": {
+                      "properties": {
+                        "targetCurrencyCode": false,
+                        "conversionRate": false
+                      }
+                    }
+                  },
+                  "invoiceApplicableTradeCurrencyExchange": {
+                    "items": {
+                      "properties": {
+                        "conversionRate": false
+                      }
+                    }
+                  },
+                  "serviceChargeApplicableTradeCurrencyExchange": {
+                    "items": {
+                      "properties": {
+                        "sourceCurrencyCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "RUB"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "specifiedTradeDeliveryTerms": {
+                    "items": {
+                      "properties": {
+                        "functionCode": {
+                          "items": {
+                            "properties": {
+                              "content": {
+                                "enum": [
+                                  "6"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "relevantTradeLocation": false
+                      }
+                    }
+                  },
+                  "transportService": {
+                    "maxItems": 9,
+                    "items": {
+                      "properties": {
+                        "id": false,
+                        "priorityCode": false,
+                        "serviceRequirementCode": {
+                          "items": {
+                            "properties": {
+                              "content": {
+                                "enum": [
+                                  "2",
+                                  "4"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "paymentArrangementCode": false,
+                        "contractMovementTypeCode": false,
+                        "responsible": false
+                      }
+                    }
+                  },
+                  "applicableLogisticsServiceCharge": {
+                    "items": {
+                      "properties": {
+                        "categoryCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "2"
+                              ]
+                            }
+                          }
+                        },
+                        "serviceCategoryCode": false,
+                        "disbursementAmount": false,
+                        "payingPartyRoleCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "CA",
+                                "CN",
+                                "CZ",
+                                "GS"
+                              ]
+                            }
+                          }
+                        },
+                        "calculationBasisCode": false,
+                        "calculationBasis": false,
+                        "transportPaymentMethodCode": false,
+                        "freightInvoiceTypeCode": false,
+                        "calculationBasisQuantity": false,
+                        "calculationBasisCommodityCode": {
+                          "properties": {
+                            "listAgencyName": false,
+                            "listVersionId": false,
+                            "name": false,
+                            "listName": false,
+                            "languageId": false,
+                            "listUri": false,
+                            "listSchemeUri": false
+                          }
+                        },
+                        "paymentPlaceLogisticsLocation": {
+                          "properties": {
+                            "name": false
+                          }
+                        },
+                        "appliedFromLogisticsLocation": {
+                          "properties": {
+                            "typeCode": {
+                              "items": {
+                                "properties": {
+                                  "content": {
+                                    "enum": [
+                                      "32"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "appliedToLogisticsLocation": {
+                          "properties": {
+                            "typeCode": {
+                              "items": {
+                                "properties": {
+                                  "content": {
+                                    "enum": [
+                                      "56"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "applicableTradeAllowanceCharge": {
+                    "items": {
+                      "properties": {
+                        "isOrHasCharge": false,
+                        "calculationPercent": false,
+                        "basisAmount": false,
+                        "basisQuantity": false,
+                        "isOrHasPrepaid": false,
+                        "actualAmount": false,
+                        "unitBasisAmount": false,
+                        "reasonCode": false
+                      }
+                    }
+                  },
+                  "reportedLogisticsStatus": false,
+                  "transportLogisticsPackage": false,
+                  "associated": false,
+                  "natureIdCargo": false,
+                  "applicableCrossBorderRegulatoryProcedure": {
+                    "items": {
+                      "properties": {
+                        "typeCode": false,
+                        "previousProcedureTypeCode": false,
+                        "declarantAssignedDeclarationId": false,
+                        "transportMovementTypeCode": {
+                          "items": {
+                            "properties": {
+                              "content": {
+                                "enum": [
+                                  "1"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "responsibleAgencyCode": {
+                          "properties": {
+                            "content": {
+                              "enum": [
+                                "5"
+                              ]
+                            }
+                          }
+                        },
+                        "responsibleAgencyActionCode": false,
+                        "goodsStatusCode": false,
+                        "previousReferencedDocument": false,
+                        "referencedDocument": false,
+                        "applicablePeriod": false,
+                        "treatmentEvent": false,
+                        "examinationEvent": false,
+                        "requiredLogisticsSeal": false,
+                        "entryCustomsOfficeSpecifiedLogisticsLocation": {
+                          "properties": {
+                            "name": false
+                          }
+                        },
+                        "exitCustomsOfficeSpecifiedLogisticsLocation": {
+                          "properties": {
+                            "name": false
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "consignorProvidedBorderClearanceInstructions": false,
+                  "deliveryInstructions": false,
+                  "previousAdministrativeReferencedDocument": false,
+                  "transportServicesBuyer": false,
+                  "statementNote": false
+                }
+              }
+            }
+          ]
+        },
+        "specifiedLogisticsTransportEquipment": false
+      }
+    }
+  ]
+}

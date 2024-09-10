@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/subset/BuyShipPay/D23B/UNECE_UNTDID5237",
+  "title": "UNECE_UNTDID5237",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5237Type": {
+          "title": "Charge category code",
+          "description": "Code specifying the category of charges.\r\n\r\nApplicable codes:\r\n* '1' - All charges\r\n* '2' - Additional charges\r\n* '3' - Transport charges + additional charges\r\n* '4' - Basic freight\r\n* '5' - Destination haulage charges\r\n* '6' - Disbursement\r\n* '7' - Destination port charges\r\n* '8' - Miscellaneous charges\r\n* '9' - Transport charges up to a specified location\r\n* '10' - Origin port charges\r\n* '11' - Origin haulage charges\r\n* '12' - Other charges\r\n* '13' - Specific amount payable\r\n* '14' - Transport costs (carriage charges)\r\n* '15' - All costs up to a specified location\r\n* '16' - Weight/valuation charge\r\n* '17' - All costs\r\n* '19' - Supply of certificate of shipment\r\n* '20' - Supply of consular formalities or certificate of origin\r\n* '21' - Supply of non-categorised documentation in paper form\r\n* '22' - Supply of customs formalities, export\r\n* '23' - Supply of customs formalities, transit\r\n* '24' - Supply of customs formalities, import",
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

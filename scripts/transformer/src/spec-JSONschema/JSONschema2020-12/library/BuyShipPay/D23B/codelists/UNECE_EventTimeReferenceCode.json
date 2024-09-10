@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_EventTimeReferenceCode",
+  "title": "UNECE_EventTimeReferenceCode",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "EventTimeReferenceCodeType": {
+          "title": "Event time reference code",
+          "description": "Code specifying a time that references an event that\r\nwill or has occurred.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Date of order"
+            },
+            {
+              "const": "2",
+              "title": "Date of confirmation"
+            },
+            {
+              "const": "3",
+              "title": "Date of contract"
+            },
+            {
+              "const": "4",
+              "title": "Date of signature of contract"
+            },
+            {
+              "const": "5",
+              "title": "Date of invoice"
+            },
+            {
+              "const": "6",
+              "title": "Date of credit note"
+            },
+            {
+              "const": "7",
+              "title": "Date of present document"
+            },
+            {
+              "const": "8",
+              "title": "Date of confirmation of order received"
+            },
+            {
+              "const": "9",
+              "title": "Date invoice received"
+            },
+            {
+              "const": "10",
+              "title": "Latest date/time for bid reception"
+            },
+            {
+              "const": "11",
+              "title": "Date credit note received"
+            },
+            {
+              "const": "12",
+              "title": "Date present document received"
+            },
+            {
+              "const": "13",
+              "title": "Date of resale by buyer"
+            },
+            {
+              "const": "14",
+              "title": "Date proceeds of resale collected by buyer"
+            },
+            {
+              "const": "21",
+              "title": "Date goods received by buyer"
+            },
+            {
+              "const": "22",
+              "title": "Date goods received by buyer's agent"
+            },
+            {
+              "const": "23",
+              "title": "Date goods received by carrier"
+            },
+            {
+              "const": "24",
+              "title": "Date ex-works"
+            },
+            {
+              "const": "25",
+              "title": "Date goods handed over for shipment by seller or agent"
+            },
+            {
+              "const": "26",
+              "title": "Date of arrival of transport"
+            },
+            {
+              "const": "27",
+              "title": "Date of outward frontier crossing"
+            },
+            {
+              "const": "28",
+              "title": "Date of inward frontier crossing"
+            },
+            {
+              "const": "29",
+              "title": "Date of delivery of goods to establishments/domicile/site"
+            },
+            {
+              "const": "31",
+              "title": "Stipulated date for payment of documentary credit"
+            },
+            {
+              "const": "32",
+              "title": "Stipulated date for acceptance of documentary credit"
+            },
+            {
+              "const": "33",
+              "title": "Stipulated date for negotiation of documentary credit"
+            },
+            {
+              "const": "41",
+              "title": "Date of delivery to buyer of documents representing goods"
+            },
+            {
+              "const": "42",
+              "title": "Date of delivery to buyer's agent of documents representing goods"
+            },
+            {
+              "const": "43",
+              "title": "Date of delivery to carrier of documents representing goods"
+            },
+            {
+              "const": "44",
+              "title": "Date of delivery to intermediary bank of documents representing good"
+            },
+            {
+              "const": "45",
+              "title": "Date of bill of lading, consignment note or other transport document"
+            },
+            {
+              "const": "46",
+              "title": "Date of receipt for loading (mate's receipt)"
+            },
+            {
+              "const": "47",
+              "title": "Date of negotiable instrument (draft, promissory note, bank)"
+            },
+            {
+              "const": "48",
+              "title": "Date of receipt of tool dependent initial samples plus unlimited absolute bank guarantee plus value added tax"
+            },
+            {
+              "const": "52",
+              "title": "Due date of negotiable instrument"
+            },
+            {
+              "const": "53",
+              "title": "Date of presentation of negotiable instrument"
+            },
+            {
+              "const": "54",
+              "title": "Date of acceptance of negotiable instrument"
+            },
+            {
+              "const": "55",
+              "title": "Date of acceptance of tooling"
+            },
+            {
+              "const": "56",
+              "title": "Date of receipt of tooling"
+            },
+            {
+              "const": "57",
+              "title": "Date of acceptance of first samples produced under production conditions"
+            },
+            {
+              "const": "60",
+              "title": "Date of start of work"
+            },
+            {
+              "const": "61",
+              "title": "Date of end of work"
+            },
+            {
+              "const": "62",
+              "title": "Date of provisional reception of work"
+            },
+            {
+              "const": "63",
+              "title": "Date of final acceptance of work"
+            },
+            {
+              "const": "64",
+              "title": "Date of certificate of preliminary acceptance"
+            },
+            {
+              "const": "65",
+              "title": "Date of certificate of final acceptance"
+            },
+            {
+              "const": "66",
+              "title": "Specified date"
+            },
+            {
+              "const": "67",
+              "title": "Anticipated delivery date"
+            },
+            {
+              "const": "68",
+              "title": "Effective date"
+            },
+            {
+              "const": "69",
+              "title": "Invoice transmission date"
+            },
+            {
+              "const": "70",
+              "title": "Date of issue of transport document(s)"
+            },
+            {
+              "const": "71",
+              "title": "Date of presentation of documents"
+            },
+            {
+              "const": "72",
+              "title": "Payment date"
+            },
+            {
+              "const": "73",
+              "title": "Draft(s) at ... days sight"
+            },
+            {
+              "const": "74",
+              "title": "Draft(s) at ... days date"
+            },
+            {
+              "const": "75",
+              "title": "Draft(s) at ... days after date of issuance of transport document(s)"
+            },
+            {
+              "const": "76",
+              "title": "Draft(s) at ... days after date of presentation of documents"
+            },
+            {
+              "const": "77",
+              "title": "Specified draft date"
+            },
+            {
+              "const": "78",
+              "title": "Customs clearance date (import)"
+            },
+            {
+              "const": "79",
+              "title": "Customs clearance date (export)"
+            },
+            {
+              "const": "80",
+              "title": "Date of salary payment"
+            },
+            {
+              "const": "81",
+              "title": "Date of shipment as evidenced by the transport document(s)"
+            },
+            {
+              "const": "82",
+              "title": "Payment due date"
+            },
+            {
+              "const": "83",
+              "title": "Requested date of delivery"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Other reference date agreed upon between the parties"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

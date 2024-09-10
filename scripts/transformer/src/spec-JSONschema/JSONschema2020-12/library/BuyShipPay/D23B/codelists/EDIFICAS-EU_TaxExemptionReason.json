@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/EDIFICAS-EU_TaxExemptionReason",
+  "title": "EDIFICAS-EU_TaxExemptionReason",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "TaxExemptionReasonType": {
+          "title": "Tax Exemption Reason",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Exports and Related Operations"
+            },
+            {
+              "const": "2",
+              "title": "Manufacturing intraCommunity"
+            },
+            {
+              "const": "3",
+              "title": "Import Exemption"
+            },
+            {
+              "const": "4",
+              "title": "Acquisition intraCommunity exempt"
+            },
+            {
+              "const": "5",
+              "title": "International Transport"
+            },
+            {
+              "const": "6",
+              "title": "FR DOM (special exemptions)"
+            },
+            {
+              "const": "7",
+              "title": "Medical professions and allied"
+            },
+            {
+              "const": "8",
+              "title": "Health institutions"
+            },
+            {
+              "const": "9",
+              "title": "Education and professional training provided by recognized institutions"
+            },
+            {
+              "const": "10",
+              "title": "Exemption on particular bank and financial transactions"
+            },
+            {
+              "const": "11",
+              "title": "Gold investment transactions"
+            },
+            {
+              "const": "12",
+              "title": "Insurance and reinsurance transactions"
+            },
+            {
+              "const": "13",
+              "title": "Particular real estate rental (farm land and buildings; unmanaged soil; unequipped business premises)"
+            },
+            {
+              "const": "14",
+              "title": "Particular rentals of furnished dwelling"
+            },
+            {
+              "const": "15",
+              "title": "Real estate transactions"
+            },
+            {
+              "const": "16",
+              "title": "Cost reimbursement of equipment by members of grouping"
+            },
+            {
+              "const": "17",
+              "title": "Pluri property Entities"
+            },
+            {
+              "const": "18",
+              "title": "Not for profit organizations (including groupings of blind or disabled workers, philosophical, religious, political, civic organizations or unions)"
+            },
+            {
+              "const": "19",
+              "title": "War memorial"
+            },
+            {
+              "const": "20",
+              "title": "Second hand objects sold by their users"
+            },
+            {
+              "const": "21",
+              "title": "Agricultural mutual aid"
+            },
+            {
+              "const": "22",
+              "title": "Fishing"
+            },
+            {
+              "const": "23",
+              "title": "Clubs and gambling houses"
+            },
+            {
+              "const": "24",
+              "title": "Gamings and bets (casinos; races; lotto)"
+            },
+            {
+              "const": "25",
+              "title": "Health Transport"
+            },
+            {
+              "const": "26",
+              "title": "Medicinal biology analysis"
+            },
+            {
+              "const": "27",
+              "title": "Prosthesis supply by prosthodontist"
+            },
+            {
+              "const": "28",
+              "title": "Organs, blood and human milk"
+            },
+            {
+              "const": "29",
+              "title": "Sport meetings"
+            },
+            {
+              "const": "30",
+              "title": "Goods future markets"
+            },
+            {
+              "const": "31",
+              "title": "Industry brand-new wastes and recycling/recovering materials"
+            },
+            {
+              "const": "32",
+              "title": "Fiscal and postage stamps"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

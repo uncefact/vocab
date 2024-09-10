@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID4439",
+  "title": "UNECE_UNTDID4439",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID4439Type": {
+          "title": "Payment conditions code",
+          "description": "Code specifying the payment conditions.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Direct payment"
+            },
+            {
+              "const": "2",
+              "title": "Automatic clearing house credit"
+            },
+            {
+              "const": "3",
+              "title": "Automatic clearing house debit"
+            },
+            {
+              "const": "4",
+              "title": "Automatic clearing house credit-savings account"
+            },
+            {
+              "const": "5",
+              "title": "Automatic clearing house debit-demand account"
+            },
+            {
+              "const": "6",
+              "title": "Bank book transfer (credit)"
+            },
+            {
+              "const": "7",
+              "title": "Bank book transfer (debit)"
+            },
+            {
+              "const": "8",
+              "title": "Doc collection via 3rd party with bill of EX"
+            },
+            {
+              "const": "9",
+              "title": "Doc collection via 3rd party no bill of EX"
+            },
+            {
+              "const": "10",
+              "title": "Irrevocable documentary credit"
+            },
+            {
+              "const": "11",
+              "title": "Transferable irrevocable documentary credit"
+            },
+            {
+              "const": "12",
+              "title": "Confirmed irrevocable documentary credit"
+            },
+            {
+              "const": "13",
+              "title": "Transferable confirmed irrevocable documentary credit"
+            },
+            {
+              "const": "14",
+              "title": "Revocable documentary credit"
+            },
+            {
+              "const": "15",
+              "title": "Irrevocable letter of credit-confirmed"
+            },
+            {
+              "const": "16",
+              "title": "Letter of guarantee"
+            },
+            {
+              "const": "17",
+              "title": "Revocable letter of credit"
+            },
+            {
+              "const": "18",
+              "title": "Standby letter of credit"
+            },
+            {
+              "const": "19",
+              "title": "Irrevocable letter of credit unconfirmed"
+            },
+            {
+              "const": "20",
+              "title": "Clean collection (ICC)"
+            },
+            {
+              "const": "21",
+              "title": "Documentary collection (ICC)"
+            },
+            {
+              "const": "22",
+              "title": "Documentary sight collection (ICC)"
+            },
+            {
+              "const": "23",
+              "title": "Documentary collection with date of expiry (ICC)"
+            },
+            {
+              "const": "24",
+              "title": "Documentary collection: bill of exchange against acceptance"
+            },
+            {
+              "const": "25",
+              "title": "Documentary collection: bill of exchange against payment"
+            },
+            {
+              "const": "26",
+              "title": "Collection subject to buyer's approval (ICC)"
+            },
+            {
+              "const": "27",
+              "title": "Collection by a bank consignee for the goods (ICC)"
+            },
+            {
+              "const": "34",
+              "title": "Seller to advise buyer"
+            },
+            {
+              "const": "35",
+              "title": "Documents through banks"
+            },
+            {
+              "const": "36",
+              "title": "Charging (to account)"
+            },
+            {
+              "const": "37",
+              "title": "Available with issuing bank"
+            },
+            {
+              "const": "38",
+              "title": "Available with advising bank"
+            },
+            {
+              "const": "39",
+              "title": "Available with named bank"
+            },
+            {
+              "const": "40",
+              "title": "Available with any bank"
+            },
+            {
+              "const": "41",
+              "title": "Available with any bank in ..."
+            },
+            {
+              "const": "42",
+              "title": "Indirect payment"
+            },
+            {
+              "const": "43",
+              "title": "Reassignment"
+            },
+            {
+              "const": "44",
+              "title": "Offset"
+            },
+            {
+              "const": "45",
+              "title": "Special entries"
+            },
+            {
+              "const": "46",
+              "title": "Instalment payment"
+            },
+            {
+              "const": "47",
+              "title": "Instalment payment with draft"
+            },
+            {
+              "const": "48",
+              "title": "Available with advise through bank"
+            },
+            {
+              "const": "49",
+              "title": "General conditions of sale"
+            },
+            {
+              "const": "50",
+              "title": "Special payment"
+            },
+            {
+              "const": "61",
+              "title": "Set-off by exchange of documents"
+            },
+            {
+              "const": "62",
+              "title": "Set-off by reciprocal credits"
+            },
+            {
+              "const": "64",
+              "title": "Set-off by exchange of goods"
+            },
+            {
+              "const": "65",
+              "title": "Reverse factoring"
+            },
+            {
+              "const": "69",
+              "title": "Other set-off"
+            },
+            {
+              "const": "70",
+              "title": "Supplier to invoice"
+            },
+            {
+              "const": "71",
+              "title": "Recipient to self bill"
+            },
+            {
+              "const": "ZZZ",
+              "title": "Mutually defined"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

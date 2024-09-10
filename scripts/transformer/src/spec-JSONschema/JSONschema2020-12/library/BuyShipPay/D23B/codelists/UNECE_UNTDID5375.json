@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID5375",
+  "title": "UNECE_UNTDID5375",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5375Type": {
+          "title": "Price type code",
+          "description": "Code specifying the type of price.",
+          "oneOf": [
+            {
+              "const": "AA",
+              "title": "Cancellation price"
+            },
+            {
+              "const": "AB",
+              "title": "Per ton"
+            },
+            {
+              "const": "AC",
+              "title": "Minimum order price"
+            },
+            {
+              "const": "AD",
+              "title": "Export price"
+            },
+            {
+              "const": "AE",
+              "title": "Range dependent price"
+            },
+            {
+              "const": "AF",
+              "title": "Competitor price"
+            },
+            {
+              "const": "AG",
+              "title": "Daily Price"
+            },
+            {
+              "const": "AH",
+              "title": "Service Price"
+            },
+            {
+              "const": "AI",
+              "title": "Active ingredient"
+            },
+            {
+              "const": "AJ",
+              "title": "Dynamic Price"
+            },
+            {
+              "const": "AK",
+              "title": "Basic Price"
+            },
+            {
+              "const": "AL",
+              "title": "Extra Price"
+            },
+            {
+              "const": "AM",
+              "title": "Discount Price"
+            },
+            {
+              "const": "AN",
+              "title": "Cancellation Price"
+            },
+            {
+              "const": "AO",
+              "title": "Refund Price"
+            },
+            {
+              "const": "AP",
+              "title": "Commission Price"
+            },
+            {
+              "const": "AQ",
+              "title": "As is quantity"
+            },
+            {
+              "const": "AR",
+              "title": "Penalty Price"
+            },
+            {
+              "const": "CA",
+              "title": "Catalogue"
+            },
+            {
+              "const": "CT",
+              "title": "Contract"
+            },
+            {
+              "const": "CU",
+              "title": "Consumer unit"
+            },
+            {
+              "const": "DI",
+              "title": "Distributor"
+            },
+            {
+              "const": "EC",
+              "title": "ECSC price"
+            },
+            {
+              "const": "NW",
+              "title": "Net weight"
+            },
+            {
+              "const": "PC",
+              "title": "Price catalogue"
+            },
+            {
+              "const": "PE",
+              "title": "Per each"
+            },
+            {
+              "const": "PK",
+              "title": "Per kilogram"
+            },
+            {
+              "const": "PL",
+              "title": "Per litre"
+            },
+            {
+              "const": "PT",
+              "title": "Per tonne"
+            },
+            {
+              "const": "PU",
+              "title": "Specified unit"
+            },
+            {
+              "const": "PV",
+              "title": "Provisional price"
+            },
+            {
+              "const": "PW",
+              "title": "Gross weight"
+            },
+            {
+              "const": "QT",
+              "title": "Quoted"
+            },
+            {
+              "const": "SR",
+              "title": "Suggested retail"
+            },
+            {
+              "const": "TB",
+              "title": "To be negotiated"
+            },
+            {
+              "const": "TU",
+              "title": "Traded unit"
+            },
+            {
+              "const": "TW",
+              "title": "Theoretical weight"
+            },
+            {
+              "const": "WH",
+              "title": "Wholesale"
+            },
+            {
+              "const": "WI",
+              "title": "Gross volume"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

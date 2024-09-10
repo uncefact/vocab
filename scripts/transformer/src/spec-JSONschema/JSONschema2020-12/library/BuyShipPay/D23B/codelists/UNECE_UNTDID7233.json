@@ -1,0 +1,287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID7233",
+  "title": "UNECE_UNTDID7233",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID7233Type": {
+          "title": "Packaging related description code",
+          "description": "Code specifying information related to packaging.",
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Product ingredients not marked on package"
+            },
+            {
+              "const": "2",
+              "title": "Product price not marked on packaging"
+            },
+            {
+              "const": "3",
+              "title": "Product best before date not marked on product package"
+            },
+            {
+              "const": "4",
+              "title": "Package not marked recyclable"
+            },
+            {
+              "const": "5",
+              "title": "Promotional details marked"
+            },
+            {
+              "const": "6",
+              "title": "Labeled according to general EAN.UCC specifications for clothing and fashion accessories"
+            },
+            {
+              "const": "7",
+              "title": "Sell-by date marked on package"
+            },
+            {
+              "const": "8",
+              "title": "Use-by date marked on package"
+            },
+            {
+              "const": "9",
+              "title": "Packaging / manufacturing date marked on package"
+            },
+            {
+              "const": "10",
+              "title": "No freshness date marked on package"
+            },
+            {
+              "const": "31",
+              "title": "Package best before date marked"
+            },
+            {
+              "const": "32",
+              "title": "Package marked recyclable"
+            },
+            {
+              "const": "33",
+              "title": "Package marked returnable"
+            },
+            {
+              "const": "34",
+              "title": "Product marking"
+            },
+            {
+              "const": "35",
+              "title": "Type of package"
+            },
+            {
+              "const": "36",
+              "title": "Package specifications"
+            },
+            {
+              "const": "37",
+              "title": "Package protection"
+            },
+            {
+              "const": "38",
+              "title": "Tarping"
+            },
+            {
+              "const": "39",
+              "title": "Platform/skid location"
+            },
+            {
+              "const": "40",
+              "title": "Bearing piece location"
+            },
+            {
+              "const": "41",
+              "title": "Skid/pallet type"
+            },
+            {
+              "const": "42",
+              "title": "Placement on carrier"
+            },
+            {
+              "const": "43",
+              "title": "Spacing directions"
+            },
+            {
+              "const": "44",
+              "title": "Unloading device"
+            },
+            {
+              "const": "45",
+              "title": "Unloading equipment"
+            },
+            {
+              "const": "46",
+              "title": "Packing method"
+            },
+            {
+              "const": "47",
+              "title": "Packing group I"
+            },
+            {
+              "const": "48",
+              "title": "Packing group II"
+            },
+            {
+              "const": "49",
+              "title": "Packing group III"
+            },
+            {
+              "const": "50",
+              "title": "Package barcoded EAN-13 or EAN-8"
+            },
+            {
+              "const": "51",
+              "title": "Package barcoded ITF-14 or ITF-6"
+            },
+            {
+              "const": "52",
+              "title": "Package barcoded UCC or EAN-128"
+            },
+            {
+              "const": "53",
+              "title": "Package price marked"
+            },
+            {
+              "const": "54",
+              "title": "Product ingredients marked on package"
+            },
+            {
+              "const": "55",
+              "title": "Core characteristics"
+            },
+            {
+              "const": "56",
+              "title": "Shipping requirement"
+            },
+            {
+              "const": "57",
+              "title": "Customs requirement"
+            },
+            {
+              "const": "58",
+              "title": "Transport contract requirement"
+            },
+            {
+              "const": "59",
+              "title": "Preservation method"
+            },
+            {
+              "const": "60",
+              "title": "Product marking pattern"
+            },
+            {
+              "const": "61",
+              "title": "Product marking location"
+            },
+            {
+              "const": "62",
+              "title": "Package/container mark location"
+            },
+            {
+              "const": "63",
+              "title": "Marking method"
+            },
+            {
+              "const": "64",
+              "title": "Package never EPC tagged"
+            },
+            {
+              "const": "65",
+              "title": "Package sometimes EPC tagged"
+            },
+            {
+              "const": "66",
+              "title": "Receiving facility limitations"
+            },
+            {
+              "const": "67",
+              "title": "Tagging/bar code instructions"
+            },
+            {
+              "const": "68",
+              "title": "Shipping package labelling"
+            },
+            {
+              "const": "69",
+              "title": "Shipping package sealing"
+            },
+            {
+              "const": "70",
+              "title": "Optional packaging procedure"
+            },
+            {
+              "const": "71",
+              "title": "Cleaning or drying specification"
+            },
+            {
+              "const": "72",
+              "title": "Cushioning thickness specification"
+            },
+            {
+              "const": "73",
+              "title": "Cushioning and dunnage specification"
+            },
+            {
+              "const": "74",
+              "title": "Level of preservation specification"
+            },
+            {
+              "const": "75",
+              "title": "Preservation material specification"
+            },
+            {
+              "const": "76",
+              "title": "Unit container specification"
+            },
+            {
+              "const": "77",
+              "title": "Material wrapping specification"
+            },
+            {
+              "const": "78",
+              "title": "Package bar-coded and EPC tagged"
+            },
+            {
+              "const": "79",
+              "title": "Package EPC tagged only"
+            },
+            {
+              "const": "80",
+              "title": "Marked with “display until date”"
+            },
+            {
+              "const": "81",
+              "title": "Package marked with a variable measure barcode"
+            },
+            {
+              "const": "82",
+              "title": "Package marked with fixed measure barcode."
+            },
+            {
+              "const": "83",
+              "title": "RFID not on packaging"
+            },
+            {
+              "const": "84",
+              "title": "RFID on packaging"
+            },
+            {
+              "const": "85",
+              "title": "Package not marked returnable"
+            },
+            {
+              "const": "86",
+              "title": "Gift wrapping"
+            },
+            {
+              "const": "87",
+              "title": "Accompanied by greeting card"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

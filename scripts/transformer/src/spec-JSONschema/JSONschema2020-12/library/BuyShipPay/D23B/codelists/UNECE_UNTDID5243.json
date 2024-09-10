@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID5243",
+  "title": "UNECE_UNTDID5243",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "UNTDID5243Type": {
+          "title": "Rate or tariff class description code",
+          "description": "Code specifying an applicable rate or tariff class.",
+          "oneOf": [
+            {
+              "const": "A",
+              "title": "Senior person rate"
+            },
+            {
+              "const": "B",
+              "title": "Basic"
+            },
+            {
+              "const": "C",
+              "title": "Specific commodity rate"
+            },
+            {
+              "const": "D",
+              "title": "Teenager rate"
+            },
+            {
+              "const": "E",
+              "title": "Child rate"
+            },
+            {
+              "const": "F",
+              "title": "Adult rate"
+            },
+            {
+              "const": "G",
+              "title": "Export Subsidy Rate"
+            },
+            {
+              "const": "H",
+              "title": "Subsidy Rate"
+            },
+            {
+              "const": "K",
+              "title": "Rate per kilogram"
+            },
+            {
+              "const": "M",
+              "title": "Minimum charge rate"
+            },
+            {
+              "const": "N",
+              "title": "Normal rate"
+            },
+            {
+              "const": "Q",
+              "title": "Quantity rate"
+            },
+            {
+              "const": "R",
+              "title": "Class rate (Reduction on normal rate)"
+            },
+            {
+              "const": "S",
+              "title": "Class rate (Surcharge on normal rate)"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+GEFEG.FX Export JSON Schema
+********************
+
+Datenmodell: Maritime Bill of Lading; D22B
+
+ERROR: Leere Codeliste: UNECE-MaritimeBillofLading.json#/$defs/codeList/$defs/MIMEMediaTypeType (Binary Object. Mime. Code)

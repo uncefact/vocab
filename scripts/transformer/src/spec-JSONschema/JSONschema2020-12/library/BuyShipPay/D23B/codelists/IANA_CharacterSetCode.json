@@ -1,0 +1,1047 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/IANA_CharacterSetCode",
+  "title": "IANA_CharacterSetCode",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "CharacterSetCodeType": {
+          "title": "Character Sets",
+          "description": "Last Updated: 2013-01-23\r\n\r\nRegistration Procedure(s): Expert Review\r\n\r\nExpert(s): Primary Expert Ned Freed and Secondary Expert Martin Dürst\r\n\r\nReference: [RFC2978]\r\n\r\nNote:These are the official names for character sets that may be used in\r\nthe Internet and may be referred to in Internet documentation.  These\r\nnames are expressed in ANSI_X3.4-1968 which is commonly called\r\nUS-ASCII or simply ASCII.  The character set most commonly use in the\r\nInternet and used especially in protocol standards is US-ASCII, this\r\nis strongly encouraged.  The use of the name US-ASCII is also\r\nencouraged.\r\n\r\nThe character set names may be up to 40 characters taken from the\r\nprintable characters of US-ASCII.  However, no distinction is made\r\nbetween use of upper and lower case letters.\r\n\r\nThe MIBenum value is a unique value for use in MIBs to identify coded\r\ncharacter sets.\r\n\r\nThe value space for MIBenum values has been divided into three\r\nregions. The first region (3-999) consists of coded character sets\r\nthat have been standardized by some standard setting organization.\r\nThis region is intended for standards that do not have subset\r\nimplementations. The second region (1000-1999) is for the Unicode and\r\nISO/IEC 10646 coded character sets together with a specification of a\r\n(set of) sub-repertoires that may occur.  The third region (>1999) is\r\nintended for vendor specific coded character sets.\r\n\r\n        Assigned MIB enum Numbers\r\n        -------------------------\r\n        0-2             Reserved\r\n        3-999           Set By Standards Organizations\r\n        1000-1999       Unicode / 10646\r\n        2000-2999       Vendor\r\n\r\nThe aliases that start with \"cs\" have been added for use with the\r\nIANA-CHARSET-MIB as originally defined in [RFC3808], and as currently\r\nmaintained by IANA at [IANA registry ianacharset-mib].\r\nNote that the ianacharset-mib needs to be kept in sync with this\r\nregistry.  These aliases that start with \"cs\" contain the standard\r\nnumbers along with suggestive names in order to facilitate applications\r\nthat want to display the names in user interfaces.  The \"cs\" stands\r\nfor character set and is provided for applications that need a lower\r\ncase first letter but want to use mixed case thereafter that cannot\r\ncontain any special characters, such as underbar (\"_\") and dash (\"-\").\r\n\r\nIf the character set is from an ISO standard, its cs alias is the ISO\r\nstandard number or name.  If the character set is not from an ISO\r\nstandard, but is registered with ISO (IPSJ/ITSCJ is the current ISO\r\nRegistration Authority), the ISO Registry number is specified as\r\nISOnnn followed by letters suggestive of the name or standards number\r\nof the code set.  When a national or international standard is\r\nrevised, the year of revision is added to the cs alias of the new\r\ncharacter set entry in the IANA Registry in order to distinguish the\r\nrevised character set from the original character set.",
+          "oneOf": [
+            {
+              "const": "3",
+              "title": "US-ASCII"
+            },
+            {
+              "const": "4",
+              "title": "ISO_8859-1:1987"
+            },
+            {
+              "const": "5",
+              "title": "ISO_8859-2:1987"
+            },
+            {
+              "const": "6",
+              "title": "ISO_8859-3:1988"
+            },
+            {
+              "const": "7",
+              "title": "ISO_8859-4:1988"
+            },
+            {
+              "const": "8",
+              "title": "ISO_8859-5:1988"
+            },
+            {
+              "const": "9",
+              "title": "ISO_8859-6:1987"
+            },
+            {
+              "const": "10",
+              "title": "ISO_8859-7:1987"
+            },
+            {
+              "const": "11",
+              "title": "ISO_8859-8:1988"
+            },
+            {
+              "const": "12",
+              "title": "ISO_8859-9:1989"
+            },
+            {
+              "const": "13",
+              "title": "ISO-8859-10"
+            },
+            {
+              "const": "14",
+              "title": "ISO_6937-2-add"
+            },
+            {
+              "const": "15",
+              "title": "JIS_X0201"
+            },
+            {
+              "const": "16",
+              "title": "JIS_Encoding"
+            },
+            {
+              "const": "17",
+              "title": "Shift_JIS"
+            },
+            {
+              "const": "18",
+              "title": "Extended_UNIX_Code_Packed_Format_for_Japanese"
+            },
+            {
+              "const": "19",
+              "title": "Extended_UNIX_Code_Fixed_Width_for_Japanese"
+            },
+            {
+              "const": "20",
+              "title": "BS_4730"
+            },
+            {
+              "const": "21",
+              "title": "SEN_850200_C"
+            },
+            {
+              "const": "22",
+              "title": "IT"
+            },
+            {
+              "const": "23",
+              "title": "ES"
+            },
+            {
+              "const": "24",
+              "title": "DIN_66003"
+            },
+            {
+              "const": "25",
+              "title": "NS_4551-1"
+            },
+            {
+              "const": "26",
+              "title": "NF_Z_62-010"
+            },
+            {
+              "const": "27",
+              "title": "ISO-10646-UTF-1"
+            },
+            {
+              "const": "28",
+              "title": "ISO_646.basic:1983"
+            },
+            {
+              "const": "29",
+              "title": "INVARIANT"
+            },
+            {
+              "const": "30",
+              "title": "ISO_646.irv:1983"
+            },
+            {
+              "const": "31",
+              "title": "NATS-SEFI"
+            },
+            {
+              "const": "32",
+              "title": "NATS-SEFI-ADD"
+            },
+            {
+              "const": "33",
+              "title": "NATS-DANO"
+            },
+            {
+              "const": "34",
+              "title": "NATS-DANO-ADD"
+            },
+            {
+              "const": "35",
+              "title": "SEN_850200_B"
+            },
+            {
+              "const": "36",
+              "title": "KS_C_5601-1987"
+            },
+            {
+              "const": "37",
+              "title": "ISO-2022-KR"
+            },
+            {
+              "const": "38",
+              "title": "EUC-KR"
+            },
+            {
+              "const": "39",
+              "title": "ISO-2022-JP"
+            },
+            {
+              "const": "40",
+              "title": "ISO-2022-JP-2"
+            },
+            {
+              "const": "41",
+              "title": "JIS_C6220-1969-jp"
+            },
+            {
+              "const": "42",
+              "title": "JIS_C6220-1969-ro"
+            },
+            {
+              "const": "43",
+              "title": "PT"
+            },
+            {
+              "const": "44",
+              "title": "greek7-old"
+            },
+            {
+              "const": "45",
+              "title": "latin-greek"
+            },
+            {
+              "const": "46",
+              "title": "NF_Z_62-010_(1973)"
+            },
+            {
+              "const": "47",
+              "title": "Latin-greek-1"
+            },
+            {
+              "const": "48",
+              "title": "ISO_5427"
+            },
+            {
+              "const": "49",
+              "title": "JIS_C6226-1978"
+            },
+            {
+              "const": "50",
+              "title": "BS_viewdata"
+            },
+            {
+              "const": "51",
+              "title": "INIS"
+            },
+            {
+              "const": "52",
+              "title": "INIS-8"
+            },
+            {
+              "const": "53",
+              "title": "INIS-cyrillic"
+            },
+            {
+              "const": "54",
+              "title": "ISO_5427:1981"
+            },
+            {
+              "const": "55",
+              "title": "ISO_5428:1980"
+            },
+            {
+              "const": "56",
+              "title": "GB_1988-80"
+            },
+            {
+              "const": "57",
+              "title": "GB_2312-80"
+            },
+            {
+              "const": "58",
+              "title": "NS_4551-2"
+            },
+            {
+              "const": "59",
+              "title": "videotex-suppl"
+            },
+            {
+              "const": "60",
+              "title": "PT2"
+            },
+            {
+              "const": "61",
+              "title": "ES2"
+            },
+            {
+              "const": "62",
+              "title": "MSZ_7795.3"
+            },
+            {
+              "const": "63",
+              "title": "JIS_C6226-1983"
+            },
+            {
+              "const": "64",
+              "title": "greek7"
+            },
+            {
+              "const": "65",
+              "title": "ASMO_449"
+            },
+            {
+              "const": "66",
+              "title": "iso-ir-90"
+            },
+            {
+              "const": "67",
+              "title": "JIS_C6229-1984-a"
+            },
+            {
+              "const": "68",
+              "title": "JIS_C6229-1984-b"
+            },
+            {
+              "const": "69",
+              "title": "JIS_C6229-1984-b-add"
+            },
+            {
+              "const": "70",
+              "title": "JIS_C6229-1984-hand"
+            },
+            {
+              "const": "71",
+              "title": "JIS_C6229-1984-hand-add"
+            },
+            {
+              "const": "72",
+              "title": "JIS_C6229-1984-kana"
+            },
+            {
+              "const": "73",
+              "title": "ISO_2033-1983"
+            },
+            {
+              "const": "74",
+              "title": "ANSI_X3.110-1983"
+            },
+            {
+              "const": "75",
+              "title": "T.61-7bit"
+            },
+            {
+              "const": "76",
+              "title": "T.61-8bit"
+            },
+            {
+              "const": "77",
+              "title": "ECMA-cyrillic"
+            },
+            {
+              "const": "78",
+              "title": "CSA_Z243.4-1985-1"
+            },
+            {
+              "const": "79",
+              "title": "CSA_Z243.4-1985-2"
+            },
+            {
+              "const": "80",
+              "title": "CSA_Z243.4-1985-gr"
+            },
+            {
+              "const": "81",
+              "title": "ISO_8859-6-E"
+            },
+            {
+              "const": "82",
+              "title": "ISO_8859-6-I"
+            },
+            {
+              "const": "83",
+              "title": "T.101-G2"
+            },
+            {
+              "const": "84",
+              "title": "ISO_8859-8-E"
+            },
+            {
+              "const": "85",
+              "title": "ISO_8859-8-I"
+            },
+            {
+              "const": "86",
+              "title": "CSN_369103"
+            },
+            {
+              "const": "87",
+              "title": "JUS_I.B1.002"
+            },
+            {
+              "const": "88",
+              "title": "IEC_P27-1"
+            },
+            {
+              "const": "89",
+              "title": "JUS_I.B1.003-serb"
+            },
+            {
+              "const": "90",
+              "title": "JUS_I.B1.003-mac"
+            },
+            {
+              "const": "91",
+              "title": "greek-ccitt"
+            },
+            {
+              "const": "92",
+              "title": "NC_NC00-10:81"
+            },
+            {
+              "const": "93",
+              "title": "ISO_6937-2-25"
+            },
+            {
+              "const": "94",
+              "title": "GOST_19768-74"
+            },
+            {
+              "const": "95",
+              "title": "ISO_8859-supp"
+            },
+            {
+              "const": "96",
+              "title": "ISO_10367-box"
+            },
+            {
+              "const": "97",
+              "title": "latin-lap"
+            },
+            {
+              "const": "98",
+              "title": "JIS_X0212-1990"
+            },
+            {
+              "const": "99",
+              "title": "DS_2089"
+            },
+            {
+              "const": "100",
+              "title": "us-dk"
+            },
+            {
+              "const": "101",
+              "title": "dk-us"
+            },
+            {
+              "const": "102",
+              "title": "KSC5636"
+            },
+            {
+              "const": "103",
+              "title": "UNICODE-1-1-UTF-7"
+            },
+            {
+              "const": "104",
+              "title": "ISO-2022-CN"
+            },
+            {
+              "const": "105",
+              "title": "ISO-2022-CN-EXT"
+            },
+            {
+              "const": "106",
+              "title": "UTF-8"
+            },
+            {
+              "const": "109",
+              "title": "ISO-8859-13"
+            },
+            {
+              "const": "110",
+              "title": "ISO-8859-14"
+            },
+            {
+              "const": "111",
+              "title": "ISO-8859-15"
+            },
+            {
+              "const": "112",
+              "title": "ISO-8859-16"
+            },
+            {
+              "const": "113",
+              "title": "GBK"
+            },
+            {
+              "const": "114",
+              "title": "GB18030"
+            },
+            {
+              "const": "115",
+              "title": "OSD_EBCDIC_DF04_15"
+            },
+            {
+              "const": "116",
+              "title": "OSD_EBCDIC_DF03_IRV"
+            },
+            {
+              "const": "117",
+              "title": "OSD_EBCDIC_DF04_1"
+            },
+            {
+              "const": "118",
+              "title": "ISO-11548-1"
+            },
+            {
+              "const": "119",
+              "title": "KZ-1048"
+            },
+            {
+              "const": "1000",
+              "title": "ISO-10646-UCS-2"
+            },
+            {
+              "const": "1001",
+              "title": "ISO-10646-UCS-4"
+            },
+            {
+              "const": "1002",
+              "title": "ISO-10646-UCS-Basic"
+            },
+            {
+              "const": "1003",
+              "title": "ISO-10646-Unicode-Latin1"
+            },
+            {
+              "const": "1004",
+              "title": "ISO-10646-J-1"
+            },
+            {
+              "const": "1005",
+              "title": "ISO-Unicode-IBM-1261"
+            },
+            {
+              "const": "1006",
+              "title": "ISO-Unicode-IBM-1268"
+            },
+            {
+              "const": "1007",
+              "title": "ISO-Unicode-IBM-1276"
+            },
+            {
+              "const": "1008",
+              "title": "ISO-Unicode-IBM-1264"
+            },
+            {
+              "const": "1009",
+              "title": "ISO-Unicode-IBM-1265"
+            },
+            {
+              "const": "1010",
+              "title": "UNICODE-1-1"
+            },
+            {
+              "const": "1011",
+              "title": "SCSU"
+            },
+            {
+              "const": "1012",
+              "title": "UTF-7"
+            },
+            {
+              "const": "1013",
+              "title": "UTF-16BE"
+            },
+            {
+              "const": "1014",
+              "title": "UTF-16LE"
+            },
+            {
+              "const": "1015",
+              "title": "UTF-16"
+            },
+            {
+              "const": "1016",
+              "title": "CESU-8"
+            },
+            {
+              "const": "1017",
+              "title": "UTF-32"
+            },
+            {
+              "const": "1018",
+              "title": "UTF-32BE"
+            },
+            {
+              "const": "1019",
+              "title": "UTF-32LE"
+            },
+            {
+              "const": "1020",
+              "title": "BOCU-1"
+            },
+            {
+              "const": "2000",
+              "title": "ISO-8859-1-Windows-3.0-Latin-1"
+            },
+            {
+              "const": "2001",
+              "title": "ISO-8859-1-Windows-3.1-Latin-1"
+            },
+            {
+              "const": "2002",
+              "title": "ISO-8859-2-Windows-Latin-2"
+            },
+            {
+              "const": "2003",
+              "title": "ISO-8859-9-Windows-Latin-5"
+            },
+            {
+              "const": "2004",
+              "title": "hp-roman8"
+            },
+            {
+              "const": "2005",
+              "title": "Adobe-Standard-Encoding"
+            },
+            {
+              "const": "2006",
+              "title": "Ventura-US"
+            },
+            {
+              "const": "2007",
+              "title": "Ventura-International"
+            },
+            {
+              "const": "2008",
+              "title": "DEC-MCS"
+            },
+            {
+              "const": "2009",
+              "title": "IBM850"
+            },
+            {
+              "const": "2010",
+              "title": "IBM852"
+            },
+            {
+              "const": "2011",
+              "title": "IBM437"
+            },
+            {
+              "const": "2012",
+              "title": "PC8-Danish-Norwegian"
+            },
+            {
+              "const": "2013",
+              "title": "IBM862"
+            },
+            {
+              "const": "2014",
+              "title": "PC8-Turkish"
+            },
+            {
+              "const": "2015",
+              "title": "IBM-Symbols"
+            },
+            {
+              "const": "2016",
+              "title": "IBM-Thai"
+            },
+            {
+              "const": "2017",
+              "title": "HP-Legal"
+            },
+            {
+              "const": "2018",
+              "title": "HP-Pi-font"
+            },
+            {
+              "const": "2019",
+              "title": "HP-Math8"
+            },
+            {
+              "const": "2020",
+              "title": "Adobe-Symbol-Encoding"
+            },
+            {
+              "const": "2021",
+              "title": "HP-DeskTop"
+            },
+            {
+              "const": "2022",
+              "title": "Ventura-Math"
+            },
+            {
+              "const": "2023",
+              "title": "Microsoft-Publishing"
+            },
+            {
+              "const": "2024",
+              "title": "Windows-31J"
+            },
+            {
+              "const": "2025",
+              "title": "GB2312"
+            },
+            {
+              "const": "2026",
+              "title": "Big5"
+            },
+            {
+              "const": "2027",
+              "title": "macintosh"
+            },
+            {
+              "const": "2028",
+              "title": "IBM037"
+            },
+            {
+              "const": "2029",
+              "title": "IBM038"
+            },
+            {
+              "const": "2030",
+              "title": "IBM273"
+            },
+            {
+              "const": "2031",
+              "title": "IBM274"
+            },
+            {
+              "const": "2032",
+              "title": "IBM275"
+            },
+            {
+              "const": "2033",
+              "title": "IBM277"
+            },
+            {
+              "const": "2034",
+              "title": "IBM278"
+            },
+            {
+              "const": "2035",
+              "title": "IBM280"
+            },
+            {
+              "const": "2036",
+              "title": "IBM281"
+            },
+            {
+              "const": "2037",
+              "title": "IBM284"
+            },
+            {
+              "const": "2038",
+              "title": "IBM285"
+            },
+            {
+              "const": "2039",
+              "title": "IBM290"
+            },
+            {
+              "const": "2040",
+              "title": "IBM297"
+            },
+            {
+              "const": "2041",
+              "title": "IBM420"
+            },
+            {
+              "const": "2042",
+              "title": "IBM423"
+            },
+            {
+              "const": "2043",
+              "title": "IBM424"
+            },
+            {
+              "const": "2044",
+              "title": "IBM500"
+            },
+            {
+              "const": "2045",
+              "title": "IBM851"
+            },
+            {
+              "const": "2046",
+              "title": "IBM855"
+            },
+            {
+              "const": "2047",
+              "title": "IBM857"
+            },
+            {
+              "const": "2048",
+              "title": "IBM860"
+            },
+            {
+              "const": "2049",
+              "title": "IBM861"
+            },
+            {
+              "const": "2050",
+              "title": "IBM863"
+            },
+            {
+              "const": "2051",
+              "title": "IBM864"
+            },
+            {
+              "const": "2052",
+              "title": "IBM865"
+            },
+            {
+              "const": "2053",
+              "title": "IBM868"
+            },
+            {
+              "const": "2054",
+              "title": "IBM869"
+            },
+            {
+              "const": "2055",
+              "title": "IBM870"
+            },
+            {
+              "const": "2056",
+              "title": "IBM871"
+            },
+            {
+              "const": "2057",
+              "title": "IBM880"
+            },
+            {
+              "const": "2058",
+              "title": "IBM891"
+            },
+            {
+              "const": "2059",
+              "title": "IBM903"
+            },
+            {
+              "const": "2060",
+              "title": "IBM904"
+            },
+            {
+              "const": "2061",
+              "title": "IBM905"
+            },
+            {
+              "const": "2062",
+              "title": "IBM918"
+            },
+            {
+              "const": "2063",
+              "title": "IBM1026"
+            },
+            {
+              "const": "2064",
+              "title": "EBCDIC-AT-DE"
+            },
+            {
+              "const": "2065",
+              "title": "EBCDIC-AT-DE-A"
+            },
+            {
+              "const": "2066",
+              "title": "EBCDIC-CA-FR"
+            },
+            {
+              "const": "2067",
+              "title": "EBCDIC-DK-NO"
+            },
+            {
+              "const": "2068",
+              "title": "EBCDIC-DK-NO-A"
+            },
+            {
+              "const": "2069",
+              "title": "EBCDIC-FI-SE"
+            },
+            {
+              "const": "2070",
+              "title": "EBCDIC-FI-SE-A"
+            },
+            {
+              "const": "2071",
+              "title": "EBCDIC-FR"
+            },
+            {
+              "const": "2072",
+              "title": "EBCDIC-IT"
+            },
+            {
+              "const": "2073",
+              "title": "EBCDIC-PT"
+            },
+            {
+              "const": "2074",
+              "title": "EBCDIC-ES"
+            },
+            {
+              "const": "2075",
+              "title": "EBCDIC-ES-A"
+            },
+            {
+              "const": "2076",
+              "title": "EBCDIC-ES-S"
+            },
+            {
+              "const": "2077",
+              "title": "EBCDIC-UK"
+            },
+            {
+              "const": "2078",
+              "title": "EBCDIC-US"
+            },
+            {
+              "const": "2079",
+              "title": "UNKNOWN-8BIT"
+            },
+            {
+              "const": "2080",
+              "title": "MNEMONIC"
+            },
+            {
+              "const": "2081",
+              "title": "MNEM"
+            },
+            {
+              "const": "2082",
+              "title": "VISCII"
+            },
+            {
+              "const": "2083",
+              "title": "VIQR"
+            },
+            {
+              "const": "2084",
+              "title": "KOI8-R"
+            },
+            {
+              "const": "2085",
+              "title": "HZ-GB-2312"
+            },
+            {
+              "const": "2086",
+              "title": "IBM866"
+            },
+            {
+              "const": "2087",
+              "title": "IBM775"
+            },
+            {
+              "const": "2088",
+              "title": "KOI8-U"
+            },
+            {
+              "const": "2089",
+              "title": "IBM00858"
+            },
+            {
+              "const": "2090",
+              "title": "IBM00924"
+            },
+            {
+              "const": "2091",
+              "title": "IBM01140"
+            },
+            {
+              "const": "2092",
+              "title": "IBM01141"
+            },
+            {
+              "const": "2093",
+              "title": "IBM01142"
+            },
+            {
+              "const": "2094",
+              "title": "IBM01143"
+            },
+            {
+              "const": "2095",
+              "title": "IBM01144"
+            },
+            {
+              "const": "2096",
+              "title": "IBM01145"
+            },
+            {
+              "const": "2097",
+              "title": "IBM01146"
+            },
+            {
+              "const": "2098",
+              "title": "IBM01147"
+            },
+            {
+              "const": "2099",
+              "title": "IBM01148"
+            },
+            {
+              "const": "2100",
+              "title": "IBM01149"
+            },
+            {
+              "const": "2101",
+              "title": "Big5-HKSCS"
+            },
+            {
+              "const": "2102",
+              "title": "IBM1047"
+            },
+            {
+              "const": "2103",
+              "title": "PTCP154"
+            },
+            {
+              "const": "2104",
+              "title": "Amiga-1251"
+            },
+            {
+              "const": "2105",
+              "title": "KOI7-switched"
+            },
+            {
+              "const": "2106",
+              "title": "BRF"
+            },
+            {
+              "const": "2107",
+              "title": "TSCII"
+            },
+            {
+              "const": "2108",
+              "title": "CP51932"
+            },
+            {
+              "const": "2109",
+              "title": "windows-874"
+            },
+            {
+              "const": "2250",
+              "title": "windows-1250"
+            },
+            {
+              "const": "2251",
+              "title": "windows-1251"
+            },
+            {
+              "const": "2252",
+              "title": "windows-1252"
+            },
+            {
+              "const": "2253",
+              "title": "windows-1253"
+            },
+            {
+              "const": "2254",
+              "title": "windows-1254"
+            },
+            {
+              "const": "2255",
+              "title": "windows-1255"
+            },
+            {
+              "const": "2256",
+              "title": "windows-1256"
+            },
+            {
+              "const": "2257",
+              "title": "windows-1257"
+            },
+            {
+              "const": "2258",
+              "title": "windows-1258"
+            },
+            {
+              "const": "2259",
+              "title": "TIS-620"
+            },
+            {
+              "const": "2260",
+              "title": "CP50220"
+            }
+          ],
+          "type": "string"
+        }
+      }
+    }
+  }
+}

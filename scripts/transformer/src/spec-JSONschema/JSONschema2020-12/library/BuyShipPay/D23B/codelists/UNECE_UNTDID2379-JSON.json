@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/JSONschema2020-12/library/BuyShipPay/D23B/UNECE_UNTDID2379-JSON",
+  "title": "UNECE_UNTDID2379-JSON",
+  "description": "Copyright (C) UN/CEFACT (2024). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "$defs": {
+    "codeList": {
+      "$defs": {
+        "untdid2379JsonType": {
+          "title": "Date and Time format codes for JSON representation.",
+          "description": "This code list is based on UNTDID 2379. It is adjusted to take JSON date and time representation into account.\n# The following abbreviations are used\n* 'C' – Century\n * 'Y' – Year\n * 'M' – Month\n * 'D' – Day\n * 'h' – Hour\n * 'm' – Minute\n * 's' – Second\n * 'w' – Week\n * 'T' – Time zone offset separator (+/-/Z) \n \n * 'A' – 10 day period within a month of a year\n * 'B' – 1: First half month; 2: second half month\n * 'E' – Week of a month\n * 'G' – Working days\n * 'H' – Half month\n * 'I' – 1-9: Shift in a day\n * 'K' – 1-5: First to fifth week in a month\n * 'M' – Trimester: A period of three months\n * 'N' – 1-7: Numeric representation of the day (Monday = 1, Sunday = 7)\n * 'P' – A period of 4 months\n * 'Q' – Quarter\n * 'RR' – 00-99: Time period\n * 'S' – Semester\n *\n  * Hyphens and additional character in a format string are kept. According to ISO 8601 a slash is used to separate time spans.\n # Codes from UNTDID 2379 and their representation in JSON\n * '2' – is represented as 'date' format\n * '3' – is represented as 'date' format\n * '4' – is represented as 'date' format\n * '5' – is represented as 'date-time' format\n * '6' – is represented as 'CCYY-MM-B'\n * '7' – is represented as 'CCYY-MM-K'\n * '8' – is represented as 'CCYY-MM-DD-I'\n * '9' – is represented as 'CCYY-MM-DD-RR'\n * '10' – is represented as 'date-time' format\n * '101' – is represented as 'date' format\n * '102' – is represented as 'date' format\n * '103' – is represented as 'YY-Www-N'; 01 is first week of January; 1 is always Monday\n * '104' – is represented as 'MM-WEE/MM-WEE'\n * '105' – is represented as 'YY-DDD'; January the first = Day 001; Always start numbering the days of the year from January 1st through December 31st \n * '106' – is represented as '-MM-DD'\n * '107' – is represented as 'DDD'\n  * '108' – is represented as 'WW'\n * '109' – is represented as '-MM-'\n * '110' – is represented as '--DD'\n * '201' – is represented as 'date-time' format\n * '202' – is represented as 'date-time' format\n * '203' – is represented as 'date-time' format\n * '204' – is represented as 'date-time' format\n * '205' – is represented as 'date-time' format\n * '206' – is represented as 'date-time' format\n * '207' – is represented as 'date-time' format\n * '208' – is represented as 'date-time' format\n * '209' – is represented as 'date-time' format\n * '210' – is represented as 'hh:mm:ssZhh:mm/hh:mm:ssZhh:mm'\n * '301' – is represented as 'date-time' format\n * '302' – is represented as 'date-time' format\n * '303' – is represented as 'date-time' format\n * '304' – is represented as 'date-time' format\n * '305' – is represented as '-MM-DDThh:mm' format\n * '306' – is represented as '--DDThh:mm' format\n * '307' – is represented as 'date-time' format\n * '308' – is represented as 'CCYY-MM-DDThh:mmZhh:mm/CCYY-MM-DDThh:mmZhh:mm' \n * '401' – is represented as 'time' format\n * '402' – is represented as 'time' format\n * '404' – is represented as 'time' format\n * '405' – is represented as 'duration' format\n * '406' – is represented as 'Zhh:mm'\n * '501' – is represented as 'hh:mm/hh:mm' \n  * '502' – is represented as 'hh:mm:ss/hh:mm:ss' \n  * '503' – is represented as 'hh:mm:ssZhh:mm/hh:mm:ssZhh:mm' \n  * '600' – is represented as 'CC'\n  * '601' – is represented as 'YY' \n  * '602' – is represented as 'CCYY' \n  * '603' – is represented as 'YY-S' \n  * '604' – is represented as 'CCYY-S' \n  * '608' – is represented as 'CCYY-Q' \n  * '609' – is represented as 'YY-MM' \n  * '610' – is represented as 'CCYY-MM' \n  * '613' – is represented as 'YY-MM-A' \n  * '614' – is represented as 'YY-MM-A' \n  * '615' – is represented as 'YY-Www \n  * '616' – is represented as 'CCYY-Www' \n  * '701' – is represented as 'YY/YY' \n  * '702' – is represented as 'CCYY/CCYY' \n  * '703' – is represented as 'YY-S/YY-S' \n  * '704' – is represented as 'CCYY-S/CCYY-S' \n  * '705' – is represented as 'YY-P/YY-P' \n  * '706' – is represented as 'CCYY-P/CCYY-P' \n  * '707' – is represented as 'YY-Q/YY-Q' \n  * '708' – is represented as 'CCYY-Q/CCYY-Q' \n  * '709' – is represented as 'YY-MM/YY-MM' \n  * '710' – is represented as 'CCYY-MM/CCYY-MM' \n  * '713' – is represented as 'YY-MM-DDThh:mm/YY-MM-DDThh:mm' \n  * '715' – is represented as 'YY-Www/YY-Www' \n  * '716' – is represented as 'CCYY-Www/CCYY-Www' \n  * '717' – is represented as 'YY-MM-DD/YY-MM-DD' \n  * '718' – is represented as 'CCYY-MM-DD/CCYY-MM-DD' \n  * '719' – is represented as 'CCYY-MM-DDThh:mm/CCYY-MM-DDThh:mm' \n  * '720' – is represented as 'NThh:mm/NThh:mm' \n  * '801' – is represented as 'duration' format \n  * '802' – is represented as 'duration' format \n  * '803' – is represented as 'duration' format \n  * '804' – is represented as 'duration' format \n  * '805' – is represented as 'duration' format \n  * '806' – is represented as 'duration' format \n  * '807' – is represented as 'duration' format \n  * '808' – is represented as 'S' \n  * '809' – is represented as 'P' \n  * '810' – is represented as 'M' \n  * '811' – is represented as 'H' \n  * '812' – is represented as 'A' \n  * '813' – is represented as 'N' \n  * '814' – is represented as 'G'",
+          "oneOf": [
+            {
+              "const": "CCYY-MM-B"
+            },
+            {
+              "const": "CCYY-MM-K"
+            },
+            {
+              "const": "CCYY-MM-DD-I"
+            },
+            {
+              "const": "CCYY-MM-DD-RR"
+            },
+            {
+              "const": "YY-Www-N"
+            },
+            {
+              "const": "MMWEE/MMWEE"
+            },
+            {
+              "const": "YY-DDD"
+            },
+            {
+              "const": "-MM-DD"
+            },
+            {
+              "const": "DDD"
+            },
+            {
+              "const": "-WW"
+            },
+            {
+              "const": "-MM-"
+            },
+            {
+              "const": "--DD"
+            },
+            {
+              "const": "hh:mm:ssZhh:mm/hh:mm:ssZhh:mm"
+            },
+            {
+              "const": "-MM-DDThh:mm"
+            },
+            {
+              "const": "--DDThh:mm"
+            },
+            {
+              "const": "CCYY-MM-DDThh:mmZhh:mm/CCYY-MM-DDThh:mmZhh:mm"
+            },
+            {
+              "const": "Zhh:mm"
+            },
+            {
+              "const": "hh:mm/hhmm"
+            },
+            {
+              "const": "hh:mm:ss/hh:mm:ss"
+            },
+            {
+              "const": "CC"
+            },
+            {
+              "const": "YY"
+            },
+            {
+              "const": "CCYY"
+            },
+            {
+              "const": "CCYY-S"
+            },
+            {
+              "const": "CCYY-Q"
+            },
+            {
+              "const": "YY-MM"
+            },
+            {
+              "const": "CCYY-MM"
+            },
+            {
+              "const": "YY-MM-A"
+            },
+            {
+              "const": "CCYY-MM-A"
+            },
+            {
+              "const": "YY-Www"
+            },
+            {
+              "const": "CCYY-Www"
+            },
+            {
+              "const": "YY/YY"
+            },
+            {
+              "const": "CCYY/CCYY"
+            },
+            {
+              "const": "YY-S/YY-S"
+            },
+            {
+              "const": "CCYY-S/CCYY-S"
+            },
+            {
+              "const": "YY-P/YY-P"
+            },
+            {
+              "const": "CCYY-P/CCYY-P"
+            },
+            {
+              "const": "YY-Q/YY-Q"
+            },
+            {
+              "const": "CCYY-Q/CCYY-Q"
+            },
+            {
+              "const": "YY-MM/YY-MM"
+            },
+            {
+              "const": "CCYY-MM/CCYY-MM"
+            },
+            {
+              "const": "YY-MM-DDThh:mm/YY-MM-DDThh:mm"
+            },
+            {
+              "const": "YYWww/YYWww"
+            },
+            {
+              "const": "CCYYWww/CCYYWww"
+            },
+            {
+              "const": "YY-MM-DD/YY-MM-DD"
+            },
+            {
+              "const": "CCYY-MM-DD/CCYY-MM-DD"
+            },
+            {
+              "const": "CCYY-MM-DDThh:mm/CCYY-MM-DDThh:mm"
+            },
+            {
+              "const": "NThh:mm/NThh:mm"
+            },
+            {
+              "const": "S"
+            },
+            {
+              "const": "P"
+            },
+            {
+              "const": "M"
+            },
+            {
+              "const": "H"
+            },
+            {
+              "const": "A"
+            },
+            {
+              "const": "N"
+            },
+            {
+              "const": "G"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

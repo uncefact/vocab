@@ -1,0 +1,1257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/uncefact/spec-JSONschema/main/compatibility/library/BuyShipPay/D22A/SmartConatinersIOTDeviceNotification",
+  "title": "Smart Conatiners IOT Device Notification",
+  "description": "Copyright (C) UN/CEFACT (2023). All Rights Reserved.\n\nThis document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to UN/CEFACT, except as needed for the purpose of developing UN/CEFACT specifications, in which case the procedures for copyrights defined in the UN/CEFACT Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.\n\nThe limited permissions granted above are perpetual and will not be revoked by UN/CEFACT or its successors or assigns.\n\nThis document and the information contained herein is provided on an \"AS IS\" basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.",
+  "allOf": [
+    {
+      "$ref": "UNECE-MMTMaster.json#"
+    },
+    {
+      "properties": {
+        "exchangedDocumentContext": false,
+        "exchangedDocument": {
+          "allOf": [
+            {
+              "oneOf": [
+                {
+                  "$ref": "UNECE-MMTContextCCLContainer.json#/$defs/exchangedDocumentType"
+                },
+                {
+                  "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                }
+              ]
+            },
+            {
+              "properties": {
+                "firstVersionIssueDateTime": false,
+                "subtypeCode": false,
+                "amendmentPurpose": false,
+                "sender": false,
+                "recipient": {
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "items": {
+                          "properties": {
+                            "schemeId": false
+                          }
+                        }
+                      },
+                      "definedTradeContact": false,
+                      "claimedPersonalLanguageProficiency": false
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "exchangedDeclaration": false,
+        "specifiedLogisticsTransportMovement": false,
+        "specifiedConsignment": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-MMTContextCCLContainer.json#/$defs/consignmentType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "consignorAssignedId": false,
+                  "availabilityDueDateTime": false,
+                  "globalId": false,
+                  "contractId": false,
+                  "shippedOnboardDateTime": false,
+                  "contractTermsInformation": false,
+                  "serviceChargeCurrencyCode": false,
+                  "consignor": {
+                    "properties": {
+                      "definedTradeContact": false,
+                      "claimedPersonalLanguageProficiency": false
+                    }
+                  },
+                  "consignee": {
+                    "properties": {
+                      "definedTradeContact": false,
+                      "claimedPersonalLanguageProficiency": false
+                    }
+                  },
+                  "carrier": {
+                    "properties": {
+                      "definedTradeContact": {
+                        "items": {
+                          "properties": {
+                            "personName": false,
+                            "telephoneUniversalCommunication": false,
+                            "emailURIUniversalCommunication": false,
+                            "postalTradeAddress": false
+                          }
+                        }
+                      },
+                      "claimedPersonalLanguageProficiency": false
+                    }
+                  },
+                  "freightForwarder": {
+                    "properties": {
+                      "definedTradeContact": false,
+                      "claimedPersonalLanguageProficiency": false
+                    }
+                  },
+                  "notified": {
+                    "items": {
+                      "properties": {
+                        "definedTradeContact": false,
+                        "claimedPersonalLanguageProficiency": false
+                      }
+                    }
+                  },
+                  "carrierAcceptanceLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "countryId": false,
+                      "physicalGeographicalCoordinate": false
+                    }
+                  },
+                  "consigneeReceiptLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "countryId": false,
+                      "physicalGeographicalCoordinate": false
+                    }
+                  },
+                  "loadingBaseportLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "countryId": false,
+                      "physicalGeographicalCoordinate": false
+                    }
+                  },
+                  "unloadingBaseportLogisticsLocation": {
+                    "properties": {
+                      "typeCode": false,
+                      "countryId": false,
+                      "physicalGeographicalCoordinate": false
+                    }
+                  },
+                  "transportContractReferencedDocument": {
+                    "properties": {
+                      "versionId": false,
+                      "issuerSpecifiedDocumentHandlingInstructions": false,
+                      "validityPeriod": false
+                    }
+                  },
+                  "handlingInstructions": false,
+                  "transportEvent": false,
+                  "includedConsignmentItem": false,
+                  "includedReferencedConsignment": false,
+                  "utilizedLogisticsTransportEquipment": false,
+                  "mainCarriageLogisticsTransportMovement": false,
+                  "preCarriageLogisticsTransportMovement": false,
+                  "onCarriageLogisticsTransportMovement": false,
+                  "originTradeCountry": false,
+                  "specifiedTradeDeliveryTerms": false,
+                  "transportService": false,
+                  "reportedLogisticsStatus": false,
+                  "transportLogisticsPackage": false,
+                  "transportServicesBuyer": false,
+                  "classificationReferencedDocument": false,
+                  "specifiedLogisticsStatus": false,
+                  "warehouseOperator": false,
+                  "warehouseKeeper": false,
+                  "warehouseDepositor": false,
+                  "onwardRoutingLogisticsLocation": false,
+                  "originalDespatchLogisticsLocation": false
+                }
+              }
+            }
+          ]
+        },
+        "specifiedLogisticsTransportEquipment": {
+          "allOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "UNECE-MMTContextCCLContainer.json#/$defs/logisticsTransportEquipmentType"
+                  },
+                  {
+                    "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
+                  }
+                ]
+              }
+            },
+            {
+              "items": {
+                "properties": {
+                  "id": false,
+                  "characteristicCode": {
+                    "properties": {
+                      "listId": false,
+                      "listAgencyName": false,
+                      "listName": false,
+                      "listVersionId": false,
+                      "name": false,
+                      "languageId": false,
+                      "listUri": false,
+                      "listSchemeUri": false
+                    }
+                  },
+                  "stowagePositionId": false,
+                  "loadedDangerousGoods": false,
+                  "linearSpatialDimension": false,
+                  "positioningEvent": false,
+                  "pickUpEvent": false,
+                  "operating": false,
+                  "reportedLogisticsStatus": false,
+                  "reportingIOTDeviceCommunicationPairing": {
+                    "items": {
+                      "properties": {
+                        "matchingCommunicationEvent": {
+                          "items": {
+                            "properties": {
+                              "operationalResponsible": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "occurrenceLogisticsLocation": false,
+                              "associatedGeographicalFeature": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "reportingIOTDeviceEvent": {
+                    "items": {
+                      "properties": {
+                        "id": false,
+                        "estimatedOccurrenceDateTime": false,
+                        "scheduledOccurrenceDateTime": false,
+                        "requestedOccurrenceDateTime": false,
+                        "isOrHasMaritimeAnchorage": false,
+                        "pilotBoardingPlace": false,
+                        "anchorageDescription": false,
+                        "isOrHasAnchorageExpected": false,
+                        "occurrenceLogisticsLocation": {
+                          "properties": {
+                            "countryId": false,
+                            "isOrHasHealthAffectedArea": false,
+                            "physicalGeographicalCoordinate": {
+                              "properties": {
+                                "usedCSEngineeringCoordinateReferenceSystem": {
+                                  "properties": {
+                                    "id": {
+                                      "properties": {
+                                        "schemeId": false,
+                                        "schemeName": false,
+                                        "schemeAgencyId": false,
+                                        "schemeAgencyName": false,
+                                        "schemeVersionId": false,
+                                        "schemeDataUri": false,
+                                        "schemeUri": false
+                                      }
+                                    },
+                                    "name": false,
+                                    "level": {
+                                      "properties": {
+                                        "languageId": false,
+                                        "languageLocaleId": false
+                                      }
+                                    },
+                                    "subordinateCSEngineeringCoordinateReferenceSystem": false
+                                  }
+                                }
+                              }
+                            },
+                            "subordinateLocation": {
+                              "items": {
+                                "properties": {
+                                  "physicalGeographicalCoordinate": {
+                                    "properties": {
+                                      "usedCSEngineeringCoordinateReferenceSystem": {
+                                        "properties": {
+                                          "id": {
+                                            "properties": {
+                                              "schemeId": false,
+                                              "schemeName": false,
+                                              "schemeAgencyId": false,
+                                              "schemeAgencyName": false,
+                                              "schemeVersionId": false,
+                                              "schemeDataUri": false,
+                                              "schemeUri": false
+                                            }
+                                          },
+                                          "name": false,
+                                          "level": {
+                                            "properties": {
+                                              "languageId": false,
+                                              "languageLocaleId": false
+                                            }
+                                          },
+                                          "subordinateCSEngineeringCoordinateReferenceSystem": false
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "subordinateLocation": {
+                                    "properties": {
+                                      "id": false,
+                                      "name": false,
+                                      "typeCode": false,
+                                      "physicalGeographicalCoordinate": false
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "reportingMonitoringIOTDevice": {
+                          "items": {
+                            "properties": {
+                              "modelId": false,
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "owner": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "operator": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "provider": false,
+                              "interfaceOEMEquipment": {
+                                "items": {
+                                  "properties": {
+                                    "manufacturer": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "definedTradeContact": false,
+                                        "claimedPersonalLanguageProficiency": false
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "reportingSensorCommunicationPairing": {
+                                "items": {
+                                  "properties": {
+                                    "matchingCommunicationEvent": {
+                                      "items": {
+                                        "properties": {
+                                          "operationalResponsible": {
+                                            "properties": {
+                                              "id": {
+                                                "items": {
+                                                  "properties": {
+                                                    "schemeId": false
+                                                  }
+                                                }
+                                              },
+                                              "definedTradeContact": false,
+                                              "claimedPersonalLanguageProficiency": false
+                                            }
+                                          },
+                                          "occurrenceLogisticsLocation": false,
+                                          "associatedGeographicalFeature": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "relatedCommunicationEvent": {
+                                "items": {
+                                  "properties": {
+                                    "unitQuantity": false,
+                                    "value": false,
+                                    "operationalResponsible": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "definedTradeContact": false,
+                                        "claimedPersonalLanguageProficiency": false
+                                      }
+                                    },
+                                    "occurrenceLogisticsLocation": false,
+                                    "associatedGeographicalFeature": false
+                                  }
+                                }
+                              },
+                              "reportedEvent": false,
+                              "embeddedMonitoringSensor": {
+                                "items": {
+                                  "properties": {
+                                    "owner": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "definedTradeContact": false,
+                                        "claimedPersonalLanguageProficiency": false
+                                      }
+                                    },
+                                    "manufacturer": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "claimedPersonalLanguageProficiency": false
+                                      }
+                                    },
+                                    "definedControlSettingParameter": {
+                                      "items": {
+                                        "properties": {
+                                          "requestedRange": {
+                                            "items": {
+                                              "properties": {
+                                                "valueCode": false,
+                                                "value": false,
+                                                "valueBaseSystemCode": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "definedOperationalParameter": false,
+                                    "precisionCalibratedMeasurement": false,
+                                    "actualReportedCalibratedMeasurement": false,
+                                    "scheduledReportedCalibratedMeasurement": false
+                                  }
+                                }
+                              },
+                              "remoteMonitoringSensor": {
+                                "items": {
+                                  "properties": {
+                                    "owner": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "definedTradeContact": false,
+                                        "claimedPersonalLanguageProficiency": false
+                                      }
+                                    },
+                                    "manufacturer": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "claimedPersonalLanguageProficiency": false
+                                      }
+                                    },
+                                    "definedControlSettingParameter": {
+                                      "items": {
+                                        "properties": {
+                                          "requestedRange": {
+                                            "items": {
+                                              "properties": {
+                                                "valueCode": false,
+                                                "value": false,
+                                                "valueBaseSystemCode": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "definedOperationalParameter": {
+                                      "items": {
+                                        "properties": {
+                                          "definedRange": {
+                                            "items": {
+                                              "properties": {
+                                                "valueCode": false,
+                                                "value": false,
+                                                "valueBaseSystemCode": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "precisionCalibratedMeasurement": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "latestReceivedGeographicalCoordinate": {
+                                "properties": {
+                                  "usedCSEngineeringCoordinateReferenceSystem": {
+                                    "properties": {
+                                      "id": {
+                                        "properties": {
+                                          "schemeId": false,
+                                          "schemeName": false,
+                                          "schemeAgencyId": false,
+                                          "schemeAgencyName": false,
+                                          "schemeVersionId": false,
+                                          "schemeDataUri": false,
+                                          "schemeUri": false
+                                        }
+                                      },
+                                      "name": false,
+                                      "level": {
+                                        "properties": {
+                                          "languageId": false,
+                                          "languageLocaleId": false
+                                        }
+                                      },
+                                      "subordinateCSEngineeringCoordinateReferenceSystem": false
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "associatedGeographicalFeature": {
+                          "items": {
+                            "properties": {
+                              "includedGeographicalPoint": {
+                                "properties": {
+                                  "associatedLogisticsLocation": false
+                                }
+                              },
+                              "includedGeographicalLine": {
+                                "properties": {
+                                  "associatedLogisticsLocation": false
+                                }
+                              },
+                              "includedGeographicalSurface": {
+                                "properties": {
+                                  "includedPolygon": {
+                                    "properties": {
+                                      "exteriorLinearRing": {
+                                        "properties": {
+                                          "coordinate": false,
+                                          "coordinateDirectPosition": false,
+                                          "associatedGeographicalObjectCharacteristic": false
+                                        }
+                                      },
+                                      "associatedLogisticsLocation": false
+                                    }
+                                  }
+                                }
+                              },
+                              "usedCSEngineeringCoordinateReferenceSystem": {
+                                "properties": {
+                                  "id": {
+                                    "properties": {
+                                      "schemeId": false,
+                                      "schemeName": false,
+                                      "schemeAgencyId": false,
+                                      "schemeAgencyName": false,
+                                      "schemeVersionId": false,
+                                      "schemeDataUri": false,
+                                      "schemeUri": false
+                                    }
+                                  },
+                                  "name": false,
+                                  "level": {
+                                    "properties": {
+                                      "languageId": false,
+                                      "languageLocaleId": false
+                                    }
+                                  },
+                                  "subordinateCSEngineeringCoordinateReferenceSystem": false
+                                }
+                              },
+                              "includedCircle": {
+                                "items": {
+                                  "properties": {
+                                    "centreGeographicalPoint": {
+                                      "properties": {
+                                        "associatedLogisticsLocation": false
+                                      }
+                                    },
+                                    "associatedLogisticsLocation": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "actualOccurrencePeriod": false
+                      }
+                    }
+                  },
+                  "relatedCommunicationEvent": {
+                    "items": {
+                      "properties": {
+                        "operationalResponsible": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "definedTradeContact": false,
+                            "claimedPersonalLanguageProficiency": false
+                          }
+                        },
+                        "occurrenceLogisticsLocation": false,
+                        "associatedGeographicalFeature": false
+                      }
+                    }
+                  },
+                  "scheduledRoute": {
+                    "items": {
+                      "properties": {
+                        "itineraryStopEvent": {
+                          "items": {
+                            "properties": {
+                              "estimatedOccurrenceDateTime": false,
+                              "actualOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "receivedDateTime": false,
+                              "isOrHasMaritimeAnchorage": false,
+                              "pilotBoardingPlace": false,
+                              "anchorageDescription": false,
+                              "isOrHasAnchorageExpected": false,
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "countryId": false,
+                                  "isOrHasHealthAffectedArea": false,
+                                  "physicalGeographicalCoordinate": false,
+                                  "subordinateLocation": {
+                                    "items": {
+                                      "properties": {
+                                        "id": false,
+                                        "name": false,
+                                        "typeCode": false,
+                                        "physicalGeographicalCoordinate": false,
+                                        "subordinateLocation": false
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "reportingMonitoringIOTDevice": false,
+                              "associatedGeographicalFeature": {
+                                "items": {
+                                  "properties": {
+                                    "includedGeographicalPoint": {
+                                      "properties": {
+                                        "associatedLogisticsLocation": false
+                                      }
+                                    },
+                                    "includedGeographicalLine": {
+                                      "properties": {
+                                        "associatedLogisticsLocation": false
+                                      }
+                                    },
+                                    "includedGeographicalSurface": {
+                                      "properties": {
+                                        "includedPolygon": {
+                                          "properties": {
+                                            "associatedLogisticsLocation": false
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "usedCSEngineeringCoordinateReferenceSystem": {
+                                      "properties": {
+                                        "id": {
+                                          "properties": {
+                                            "schemeId": false,
+                                            "schemeName": false,
+                                            "schemeAgencyId": false,
+                                            "schemeAgencyName": false,
+                                            "schemeVersionId": false,
+                                            "schemeDataUri": false,
+                                            "schemeUri": false
+                                          }
+                                        },
+                                        "name": false,
+                                        "level": {
+                                          "properties": {
+                                            "languageId": false,
+                                            "languageLocaleId": false
+                                          }
+                                        },
+                                        "subordinateCSEngineeringCoordinateReferenceSystem": false
+                                      }
+                                    },
+                                    "includedCircle": {
+                                      "items": {
+                                        "properties": {
+                                          "centreGeographicalPoint": {
+                                            "properties": {
+                                              "associatedLogisticsLocation": {
+                                                "items": {
+                                                  "properties": {
+                                                    "countryId": false,
+                                                    "physicalGeographicalCoordinate": false
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "associatedGeographicalObjectCharacteristic": {
+                                            "properties": {
+                                              "isOrHasGeometryCollection": false,
+                                              "isOrHasPhysical": false,
+                                              "relevantGeometryType": false,
+                                              "shapeType": false
+                                            }
+                                          },
+                                          "associatedLogisticsLocation": {
+                                            "items": {
+                                              "properties": {
+                                                "countryId": false,
+                                                "physicalGeographicalCoordinate": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "actualOccurrencePeriod": false
+                            }
+                          }
+                        },
+                        "scheduledPeriod": false
+                      }
+                    }
+                  },
+                  "requestedRoute": {
+                    "items": {
+                      "properties": {
+                        "itineraryStopEvent": {
+                          "items": {
+                            "properties": {
+                              "estimatedOccurrenceDateTime": false,
+                              "actualOccurrenceDateTime": false,
+                              "requestedOccurrenceDateTime": false,
+                              "receivedDateTime": false,
+                              "isOrHasMaritimeAnchorage": false,
+                              "pilotBoardingPlace": false,
+                              "anchorageDescription": false,
+                              "isOrHasAnchorageExpected": false,
+                              "occurrenceLogisticsLocation": {
+                                "properties": {
+                                  "countryId": false,
+                                  "isOrHasHealthAffectedArea": false,
+                                  "physicalGeographicalCoordinate": {
+                                    "properties": {
+                                      "latitude": false,
+                                      "longitude": false,
+                                      "timeZoneDateTime": false,
+                                      "timeZoneCode": false,
+                                      "timeZone": false,
+                                      "acquisitionDateTime": false,
+                                      "alternativeSourceSystemId": false,
+                                      "usedCSEngineeringCoordinateReferenceSystem": false,
+                                      "usedGeographicalCoordinateSourceSystem": false
+                                    }
+                                  },
+                                  "subordinateLocation": false
+                                }
+                              },
+                              "reportingMonitoringIOTDevice": false,
+                              "associatedGeographicalFeature": {
+                                "items": {
+                                  "properties": {
+                                    "includedGeographicalPoint": {
+                                      "properties": {
+                                        "associatedLogisticsLocation": {
+                                          "items": {
+                                            "properties": {
+                                              "physicalGeographicalCoordinate": {
+                                                "properties": {
+                                                  "latitude": false,
+                                                  "longitude": false,
+                                                  "timeZoneDateTime": false,
+                                                  "timeZoneCode": false,
+                                                  "timeZone": false,
+                                                  "acquisitionDateTime": false,
+                                                  "alternativeSourceSystemId": false,
+                                                  "usedCSEngineeringCoordinateReferenceSystem": false,
+                                                  "usedGeographicalCoordinateSourceSystem": false
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "includedGeographicalLine": {
+                                      "properties": {
+                                        "associatedGeographicalObjectCharacteristic": {
+                                          "properties": {
+                                            "id": false,
+                                            "description": false,
+                                            "descriptionReference": false,
+                                            "name": false,
+                                            "isOrHasGeometryCollection": false,
+                                            "isOrHasPhysical": false,
+                                            "relevantGeometryType": false,
+                                            "shapeType": false
+                                          }
+                                        },
+                                        "associatedLogisticsLocation": {
+                                          "items": {
+                                            "properties": {
+                                              "countryId": false,
+                                              "physicalGeographicalCoordinate": false
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "includedGeographicalSurface": {
+                                      "properties": {
+                                        "includedPolygon": {
+                                          "properties": {
+                                            "exteriorLinearRing": {
+                                              "properties": {
+                                                "coordinate": false,
+                                                "coordinateDirectPosition": false,
+                                                "associatedGeographicalObjectCharacteristic": false
+                                              }
+                                            },
+                                            "associatedLogisticsLocation": {
+                                              "items": {
+                                                "properties": {
+                                                  "countryId": false,
+                                                  "isOrHasHealthAffectedArea": false,
+                                                  "physicalGeographicalCoordinate": false,
+                                                  "subordinateLocation": false,
+                                                  "associatedGeographicalFeature": false,
+                                                  "previousAssociatedGeographicalFeature": false,
+                                                  "facilityReferencedLocation": false
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "usedCSEngineeringCoordinateReferenceSystem": {
+                                      "properties": {
+                                        "id": {
+                                          "properties": {
+                                            "schemeId": false,
+                                            "schemeName": false,
+                                            "schemeAgencyId": false,
+                                            "schemeAgencyName": false,
+                                            "schemeVersionId": false,
+                                            "schemeDataUri": false,
+                                            "schemeUri": false
+                                          }
+                                        },
+                                        "name": false,
+                                        "level": {
+                                          "properties": {
+                                            "languageId": false,
+                                            "languageLocaleId": false
+                                          }
+                                        },
+                                        "subordinateCSEngineeringCoordinateReferenceSystem": false
+                                      }
+                                    },
+                                    "includedCircle": {
+                                      "items": {
+                                        "properties": {
+                                          "centreGeographicalPoint": {
+                                            "properties": {
+                                              "associatedLogisticsLocation": {
+                                                "items": {
+                                                  "properties": {
+                                                    "countryId": false,
+                                                    "physicalGeographicalCoordinate": false
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "associatedLogisticsLocation": {
+                                            "items": {
+                                              "properties": {
+                                                "countryId": false,
+                                                "physicalGeographicalCoordinate": false
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "actualOccurrencePeriod": false
+                            }
+                          }
+                        },
+                        "scheduledPeriod": false
+                      }
+                    }
+                  },
+                  "actualRoute": false,
+                  "attachedMonitoringIOTDevice": {
+                    "items": {
+                      "properties": {
+                        "attachedAssetId": false,
+                        "modelId": false,
+                        "manufacturer": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "definedTradeContact": false,
+                            "claimedPersonalLanguageProficiency": false
+                          }
+                        },
+                        "owner": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "definedTradeContact": false,
+                            "claimedPersonalLanguageProficiency": false
+                          }
+                        },
+                        "operator": {
+                          "properties": {
+                            "id": {
+                              "items": {
+                                "properties": {
+                                  "schemeId": false
+                                }
+                              }
+                            },
+                            "definedTradeContact": false,
+                            "claimedPersonalLanguageProficiency": false
+                          }
+                        },
+                        "provider": false,
+                        "interfaceOEMEquipment": {
+                          "items": {
+                            "properties": {
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "reportingSensorCommunicationPairing": {
+                          "items": {
+                            "properties": {
+                              "matchingCommunicationEvent": {
+                                "items": {
+                                  "properties": {
+                                    "operationalResponsible": {
+                                      "properties": {
+                                        "id": {
+                                          "items": {
+                                            "properties": {
+                                              "schemeId": false
+                                            }
+                                          }
+                                        },
+                                        "definedTradeContact": false,
+                                        "claimedPersonalLanguageProficiency": false
+                                      }
+                                    },
+                                    "occurrenceLogisticsLocation": false,
+                                    "associatedGeographicalFeature": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "relatedCommunicationEvent": {
+                          "items": {
+                            "properties": {
+                              "operationalResponsible": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "occurrenceLogisticsLocation": false,
+                              "associatedGeographicalFeature": false
+                            }
+                          }
+                        },
+                        "reportedEvent": false,
+                        "embeddedMonitoringSensor": {
+                          "items": {
+                            "properties": {
+                              "owner": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "definedControlSettingParameter": {
+                                "items": {
+                                  "properties": {
+                                    "requestedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "definedOperationalParameter": {
+                                "items": {
+                                  "properties": {
+                                    "definedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "remoteMonitoringSensor": {
+                          "items": {
+                            "properties": {
+                              "owner": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "definedTradeContact": false,
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "manufacturer": {
+                                "properties": {
+                                  "id": {
+                                    "items": {
+                                      "properties": {
+                                        "schemeId": false
+                                      }
+                                    }
+                                  },
+                                  "claimedPersonalLanguageProficiency": false
+                                }
+                              },
+                              "definedControlSettingParameter": {
+                                "items": {
+                                  "properties": {
+                                    "requestedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "definedOperationalParameter": {
+                                "items": {
+                                  "properties": {
+                                    "definedRange": {
+                                      "items": {
+                                        "properties": {
+                                          "valueCode": false,
+                                          "value": false,
+                                          "valueBaseSystemCode": false
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "latestReceivedGeographicalCoordinate": {
+                          "properties": {
+                            "usedCSEngineeringCoordinateReferenceSystem": {
+                              "properties": {
+                                "id": {
+                                  "properties": {
+                                    "schemeId": false,
+                                    "schemeName": false,
+                                    "schemeAgencyId": false,
+                                    "schemeAgencyName": false,
+                                    "schemeVersionId": false,
+                                    "schemeDataUri": false,
+                                    "schemeUri": false
+                                  }
+                                },
+                                "name": false,
+                                "level": {
+                                  "properties": {
+                                    "languageId": false,
+                                    "languageLocaleId": false
+                                  }
+                                },
+                                "subordinateCSEngineeringCoordinateReferenceSystem": false
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "manufacturer": false,
+                  "owner": false,
+                  "deconsolidationEvent": false
+                }
+              }
+            }
+          ]
+        },
+        "specifiedService": false,
+        "acknowledgementDocument": false,
+        "xheEnvelope": false
+      }
+    }
+  ]
+}
