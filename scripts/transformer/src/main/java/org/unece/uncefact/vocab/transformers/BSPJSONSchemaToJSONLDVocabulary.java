@@ -441,10 +441,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
 
         for (Entity entity : vocabulary.values()) {
             if (entity.getType().equalsIgnoreCase(UNECE_BBIE_PROPERTY_NAME)) {
-                Set<Entity> entities = new HashSet<>();
-                if (entity.getId().equalsIgnoreCase("UN01013236")) {
-                    System.out.println(entity);
-                }
+                Set<Entity> entities = new TreeSet<>();
                 String key = stripReferencedPrefix(entity.getPropertyKey());
                 key = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, key);
                 if (propertiesMap.containsKey(key)) {
@@ -561,7 +558,11 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                         if (rangeIncludes != null && !rangeIncludes.equals(entity.getRangeIncludes())) {
                             //System.err.println(String.format("for %s range includes are different for entities of the same property, %s and %s", id, rangeIncludes, entity.getRangeIncludes()));
                         }
-                        rangeIncludes = entity.getRangeIncludes();
+                        if (rangeIncludes != null && rangeIncludes.startsWith(UNECE_NS) && !rangeIncludes.equals(entity.getRangeIncludes())) {
+                            System.out.println(String.format("Skip set rangeIncludes to %s for %s as it has been set to %s already",entity.getRangeIncludes(), key, rangeIncludes));
+                            
+                        } else
+                            rangeIncludes = entity.getRangeIncludes();
                     }
                     if (entity.getSchemaName() != null) {
                         metadata.add(UNECE_SCHEMA_NAME_PROPERTY, entity.getSchemaName());
@@ -625,7 +626,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                 }
                 if (rangeIncludes != null) {
                     rdfProperty.add(SCHEMA_RANGE_INCLUDES, Json.createObjectBuilder().add(ID, rangeIncludes));
-                } else {
+                } else {    
                     Object rangeIncludesObj = getData(rangeBBIE, tded);
                     if (rangeIncludesObj instanceof JsonObjectBuilder) {
                         rdfProperty.add(SCHEMA_RANGE_INCLUDES, (JsonObjectBuilder) rangeIncludesObj);

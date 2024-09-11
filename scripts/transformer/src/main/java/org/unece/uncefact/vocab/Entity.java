@@ -4,7 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
 
-public class Entity {
+public class Entity implements Comparable{
     /**
      * Codes list is being checked and if it TDED of the property exists in it, Data Type is used to generate the JSON LD property name.
      *
@@ -360,5 +360,10 @@ public class Entity {
 
     public static void printRuleCounter(){
         System.out.println(ruleCount);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.getId().compareTo(((Entity)o).getId());
     }
 }
