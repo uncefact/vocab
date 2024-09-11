@@ -386,7 +386,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
         }
         for (Entity entity : vocabulary.values()) {
             if (entity.getType().equalsIgnoreCase(UNECE_ASBIE_PROPERTY_NAME)) {
-                Set<Entity> entities = new HashSet<>();
+                Set<Entity> entities = new TreeSet<>();
                 String key = stripReferencedPrefix(entity.getPropertyKey());
                 key = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, key);
                 if (propertiesMap.containsKey(key)) {
