@@ -365,20 +365,20 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
             }
         }
 
-        Map<String, Set<Entity>> classesMap = new TreeMap<>();
-        Map<String, Set<Entity>> propertiesMap = new TreeMap<>();
-        Map<String, Set<Entity>> newPropertiesMap = new TreeMap<>();
-        Map<String, Set<String>> relatedClasses = new TreeMap<>();
+        Map<String, TreeSet<Entity>> classesMap = new TreeMap<>();
+        Map<String, TreeSet<Entity>> propertiesMap = new TreeMap<>();
+        Map<String, TreeSet<Entity>> newPropertiesMap = new TreeMap<>();
+        Map<String, TreeSet<String>> relatedClasses = new TreeMap<>();
         for (Entity entity : vocabulary.values()) {
             if (entity.getType().equalsIgnoreCase(UNECE_ABIE_PROPERTY_NAME)) {
                 String classKey = entity.getObjectClassTerm();
                 String classTermWithQualifier = stripReferencedPrefix(entity.getObjectClassTermQualifier().concat(classKey));
                 if (relatedClasses.containsKey(classKey)) {
-                    Set<String> values = relatedClasses.get(classKey);
+                    TreeSet<String> values = relatedClasses.get(classKey);
                     values.add(classTermWithQualifier);
                     relatedClasses.put(classKey, values);
                 } else {
-                    Set<String> values = new HashSet<>();
+                    TreeSet<String> values = new TreeSet<>();
                     values.add(classTermWithQualifier);
                     relatedClasses.put(classKey, values);
                 }
@@ -386,7 +386,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
         }
         for (Entity entity : vocabulary.values()) {
             if (entity.getType().equalsIgnoreCase(UNECE_ASBIE_PROPERTY_NAME)) {
-                Set<Entity> entities = new TreeSet<>();
+                TreeSet<Entity> entities = new TreeSet<>();
                 String key = stripReferencedPrefix(entity.getPropertyKey());
                 key = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, key);
                 if (propertiesMap.containsKey(key)) {
@@ -418,7 +418,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
             if (keysToRemove.contains(key)) {
                 Set<Entity> entities = propertiesMap.get(key);
                 for (Entity e : entities) {
-                    Set<Entity> newEntities = new HashSet<>();
+                    TreeSet<Entity> newEntities = new TreeSet<>();
                     String classKey = stripReferencedPrefix(e.getAssociatedClassTermWithQualifier());
                     String newKey = e.getPropertyTermWithQualifierForNDRRules().concat(classKey);
                     newKey = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, newKey);
@@ -441,7 +441,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
 
         for (Entity entity : vocabulary.values()) {
             if (entity.getType().equalsIgnoreCase(UNECE_BBIE_PROPERTY_NAME)) {
-                Set<Entity> entities = new TreeSet<>();
+                TreeSet<Entity> entities = new TreeSet<>();
                 String key = stripReferencedPrefix(entity.getPropertyKey());
                 key = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, key);
                 if (propertiesMap.containsKey(key)) {
@@ -456,7 +456,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
 
         for (Entity entity : vocabulary.values()) {
             if (entity.getType().equalsIgnoreCase(UNECE_ABIE_PROPERTY_NAME)) {
-                Set<Entity> entities = new HashSet<>();
+                TreeSet<Entity> entities = new TreeSet<>();
                 String key = entity.getObjectClassTerm();
                 if (relatedClasses.containsKey(key)) {
                     if (relatedClasses.get(key).size() > 1) {
