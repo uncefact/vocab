@@ -6,13 +6,13 @@
 
     <groupId>org.unece.uncefact</groupId>
     <artifactId>vocab-transformer</artifactId>
-    <version>D22A</version>
+    <version>D22B</version>
     <build>
         <resources>
             <resource>
                 <directory>src/spec-JSONschema/JSONschema2020-12/meta-library/BuyShipPay</directory>
                 <includes>
-                    <include>D22A/**/*.json</include>
+                    <include>D22B/**/*.json</include>
                 </includes>
             </resource>
         </resources>

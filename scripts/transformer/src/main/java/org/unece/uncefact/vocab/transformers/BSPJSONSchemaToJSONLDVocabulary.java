@@ -103,7 +103,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
                     InputStream fis = null;
                     try {
                         if (inputFile == null) {
-                            fis = getClass().getResourceAsStream("/D22A/".concat(refPath));
+                            fis = getClass().getResourceAsStream("/D22B/".concat(refPath));
                         } else {
                             //TODO: parse bath path from input file
                             fis = new FileInputStream(inputFile);
@@ -1230,7 +1230,7 @@ public class BSPJSONSchemaToJSONLDVocabulary extends Transformer {
         InputStream fis = null;
         try {
             if (inputFile == null) {
-                fis = getClass().getResourceAsStream("/D22A/".concat(refPath).concat(".json"));
+                fis = getClass().getResourceAsStream("/D22B/".concat(refPath).concat(".json"));
             } else {
                 //TODO: parse bath path from input file
                 fis = new FileInputStream(inputFile);

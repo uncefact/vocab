@@ -5515,7 +5515,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01012282",
           "uncefact:cefactBusinessProcess": "Agricultural",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
         },
         "requestedEffectiveDateTime": {
           "title": "Agricultural_ Certificate. Requested Effective. Date Time",
@@ -5975,7 +5975,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01011239",
           "uncefact:cefactBusinessProcess": "Traceability",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
         },
         "applicableSustainabilityCharacteristic": {
           "title": "Animal_ Certificate. Applicable. Sustainability_ Characteristic",
@@ -7980,7 +7980,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01007077",
           "uncefact:cefactBusinessProcess": "In All Contexts",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
         },
         "softwareOperatingSystem": {
           "title": "Conformance_ Certificate. Software Operating System. Text",
@@ -9954,7 +9954,7 @@
           "uncefact:cefactUNId": "UN01006151",
           "uncefact:TDED": "4377",
           "uncefact:cefactBusinessProcess": "Buy-Ship-Pay",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+          "$ref": "#/$defs/qdt/$defs/customsProcedureGuaranteeCodeType",
           "properties": {
             "listId": false,
             "listAgencyName": false,
@@ -14552,7 +14552,7 @@
           "uncefact:cefactBusinessProcess": "In All Contexts",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+            "$ref": "#/$defs/qdt/$defs/responseTypeCodeType",
             "properties": {
               "listId": false,
               "listAgencyName": false,
@@ -16845,11 +16845,11 @@
           "description": "A code specifying a reason for this financial adjustment.",
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01003595",
-          "uncefact:TDED": "5325",
+          "uncefact:TDED": "4465",
           "uncefact:cefactBusinessProcess": "In All Contexts",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+            "$ref": "#/$defs/qdt/$defs/financialAdjustmentReasonCodeType",
             "properties": {
               "listId": false,
               "listAgencyName": false,
@@ -26666,7 +26666,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01013472",
           "uncefact:cefactBusinessProcess": "Buy-Ship-Pay",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/currencyCodeType"
         },
         "amountDirectionCode": {
           "title": "Line_ Trade Settlement. Amount_ Direction. Code",
@@ -34620,7 +34620,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01013868",
           "uncefact:cefactBusinessProcess": "In All Contexts",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
         },
         "requestedEffectiveDateTime": {
           "title": "Organizational_ Certificate. Requested Effective. Date Time",
@@ -36683,7 +36683,7 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/$defs/noteType"
+                "$ref": "#/$defs/specifiedNoteType"
               },
               {
                 "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
@@ -36783,7 +36783,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01013926",
           "uncefact:cefactBusinessProcess": "In All Contexts",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
         },
         "requestedEffectiveDateTime": {
           "title": "Process_ Certificate. Requested Effective. Date Time",
@@ -37541,7 +37541,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01013972",
           "uncefact:cefactBusinessProcess": "In All Contexts",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
         },
         "requestedEffectiveDateTime": {
           "title": "Product Batch_ Certificate. Requested Effective. Date Time",
@@ -40657,7 +40657,7 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/$defs/noteType"
+                "$ref": "#/$defs/specifiedNoteType"
               },
               {
                 "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
@@ -40825,7 +40825,7 @@
           "uncefact:cefactBusinessProcess": "Traceability",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+            "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
           }
         },
         "requestedEffectiveDateTime": {
@@ -45859,7 +45859,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01002019",
           "uncefact:cefactBusinessProcess": "Project Management",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/partyTypeCodeType"
         },
         "name": {
           "title": "Requesting_ Party. Name. Text",
@@ -45884,7 +45884,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01002022",
           "uncefact:cefactBusinessProcess": "Project Management",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+          "$ref": "#/$defs/qdt/$defs/accessRightsTypeCodeType"
         },
         "languageCode": {
           "title": "Requesting_ Party. Language. Code",
@@ -46958,7 +46958,7 @@
           "uncefact:cefactUNId": "UN01000080",
           "uncefact:TDED": "4343",
           "uncefact:cefactBusinessProcess": "In All Contexts",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+          "$ref": "#/$defs/qdt/$defs/responseTypeCodeType",
           "properties": {
             "listId": false,
             "listAgencyName": false,
@@ -47548,7 +47548,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01006021",
           "uncefact:cefactBusinessProcess": "In All Contexts",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+          "$ref": "#/$defs/qdt/$defs/mimeCodeType",
           "properties": {
             "listId": false,
             "listAgencyName": false,
@@ -47712,7 +47712,7 @@
           "uncefact:cefactBusinessProcess": "In All Contexts",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+            "$ref": "#/$defs/qdt/$defs/certificateTypeCodeType"
           }
         },
         "aliasNameCode": {
@@ -51883,7 +51883,7 @@
       "$ref": "UNECE-BasicComponents.json#/$defs/extensibleType",
       "unevaluatedProperties": false
     },
-    "noteType": {
+    "specifiedNoteType": {
       "title": "Specified_ Note. Details",
       "description": "A specified textual or coded description, such as a remark or additional information.",
       "uncefact:type": "AggregateBIE",
@@ -54013,7 +54013,7 @@
       "$ref": "UNECE-BasicComponents.json#/$defs/extensibleType",
       "unevaluatedProperties": false
     },
-    "subordinateLocationType": {
+    "subordinateSubordinateLocationType": {
       "title": "Subordinate Subordinate_ Location. Details",
       "description": "A physical location or place which is a subordinate location of a subordinate location.",
       "uncefact:type": "AggregateBIE",
@@ -58288,7 +58288,7 @@
           "uncefact:cefactBusinessProcess": "Buy-Ship-Pay",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+            "$ref": "#/$defs/qdt/$defs/commitmentLevelCodeType",
             "properties": {
               "listId": false,
               "listAgencyName": false,
@@ -59120,7 +59120,7 @@
           "uncefact:cefactUNId": "UN01004325",
           "uncefact:TDED": "4017",
           "uncefact:cefactBusinessProcess": "Buy-Ship-Pay",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+          "$ref": "#/$defs/qdt/$defs/commitmentLevelCodeType",
           "properties": {
             "listId": false,
             "listAgencyName": false,
@@ -64111,7 +64111,7 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/$defs/noteType"
+                "$ref": "#/$defs/specifiedNoteType"
               },
               {
                 "$ref": "UNECE-BasicComponents.json#/$defs/resourceType"
@@ -64918,7 +64918,7 @@
           "uncefact:cefactBusinessProcess": "Buy-Ship-Pay",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+            "$ref": "#/$defs/qdt/$defs/partyTypeCodeType",
             "properties": {
               "listId": false,
               "listAgencyName": false,
@@ -70364,7 +70364,7 @@
           "uncefact:cefactBusinessProcess": "Buy-Ship-Pay",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+            "$ref": "#/$defs/qdt/$defs/taxExemptionReasonCodeType",
             "properties": {
               "listId": false,
               "listAgencyName": false,
@@ -70562,7 +70562,7 @@
           "uncefact:cefactUNId": "UN01004738",
           "uncefact:TDED": "4377",
           "uncefact:cefactBusinessProcess": "Buy-Ship-Pay",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+          "$ref": "#/$defs/qdt/$defs/customsProcedureGuaranteeCodeType",
           "properties": {
             "listId": false,
             "listAgencyName": false,
@@ -70883,7 +70883,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01011932",
           "uncefact:cefactBusinessProcess": "Trade",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+          "$ref": "#/$defs/qdt/$defs/workflowStatusCodeType",
           "properties": {
             "listId": false,
             "listAgencyName": false,
@@ -70901,7 +70901,7 @@
           "uncefact:type": "BasicBIE",
           "uncefact:cefactUNId": "UN01011933",
           "uncefact:cefactBusinessProcess": "Trade",
-          "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType",
+          "$ref": "#/$defs/qdt/$defs/workflowStatusCodeType",
           "properties": {
             "listId": false,
             "listAgencyName": false,
@@ -75217,7 +75217,7 @@
           "uncefact:cefactBusinessProcess": "Traceability",
           "type": "array",
           "items": {
-            "$ref": "UNECE-BasicComponents.json#/$defs/udt/$defs/codeType"
+            "$ref": "#/$defs/qdt/$defs/partyTypeCodeType"
           }
         },
         "name": {
